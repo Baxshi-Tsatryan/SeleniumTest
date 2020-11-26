@@ -23,7 +23,7 @@ public class AddManualPortfolioPositive extends Driver {
     }
 
     @Test
-    public void addManualPortfolioPositive() throws InterruptedException {
+    public void addManualPortfolioPositive() {
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
@@ -31,7 +31,6 @@ public class AddManualPortfolioPositive extends Driver {
         addPortfolio.clickOnAddManualPortfolio();
         addPortfolio.clickOnSaveButtonInManualPortfolio();
         utils.refreshPage();
-
 
     }
 }
