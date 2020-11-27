@@ -68,7 +68,7 @@ public class AddPortfolio {
 
     By CSVTab = By.cssSelector("div.tabs-section > div:nth-of-type(2) > .tab-label");
 
-    By importCSVField = By.cssSelector("input.jsx-2090407883");
+    By importCSVField = By.cssSelector("#__next > main > div > div > div.jsx-215517225.sidebar-container-wrapper.show > div.jsx-4109874676.universal-modal.has-right-section > div > div.jsx-4109874676.modal-content > div.jsx-4109874676.changing-content-wrapper > div.jsx-4109874676.changing-content.showing > div.new-portfolio-modal > div > div.dropzone-section > div > input");
 
     By downloadCSVTemplateButton = By.cssSelector("span.download-csv-text > span");
 
@@ -153,6 +153,11 @@ public class AddPortfolio {
 
     public void clickOnAddPortfolio() {
         utils.clickOnElement(addPortfolio);
+    }
+
+    public void clickOnAddPortfolioAction()
+    {
+        utils.actionClickOnElement(addPortfolio);
     }
 
 
@@ -330,8 +335,13 @@ public class AddPortfolio {
         utils.clickOnElement(CSVTab);
     }
 
-    public void importCSVFile(String pathToCSVFile) {
-        utils.sendKeys(importCSVField, pathToCSVFile);
+    public void importCSVFile(CharSequence pathToCSVFile) {
+        utils.sendKeysCharSequence(importCSVField, pathToCSVFile);
+    }
+
+    public void clickOnImportCSVFile()
+    {
+        utils.clickOnElement(importCSVField);
     }
 
     public void clickOnCSVTemplate() {

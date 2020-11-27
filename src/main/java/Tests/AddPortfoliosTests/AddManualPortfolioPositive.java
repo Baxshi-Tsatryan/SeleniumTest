@@ -5,6 +5,7 @@ import AllPages.PortfolioPage.LeftSideOfPagePortfolios;
 import MainPackage.AllURLs;
 import MainPackage.Driver;
 import MainPackage.SeleniumUtils;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -13,6 +14,7 @@ public class AddManualPortfolioPositive extends Driver {
     LeftSideOfPagePortfolios leftSideOfPagePortfolios;
     AllURLs allURLs;
     SeleniumUtils utils;
+    DeleteAllPortfolios deleteAllPortfolios;
 
     @BeforeClass
     public void beforeClass() {
@@ -20,6 +22,8 @@ public class AddManualPortfolioPositive extends Driver {
         utils = new SeleniumUtils(driver);
         addPortfolio = new AddPortfolio(driver);
         leftSideOfPagePortfolios = new LeftSideOfPagePortfolios(driver);
+        deleteAllPortfolios = new DeleteAllPortfolios();
+
     }
 
     @Test
@@ -31,6 +35,19 @@ public class AddManualPortfolioPositive extends Driver {
         addPortfolio.clickOnAddManualPortfolio();
         addPortfolio.clickOnSaveButtonInManualPortfolio();
         utils.refreshPage();
+
+        deleteAllPortfolios.deleteSecondPortfolio();
+
+        addPortfolio.clickOnAddPortfolio();
+        addPortfolio.clickOnAddManualPortfolio();
+        addPortfolio.typeManualPortfolioName("Name");
+        addPortfolio.typeManualPortfolioTotalCost("100");
+        addPortfolio.clickOnSaveButtonInManualPortfolio();
+        utils.refreshPage();
+
+        String addedPortfolioName = leftSideOfPagePortfolios.getSecondPortfolioName();
+        Assert.assertEquals(addedPortfolioName, "Name");
+        deleteAllPortfolios.deleteSecondPortfolio();
 
     }
 }

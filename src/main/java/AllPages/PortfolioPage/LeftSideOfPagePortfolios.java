@@ -26,6 +26,10 @@ public class LeftSideOfPagePortfolios {
 
     By firstPortfolioDelete = By.cssSelector("ul#portfolio-list > li:nth-of-type(2) .icon-delete");
 
+    By secondPortfolioName = By.cssSelector("ul#portfolio-list > li:nth-of-type(3) .jsx-544775375");
+
+    By secondPortfolioDelete = By.cssSelector("ul#portfolio-list > li:nth-of-type(3) .icon-delete");
+
     By portfolioSettings = By.cssSelector(".icon-settings");
 
     By linkSharing = By.cssSelector(".icon-link");
@@ -124,6 +128,13 @@ public class LeftSideOfPagePortfolios {
         return firstPortfolioIsDisplayed;
     }
 
+    public String getSecondPortfolioName()
+    {
+        String secondPortfolioName2 = utils.getText(secondPortfolioName);
+
+        return secondPortfolioName2;
+    }
+
     public void moveToFirstPortfolioName()
     {
         utils.moveToElement(firstPortfolioName);
@@ -138,6 +149,22 @@ public class LeftSideOfPagePortfolios {
     {
         utils.moveToElement(firstPortfolioName);
         utils.clickOnElement(firstPortfolioDelete);
+    }
+
+    public void moveToSecondPortfolioName()
+    {
+        utils.moveToElement(secondPortfolioName);
+    }
+
+    public void clickOnSecondPortfolioDelete()
+    {
+        utils.clickOnElement(secondPortfolioDelete);
+    }
+
+    public void clickOnSecondPortfolioDeleteWithMove()
+    {
+        utils.moveToElement(secondPortfolioName);
+        utils.clickOnElement(secondPortfolioDelete);
     }
 
     public void clickOnSettings()

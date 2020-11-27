@@ -54,4 +54,11 @@ public class DeleteAllPortfolios extends Driver {
 
     }
 
+    public void deleteSecondPortfolio()
+    {
+        leftSideOfPagePortfolios.moveToSecondPortfolioName();
+        leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
+        leftSideOfPagePortfolios.clickOnDeleteInDelete();
+    }
+
 }

@@ -14,7 +14,7 @@ public class SeleniumUtils{
         this.driver = driver;
     }
 
-    String cookie = "eyJzZXNzaW9uVG9rZW4iOiJyOjM1YjIxODQ4YzZlMWRiZGZiODFlOTIzY2ZkMmMzMTEzIn0=";
+    String cookie = "eyJzZXNzaW9uVG9rZW4iOiJyOjQyNzU5ZjgwZjE5NjBiZjUzMTY1YTQ3NmQ1OWM3MzhkIn0=";
 
     // Navigation
 
@@ -31,6 +31,12 @@ public class SeleniumUtils{
     public void clickOnElement(By by)
     {
         driver.findElement(by).click();
+    }
+
+    public void actionClickOnElement(By by)
+    {
+        Actions actions = new Actions(driver);
+        actions.click(driver.findElement(by)).build().perform();
     }
 
     public void goToBackPage()
@@ -123,6 +129,12 @@ public class SeleniumUtils{
     {
         Actions actions = new Actions(driver);
         actions.sendKeys(driver.findElement(by), searchString).build().perform();
+    }
+
+    public void sendKeysCharSequence(By by, CharSequence charSequence)
+    {
+        Actions actions = new Actions(driver);
+        actions.sendKeys(driver.findElement(by), charSequence).build().perform();
     }
 
     public void clear(By by)
