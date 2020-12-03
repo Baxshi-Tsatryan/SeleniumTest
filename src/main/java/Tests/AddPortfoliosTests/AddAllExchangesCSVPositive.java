@@ -2,13 +2,18 @@ package Tests.AddPortfoliosTests;
 
 import AllPages.PortfolioPage.AddPortfolio;
 import AllPages.PortfolioPage.LeftSideOfPagePortfolios;
+import AllPages.PortfolioPage.PortfolioPageWhenNotLogin;
 import MainPackage.AllURLs;
 import MainPackage.Driver;
 import MainPackage.Paths;
 import MainPackage.SeleniumUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import java.util.List;
 
 public class AddAllExchangesCSVPositive extends Driver{
 
@@ -17,6 +22,7 @@ public class AddAllExchangesCSVPositive extends Driver{
     AllURLs allURLs;
     SeleniumUtils utils;
     Paths paths;
+    PortfolioPageWhenNotLogin portfolioPageWhenNotLogin;
 
     @BeforeClass
     public void beforeClass() {
@@ -25,8 +31,8 @@ public class AddAllExchangesCSVPositive extends Driver{
         addPortfolio = new AddPortfolio(driver);
         leftSideOfPagePortfolios = new LeftSideOfPagePortfolios(driver);
         paths = new Paths(driver);
+        portfolioPageWhenNotLogin = new PortfolioPageWhenNotLogin(driver);
     }
-
 
     @Test (priority = 1)
     public void addAllExchangesCSVPositive() throws InterruptedException {
@@ -34,68 +40,72 @@ public class AddAllExchangesCSVPositive extends Driver{
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
-        int index = 1;
-
-        do
-        {
-            if (index == 5)
-            {
-                addCryptoComApp(index);
-                index++;
-            }
-            else if (index == 12)
-            {
-                addBittrex(index);
-                index++;
-            }
-            else if (index == 13 || index == 15 || index == 17)
-            {
-                index++;
-            }
-
-            addStandardPortfolios(index);
-
+        Thread.sleep(3000);
+        try {
+            addPortfolio.clickOnAddPortfolio();
         }
-        while(index != 27);
-
-    }
-
-    public void addStandardPortfolios(int index)
-    {
-      //  try
-      //  {
-      //      driver.findElement(By.cssSelector("#onesignal-slidedown-cancel-button")).click();
-      //  }
-      //  catch (NoSuchElementException e)
-      //  {}
-
-        addPortfolio.clickOnAddPortfolio();
+        catch (Exception e) {
+            JavascriptExecutor executor = (JavascriptExecutor) driver;
+            executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
+        }
         addPortfolio.clickOnConnectExchange();
-        driver.findElement(By.cssSelector("ul.jsx-2489091780 > li:nth-of-type(" + index + ") > .table-row")).click();
-        addPortfolio.clickOnCSVTab();
-        addPortfolio.importCSVFile(paths.getCoinStatsTemplateCSV());
-        addPortfolio.clickOnSubmit();
-        addPortfolio.clickOnNoShowMeSynced();
-    }
 
-    public void addCryptoComApp(int index)
-    {
-        addPortfolio.clickOnAddPortfolio();
-        addPortfolio.clickOnConnectExchange();
-        driver.findElement(By.cssSelector("ul.jsx-2489091780 > li:nth-of-type(" + index + ") > .table-row")).click();
-        addPortfolio.importCSVFile(paths.getCryptoComCSV());
-        addPortfolio.clickOnSubmit();
-        addPortfolio.clickOnNoShowMeSynced();
-    }
+        List<WebElement> listTill = driver.findElements(By.className("qa-exchanges"));
 
-    public void addBittrex(int index)
-    {
-        addPortfolio.clickOnAddPortfolio();
-        addPortfolio.clickOnConnectExchange();
-        driver.findElement(By.cssSelector("ul.jsx-2489091780 > li:nth-of-type(" + index + ") > .table-row")).click();
-        addPortfolio.importCSVFile(paths.getBittrexCSV());
-        addPortfolio.clickOnSubmit();
-        addPortfolio.clickOnNoShowMeSynced();
-    }
+            for (int i = 0; i < listTill.size(); i++)
+            {
+                List<WebElement> list = driver.findElements(By.className("qa-exchanges"));
+                list.get(i).click();
 
+                if (i == 4)
+                {
+                    WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
+                    importButton.sendKeys(paths.getCryptoComCSV());
+                }
+
+                else if (i == 11)
+                {
+                    addPortfolio.clickOnCSVTab();
+                    WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
+                    importButton.sendKeys(paths.getBittrexCSV());
+                }
+
+                else if (i == 12 || i == 14 || i == 16)
+                {
+                    addPortfolio.clickOnBack();
+                    continue;
+                }
+                else
+                {
+                    addPortfolio.clickOnCSVTab();
+                    WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
+                    importButton.sendKeys(paths.getCoinStatsTemplateCSV());
+                }
+
+                Thread.sleep(3000);
+                addPortfolio.clickOnSubmit();
+                addPortfolio.clickOnSuccessYes();
+                addPortfolio.clickOnConnectExchange();
+            }
+
+            deleteAllPortfolios();
+        }
+
+    public void deleteAllPortfolios() throws InterruptedException {
+        allURLs.navigateToPortfolioPage();
+
+        while (true) {
+
+            try {
+                leftSideOfPagePortfolios.moveToSecondPortfolioName();
+                leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
+                leftSideOfPagePortfolios.clickOnDeleteInDelete();
+                Thread.sleep(3000);
+            }
+            catch (NoSuchElementException e)
+            {
+                break;
+            }
+        }
+    }
 }

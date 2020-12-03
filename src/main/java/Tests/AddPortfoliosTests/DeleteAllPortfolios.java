@@ -29,9 +29,8 @@ public class DeleteAllPortfolios extends Driver {
 
     @Test
     public void deleteAllPortfolios() throws InterruptedException {
-        allURLs.navigateToMainPage();
-        utils.enableCookie();
         allURLs.navigateToPortfolioPage();
+        utils.enableCookie();
 
             while (true) {
 

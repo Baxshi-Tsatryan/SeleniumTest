@@ -15,7 +15,7 @@ public class AddPortfolio {
         utils = new SeleniumUtils(this.driver);
     }
 
-    By addPortfolio = By.xpath("//html//body//div[1]//main//div//div//div[1]//div//div[1]//button");
+    By addPortfolio = By.cssSelector(".primary");
 
 
     // Exchanges API
@@ -68,7 +68,7 @@ public class AddPortfolio {
 
     By CSVTab = By.cssSelector("div.tabs-section > div:nth-of-type(2) > .tab-label");
 
-    By importCSVField = By.cssSelector("#__next > main > div > div > div.jsx-215517225.sidebar-container-wrapper.show > div.jsx-4109874676.universal-modal.has-right-section > div > div.jsx-4109874676.modal-content > div.jsx-4109874676.changing-content-wrapper > div.jsx-4109874676.changing-content.showing > div.new-portfolio-modal > div > div.dropzone-section > div > input");
+    By importCSVField = By.cssSelector("input.jsx-2090407883");
 
     By downloadCSVTemplateButton = By.cssSelector("span.download-csv-text > span");
 
@@ -335,8 +335,8 @@ public class AddPortfolio {
         utils.clickOnElement(CSVTab);
     }
 
-    public void importCSVFile(CharSequence pathToCSVFile) {
-        utils.sendKeysCharSequence(importCSVField, pathToCSVFile);
+    public void importCSVFile(String pathToCSVFile) {
+        utils.sendKeys(importCSVField, pathToCSVFile);
     }
 
     public void clickOnImportCSVFile()

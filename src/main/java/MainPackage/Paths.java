@@ -10,39 +10,39 @@ public class Paths {
         this.driver = driver;
     }
 
-    CharSequence bittrexCSV = "/Users/jenkins/Desktop/SeleniumFiles/BittrexOrderHistory_2019.csv";
-    CharSequence coinStatsTemplateCSV = "/Users/jenkins/Desktop/SeleniumFiles/coinstats_template.csv";
-    CharSequence cryptoComCSV = "/Users/jenkins/Desktop/SeleniumFiles/crypto_transactions_record_20200623_132654 - crypto_transactions_record_20200623_132654.csv";
-    CharSequence exodusCSV = "/Users/jenkins/Desktop/SeleniumFiles/Exodus.zip";
-    CharSequence image = "/Users/jenkins/Desktop/SeleniumFiles/Screen Shot 2020-11-06 at 5.54.47 PM";
-    CharSequence image2 = "/Users/jenkins/Desktop/SeleniumFiles/Screen Shot 2020-11-04 at 2.51.08 PM";
+    String bittrexCSV = "/Users/jenkins/Desktop/SeleniumFiles/BittrexOrderHistory_2019.csv";
+    String coinStatsTemplateCSV = "/Users/jenkins/Desktop/SeleniumFiles/coinstats_template.csv";
+    String cryptoComCSV = "/Users/jenkins/Desktop/SeleniumFiles/crypto_transactions_record_20200623_132654 - crypto_transactions_record_20200623_132654.csv";
+    String exodusCSV = "/Users/jenkins/Desktop/SeleniumFiles/Exodus.zip";
+    String image = "/Users/jenkins/Desktop/SeleniumFiles/Screen Shot 2020-11-06 at 5.54.47 PM";
+    String image2 = "/Users/jenkins/Desktop/SeleniumFiles/Screen Shot 2020-11-04 at 2.51.08 PM";
 
-    public CharSequence getBittrexCSV()
+    public String getBittrexCSV()
     {
         return bittrexCSV;
     }
 
-    public CharSequence getCoinStatsTemplateCSV()
+    public String getCoinStatsTemplateCSV()
     {
         return coinStatsTemplateCSV;
     }
 
-    public CharSequence getCryptoComCSV()
+    public String getCryptoComCSV()
     {
         return cryptoComCSV;
     }
 
-    public CharSequence getExodusCSV()
+    public String getExodusCSV()
     {
         return exodusCSV;
     }
 
-    public CharSequence getImage()
+    public String getImage()
     {
         return image;
     }
 
-    public CharSequence getImage2()
+    public String getImage2()
     {
         return image2;
     }

@@ -39,11 +39,11 @@ public class ConnectExchangesWithCSVValid {
             driver.get(coinstatsURL);
 
             // Set Cookie (mail@mail.com | password account)
-            driver.manage().addCookie(new Cookie("userData", "eyJzZXNzaW9uVG9rZW4iOiJyOjQyNzU5ZjgwZjE5NjBiZjUzMTY1YTQ3NmQ1OWM3MzhkIn0="));
+            driver.manage().addCookie(new Cookie("userData", "eyJzZXNzaW9uVG9rZW4iOiJyOjQzMDVhZjlmNzA5NzUwZWVmNzdlMTRmMjZkNzRkMWQ1In0="));
             driver.navigate().refresh();
 
             // Create By and Element for addPortfolio button
-            By addPortfolioBy = By.cssSelector("#__next > main > div > div > div.jsx-2241105801.sidebar-container-wrapper.show > div > div.jsx-60857151.add-portfolio-container > button");
+            By addPortfolioBy = By.xpath("//html//body//div[1]//main//div//div//div[1]//div//div[1]//button");
             WebElement addPortfolio = driver.findElement(addPortfolioBy);
 
             // Click on addPortfolio button
