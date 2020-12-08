@@ -53,7 +53,7 @@ public class TradesTransactionsOpenOrders {
 
     public void typeDateFromTrades(String date)
     {
-        utils.sendKeys(dateFromField, date);
+        utils.sendKeysAction(dateFromField, date);
     }
 
     public String getDateFromTrades()
@@ -68,7 +68,7 @@ public class TradesTransactionsOpenOrders {
 
     public void typeDateToTrades(String date)
     {
-        utils.sendKeys(dateToField, date);
+        utils.sendKeysAction(dateToField, date);
     }
 
     public String getDateToTrades()
@@ -98,7 +98,7 @@ public class TradesTransactionsOpenOrders {
 
     public void typeCoinNameTrades(String coinName)
     {
-        utils.sendKeys(searchCoinFieldTrades, coinName);
+        utils.sendKeysAction(searchCoinFieldTrades, coinName);
     }
 
     public String getCoinNameTrades()
@@ -118,7 +118,7 @@ public class TradesTransactionsOpenOrders {
 
     public void typeCoinNameTransactions(String coinName)
     {
-        utils.sendKeys(searchCoinFieldTransactions, coinName);
+        utils.sendKeysAction(searchCoinFieldTransactions, coinName);
     }
 
     public String getCoinNameTransactions()

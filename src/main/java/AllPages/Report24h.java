@@ -676,7 +676,7 @@ public class Report24h {
 
     public void typeEmailForSubscribtion(String email)
     {
-        utils.sendKeys(subscribeEmailField, email);
+        utils.sendKeysAction(subscribeEmailField, email);
     }
 
     public void clearEmailSubscribeField()

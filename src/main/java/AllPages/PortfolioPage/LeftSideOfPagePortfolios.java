@@ -88,7 +88,7 @@ public class LeftSideOfPagePortfolios {
 
     public void searchPortfoliosOrCoins(String portfoliosOrCoins)
     {
-        utils.sendKeys(searchPortfoliosOrCoins, portfoliosOrCoins);
+        utils.sendKeysAction(searchPortfoliosOrCoins, portfoliosOrCoins);
     }
 
     public String getSearchPortfoliosOrCoinsName()
@@ -239,7 +239,7 @@ public class LeftSideOfPagePortfolios {
 
     public void typeCoinNameBlackList(String coinName)
     {
-        utils.sendKeys(searchCoinsBlacklist, coinName);
+        utils.sendKeysAction(searchCoinsBlacklist, coinName);
     }
 
     public String getCoinNameBlacklist()

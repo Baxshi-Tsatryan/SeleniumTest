@@ -297,7 +297,7 @@ public class CoinPriceChartWidgets {
 
     public void typeCoinName(String coinName)
     {
-        utils.sendKeys(searchCoinField, coinName);
+        utils.sendKeysAction(searchCoinField, coinName);
     }
 
     public String getCurrentTheme()
@@ -337,7 +337,7 @@ public class CoinPriceChartWidgets {
 
     public void typeWidth(String width)
     {
-        utils.sendKeys(widthField, width);
+        utils.sendKeysAction(widthField, width);
     }
 
     public void clearWidth()
@@ -352,7 +352,7 @@ public class CoinPriceChartWidgets {
 
     public void typeHeight(String height)
     {
-        utils.sendKeys(heightField, height);
+        utils.sendKeysAction(heightField, height);
     }
 
     public void clearHeight()
@@ -375,7 +375,7 @@ public class CoinPriceChartWidgets {
 
     public void typeBackgroundColorText(String colorText)
     {
-        utils.sendKeys(backgroundColorField, colorText);
+        utils.sendKeysAction(backgroundColorField, colorText);
     }
 
     public String getTextColorText()
@@ -390,7 +390,7 @@ public class CoinPriceChartWidgets {
 
     public void typeTextColorText(String colorText)
     {
-        utils.sendKeys(textColorField, colorText);
+        utils.sendKeysAction(textColorField, colorText);
     }
 
     public String getPercentageArrowUpColorText()
@@ -405,7 +405,7 @@ public class CoinPriceChartWidgets {
 
     public void typePercentageArrowUpColorText(String colorText)
     {
-        utils.sendKeys(percentageArrowUpColorField, colorText);
+        utils.sendKeysAction(percentageArrowUpColorField, colorText);
     }
 
     public String getPercentageArrowDownColorText()
@@ -420,7 +420,7 @@ public class CoinPriceChartWidgets {
 
     public void typePercentageArrowDownColorText(String colorText)
     {
-        utils.sendKeys(percentageArrowDownColorField, colorText);
+        utils.sendKeysAction(percentageArrowDownColorField, colorText);
     }
 
     public String getChartColorText()
@@ -435,7 +435,7 @@ public class CoinPriceChartWidgets {
 
     public void typeChartColorText(String colorText)
     {
-        utils.sendKeys(chartColorField, colorText);
+        utils.sendKeysAction(chartColorField, colorText);
     }
 
     public String getButtonsBackgroundColorText()
@@ -450,7 +450,7 @@ public class CoinPriceChartWidgets {
 
     public void typeButtonsBackgroundColorText(String colorText)
     {
-        utils.sendKeys(buttonsBackgroundColorField, colorText);
+        utils.sendKeysAction(buttonsBackgroundColorField, colorText);
     }
 
     public String getChartGradientFromColorText()
@@ -465,7 +465,7 @@ public class CoinPriceChartWidgets {
 
     public void typeChartGradientFromColorText(String colorText)
     {
-        utils.sendKeys(chartGradientFromColorField, colorText);
+        utils.sendKeysAction(chartGradientFromColorField, colorText);
     }
 
     public String getChartGradientToColorText()
@@ -480,7 +480,7 @@ public class CoinPriceChartWidgets {
 
     public void typeChartGradientToColorText(String colorText)
     {
-        utils.sendKeys(chartGradientToColorField, colorText);
+        utils.sendKeysAction(chartGradientToColorField, colorText);
     }
 
     public String getBTCColorTextLarge()
@@ -495,7 +495,7 @@ public class CoinPriceChartWidgets {
 
     public void typeBTCColorTextLarge(String colorText)
     {
-        utils.sendKeys(coloBTCFieldLarge, colorText);
+        utils.sendKeysAction(coloBTCFieldLarge, colorText);
     }
 
     public String getETHColorTextLarge()
@@ -510,7 +510,7 @@ public class CoinPriceChartWidgets {
 
     public void typeETHColorTextLarge(String colorText)
     {
-        utils.sendKeys(colorETHFieldLarge, colorText);
+        utils.sendKeysAction(colorETHFieldLarge, colorText);
     }
 
     public String getChartLabelBackgroundColorTextLarge()
@@ -525,7 +525,7 @@ public class CoinPriceChartWidgets {
 
     public void typeChartLabelBackgroundColorTextLarge(String colorText)
     {
-        utils.sendKeys(chartLabelBackgroundColorFieldLarge, colorText);
+        utils.sendKeysAction(chartLabelBackgroundColorFieldLarge, colorText);
     }
 
     public String getCandleChartGridsColorTextLarge()
@@ -540,7 +540,7 @@ public class CoinPriceChartWidgets {
 
     public void typeCandleChartGridsColorTextLarge(String colorText)
     {
-        utils.sendKeys(candleChartGridsColorFieldLarge, colorText);
+        utils.sendKeysAction(candleChartGridsColorFieldLarge, colorText);
     }
 
     public String getWidgetBorderColorTextLarge()
@@ -555,7 +555,7 @@ public class CoinPriceChartWidgets {
 
     public void typeWidgetBorderColorTextLarge(String colorText)
     {
-        utils.sendKeys(widgetBorderColorFieldLarge, colorText);
+        utils.sendKeysAction(widgetBorderColorFieldLarge, colorText);
     }
 
 
@@ -573,7 +573,7 @@ public class CoinPriceChartWidgets {
 
     public void typeChartLabelBackgroundColorTextMedium(String colorText)
     {
-        utils.sendKeys(chartLabelBackgroundColorFieldMedium, colorText);
+        utils.sendKeysAction(chartLabelBackgroundColorFieldMedium, colorText);
     }
 
     public String getCandleChartGridsColorTextMedium()
@@ -588,7 +588,7 @@ public class CoinPriceChartWidgets {
 
     public void typeCandleChartGridsColorTextMedium(String colorText)
     {
-        utils.sendKeys(candleChartGridsColorFieldMedium, colorText);
+        utils.sendKeysAction(candleChartGridsColorFieldMedium, colorText);
     }
 
     public String getWidgetBorderColorTextMedium()
@@ -603,7 +603,7 @@ public class CoinPriceChartWidgets {
 
     public void typeWidgetBorderColorTextMedium(String colorText)
     {
-        utils.sendKeys(widgetBorderColorFieldMedium, colorText);
+        utils.sendKeysAction(widgetBorderColorFieldMedium, colorText);
     }
 
 

@@ -125,10 +125,16 @@ public class SeleniumUtils{
 
     // Work with Texts
 
-    public void sendKeys(By by, String searchString)
+    public void sendKeysAction(By by, String searchString)
     {
         Actions actions = new Actions(driver);
         actions.sendKeys(driver.findElement(by), searchString).build().perform();
+    }
+
+    public void sendKeys(By by, String searchString)
+    {
+        WebElement element = driver.findElement(by);
+        element.sendKeys(searchString);
     }
 
     public void clear(By by)

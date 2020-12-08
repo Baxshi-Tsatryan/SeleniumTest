@@ -296,7 +296,7 @@ public class CoinPriceWidgets {
 
     public void typeWidth(String width)
     {
-        utils.sendKeys(widthField, width);
+        utils.sendKeysAction(widthField, width);
     }
 
     public String getHeight()
@@ -311,7 +311,7 @@ public class CoinPriceWidgets {
 
     public void typeHeight(String height)
     {
-        utils.sendKeys(heightField, height);
+        utils.sendKeysAction(heightField, height);
     }
 
 
@@ -329,7 +329,7 @@ public class CoinPriceWidgets {
 
     public void typeBackgroundColorText(String colorText)
     {
-        utils.sendKeys(backgroundColorField, colorText);
+        utils.sendKeysAction(backgroundColorField, colorText);
     }
 
     public String getTextColorText()
@@ -344,7 +344,7 @@ public class CoinPriceWidgets {
 
     public void typeTextColorText(String colorText)
     {
-        utils.sendKeys(textColorField, colorText);
+        utils.sendKeysAction(textColorField, colorText);
     }
 
     public String getPercentageArrowUpColorText()
@@ -359,7 +359,7 @@ public class CoinPriceWidgets {
 
     public void typePercentageArrowUpColorText(String colorText)
     {
-        utils.sendKeys(percentageArrowUpField, colorText);
+        utils.sendKeysAction(percentageArrowUpField, colorText);
     }
 
     public String getPercentageArrowDownColorText()
@@ -374,7 +374,7 @@ public class CoinPriceWidgets {
 
     public void typePercentageArrowDownColorText(String colorText)
     {
-        utils.sendKeys(rankBackgroundField, colorText);
+        utils.sendKeysAction(rankBackgroundField, colorText);
     }
 
     public String getRankBackgroundColorText()
@@ -389,7 +389,7 @@ public class CoinPriceWidgets {
 
     public void typeRankBackgroundColorText(String colorText)
     {
-        utils.sendKeys(rankBackgroundField, colorText);
+        utils.sendKeysAction(rankBackgroundField, colorText);
     }
 
     public String getRankTextColorText()
@@ -404,7 +404,7 @@ public class CoinPriceWidgets {
 
     public void typeRankTextColorText(String colorText)
     {
-        utils.sendKeys(rankTextField, colorText);
+        utils.sendKeysAction(rankTextField, colorText);
     }
 
     public String getWidgetBorderColorText()
@@ -419,7 +419,7 @@ public class CoinPriceWidgets {
 
     public void typeWidgetBorderColorText(String colorText)
     {
-        utils.sendKeys(widgetBorderColorField, colorText);
+        utils.sendKeysAction(widgetBorderColorField, colorText);
     }
 
 
@@ -475,7 +475,7 @@ public class CoinPriceWidgets {
 
     public void typeBackgroundColorTextSmall(String colorText)
     {
-        utils.sendKeys(backgroundColorFieldSmall, colorText);
+        utils.sendKeysAction(backgroundColorFieldSmall, colorText);
     }
 
     public String getTextColorTextSmall()
@@ -490,7 +490,7 @@ public class CoinPriceWidgets {
 
     public void typeTextColorTextSmall(String colorText)
     {
-        utils.sendKeys(textColorFieldSmall, colorText);
+        utils.sendKeysAction(textColorFieldSmall, colorText);
     }
 
     public String getWidgetBorderColorTextSmall()
@@ -505,7 +505,7 @@ public class CoinPriceWidgets {
 
     public void typeWidgetBorderColorTextSmall(String colorText)
     {
-        utils.sendKeys(widgetBorderColorFieldSmall, colorText);
+        utils.sendKeysAction(widgetBorderColorFieldSmall, colorText);
     }
 
 

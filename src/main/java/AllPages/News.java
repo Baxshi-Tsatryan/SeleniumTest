@@ -61,7 +61,7 @@ public class News {
 
     public void searchCoinNews(String coinName)
     {
-        utils.sendKeys(searchCoinNewsField, coinName);
+        utils.sendKeysAction(searchCoinNewsField, coinName);
     }
 
     public void clickOnSourcesDropDown()

@@ -35,22 +35,16 @@ public class DeleteAllPortfolios extends Driver {
             while (true) {
 
                 try {
-                    leftSideOfPagePortfolios.moveToFirstPortfolioName();
-                    leftSideOfPagePortfolios.clickOnFirstPortfolioDelete();
+                    leftSideOfPagePortfolios.moveToSecondPortfolioName();
+                    leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
                     leftSideOfPagePortfolios.clickOnDeleteInDelete();
-                    Thread.sleep(2000);
+                    Thread.sleep(3000);
                 }
                 catch (NoSuchElementException e)
                 {
                     break;
                 }
-
             }
-
-            portfolioPageWhenNotLogin.clickOnAddManualPortfolio();
-            addPortfolio.typeManualPortfolioName("Test");
-            addPortfolio.clickOnSaveButtonInManualPortfolio();
-
     }
 
     public void deleteSecondPortfolio()

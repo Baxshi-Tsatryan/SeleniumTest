@@ -27,17 +27,17 @@ public class ExchangesWalletsAPIs {
     String binanceUSAPIKey = "RVYB1wsPXYm7GS8rhDgpUnbJETPJYjeZ0VSxYaT1hYN3RvhkGzKHbpPXU8uit5iD";
     String binanceUSAPISecret = "hfPdIOun7s13eI7uP5VbRgM6JEng6gqHc42PqBDyiarOgjesUPKMcZUe6Wxs48XL";
 
-    String bitfinexAPIKey = "R2rXFRXG4BFWdVCPUUbzLMsfR1w9vZx7Pek0a3I7Gjx";
-    String bitfinexAPISecret = "rSwjoDIiOchiC6t9FJ9ysLlud5DvLkyEjBDcEFiqYO4";
+    String bitfinexAPIKey = "BMUQ7lJPDSLm6y2kkfyGWf6IXn4j8CmL9zIeE4Nw7fA";
+    String bitfinexAPISecret = "Pn40VNtUjjP9hNlFoqJTGkcnnngEb4fzsZTsh4kbRw9";
 
-    String bitmexID = "U8-yOWvzvSG-c4pRoTiMltnp";
-    String bitmexAPISecret = "Ws0L6OIqkMW6GnRec4n5V1GNo3U-AX5k-FeUs_9hkOmJ4yNu";
+    String bitmexID = "dYOcDY6USQ4h5Nfu-eZKEssc";
+    String bitmexAPISecret = "C7qmXuvzcF1ocf5-asMUInQSb_i-R0HXYV2bMLMRiUo2yZdO";
 
     String bitsoAPIKey = "SnutcNsIls";
     String bitsoAPISecret = "a0b6d34688235fdcbee10f55593951d2";
 
-    String bitmaxAPIKey = "j66A8Bd1gaOhe4tG8CGL9q4zihSMyrA9";
-    String bitmaxAPISecret = "6HtuXsdCNJGITePjrVrg8LT3mhykRrkSjXvPRvqhHBQXwZQg46NuT6Hxksm6kkhI";
+    String bitmaxAPIKey = "hJ6eYAcTdVGbArPcaZD8KviBqGZPwgjt";
+    String bitmaxAPISecret = "PLhdfCiyxbyw4Z3rdB7USTttfnBgGgv7bNoRyKYi2Uuvqxu8S2GboaBkSAfA854o";
 
     String cexioAPIKey = "KRDhLP69jBzHoGU18WXTQ0MKnOg";
     String cexioAPISecret = "IpqYSm0CwqkCxTS8rzYd9z0xCo";
@@ -46,13 +46,14 @@ public class ExchangesWalletsAPIs {
     String deribitClientID = "lvKWWZBb";
     String deribitClientSecret = "SffSvcmOxU6M4cyUyvZEY_iN7Suu_HIGxziAd4cIkTw";
 
-    String idexWalletAddress = "0x452c60a0c61ed0323557fb92488f5c922438cf2c";
+    String idexAPICode = "e819b4b9-3e90-46d2-a25c-f5d8e8a6ace5";
+    String idexAPISecret = "zi+BxZ5Jd+Nu1PhKgoHMsWGqLSGWJ9Wc";
 
     String hitBTCAPIKey = "p2VltjQ_pgd6Pb9N0UTA8zktrE093mMo";
     String hitBTCAPISecret = "uK2u9Y1BHxDZVabBqfHewisIzVqemNWe";
 
-    String huobiAccessKey = "989a1c43-h6n2d4f5gh-0b86e4e1-3e86f";
-    String huobiAccessSecret = "3a2eb487-d28d059f-583566b2-41b65";
+    String huobiAccessKey = "rbr45t6yr4-9140b77e-f375418a-e4abd";
+    String huobiAccessSecret = "b8240a1c-987bf4c7-42af9ab0-a588e";
 
     String krakenAPIKey = "nM8tGHI9HAU6LZLgqhRTnm03MDbvf5nMOh9sQ6bmh/eEZKSsh/YnpHP2";
     String krakenAPISecret = "1Pw4wX+wYCMLaMLakVR7uAVvj6K/5/QzCccGXJxCYKHgM2Z7bHdgjmH4lCiE/gbbO5Q0F+/ShpUeYO7LgF8cpQ==";
@@ -71,11 +72,13 @@ public class ExchangesWalletsAPIs {
     String poloniexAPIKey = "C6OM7H3S-O4OMXJW6-NAEREN4X-F4LNVDKY";
     String poloniexAPISecret = "bc37997363241fd58e48bb825994ed7acd7f9bf9df33a6f0ee090717df155e4a8903079742eb656f65b7ac3375905ec3e4449cd2a71b01e899106973cae7d9c0";
 
-    String cryptoComExchangeAPIKey = "P1LYgHFv8E91vqGgnB4Anh";
-    String cryptoComExchangeAPISecret = "fjWbYgkR64ry8TWjt8KGEd";
+    String byBitAPIPrivateKey = "uv2pewcQCKoTTD5LSD";
+    String byBitPrivateKey = "R7qU11quoXqWNr75Z7HZBmr4T1KzU42QKzwi";
 
-    String byBitAPIPrivateKey = "q0Uu0ewFuIkTND0WpQ";
-    String byBitPrivateKey = "wFJfv090YYvo1pkkYrmTkIXjyxWRWCAfJFGs";
+    String ftxAPIKey = "nq4ELeSnFpCCNj9ea8uUtxTYmhKKOFYRs0iA9hgp";
+    String ftxAPISecret = "okRhmYg6UeNmXIHekdGlKVMxZkY_gxAmteweXlvq";
+
+
 
 
     // Wallets
@@ -279,9 +282,14 @@ public class ExchangesWalletsAPIs {
 
     // IDEX
 
-    public String getIdexWalletAddress()
+    public String getIdexAPICode()
     {
-        return idexWalletAddress;
+        return idexAPICode;
+    }
+
+    public String getIdexAPISecret()
+    {
+        return idexAPISecret;
     }
 
 
@@ -386,19 +394,6 @@ public class ExchangesWalletsAPIs {
     }
 
 
-    // Crypto Com Exchange
-
-    public String getCryptoComExchangeAPIKey()
-    {
-        return cryptoComExchangeAPIKey;
-    }
-
-    public String getCryptoComExchangeAPISecret()
-    {
-        return cryptoComExchangeAPISecret;
-    }
-
-
     // ByBit
 
     public String getByBitAPIPrivateKey()
@@ -411,6 +406,18 @@ public class ExchangesWalletsAPIs {
         return byBitPrivateKey;
     }
 
+
+    // FTX
+
+    public String getFTXAPIKey()
+    {
+        return ftxAPIKey;
+    }
+
+    public String getFTXAPISecret()
+    {
+        return ftxAPISecret;
+    }
 
 
     // Wallets

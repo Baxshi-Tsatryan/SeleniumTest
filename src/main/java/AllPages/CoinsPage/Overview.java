@@ -342,7 +342,7 @@ public class Overview {
 
     public void typeFirstValueCalc(String price)
     {
-        utils.sendKeys(firstValueCalc, price);
+        utils.sendKeysAction(firstValueCalc, price);
     }
 
     public void clearFirstValueCalc()
@@ -362,7 +362,7 @@ public class Overview {
 
     public void typeSecondValueCalc(String price)
     {
-        utils.sendKeys(secondValueCalc, price);
+        utils.sendKeysAction(secondValueCalc, price);
     }
 
     public void clearSecondValueCalc()
@@ -382,7 +382,7 @@ public class Overview {
 
     public void typeDateCalc(String date)
     {
-        utils.sendKeys(dateCalc, date);
+        utils.sendKeysAction(dateCalc, date);
     }
 
     public void clickOnDateCalc()

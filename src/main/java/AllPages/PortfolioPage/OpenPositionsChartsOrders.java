@@ -256,7 +256,7 @@ public class OpenPositionsChartsOrders {
 
     public void typeDateFromOrders(String date)
     {
-        utils.sendKeys(dateFromFieldOrders, date);
+        utils.sendKeysAction(dateFromFieldOrders, date);
     }
 
     public String getDateFromOrders()
@@ -271,7 +271,7 @@ public class OpenPositionsChartsOrders {
 
     public void typeDateToOrders(String date)
     {
-        utils.sendKeys(dateToFieldOrders, date);
+        utils.sendKeysAction(dateToFieldOrders, date);
     }
 
     public String getDateToOrders()
@@ -301,7 +301,7 @@ public class OpenPositionsChartsOrders {
 
     public void typeCoinNameOrders(String coinName)
     {
-        utils.sendKeys(searchCoinFieldOrders, coinName);
+        utils.sendKeysAction(searchCoinFieldOrders, coinName);
     }
 
     public String getCoinNameOrders()

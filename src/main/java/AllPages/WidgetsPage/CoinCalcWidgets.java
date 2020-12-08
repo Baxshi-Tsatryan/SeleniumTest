@@ -107,7 +107,7 @@ public class CoinCalcWidgets {
 
     public void typeFirstFieldPrice(String firstPrice)
     {
-        utils.sendKeys(firstField, firstPrice);
+        utils.sendKeysAction(firstField, firstPrice);
     }
 
     public void clickOnCoinName()
@@ -122,7 +122,7 @@ public class CoinCalcWidgets {
 
     public void typeCoinName(String coinName)
     {
-        utils.sendKeys(searchCoinField, coinName);
+        utils.sendKeysAction(searchCoinField, coinName);
     }
 
     public void clearCoinName()
@@ -142,7 +142,7 @@ public class CoinCalcWidgets {
 
     public void typeInvestSecondFieldPrice(String secondPrice)
     {
-        utils.sendKeys(investSecondField, secondPrice);
+        utils.sendKeysAction(investSecondField, secondPrice);
     }
 
     public String getResult()
@@ -238,7 +238,7 @@ public class CoinCalcWidgets {
 
     public void typeBackgroundColorText(String colorText)
     {
-        utils.sendKeys(backgroundColorField, "color");
+        utils.sendKeysAction(backgroundColorField, "color");
     }
 
     public String getTextColorText()
@@ -253,7 +253,7 @@ public class CoinCalcWidgets {
 
     public void typeTextColorText(String colorText)
     {
-        utils.sendKeys(textColorField, "color");
+        utils.sendKeysAction(textColorField, "color");
     }
 
     public String getSelectionColorText()
@@ -268,7 +268,7 @@ public class CoinCalcWidgets {
 
     public void typeSelectionColorText(String colorText)
     {
-        utils.sendKeys(selectionColorField, "color");
+        utils.sendKeysAction(selectionColorField, "color");
     }
 
     public String getWidgetBorderColorText()
@@ -283,7 +283,7 @@ public class CoinCalcWidgets {
 
     public void typeWidgetBorderColorText(String colorText)
     {
-        utils.sendKeys(widgetBorderColorField, "color");
+        utils.sendKeysAction(widgetBorderColorField, "color");
     }
 
 

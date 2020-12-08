@@ -28,15 +28,17 @@ public class AddPortfolio {
 
     By exchangeAPISyncTab = By.cssSelector("div.tabs-section > div:nth-of-type(1) > .tab-label");
 
-    By firstAPIField = By.cssSelector("div.jsx-2795784314 > .inputs-section > div:nth-of-type(1) [placeholder='Enter here']");
+    By firstAPIField = By.cssSelector("div.jsx-2422867904 > .inputs-section > div:nth-of-type(1) [placeholder='Enter here']");
 
     By exchangeFirstPaste = By.cssSelector("div.jsx-2795784314 > .inputs-section > div:nth-of-type(1) .jsx-1426819953");
 
-    By secondAPIField = By.cssSelector("div.jsx-2795784314 div:nth-of-type(2) [name]");
+    By secondAPIField = By.cssSelector("div.jsx-2422867904 div:nth-of-type(2) [name]");
+
+    By secondAPIByBitField = By.cssSelector("div.jsx-2422867904 > .inputs-section > div:nth-of-type(2) [name]");
 
     By exchangeSecondPaste = By.cssSelector("div.jsx-2795784314 div:nth-of-type(2) .jsx-1426819953");
 
-    By thirdAPIField = By.cssSelector("div.jsx-2795784314 div:nth-of-type(3) [name]");
+    By thirdAPIField = By.cssSelector("div.jsx-2422867904 div:nth-of-type(3) [name]");
 
     By exchangeThirdPaste = By.cssSelector("div.jsx-2795784314 div:nth-of-type(3) .jsx-1426819953");
 
@@ -168,11 +170,11 @@ public class AddPortfolio {
     }
 
     public void searchExchange(String exchangeName) {
-        utils.sendKeys(searchExchanges, exchangeName);
+        utils.sendKeysAction(searchExchanges, exchangeName);
     }
 
     public void typeExchangeName(String exchangeName) {
-        utils.sendKeys(exchangeNameField, exchangeName);
+        utils.sendKeysAction(exchangeNameField, exchangeName);
     }
 
     public String getExchangeName()
@@ -190,7 +192,7 @@ public class AddPortfolio {
     }
 
     public void typeFirstAPI(String firstAPI) {
-        utils.sendKeys(firstAPIField, firstAPI);
+        utils.sendKeysAction(firstAPIField, firstAPI);
     }
 
     public String getTypedFirstAPI()
@@ -204,7 +206,12 @@ public class AddPortfolio {
     }
 
     public void typeSecondAPI(String secondAPI) {
-        utils.sendKeys(secondAPIField, secondAPI);
+        utils.sendKeysAction(secondAPIField, secondAPI);
+    }
+
+    public void typeSecondAPIByBit(String secondAPIByBit)
+    {
+        utils.sendKeysAction(secondAPIByBitField, secondAPIByBit);
     }
 
     public String getTypedSecondAPI()
@@ -223,7 +230,7 @@ public class AddPortfolio {
     }
 
     public void typeThirdAPI(String thirdAPI) {
-        utils.sendKeys(thirdAPIField, thirdAPI);
+        utils.sendKeysAction(thirdAPIField, thirdAPI);
     }
 
     public String getTypedThirdAPI()
@@ -336,7 +343,7 @@ public class AddPortfolio {
     }
 
     public void importCSVFile(String pathToCSVFile) {
-        utils.sendKeys(importCSVField, pathToCSVFile);
+        utils.sendKeysAction(importCSVField, pathToCSVFile);
     }
 
     public void clickOnImportCSVFile()
@@ -349,7 +356,7 @@ public class AddPortfolio {
     }
 
     public void importAnotherCSVFile(String pathToCSVFile) {
-        utils.sendKeys(addAnotherCSVButton, pathToCSVFile);
+        utils.sendKeysAction(addAnotherCSVButton, pathToCSVFile);
     }
 
     public void clickOnDeleteCSVFileButton() {
@@ -368,15 +375,15 @@ public class AddPortfolio {
     }
 
     public void searchWallet(String walletName) {
-        utils.sendKeys(searchWallets, walletName);
+        utils.sendKeysAction(searchWallets, walletName);
     }
 
     public void typeWalletName(String walletName) {
-        utils.sendKeys(walletNameField, walletName);
+        utils.sendKeysAction(walletNameField, walletName);
     }
 
     public void typeWalletAddress(String walletAddress) {
-        utils.sendKeys(walletAddressField, walletAddress);
+        utils.sendKeysAction(walletAddressField, walletAddress);
     }
 
     public void clickOnPasteWallet() {
@@ -395,7 +402,7 @@ public class AddPortfolio {
     }
 
     public void typeMultiCoinsWallet(String multiCoinName) {
-        utils.sendKeys(searchFieldInMultiCoinsWallet, multiCoinName);
+        utils.sendKeysAction(searchFieldInMultiCoinsWallet, multiCoinName);
     }
 
     public void clickOnDeleteSelectedCoinFromSearchDropDownButton()
@@ -428,7 +435,7 @@ public class AddPortfolio {
 
     public void importZIPFile(String pathToZIPFile)
     {
-        utils.sendKeys(importZIPFile, pathToZIPFile);
+        utils.sendKeysAction(importZIPFile, pathToZIPFile);
     }
 
     public String getZIPFileError()
@@ -445,12 +452,12 @@ public class AddPortfolio {
 
     public void typeManualPortfolioName(String manualPortfolioName)
     {
-        utils.sendKeys(manualPortfolioNameField, manualPortfolioName);
+        utils.sendKeysAction(manualPortfolioNameField, manualPortfolioName);
     }
 
     public void typeManualPortfolioTotalCost(String manualPortfolioTotalCost)
     {
-        utils.sendKeys(manualPortfolioTotalCostField, manualPortfolioTotalCost);
+        utils.sendKeysAction(manualPortfolioTotalCostField, manualPortfolioTotalCost);
     }
 
     public void disableCalculateAmountInTotal()

@@ -86,7 +86,7 @@ public class BuyCoin {
 
     public void typeFirstCurrencyAmount(String amount)
     {
-        utils.sendKeys(firstAmountField, amount);
+        utils.sendKeysAction(firstAmountField, amount);
     }
 
     public String getFirstCurrencyAmount()
@@ -101,7 +101,7 @@ public class BuyCoin {
 
     public void typeSecondCurrencyAmount(String amount)
     {
-        utils.sendKeys(secondAmountField, amount);
+        utils.sendKeysAction(secondAmountField, amount);
     }
 
     public String getSecondCurrencyAmount()
@@ -129,7 +129,7 @@ public class BuyCoin {
 
     public void typeWalletAddress(String walletAddress)
     {
-        utils.sendKeys(walletAddressField, walletAddress);
+        utils.sendKeysAction(walletAddressField, walletAddress);
     }
 
     public String getWalletAddress()

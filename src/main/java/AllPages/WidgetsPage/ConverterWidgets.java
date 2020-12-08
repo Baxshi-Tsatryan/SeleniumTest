@@ -138,7 +138,7 @@ public class ConverterWidgets {
 
     public void typeFirstCoinNameLarge(String coinName)
     {
-        utils.sendKeys(firstCoinNameLarge, coinName);
+        utils.sendKeysAction(firstCoinNameLarge, coinName);
     }
 
     public void clearFirstCoinNameLarge()
@@ -153,7 +153,7 @@ public class ConverterWidgets {
 
     public void typeSecondCoinNameLarge(String coinName)
     {
-        utils.sendKeys(secondCoinNameLarge, coinName);
+        utils.sendKeysAction(secondCoinNameLarge, coinName);
     }
 
     public void clearSecondCoinNameLarge()
@@ -163,7 +163,7 @@ public class ConverterWidgets {
 
     public void typeFirstCoinPriceLarge(String price)
     {
-        utils.sendKeys(firstCoinPriceLarge, price);
+        utils.sendKeysAction(firstCoinPriceLarge, price);
     }
 
     public void clearFirstCoinPrice()
@@ -173,7 +173,7 @@ public class ConverterWidgets {
 
     public void typeSecondCoinPriceLarge(String price)
     {
-        utils.sendKeys(secondCoinPriceLarge, price);
+        utils.sendKeysAction(secondCoinPriceLarge, price);
     }
 
     public void clearSecondCoinPriceLarge()
@@ -216,7 +216,7 @@ public class ConverterWidgets {
 
     public void typeFirstCoinNameMedium(String coinName)
     {
-        utils.sendKeys(firstCoinNameMedium, coinName);
+        utils.sendKeysAction(firstCoinNameMedium, coinName);
     }
 
     public void clearFirstCoinNameMedium()
@@ -231,7 +231,7 @@ public class ConverterWidgets {
 
     public void typeSecondCoinNameMedium(String coinName)
     {
-        utils.sendKeys(secondCoinNameMedium, coinName);
+        utils.sendKeysAction(secondCoinNameMedium, coinName);
     }
 
     public void clearSecondCoinNameMedium()
@@ -241,7 +241,7 @@ public class ConverterWidgets {
 
     public void typeFirstCoinPriceMedium(String price)
     {
-        utils.sendKeys(firstCoinPriceMedium, price);
+        utils.sendKeysAction(firstCoinPriceMedium, price);
     }
 
     public void clearFirstCoinMedium()
@@ -251,7 +251,7 @@ public class ConverterWidgets {
 
     public void typeSecondCoinPriceMedium(String price)
     {
-        utils.sendKeys(secondCoinPriceMedium, price);
+        utils.sendKeysAction(secondCoinPriceMedium, price);
     }
 
     public void clearSecondCoinPriceMedium()
@@ -289,7 +289,7 @@ public class ConverterWidgets {
 
     public void typeFirstCoinNameSmall(String coinName)
     {
-        utils.sendKeys(firstCoinSymbolSmall, coinName);
+        utils.sendKeysAction(firstCoinSymbolSmall, coinName);
     }
 
     public void clearFirstCoinNameSmall()
@@ -304,7 +304,7 @@ public class ConverterWidgets {
 
     public void typeSecondCoinNameSmall(String coinName)
     {
-        utils.sendKeys(secondCoinSymbolSmall, coinName);
+        utils.sendKeysAction(secondCoinSymbolSmall, coinName);
     }
 
     public void clearSecondCoinNameSmall()
@@ -314,7 +314,7 @@ public class ConverterWidgets {
 
     public void typeFirstCoinPriceSmall(String price)
     {
-        utils.sendKeys(firstCoinPriceSmall, price);
+        utils.sendKeysAction(firstCoinPriceSmall, price);
     }
 
     public void clearFirstCoinSmall()
@@ -324,7 +324,7 @@ public class ConverterWidgets {
 
     public void typeSecondCoinPriceSmall(String price)
     {
-        utils.sendKeys(secondCoinPriceSmall, price);
+        utils.sendKeysAction(secondCoinPriceSmall, price);
     }
 
     public void clearSecondCoinPriceSmall()
@@ -377,7 +377,7 @@ public class ConverterWidgets {
 
     public void typeSellCoin(String coinName)
     {
-        utils.sendKeys(searchSellCoin, coinName);
+        utils.sendKeysAction(searchSellCoin, coinName);
     }
 
     public void clearSellCoinName()
@@ -407,7 +407,7 @@ public class ConverterWidgets {
 
     public void typeBuyCoin(String coinName)
     {
-        utils.sendKeys(searchBuyCoin, coinName);
+        utils.sendKeysAction(searchBuyCoin, coinName);
     }
 
     public void clearBuyCoinName()
@@ -452,7 +452,7 @@ public class ConverterWidgets {
 
     public void typeWidth(String width)
     {
-        utils.sendKeys(widthField, width);
+        utils.sendKeysAction(widthField, width);
     }
 
 
@@ -470,7 +470,7 @@ public class ConverterWidgets {
 
     public void typeBackgroundColorText(String colorText)
     {
-        utils.sendKeys(backgroundColorField, colorText);
+        utils.sendKeysAction(backgroundColorField, colorText);
     }
 
     public String getTextColorText()
@@ -485,7 +485,7 @@ public class ConverterWidgets {
 
     public void typeTextColorText(String colorText)
     {
-        utils.sendKeys(textColorField, colorText);
+        utils.sendKeysAction(textColorField, colorText);
     }
 
     public String getWidgetBorderColorText()
@@ -500,7 +500,7 @@ public class ConverterWidgets {
 
     public void typeWidgetBorderColorText(String colorText)
     {
-        utils.sendKeys(widgetBorderColorField, colorText);
+        utils.sendKeysAction(widgetBorderColorField, colorText);
     }
 
     public String getRotateButtonColorText()
@@ -515,7 +515,7 @@ public class ConverterWidgets {
 
     public void typeRotateButtonColorText(String colorText)
     {
-        utils.sendKeys(rotateButtonColorField, colorText);
+        utils.sendKeysAction(rotateButtonColorField, colorText);
     }
 
 

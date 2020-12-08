@@ -92,7 +92,7 @@ public class EditPortfolios {
 
     public void typeConnectionNameExchangeWallet(String exchangeWalletName)
     {
-        utils.sendKeys(connectionNameFieldExchangeWallet, exchangeWalletName);
+        utils.sendKeysAction(connectionNameFieldExchangeWallet, exchangeWalletName);
     }
 
     public String getConnectionNameExchangeWallet()
@@ -127,7 +127,7 @@ public class EditPortfolios {
 
     public void typeAPIKeyExchange(String APIKey)
     {
-        utils.sendKeys(APIKeyFieldExchange, APIKey);
+        utils.sendKeysAction(APIKeyFieldExchange, APIKey);
     }
 
     public String getAPIKeyExchange()
@@ -147,7 +147,7 @@ public class EditPortfolios {
 
     public void typeAPISecretExchange(String APISecret)
     {
-        utils.sendKeys(APISecretFieldExchange, APISecret);
+        utils.sendKeysAction(APISecretFieldExchange, APISecret);
     }
 
     public String getAPISecretExchange()
@@ -167,7 +167,7 @@ public class EditPortfolios {
 
     public void typePassphraseExchange(String passphrase)
     {
-        utils.sendKeys(passphraseFieldExchange, passphrase);
+        utils.sendKeysAction(passphraseFieldExchange, passphrase);
     }
 
     public String getPassphraseExchange()
@@ -197,7 +197,7 @@ public class EditPortfolios {
 
     public void typeTotalCostExchange(String totalCost)
     {
-        utils.sendKeys(totalCostFieldExchange, totalCost);
+        utils.sendKeysAction(totalCostFieldExchange, totalCost);
     }
 
     public String getTotalCostExchange()
@@ -235,7 +235,7 @@ public class EditPortfolios {
 
     public void typeTotalCostCoinbase(String totalCost)
     {
-        utils.sendKeys(totalCostFieldCoinbase, totalCost);
+        utils.sendKeysAction(totalCostFieldCoinbase, totalCost);
     }
 
     public String getTotalCostCoinbase()
@@ -258,7 +258,7 @@ public class EditPortfolios {
 
     public void typeConnectionNameCSV(String connectionName)
     {
-        utils.sendKeys(connectionNameFieldCSV, connectionName);
+        utils.sendKeysAction(connectionNameFieldCSV, connectionName);
     }
 
     public String getConnectionNameCSV()
@@ -273,7 +273,7 @@ public class EditPortfolios {
 
     public void typeTotalCostCSV(String totalCost)
     {
-        utils.sendKeys(totalCostFieldCSV, totalCost);
+        utils.sendKeysAction(totalCostFieldCSV, totalCost);
     }
 
     public String getTotalCostCSV()
@@ -293,7 +293,7 @@ public class EditPortfolios {
 
     public void typePathToAnotherCSV(String path)
     {
-        utils.sendKeys(addAnotherCSV, path);
+        utils.sendKeysAction(addAnotherCSV, path);
     }
 
     public String getErrorMessageCSV()
@@ -306,7 +306,7 @@ public class EditPortfolios {
 
     public void typeWalletAddress(String walletAddress)
     {
-        utils.sendKeys(walletAddressField, walletAddress);
+        utils.sendKeysAction(walletAddressField, walletAddress);
     }
 
     public String getWalletAddress()
@@ -336,7 +336,7 @@ public class EditPortfolios {
 
     public void typeTotalCostWallet(String totalCost)
     {
-        utils.sendKeys(totalCostFieldWallet, totalCost);
+        utils.sendKeysAction(totalCostFieldWallet, totalCost);
     }
 
     public String getTotalCostWallet()
@@ -354,7 +354,7 @@ public class EditPortfolios {
 
     public void typeConnectionNameMultiWallet(String multiWalletName)
     {
-        utils.sendKeys(connectionNameFieldMultiWallet, multiWalletName);
+        utils.sendKeysAction(connectionNameFieldMultiWallet, multiWalletName);
     }
 
     public String getConnectionNameMultiWallet()
@@ -384,7 +384,7 @@ public class EditPortfolios {
 
     public void typeTotalCostMultiWallet(String totalCost)
     {
-        utils.sendKeys(totalCostFieldMultiWallet, totalCost);
+        utils.sendKeysAction(totalCostFieldMultiWallet, totalCost);
     }
 
     public String getTotalCostMultiWallet()
@@ -407,7 +407,7 @@ public class EditPortfolios {
 
     public void typeConnectionNameSubWallet(String subWalletName)
     {
-        utils.sendKeys(connectionNameFieldSubWallet, subWalletName);
+        utils.sendKeysAction(connectionNameFieldSubWallet, subWalletName);
     }
 
     public String getConnectionNameSubWallet()
@@ -427,7 +427,7 @@ public class EditPortfolios {
 
     public void typeSubWalletAddress(String subWalletAddress)
     {
-        utils.sendKeys(walletAddressFieldSubWallet, subWalletAddress);
+        utils.sendKeysAction(walletAddressFieldSubWallet, subWalletAddress);
     }
 
     public String getSubWalletAddress()

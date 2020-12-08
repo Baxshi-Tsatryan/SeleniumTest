@@ -94,7 +94,7 @@ public class Settings {
 
     public void uploadPhoto(String pathToPhoto)
     {
-        utils.sendKeys(uploadPhoto, pathToPhoto);
+        utils.sendKeysAction(uploadPhoto, pathToPhoto);
     }
 
     public String getPhotoText()
@@ -114,7 +114,7 @@ public class Settings {
 
     public void uploadNewPhoto(String pathToPhoto)
     {
-        utils.sendKeys(editUploadPhoto, pathToPhoto);
+        utils.sendKeysAction(editUploadPhoto, pathToPhoto);
     }
 
     public void clickOnDeletePhoto()
@@ -156,7 +156,7 @@ public class Settings {
 
     public void typeUsername(String username)
     {
-        utils.sendKeys(userNameField, username);
+        utils.sendKeysAction(userNameField, username);
     }
 
     public String getEmail()
@@ -189,7 +189,7 @@ public class Settings {
 
     public void typePassword2FA(String password)
     {
-        utils.sendKeys(passwordFor2FA, password);
+        utils.sendKeysAction(passwordFor2FA, password);
     }
 
     public void clearPassword2FA()
@@ -204,7 +204,7 @@ public class Settings {
 
     public void typeGoogleVerificationCode2FA(String googleVerificationCode)
     {
-        utils.sendKeys(this.googleVerificationCode, googleVerificationCode);
+        utils.sendKeysAction(this.googleVerificationCode, googleVerificationCode);
     }
 
     public void clearGoogleVerificationCode()
@@ -247,7 +247,7 @@ public class Settings {
 
     public void typeOldPassword(String oldPassword)
     {
-        utils.sendKeys(oldPasswordField, oldPassword);
+        utils.sendKeysAction(oldPasswordField, oldPassword);
     }
 
     public void clearOldPassword()
@@ -267,7 +267,7 @@ public class Settings {
 
     public void typeNewPassword(String newPassword)
     {
-        utils.sendKeys(newPasswordField, newPassword);
+        utils.sendKeysAction(newPasswordField, newPassword);
     }
 
     public void clearNewPassword()

@@ -230,7 +230,7 @@ public class InsightWidgets {
 
     public void typeCoinName(String coinName)
     {
-        utils.sendKeys(searchCoinField, coinName);
+        utils.sendKeysAction(searchCoinField, coinName);
     }
 
     public void clearCoinName()
@@ -278,7 +278,7 @@ public class InsightWidgets {
 
     public void typeBackgroundColorText(String colorText)
     {
-        utils.sendKeys(backgroundColorField, colorText);
+        utils.sendKeysAction(backgroundColorField, colorText);
     }
 
     public String getTextColorText()
@@ -293,7 +293,7 @@ public class InsightWidgets {
 
     public void typeTextColorText(String colorText)
     {
-        utils.sendKeys(textColorField, colorText);
+        utils.sendKeysAction(textColorField, colorText);
     }
 
     public String getChartPrimaryColorText()
@@ -308,7 +308,7 @@ public class InsightWidgets {
 
     public void typeChartPrimaryColorText(String colorText)
     {
-        utils.sendKeys(chartPrimaryColorField, colorText);
+        utils.sendKeysAction(chartPrimaryColorField, colorText);
     }
 
     public String getChartSecondaryColorText()
@@ -323,7 +323,7 @@ public class InsightWidgets {
 
     public void typeChartSecondaryColorText(String colorText)
     {
-        utils.sendKeys(chartSecondaryColorField, colorText);
+        utils.sendKeysAction(chartSecondaryColorField, colorText);
     }
 
     public String getButtonColorText()
@@ -338,7 +338,7 @@ public class InsightWidgets {
 
     public void typeButtonColorText(String colorText)
     {
-        utils.sendKeys(buttonColorField, colorText);
+        utils.sendKeysAction(buttonColorField, colorText);
     }
 
     public String getWidgetBorderColorText()
@@ -353,7 +353,7 @@ public class InsightWidgets {
 
     public void typeWidgetBorderColorText(String colorText)
     {
-        utils.sendKeys(widgetBorderColorField, colorText);
+        utils.sendKeysAction(widgetBorderColorField, colorText);
     }
 
 

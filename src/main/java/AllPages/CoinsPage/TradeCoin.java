@@ -102,7 +102,7 @@ public class TradeCoin {
 
     public void typeWithCoinName(String coinName)
     {
-        utils.sendKeys(withCoinField, coinName);
+        utils.sendKeysAction(withCoinField, coinName);
     }
 
     public void clickOnWithCoinField()
@@ -122,7 +122,7 @@ public class TradeCoin {
 
     public void typeBuyingCoinName(String coinName)
     {
-        utils.sendKeys(buyingCoinField, coinName);
+        utils.sendKeysAction(buyingCoinField, coinName);
     }
 
     public void clickOnBuyingCoinField()
@@ -142,7 +142,7 @@ public class TradeCoin {
 
     public void typeWithCoinAmount(String amount)
     {
-        utils.sendKeys(withCoinAmountField, amount);
+        utils.sendKeysAction(withCoinAmountField, amount);
     }
 
     public String getWithCoinSymbol()
@@ -162,7 +162,7 @@ public class TradeCoin {
 
     public void typeBuyingCoinAmount(String amount)
     {
-        utils.sendKeys(buyingCoinAmountField, amount);
+        utils.sendKeysAction(buyingCoinAmountField, amount);
     }
 
     public String getBuyingCoinSymbol()

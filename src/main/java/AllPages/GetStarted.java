@@ -158,7 +158,7 @@ public class GetStarted {
 
     public void typeEmailSignUp(String email)
     {
-        utils.sendKeys(emailSignUp, email);
+        utils.sendKeysAction(emailSignUp, email);
     }
 
     public void clearEmailSignUp()
@@ -173,7 +173,7 @@ public class GetStarted {
 
     public void typePasswordSignUp(String password)
     {
-        utils.sendKeys(passwordSignUp, password);
+        utils.sendKeysAction(passwordSignUp, password);
     }
 
     public void clearPasswordSignUp()
@@ -236,7 +236,7 @@ public class GetStarted {
 
     public void typeEmailLogin(String email)
     {
-        utils.sendKeys(emailLogin, email);
+        utils.sendKeysAction(emailLogin, email);
     }
 
     public void clearEmailLogin()
@@ -261,7 +261,7 @@ public class GetStarted {
 
     public void typePasswordLogin(String password)
     {
-        utils.sendKeys(passwordLogin, password);
+        utils.sendKeysAction(passwordLogin, password);
     }
 
     public void clearPasswordLogin()
@@ -339,7 +339,7 @@ public class GetStarted {
 
     public void typeEmailForgotPassword(String email)
     {
-        utils.sendKeys(emailForgotPassword, email);
+        utils.sendKeysAction(emailForgotPassword, email);
     }
 
     public void clearEmailForgotPassword()

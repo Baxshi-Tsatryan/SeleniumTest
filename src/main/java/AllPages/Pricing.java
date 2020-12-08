@@ -137,7 +137,7 @@ public class Pricing {
 
     public void typePromoCode(String promoCode)
     {
-        utils.sendKeys(promoCodeField, promoCode);
+        utils.sendKeysAction(promoCodeField, promoCode);
     }
 
     public String getPromoCode()

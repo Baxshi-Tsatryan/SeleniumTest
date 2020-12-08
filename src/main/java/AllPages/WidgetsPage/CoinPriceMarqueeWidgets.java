@@ -214,7 +214,7 @@ public class CoinPriceMarqueeWidgets {
 
     public void typeWidth(String width)
     {
-        utils.sendKeys(widthField, width);
+        utils.sendKeysAction(widthField, width);
     }
 
 
@@ -232,7 +232,7 @@ public class CoinPriceMarqueeWidgets {
 
     public void typeBackgroundColorText(String colorText)
     {
-        utils.sendKeys(backgroundColorField, "color");
+        utils.sendKeysAction(backgroundColorField, "color");
     }
 
     public String getTextColorText()
@@ -247,7 +247,7 @@ public class CoinPriceMarqueeWidgets {
 
     public void typeTextColorText(String colorText)
     {
-        utils.sendKeys(textColorField, "color");
+        utils.sendKeysAction(textColorField, "color");
     }
 
     public String getPercentageArrowUpColorText()
@@ -262,7 +262,7 @@ public class CoinPriceMarqueeWidgets {
 
     public void typePercentageArrowUpColorText(String colorText)
     {
-        utils.sendKeys(percentageArrowUpColorField, "color");
+        utils.sendKeysAction(percentageArrowUpColorField, "color");
     }
 
     public String getPercentageArrowDownColorText()
@@ -277,7 +277,7 @@ public class CoinPriceMarqueeWidgets {
 
     public void typePercentageArrowDownColorText(String colorText)
     {
-        utils.sendKeys(navigationButtonsColorField, "color");
+        utils.sendKeysAction(navigationButtonsColorField, "color");
     }
 
     public String getNavigationButtonsColorText()
@@ -292,7 +292,7 @@ public class CoinPriceMarqueeWidgets {
 
     public void typeNavigationButtonsColorText(String colorText)
     {
-        utils.sendKeys(navigationButtonsColorField, "color");
+        utils.sendKeysAction(navigationButtonsColorField, "color");
     }
 
     public String getWidgetBorderColorText()
@@ -307,7 +307,7 @@ public class CoinPriceMarqueeWidgets {
 
     public void typeWidgetBorderColorText(String colorText)
     {
-        utils.sendKeys(widgetBorderColorField, "color");
+        utils.sendKeysAction(widgetBorderColorField, "color");
     }
 
 

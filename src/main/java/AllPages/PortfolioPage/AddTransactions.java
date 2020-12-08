@@ -86,7 +86,7 @@ public class AddTransactions {
 
     public void typeCoinName(String coinName)
     {
-        utils.sendKeys(coinSearchField, coinName);
+        utils.sendKeysAction(coinSearchField, coinName);
     }
 
     public void clickOnPairField()
@@ -96,7 +96,7 @@ public class AddTransactions {
 
     public void typePair(String pairName)
     {
-        utils.sendKeys(pairField, pairName);
+        utils.sendKeysAction(pairField, pairName);
     }
 
     public String getCurrentDate()
@@ -111,7 +111,7 @@ public class AddTransactions {
 
     public void typeDate(String date)
     {
-        utils.sendKeys(dateField, date);
+        utils.sendKeysAction(dateField, date);
     }
 
     public void clickOnPreviousMonth()
@@ -136,12 +136,12 @@ public class AddTransactions {
 
     public void typeTime(String time)
     {
-        utils.sendKeys(timeField, time);
+        utils.sendKeysAction(timeField, time);
     }
 
     public void typeAmount(String amount)
     {
-        utils.sendKeys(amountField, amount);
+        utils.sendKeysAction(amountField, amount);
     }
 
     public String getPrice()
@@ -151,17 +151,17 @@ public class AddTransactions {
 
     public void typePrice(String price)
     {
-        utils.sendKeys(priceField, price);
+        utils.sendKeysAction(priceField, price);
     }
 
     public void typeFee(String fee)
     {
-        utils.sendKeys(feeField, fee);
+        utils.sendKeysAction(feeField, fee);
     }
 
     public void typeNote(String note)
     {
-        utils.sendKeys(notesField, note);
+        utils.sendKeysAction(notesField, note);
     }
 
     public void clickOnChecklist()

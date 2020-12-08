@@ -556,7 +556,7 @@ public class Header{
 
     public void typeInSearchField(String searchString)
     {
-        utils.sendKeys(searchFieldMaxScreen, searchString);
+        utils.sendKeysAction(searchFieldMaxScreen, searchString);
     }
 
     public void clearFromSearchField()

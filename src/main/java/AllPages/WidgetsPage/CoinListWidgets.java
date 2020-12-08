@@ -138,7 +138,7 @@ public class CoinListWidgets {
 
     public void typeCustomCoin(String coinName)
     {
-        utils.sendKeys(searchFieldCustomCoins, coinName);
+        utils.sendKeysAction(searchFieldCustomCoins, coinName);
     }
 
     public String getCurrentCoinsCount()
@@ -193,7 +193,7 @@ public class CoinListWidgets {
 
     public void typeWidth(String width)
     {
-        utils.sendKeys(widthField, width);
+        utils.sendKeysAction(widthField, width);
     }
 
     public String getCurrentTheme()
@@ -216,7 +216,7 @@ public class CoinListWidgets {
 
     public void typeBackgroundColorText(String colorText)
     {
-        utils.sendKeys(backgroundColorField, colorText);
+        utils.sendKeysAction(backgroundColorField, colorText);
     }
 
     public String getTextColorText()
@@ -231,7 +231,7 @@ public class CoinListWidgets {
 
     public void typeTextColorText(String colorText)
     {
-        utils.sendKeys(textColorField, colorText);
+        utils.sendKeysAction(textColorField, colorText);
     }
 
     public String getPositivePercentageColorText()
@@ -246,7 +246,7 @@ public class CoinListWidgets {
 
     public void typePositivePercentageColorText(String colorText)
     {
-        utils.sendKeys(positivePercentageColorField, colorText);
+        utils.sendKeysAction(positivePercentageColorField, colorText);
     }
 
     public String getNegativePercentageColorText()
@@ -261,7 +261,7 @@ public class CoinListWidgets {
 
     public void typeNegativePercentageColorText(String colorText)
     {
-        utils.sendKeys(negativePercentageColorField, colorText);
+        utils.sendKeysAction(negativePercentageColorField, colorText);
     }
 
     public String getWidgetBorderColorText()
@@ -276,7 +276,7 @@ public class CoinListWidgets {
 
     public void typeWidgetBorderColorText(String colorText)
     {
-        utils.sendKeys(widgetBorderColorField, colorText);
+        utils.sendKeysAction(widgetBorderColorField, colorText);
     }
 
 
