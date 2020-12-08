@@ -98,6 +98,12 @@ public class ExchangesWalletsAPIs {
     String wavesWallet = "3P9ici3ievSXxt59yxaCWcmQhbss8AQ11mL";
     String tezosWallet = "tz1QMt7a1p5DXB1tNirFFFfqY4o76HtfxtAf";
     String stellarWallet = "GBR27DA6RV47ORID6PE2CCGSUO4S6UKZVO553VKYJ2PNI6TEWFSMWUDL";
+    String algorandWallet = "2WZSPRDAWR2BMLW2C4RKTN5IU3WG72SVPW2QA746GP63RPCV2GZVVEKYNM";
+    String cosmosWallet = "cosmos15v50ymp6n5dn73erkqtmq0u8adpl8d3ujv2e74";
+    String digiByteWallet = "DN4yzowAzPbtM6Hh4HsNjFH8QjurZ4Nzhz";
+    String ontologyWallet = "AL1mbmtWq3pqiYv2pZ13bsJHU5oGrFcvoY";
+    String zClassicWallet = "t1dH2GMdJu6E7xFW2Doi7Xo8WeGBa5BSkJ4";
+    String zillqaWallet = "0x05f4a42e251f2d52b8ed15e9fedaacfcef1fad27";
 
 
     // Multi-Coins Wallets
@@ -495,6 +501,36 @@ public class ExchangesWalletsAPIs {
     public String getStellarWallet()
     {
         return stellarWallet;
+    }
+
+    public String getAlgorandWallet()
+    {
+        return algorandWallet;
+    }
+
+    public String getCosmosWallet()
+    {
+        return cosmosWallet;
+    }
+
+    public String getDigiByteWallet()
+    {
+        return digiByteWallet;
+    }
+
+    public String getOntologyWallet()
+    {
+        return ontologyWallet;
+    }
+
+    public String getZClassicWallet()
+    {
+        return zClassicWallet;
+    }
+
+    public String getZillqaWallet()
+    {
+        return zillqaWallet;
     }
 
 
