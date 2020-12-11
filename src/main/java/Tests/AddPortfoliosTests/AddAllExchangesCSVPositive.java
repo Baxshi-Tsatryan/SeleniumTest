@@ -40,6 +40,8 @@ public class AddAllExchangesCSVPositive extends Driver{
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
+        deleteAllPortfolios();
+
         Thread.sleep(3000);
         try {
             addPortfolio.clickOnAddPortfolio();
@@ -54,7 +56,10 @@ public class AddAllExchangesCSVPositive extends Driver{
 
             for (int i = 0; i < listTill.size(); i++)
             {
+
                 List<WebElement> list = driver.findElements(By.className("qa-exchanges"));
+
+                String exchangeName = list.get(i).getText();
                 list.get(i).click();
 
                 if (i == 4)
@@ -75,16 +80,49 @@ public class AddAllExchangesCSVPositive extends Driver{
                     addPortfolio.clickOnBack();
                     continue;
                 }
+
                 else
-                {
+                    {
                     addPortfolio.clickOnCSVTab();
                     WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
                     importButton.sendKeys(paths.getCoinStatsTemplateCSV());
-                }
+                    }
 
                 Thread.sleep(3000);
                 addPortfolio.clickOnSubmit();
-                addPortfolio.clickOnSuccessYes();
+                try {
+                    addPortfolio.clickOnNoShowMeSynced();
+                }
+                catch (NoSuchElementException e)
+                {
+                    System.err.println(exchangeName + " exchange CSV is Invalid or exception with Submit button");
+                    try
+                    {
+                        addPortfolio.clickOnBack();
+                    }
+                    catch (Exception ee) {
+                        JavascriptExecutor executor = (JavascriptExecutor) driver;
+                        executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
+                    }
+                    continue;
+                }
+
+                List<WebElement> list2 = driver.findElements(By.className("qa-portfolios"));
+                String addedExchangeName = list2.get(list2.size() - 1)
+                        .getText().replace(" CSV", "");
+
+                if (!exchangeName.equals(addedExchangeName))
+                {
+                    System.err.println(exchangeName + " exchange CSV is invalid");
+                }
+
+                try {
+                    addPortfolio.clickOnAddPortfolio();
+                }
+                catch (Exception e) {
+                    JavascriptExecutor executor = (JavascriptExecutor) driver;
+                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
+                }
                 addPortfolio.clickOnConnectExchange();
             }
 
@@ -98,6 +136,7 @@ public class AddAllExchangesCSVPositive extends Driver{
 
             try {
                 leftSideOfPagePortfolios.moveToSecondPortfolioName();
+                Thread.sleep(1000);
                 leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
                 leftSideOfPagePortfolios.clickOnDeleteInDelete();
                 Thread.sleep(3000);

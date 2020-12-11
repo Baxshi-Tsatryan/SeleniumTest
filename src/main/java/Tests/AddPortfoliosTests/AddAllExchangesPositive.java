@@ -35,6 +35,8 @@ public class AddAllExchangesPositive extends Driver {
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
+        deleteAllPortfolios();
+
         String firstAPI = "";
         String secondAPI = "";
         String thirdAPI = "";
@@ -55,6 +57,8 @@ public class AddAllExchangesPositive extends Driver {
         for (int i = 0; i < listTill.size(); i++) {
 
             List<WebElement> list = driver.findElements(By.className("qa-exchanges"));
+
+            String exchangeName = list.get(i).getText();
             list.get(i).click();
 
             int loop = 0;
@@ -247,6 +251,7 @@ public class AddAllExchangesPositive extends Driver {
             {
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPI(secondAPI);
+                Thread.sleep(1000);
                 addPortfolio.clickOnSubmit();
                 addPortfolio.clickOnBinanceAddAccounts();
                 addPortfolio.clickOnSuccessYes();
@@ -275,7 +280,39 @@ public class AddAllExchangesPositive extends Driver {
             
             Thread.sleep(1000);
             addPortfolio.clickOnSubmit();
-            addPortfolio.clickOnSuccessYes();
+            try {
+                addPortfolio.clickOnNoShowMeSynced();
+            }
+            catch (NoSuchElementException e)
+            {
+                System.err.println(exchangeName + " exchange API is Invalid or exception with Submit button");
+                try
+                {
+                    addPortfolio.clickOnBack();
+                }
+                catch (Exception ee) {
+                    JavascriptExecutor executor = (JavascriptExecutor) driver;
+                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
+                }
+                continue;
+            }
+
+            List<WebElement> list2 = driver.findElements(By.className("qa-portfolios"));
+            String addedExchangeName = list2.get(list2.size() - 1).getText();
+
+            if (!exchangeName.equals(addedExchangeName))
+            {
+                System.err.println(exchangeName + " exchange API is invalid");
+            }
+
+            Thread.sleep(2000);
+            try {
+                addPortfolio.clickOnAddPortfolio();
+            }
+            catch (Exception e) {
+                JavascriptExecutor executor = (JavascriptExecutor) driver;
+                executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
+            }
             addPortfolio.clickOnConnectExchange();
 
         }
@@ -291,6 +328,7 @@ public class AddAllExchangesPositive extends Driver {
 
             try {
                 leftSideOfPagePortfolios.moveToSecondPortfolioName();
+                Thread.sleep(1000);
                 leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
                 leftSideOfPagePortfolios.clickOnDeleteInDelete();
                 Thread.sleep(3000);

@@ -35,6 +35,8 @@ public class AddAllWalletsPositive extends Driver{
             allURLs.navigateToPortfolioPage();
             utils.enableCookie();
 
+            deleteAllPortfolios();
+
             String walletAddress = "";
 
             Thread.sleep(4000);
@@ -50,9 +52,11 @@ public class AddAllWalletsPositive extends Driver{
 
             List<WebElement> listTill = driver.findElements(By.className("qa-wallets"));
 
-            for (int i = 29; i < listTill.size(); i++) {
+            for (int i = 0; i < listTill.size(); i++) {
 
                 List<WebElement> list = driver.findElements(By.className("qa-wallets"));
+
+                String exchangeName = list.get(i).getText();
                 list.get(i).click();
 
                 int loop = 0;
@@ -253,9 +257,40 @@ public class AddAllWalletsPositive extends Driver{
                     addPortfolio.typeWalletAddress(walletAddress);
                     Thread.sleep(1000);
                     addPortfolio.clickOnSubmit();
-                    addPortfolio.clickOnSuccessYes();
+                    try {
+                        addPortfolio.clickOnNoShowMeSynced();
+                    }
+                    catch (NoSuchElementException e)
+                    {
+                        System.err.println(exchangeName + " wallet address is Invalid or exception with Submit button");
+                        try
+                        {
+                            addPortfolio.clickOnBack();
+                        }
+                        catch (Exception ee) {
+                            JavascriptExecutor executor = (JavascriptExecutor) driver;
+                            executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
+                        }
+                        continue;
+                    }
+
+                    List<WebElement> list2 = driver.findElements(By.className("qa-portfolios"));
+                    String addedExchangeName = list2.get(list2.size() - 1).getText();
+
+                    if (!exchangeName.equals(addedExchangeName))
+                    {
+                        System.err.println(exchangeName + " exchange API is invalid");
+                    }
+
+                    Thread.sleep(2000);
+                    try {
+                        addPortfolio.clickOnAddPortfolio();
+                    }
+                    catch (Exception e) {
+                        JavascriptExecutor executor = (JavascriptExecutor) driver;
+                        executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
+                    }
                     addPortfolio.clickOnConnectWallet();
-                    continue;
                 }
 
             }
@@ -271,6 +306,7 @@ public class AddAllWalletsPositive extends Driver{
 
                 try {
                     leftSideOfPagePortfolios.moveToSecondPortfolioName();
+                    Thread.sleep(1000);
                     leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
                     leftSideOfPagePortfolios.clickOnDeleteInDelete();
                     Thread.sleep(3000);

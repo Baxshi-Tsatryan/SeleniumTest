@@ -367,6 +367,11 @@ public class AddPortfolio {
         return utils.getText(invalidCSVFileErrorMessage);
     }
 
+    public Boolean invalidCSVErrorMessageIsDisplayed()
+    {
+        return utils.isDisplayed(invalidCSVFileErrorMessage);
+    }
+
 
     // Wallets
 

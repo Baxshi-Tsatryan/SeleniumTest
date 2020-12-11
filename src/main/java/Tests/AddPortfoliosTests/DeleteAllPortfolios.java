@@ -36,6 +36,7 @@ public class DeleteAllPortfolios extends Driver {
 
                 try {
                     leftSideOfPagePortfolios.moveToSecondPortfolioName();
+                    Thread.sleep(1000);
                     leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
                     leftSideOfPagePortfolios.clickOnDeleteInDelete();
                     Thread.sleep(3000);
@@ -46,12 +47,4 @@ public class DeleteAllPortfolios extends Driver {
                 }
             }
     }
-
-    public void deleteSecondPortfolio()
-    {
-        leftSideOfPagePortfolios.moveToSecondPortfolioName();
-        leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
-        leftSideOfPagePortfolios.clickOnDeleteInDelete();
-    }
-
 }

@@ -36,8 +36,6 @@ public class AddManualPortfolioPositive extends Driver {
         addPortfolio.clickOnSaveButtonInManualPortfolio();
         utils.refreshPage();
 
-        deleteAllPortfolios.deleteSecondPortfolio();
-
         addPortfolio.clickOnAddPortfolio();
         addPortfolio.clickOnAddManualPortfolio();
         addPortfolio.typeManualPortfolioName("Name");
@@ -47,7 +45,6 @@ public class AddManualPortfolioPositive extends Driver {
 
         String addedPortfolioName = leftSideOfPagePortfolios.getSecondPortfolioName();
         Assert.assertEquals(addedPortfolioName, "Name");
-        deleteAllPortfolios.deleteSecondPortfolio();
 
     }
 }
