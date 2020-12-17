@@ -35,14 +35,7 @@ public class AddAllExchangesNegative extends Driver {
         utils.enableCookie();
 
         Thread.sleep(4000);
-        try {
-            addPortfolio.clickOnAddPortfolio();
-        }
-        catch (Exception e) {
-            JavascriptExecutor executor = (JavascriptExecutor) driver;
-            executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
-        }
-
+        addPortfolio.clickOnAddPortfolio();
         addPortfolio.clickOnConnectExchange();
 
         List<WebElement> listTill = driver.findElements(By.className("qa-exchanges"));
@@ -60,14 +53,7 @@ public class AddAllExchangesNegative extends Driver {
 
             if (exchangeName.equals("Coinbase") || exchangeName.equals("Crypto.com app") || exchangeName.equals("Nexo (beta)") || exchangeName.equals("Gemini"))
             {
-                try
-                {
-                    addPortfolio.clickOnBack();
-                }
-                catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
+                addPortfolio.clickOnBack();
                 continue;
             }
 
@@ -94,14 +80,7 @@ public class AddAllExchangesNegative extends Driver {
             addPortfolio.clickOnSubmit();
             String errorMessage = addPortfolio.getErrorMessage();
             System.out.println(exchangeName + " - " + "invalid format - " + errorMessage);
-                try
-                {
-                    addPortfolio.clickOnBack();
-                }
-                catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
+            addPortfolio.clickOnBack();
         }
 
         for (int i = 0; i < listTill.size(); i++) {
@@ -117,14 +96,7 @@ public class AddAllExchangesNegative extends Driver {
 
             if (exchangeName.equals("Coinbase") || exchangeName.equals("Crypto.com app") || exchangeName.equals("Nexo (beta)") || exchangeName.equals("Gemini"))
             {
-                try
-                {
-                    addPortfolio.clickOnBack();
-                }
-                catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
+                addPortfolio.clickOnBack();
                 continue;
             }
 
@@ -151,14 +123,8 @@ public class AddAllExchangesNegative extends Driver {
             addPortfolio.clickOnSubmit();
             String errorMessage = addPortfolio.getErrorMessage();
             System.out.println(exchangeName + " - " + "wrong API - " + errorMessage);
-            try
-            {
-                addPortfolio.clickOnBack();
-            }
-            catch (Exception ee) {
-                JavascriptExecutor executor = (JavascriptExecutor) driver;
-                executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-            }
+            addPortfolio.clickOnBack();
+
         }
     }
 }

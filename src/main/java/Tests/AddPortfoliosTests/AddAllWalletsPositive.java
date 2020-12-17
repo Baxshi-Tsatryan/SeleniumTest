@@ -38,13 +38,7 @@ public class AddAllWalletsPositive extends Driver {
         String walletAddress = "";
 
         Thread.sleep(4000);
-        try {
-            addPortfolio.clickOnAddPortfolio();
-        } catch (Exception e) {
-            JavascriptExecutor executor = (JavascriptExecutor) driver;
-            executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
-        }
-
+        addPortfolio.clickOnAddPortfolio();
         addPortfolio.clickOnConnectWallet();
 
         List<WebElement> listTill = driver.findElements(By.className("qa-wallets"));
@@ -53,12 +47,12 @@ public class AddAllWalletsPositive extends Driver {
 
             List<WebElement> list = driver.findElements(By.className("qa-wallets"));
 
-            String exchangeName = list.get(i).getText();
+            String walletName = list.get(i).getText();
             list.get(i).click();
 
             int loop = 0;
 
-            switch (exchangeName) {
+            switch (walletName) {
                 case "Ethereum Wallet": {
                     walletAddress = exchangesWalletsAPIs.getEthereumWallet();
                     break;
@@ -146,12 +140,7 @@ public class AddAllWalletsPositive extends Driver {
 
                 default: {
                     Thread.sleep(1000);
-                    try {
-                        addPortfolio.clickOnBack();
-                    } catch (Exception e) {
-                        JavascriptExecutor executor = (JavascriptExecutor) driver;
-                        executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                    }
+                    addPortfolio.clickOnBack();
                     continue;
                 }
             }
@@ -161,30 +150,19 @@ public class AddAllWalletsPositive extends Driver {
             try {
                 addPortfolio.clickOnNoShowMeSynced();
             } catch (NoSuchElementException e) {
-                System.err.println(exchangeName + " wallet address is Invalid or exception with Submit button");
-                try {
-                    addPortfolio.clickOnBack();
-                } catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
+                System.err.println(walletName + " wallet address is Invalid or exception with Submit button");
+                addPortfolio.clickOnBack();
             }
 
             List<WebElement> list2 = driver.findElements(By.className("qa-portfolios"));
             String addedExchangeName = list2.get(list2.size() - 1).getText();
 
-            if (!exchangeName.equals(addedExchangeName)) {
-                System.err.println(exchangeName + " exchange API is invalid");
+            if (!walletName.equals(addedExchangeName)) {
+                System.err.println(walletName + " wallet address is invalid");
             }
 
             Thread.sleep(2000);
-            try {
-                addPortfolio.clickOnAddPortfolio();
-            } catch (Exception e) {
-                JavascriptExecutor executor = (JavascriptExecutor) driver;
-                executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
-            }
-
+            addPortfolio.clickOnAddPortfolio();
             addPortfolio.clickOnConnectWallet();
         }
 
@@ -193,22 +171,22 @@ public class AddAllWalletsPositive extends Driver {
     }
 
 
-         public void addManualPortfolioPositive() {
+  //      public void addManualPortfolioPositive() {
 
-                allURLs.navigateToPortfolioPage();
+  //             allURLs.navigateToPortfolioPage();
 
-                addPortfolio.clickOnAddPortfolio();
-                addPortfolio.clickOnAddManualPortfolio();
-                addPortfolio.clickOnSaveButtonInManualPortfolio();
-                utils.refreshPage();
+  //             addPortfolio.clickOnAddPortfolio();
+  //             addPortfolio.clickOnAddManualPortfolio();
+  //             addPortfolio.clickOnSaveButtonInManualPortfolio();
+  //             utils.refreshPage();
 
-                addPortfolio.clickOnAddPortfolio();
-                addPortfolio.clickOnAddManualPortfolio();
-                addPortfolio.typeManualPortfolioName("Name");
-                addPortfolio.typeManualPortfolioTotalCost("100");
-                addPortfolio.clickOnSaveButtonInManualPortfolio();
-                utils.refreshPage();
-    }
+  //             addPortfolio.clickOnAddPortfolio();
+  //             addPortfolio.clickOnAddManualPortfolio();
+  //             addPortfolio.typeManualPortfolioName("Name");
+  //             addPortfolio.typeManualPortfolioTotalCost("100");
+  //             addPortfolio.clickOnSaveButtonInManualPortfolio();
+  //             utils.refreshPage();
+  // }
 
         public void deleteAllPortfolios() throws InterruptedException {
             allURLs.navigateToPortfolioPage();

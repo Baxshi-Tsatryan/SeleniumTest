@@ -38,12 +38,7 @@ public class AddAllExchangesCSVNegative extends Driver {
         utils.enableCookie();
 
         Thread.sleep(3000);
-        try {
-            addPortfolio.clickOnAddPortfolio();
-        } catch (Exception e) {
-            JavascriptExecutor executor = (JavascriptExecutor) driver;
-            executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
-        }
+        addPortfolio.clickOnAddPortfolio();
         addPortfolio.clickOnConnectExchange();
 
         List<WebElement> listTill = driver.findElements(By.className("qa-exchanges"));
@@ -64,13 +59,7 @@ public class AddAllExchangesCSVNegative extends Driver {
                 String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
 
                 System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
-
-                try {
-                    addPortfolio.clickOnBack();
-                } catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
+                addPortfolio.clickOnBack();
                 continue;
             }
 
@@ -84,13 +73,7 @@ public class AddAllExchangesCSVNegative extends Driver {
                 String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
 
                 System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
-
-                try {
-                    addPortfolio.clickOnBack();
-                } catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
+                addPortfolio.clickOnBack();
                 continue;
             }
 
@@ -109,13 +92,8 @@ public class AddAllExchangesCSVNegative extends Driver {
                 String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
 
                 System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
+                addPortfolio.clickOnBack();
 
-                try {
-                    addPortfolio.clickOnBack();
-                } catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
             }
         }
 
@@ -143,13 +121,7 @@ public class AddAllExchangesCSVNegative extends Driver {
                     String errorZIP = addPortfolio.getInvalidCSVErrorMessage();
 
                     System.out.println(exchangeName + " ZIP file" + " - " + errorZIP);
-                    try {
-                        addPortfolio.clickOnBack();
-                    } catch (Exception ee) {
-                        JavascriptExecutor executor = (JavascriptExecutor) driver;
-                        executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                    }
-
+                    addPortfolio.clickOnBack();
                     continue;
                 }
             }

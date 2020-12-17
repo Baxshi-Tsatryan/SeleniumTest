@@ -2,6 +2,7 @@ package AllPages.PortfolioPage;
 
 import MainPackage.SeleniumUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -154,7 +155,14 @@ public class AddPortfolio {
 
 
     public void clickOnAddPortfolio() {
-        utils.clickOnElement(addPortfolio);
+
+        try {
+            utils.clickOnElement(addPortfolio);
+        }
+        catch (Exception e) {
+            JavascriptExecutor executor = (JavascriptExecutor) driver;
+            executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
+        }
     }
 
     public void clickOnAddPortfolioAction()
@@ -499,7 +507,14 @@ public class AddPortfolio {
 
     public void clickOnBack()
     {
-        utils.clickOnElement(backButton);
+        try
+        {
+            utils.clickOnElement(backButton);
+        }
+        catch (Exception ee) {
+            JavascriptExecutor executor = (JavascriptExecutor) driver;
+            executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
+        }
     }
 
     public void clickOnNoShowMeSynced()

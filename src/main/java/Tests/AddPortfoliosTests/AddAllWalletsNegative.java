@@ -35,13 +35,7 @@ public class AddAllWalletsNegative extends Driver {
         utils.enableCookie();
 
         Thread.sleep(4000);
-        try {
-            addPortfolio.clickOnAddPortfolio();
-        } catch (Exception e) {
-            JavascriptExecutor executor = (JavascriptExecutor) driver;
-            executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
-        }
-
+        addPortfolio.clickOnAddPortfolio();
         addPortfolio.clickOnConnectWallet();
 
         List<WebElement> listTill = driver.findElements(By.className("qa-wallets"));
@@ -58,12 +52,7 @@ public class AddAllWalletsNegative extends Driver {
 
             if (walletName.equals("Metamask") || walletName.equals("Exodus") || walletName.equals("Tron Wallet"))
             {
-                try {
-                    addPortfolio.clickOnBack();
-                } catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
+                addPortfolio.clickOnBack();
                 continue;
             }
 
@@ -76,13 +65,8 @@ public class AddAllWalletsNegative extends Driver {
                 System.out.println(walletName + " - invalid format - " + walletError);
             }
 
-                try {
-                    addPortfolio.clickOnBack();
-                } catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
-                continue;
+            addPortfolio.clickOnBack();
+            continue;
         }
 
         // Invalid address
@@ -97,12 +81,7 @@ public class AddAllWalletsNegative extends Driver {
 
             if (walletName.equals("Metamask") || walletName.equals("Exodus") || walletName.equals("Tron Wallet"))
             {
-                try {
-                    addPortfolio.clickOnBack();
-                } catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
+                addPortfolio.clickOnBack();
                 continue;
             }
 
@@ -115,12 +94,7 @@ public class AddAllWalletsNegative extends Driver {
                 System.out.println(walletName + " - invalid adress - " + walletError);
             }
 
-            try {
-                addPortfolio.clickOnBack();
-            } catch (Exception ee) {
-                JavascriptExecutor executor = (JavascriptExecutor) driver;
-                executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-            }
+            addPortfolio.clickOnBack();
             continue;
         }
     }

@@ -40,14 +40,7 @@ public class AddAllExchangesPositive2Name extends Driver {
         String thirdAPI = "";
 
         Thread.sleep(4000);
-        try {
-            addPortfolio.clickOnAddPortfolio();
-        }
-        catch (Exception e) {
-            JavascriptExecutor executor = (JavascriptExecutor) driver;
-            executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
-        }
-
+        addPortfolio.clickOnAddPortfolio();
         addPortfolio.clickOnConnectExchange();
 
         List<WebElement> listTill = driver.findElements(By.className("qa-exchanges"));
@@ -195,13 +188,7 @@ public class AddAllExchangesPositive2Name extends Driver {
                 default:
                 {
                     Thread.sleep(1000);
-                    try {
-                        addPortfolio.clickOnBack();
-                    }
-                    catch (Exception e) {
-                        JavascriptExecutor executor = (JavascriptExecutor) driver;
-                        executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                    }
+                    addPortfolio.clickOnBack();
                     continue;
                 }
             }
@@ -220,18 +207,21 @@ public class AddAllExchangesPositive2Name extends Driver {
 
             else if (loop == 2)
             {
+                addPortfolio.typeExchangeName(changedExchangeName);
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPI(secondAPI);
             }
 
             else if (loop == 8)
             {
+                addPortfolio.typeExchangeName(changedExchangeName);
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPIByBit(secondAPI);
             }
 
             else if (loop == 3)
             {
+                addPortfolio.typeExchangeName(changedExchangeName);
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPI(secondAPI);
                 addPortfolio.typeThirdAPI(thirdAPI);
@@ -245,33 +235,20 @@ public class AddAllExchangesPositive2Name extends Driver {
             catch (NoSuchElementException e)
             {
                 System.err.println(exchangeName + " exchange API is Invalid or exception with Submit button");
-                try
-                {
-                    addPortfolio.clickOnBack();
-                }
-                catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
+                addPortfolio.clickOnBack();
                 continue;
             }
 
             List<WebElement> list2 = driver.findElements(By.className("qa-portfolios"));
             String addedExchangeName = list2.get(list2.size() - 1).getText();
 
-            if (!exchangeName.equals(addedExchangeName))
+            if (!changedExchangeName.equals(addedExchangeName))
             {
-                System.err.println(exchangeName + " exchange API is invalid");
+                System.err.println(exchangeName + " exchange name is invalid");
             }
 
             Thread.sleep(2000);
-            try {
-                addPortfolio.clickOnAddPortfolio();
-            }
-            catch (Exception e) {
-                JavascriptExecutor executor = (JavascriptExecutor) driver;
-                executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
-            }
+            addPortfolio.clickOnAddPortfolio();
             addPortfolio.clickOnConnectExchange();
 
         }

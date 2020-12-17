@@ -40,14 +40,7 @@ public class AddAllExchangesPositive extends Driver {
         String thirdAPI = "";
 
         Thread.sleep(4000);
-        try {
-            addPortfolio.clickOnAddPortfolio();
-        }
-        catch (Exception e) {
-            JavascriptExecutor executor = (JavascriptExecutor) driver;
-            executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
-        }
-
+        addPortfolio.clickOnAddPortfolio();
         addPortfolio.clickOnConnectExchange();
 
         List<WebElement> listTill = driver.findElements(By.className("qa-exchanges"));
@@ -194,13 +187,7 @@ public class AddAllExchangesPositive extends Driver {
                 default:
                 {
                     Thread.sleep(1000);
-                    try {
-                        addPortfolio.clickOnBack();
-                    }
-                    catch (Exception e) {
-                        JavascriptExecutor executor = (JavascriptExecutor) driver;
-                        executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                    }
+                    addPortfolio.clickOnBack();
                     continue;
                 }
             }
@@ -244,14 +231,7 @@ public class AddAllExchangesPositive extends Driver {
             catch (NoSuchElementException e)
             {
                 System.err.println(exchangeName + " exchange API is Invalid or exception with Submit button");
-                try
-                {
-                    addPortfolio.clickOnBack();
-                }
-                catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
+                addPortfolio.clickOnBack();
                 continue;
             }
 
@@ -264,13 +244,7 @@ public class AddAllExchangesPositive extends Driver {
             }
 
             Thread.sleep(2000);
-            try {
-                addPortfolio.clickOnAddPortfolio();
-            }
-            catch (Exception e) {
-                JavascriptExecutor executor = (JavascriptExecutor) driver;
-                executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
-            }
+            addPortfolio.clickOnAddPortfolio();
             addPortfolio.clickOnConnectExchange();
 
         }

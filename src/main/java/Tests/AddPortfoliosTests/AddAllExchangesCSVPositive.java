@@ -41,13 +41,7 @@ public class AddAllExchangesCSVPositive extends Driver {
         utils.enableCookie();
 
         Thread.sleep(3000);
-        try {
-            addPortfolio.clickOnAddPortfolio();
-        }
-        catch (Exception e) {
-            JavascriptExecutor executor = (JavascriptExecutor) driver;
-            executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
-        }
+        addPortfolio.clickOnAddPortfolio();
         addPortfolio.clickOnConnectExchange();
 
         List<WebElement> listTill = driver.findElements(By.className("qa-exchanges"));
@@ -94,14 +88,7 @@ public class AddAllExchangesCSVPositive extends Driver {
             catch (NoSuchElementException e)
             {
                 System.err.println(exchangeName + " exchange CSV is Invalid or exception with Submit button");
-                try
-                {
-                    addPortfolio.clickOnBack();
-                }
-                catch (Exception ee) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
-                }
+                addPortfolio.clickOnBack();
                 continue;
             }
 
@@ -114,13 +101,7 @@ public class AddAllExchangesCSVPositive extends Driver {
                 System.err.println(exchangeName + " exchange CSV is invalid");
             }
 
-            try {
-                addPortfolio.clickOnAddPortfolio();
-            }
-            catch (Exception e) {
-                JavascriptExecutor executor = (JavascriptExecutor) driver;
-                executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
-            }
+            addPortfolio.clickOnAddPortfolio();
             addPortfolio.clickOnConnectExchange();
         }
 
