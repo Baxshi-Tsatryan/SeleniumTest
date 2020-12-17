@@ -32,7 +32,7 @@ public class Paths {
         return cryptoComCSV;
     }
 
-    public String getExodusCSV()
+    public String getExodusZIP()
     {
         return exodusCSV;
     }

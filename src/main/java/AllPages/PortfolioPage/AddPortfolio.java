@@ -24,7 +24,7 @@ public class AddPortfolio {
 
     By searchExchanges = By.cssSelector(".search-wrapper.jsx-2489091780 [name]");
 
-    By exchangeNameField = By.cssSelector("input[value='Binance']");
+    By exchangeNameField = By.xpath("//*[@id='__next']/main/div/div/div[1]/div[2]/div/div/div[1]/div[4]/div[3]/div/div[1]/div/div/input");
 
     By exchangeAPISyncTab = By.cssSelector("div.tabs-section > div:nth-of-type(1) > .tab-label");
 
@@ -171,6 +171,11 @@ public class AddPortfolio {
 
     public void searchExchange(String exchangeName) {
         utils.sendKeysAction(searchExchanges, exchangeName);
+    }
+
+    public void deleteExchangeName()
+    {
+        utils.clear(exchangeNameField);
     }
 
     public void typeExchangeName(String exchangeName) {

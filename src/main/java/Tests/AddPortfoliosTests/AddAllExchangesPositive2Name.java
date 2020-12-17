@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.util.List;
 
-public class AddAllExchangesPositive extends Driver {
+public class AddAllExchangesPositive2Name extends Driver {
 
     AddPortfolio addPortfolio;
     LeftSideOfPagePortfolios leftSideOfPagePortfolios;
@@ -59,6 +59,7 @@ public class AddAllExchangesPositive extends Driver {
             String exchangeName = list.get(i).getText();
             list.get(i).click();
 
+            String changedExchangeName = "My" + exchangeName + " Portfolio";
             int loop = 0;
 
             switch (exchangeName) {
@@ -83,12 +84,12 @@ public class AddAllExchangesPositive extends Driver {
                     break;
                 }
 
-               //case "Bitmex": {
-               //    //firstAPI = exchangesWalletsAPIs.getBitmexID();
-               //    //secondAPI = exchangesWalletsAPIs.getBitmexAPISecret();
-               //    loop = 2;
-               //    break;
-               //}
+                //case "Bitmex": {
+                //    //firstAPI = exchangesWalletsAPIs.getBitmexID();
+                //    //secondAPI = exchangesWalletsAPIs.getBitmexAPISecret();
+                //    loop = 2;
+                //    break;
+                //}
 
                 case "Bitfinex": {
                     firstAPI = exchangesWalletsAPIs.getBitfinexAPIKey();
@@ -235,7 +236,7 @@ public class AddAllExchangesPositive extends Driver {
                 addPortfolio.typeSecondAPI(secondAPI);
                 addPortfolio.typeThirdAPI(thirdAPI);
             }
-            
+
             Thread.sleep(1000);
             addPortfolio.clickOnSubmit();
             try {

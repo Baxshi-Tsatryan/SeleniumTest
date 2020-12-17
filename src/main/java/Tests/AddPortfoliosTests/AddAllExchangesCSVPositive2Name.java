@@ -15,7 +15,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.util.List;
 
-public class AddAllExchangesCSVPositive extends Driver {
+public class AddAllExchangesCSVPositive2Name extends Driver {
 
     AddPortfolio addPortfolio;
     LeftSideOfPagePortfolios leftSideOfPagePortfolios;
@@ -40,6 +40,8 @@ public class AddAllExchangesCSVPositive extends Driver {
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
+        deleteAllPortfolios();
+
         Thread.sleep(3000);
         try {
             addPortfolio.clickOnAddPortfolio();
@@ -60,8 +62,12 @@ public class AddAllExchangesCSVPositive extends Driver {
             String exchangeName = list.get(i).getText();
             list.get(i).click();
 
+            String changedExchangeName = "My" + exchangeName + " Portfolio";
+
             if (exchangeName.equals("Crypto.com app"))
             {
+                addPortfolio.clearExchangeName();
+                addPortfolio.typeExchangeName(changedExchangeName);
                 WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
                 importButton.sendKeys(paths.getCryptoComCSV());
             }
@@ -69,6 +75,8 @@ public class AddAllExchangesCSVPositive extends Driver {
             else if (exchangeName.equals("Bittrex"))
             {
                 addPortfolio.clickOnCSVTab();
+                addPortfolio.clearExchangeName();
+                addPortfolio.typeExchangeName(changedExchangeName);
                 WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
                 importButton.sendKeys(paths.getBittrexCSV());
             }
@@ -82,6 +90,8 @@ public class AddAllExchangesCSVPositive extends Driver {
             else
             {
                 addPortfolio.clickOnCSVTab();
+                addPortfolio.clearExchangeName();
+                addPortfolio.typeExchangeName(changedExchangeName);
                 WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
                 importButton.sendKeys(paths.getCoinStatsTemplateCSV());
             }
@@ -106,12 +116,10 @@ public class AddAllExchangesCSVPositive extends Driver {
             }
 
             List<WebElement> list2 = driver.findElements(By.className("qa-portfolios"));
-            String addedExchangeName = list2.get(list2.size() - 1)
-                    .getText().replace(" CSV", "");
 
-            if (!exchangeName.equals(addedExchangeName))
+            if (!exchangeName.equals(changedExchangeName))
             {
-                System.err.println(exchangeName + " exchange CSV is invalid");
+                System.err.println(exchangeName + " changed name is invalid");
             }
 
             try {
