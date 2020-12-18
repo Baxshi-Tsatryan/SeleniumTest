@@ -40,6 +40,8 @@ public class AddAllExchangesCSVPositive extends Driver {
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
+        deleteAllPortfolios();
+
         Thread.sleep(3000);
         addPortfolio.clickOnAddPortfolio();
         addPortfolio.clickOnConnectExchange();

@@ -50,7 +50,7 @@ public class AddAllWalletsPositive2Name extends Driver {
             String walletName = list.get(i).getText();
             list.get(i).click();
 
-            String changedWalletName = "My" + walletName + " Portfolio";
+            String changedWalletName = "My" + walletName;
             int loop = 0;
 
             switch (walletName) {
@@ -145,6 +145,9 @@ public class AddAllWalletsPositive2Name extends Driver {
                     continue;
                 }
             }
+
+            addPortfolio.clearExchangeName();
+            addPortfolio.typeExchangeName(changedWalletName);
             addPortfolio.typeWalletAddress(walletAddress);
             Thread.sleep(1000);
             addPortfolio.clickOnSubmit();
@@ -159,7 +162,7 @@ public class AddAllWalletsPositive2Name extends Driver {
             String addedExchangeName = list2.get(list2.size() - 1).getText();
 
             if (!changedWalletName.equals(addedExchangeName)) {
-                System.err.println(walletName + " wallet address is invalid");
+                System.err.println(walletName + " wallet address (name) is invalid");
             }
 
             Thread.sleep(2000);

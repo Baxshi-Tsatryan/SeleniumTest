@@ -35,6 +35,8 @@ public class AddAllExchangesPositive extends Driver {
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
+        deleteAllPortfolios();
+
         String firstAPI = "";
         String secondAPI = "";
         String thirdAPI = "";

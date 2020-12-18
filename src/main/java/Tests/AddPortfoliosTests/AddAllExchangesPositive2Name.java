@@ -207,6 +207,7 @@ public class AddAllExchangesPositive2Name extends Driver {
 
             else if (loop == 2)
             {
+                addPortfolio.clearExchangeName();
                 addPortfolio.typeExchangeName(changedExchangeName);
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPI(secondAPI);
@@ -214,6 +215,7 @@ public class AddAllExchangesPositive2Name extends Driver {
 
             else if (loop == 8)
             {
+                addPortfolio.clearExchangeName();
                 addPortfolio.typeExchangeName(changedExchangeName);
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPIByBit(secondAPI);
@@ -221,6 +223,7 @@ public class AddAllExchangesPositive2Name extends Driver {
 
             else if (loop == 3)
             {
+                addPortfolio.clearExchangeName();
                 addPortfolio.typeExchangeName(changedExchangeName);
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPI(secondAPI);

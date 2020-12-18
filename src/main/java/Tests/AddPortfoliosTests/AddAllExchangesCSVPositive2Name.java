@@ -40,6 +40,7 @@ public class AddAllExchangesCSVPositive2Name extends Driver {
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
+        //
         deleteAllPortfolios();
 
         Thread.sleep(3000);

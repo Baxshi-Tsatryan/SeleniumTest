@@ -35,6 +35,8 @@ public class AddAllWalletsPositive extends Driver {
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
+        deleteAllPortfolios();
+
         String walletAddress = "";
 
         Thread.sleep(4000);
