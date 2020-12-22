@@ -16,6 +16,7 @@ public class Paths {
     String exodusCSV = "/Users/jenkins/Desktop/SeleniumFiles/Exodus.zip";
     String image = "/Users/jenkins/Desktop/SeleniumFiles/Screen Shot 2020-11-06 at 5.54.47 PM";
     String image2 = "/Users/jenkins/Desktop/SeleniumFiles/Screen Shot 2020-11-04 at 2.51.08 PM";
+    String screensFolder = "/Users/jenkins/Desktop/SeleniumFiles/BugsScreens";
 
     public String getBittrexCSV()
     {
@@ -45,6 +46,11 @@ public class Paths {
     public String getImage2()
     {
         return image2;
+    }
+
+    public String getScreensFolder()
+    {
+        return screensFolder;
     }
 
 }

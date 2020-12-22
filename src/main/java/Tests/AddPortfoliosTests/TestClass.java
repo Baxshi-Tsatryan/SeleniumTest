@@ -1,22 +1,19 @@
 package Tests.AddPortfoliosTests;
 
-import AllPages.PortfolioPage.AddPortfolio;
+import AllPages.PortfolioPage.AddTransactions;
 import AllPages.PortfolioPage.LeftSideOfPagePortfolios;
 import AllPages.PortfolioPage.PortfolioPageWhenNotLogin;
 import MainPackage.AllURLs;
 import MainPackage.Driver;
 import MainPackage.Paths;
 import MainPackage.SeleniumUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import java.util.List;
+import java.io.IOException;
 
 public class TestClass extends Driver{
 
-    AddPortfolio addPortfolio;
+    AddTransactions addTransactions;
     LeftSideOfPagePortfolios leftSideOfPagePortfolios;
     AllURLs allURLs;
     SeleniumUtils utils;
@@ -27,51 +24,22 @@ public class TestClass extends Driver{
     public void beforeClass() {
         allURLs = new AllURLs(driver);
         utils = new SeleniumUtils(driver);
-        addPortfolio = new AddPortfolio(driver);
+        addTransactions = new AddTransactions(driver);
         leftSideOfPagePortfolios = new LeftSideOfPagePortfolios(driver);
         paths = new Paths(driver);
         portfolioPageWhenNotLogin = new PortfolioPageWhenNotLogin(driver);
     }
 
-
     @Test(priority = 1)
-    public void addAllExchangesCSVPositive() throws InterruptedException {
+    public void addAllExchangesCSVPositive() throws InterruptedException, IOException {
 
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
-        List<WebElement> listTill = driver.findElements(By.className("qa-portfolios"));
+        addTransactions.clickOnAddTransactions();
+        addTransactions.clickOnAnyCoinResult("ZoZoCoin");
 
-        for (int i = 1; i < listTill.size(); i++)
-        {
-            List<WebElement> list = driver.findElements(By.className("qa-exchanges"));
-            List<WebElement> listDelete = driver.findElements(By.className("icon-delete"));
-
-            Thread.sleep(1000);
-            utils.moveToElement((By) list.get(i));
-            listDelete.get(i).click();
-            leftSideOfPagePortfolios.clickOnDeleteInDelete();
-        }
-
-     //  while (true) {
-
-     //      try {
-     //          leftSideOfPagePortfolios.moveToFirstPortfolioName();
-     //          leftSideOfPagePortfolios.clickOnFirstPortfolioDelete();
-     //          leftSideOfPagePortfolios.clickOnDeleteInDelete();
-     //          Thread.sleep(2000);
-     //      }
-     //      catch (NoSuchElementException e)
-     //      {
-     //          break;
-     //      }
-
-     //  }
-
-     //  portfolioPageWhenNotLogin.clickOnAddManualPortfolio();
-     //  addPortfolio.typeManualPortfolioName("Test");
-     //  addPortfolio.clickOnSaveButtonInManualPortfolio();
+        Thread.sleep(3000);
 
     }
-
 }

@@ -103,6 +103,8 @@ public class AddPortfolio {
 
     By searchDropDownMultiCoinsWallets = By.cssSelector(".search-dropdown-enable-placeholder");
 
+    By multiCoinsFirstResult = By.cssSelector("ul.jsx-931209423 > li:nth-of-type(1) .table-row");
+
     By deleteSelectedCoinFromSearchDropDown = By.cssSelector(".icon-clear");
 
     By searchFieldInMultiCoinsWallet = By.cssSelector("input.jsx-931209423");
@@ -417,6 +419,11 @@ public class AddPortfolio {
 
     public void clickOnSearchDropDownMultiCoinsWallets() {
         utils.clickOnElement(searchDropDownMultiCoinsWallets);
+    }
+
+    public void clickOnFirstMultiCoinResult()
+    {
+        utils.clickOnElement(multiCoinsFirstResult);
     }
 
     public void typeMultiCoinsWallet(String multiCoinName) {

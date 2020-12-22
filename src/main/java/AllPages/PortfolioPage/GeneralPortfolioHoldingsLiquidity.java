@@ -47,7 +47,11 @@ public class GeneralPortfolioHoldingsLiquidity {
 
     By trade = By.cssSelector(".primary-bordered");
 
-    By addTransaction = By.cssSelector("div.right-section > .text");
+    By moreActionsDropDown = By.cssSelector("div.more-actions .primary-nav");
+
+    By addTransactionInDropDown = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(1) .table-row");
+
+    By depositInDropDown = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(2) .table-row");
 
 
     // Tabs
@@ -197,9 +201,19 @@ public class GeneralPortfolioHoldingsLiquidity {
         utils.clickOnElement(trade);
     }
 
-    public void clickOnAddTransaction()
+    public void clickOnMoreActionsDropDown()
     {
-        utils.clickOnElement(addTransaction);
+        utils.clickOnElement(moreActionsDropDown);
+    }
+
+    public void clickOnAddTransactionsInDropDown()
+    {
+        utils.clickOnElement(addTransactionInDropDown);
+    }
+
+    public void clickOnDepositInDropDown()
+    {
+        utils.clickOnElement(depositInDropDown);
     }
 
 
