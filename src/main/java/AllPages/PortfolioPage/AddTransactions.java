@@ -58,7 +58,7 @@ public class AddTransactions {
 
     By amountField = By.cssSelector("[placeholder='Amount']");
 
-    By priceField = By.cssSelector("[placeholder='Price']");
+    By priceField = By.cssSelector(".jsx-693624628:nth-child(2) > .jsx-1485860805 > .text-box");
 
     By priceCurrency = By.cssSelector(".input-right-sign");
 
@@ -72,11 +72,13 @@ public class AddTransactions {
 
     By firstFeeCurrencyResult = By.cssSelector("ul.jsx-931209423 > li:nth-of-type(1) .coin-item-wrapper > .table-row");
 
+    By firstFeeCurrencyResultSymbol = By.cssSelector("ul.jsx-931209423 > li:nth-of-type(1) .additional-label > .table-row");
+
     By clearFeeCurrencyButton = By.cssSelector(".icon-clear");
 
     By feeCurrencySearchField = By.cssSelector("div.false [placeholder='Search']");
 
-    By feeField = By.cssSelector("[placeholder='Fee']");
+    By feeField = By.cssSelector("[placeholder='Fee amount']");
 
     By notesField = By.cssSelector("[placeholder='Type Something...']");
 
@@ -371,6 +373,11 @@ public class AddTransactions {
     public void clickOnFeeCurrencyFirstResult()
     {
         utils.clickOnElement(firstFeeCurrencyResult);
+    }
+
+    public String getFirstFeeCurrencyResultSymbol()
+    {
+        return utils.getText(firstFeeCurrencyResultSymbol);
     }
 
     public void clickOnCurrentFeeCurrency()

@@ -14,7 +14,6 @@ public class TradesTransactionsOpenOrders {
         utils = new SeleniumUtils(this.driver);
     }
 
-
     // Filters
 
     By searchCoinFieldTrades = By.cssSelector("[placeholder='Search coin']");
@@ -79,6 +78,8 @@ public class TradesTransactionsOpenOrders {
     By transactionFromLast = By.cssSelector("div.transfer > span:nth-of-type(1)");
 
     By transactionToLast = By.cssSelector("div.transfer > span:nth-of-type(3)");
+
+    By transactionNotesLast = By.cssSelector("div.note-container > .table-row-secondary > span");
 
 
     // --------------------------------------------- Methods -----------------------------------------------------------
@@ -296,6 +297,16 @@ public class TradesTransactionsOpenOrders {
     public String getLastTransactionPLSecondColor()
     {
         return utils.getCSSValue(transactionPLSecondLast, "Color");
+    }
+
+    public String getLastTransactionNotes()
+    {
+        return utils.getText(transactionNotesLast);
+    }
+
+    public Boolean lastTransactionNotesIsDisplayed()
+    {
+        return utils.isDisplayed(transactionNotesLast);
     }
 
     public void clickOnLastTransaction3Dot()
