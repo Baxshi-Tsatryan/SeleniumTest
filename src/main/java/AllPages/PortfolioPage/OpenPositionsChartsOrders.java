@@ -43,6 +43,8 @@ public class OpenPositionsChartsOrders {
 
     By chartETH = By.cssSelector("span.jsx-1754482975");
 
+    By heatmap = By.cssSelector("div.treemap-chart-container-wrapper > .title");
+
 
     // Analytics
 
@@ -186,6 +188,11 @@ public class OpenPositionsChartsOrders {
     public Boolean chartETHIsEnabled()
     {
         return utils.isEnabled(chartETH);
+    }
+
+    public Boolean heatmapIsDisplayed()
+    {
+        return utils.isDisplayed(heatmap);
     }
 
 

@@ -12,6 +12,7 @@ public class AllURLs {
 
     // Cookie
     String cookie = "eyJzZXNzaW9uVG9rZW4iOiJyOjM5YTE2Y2Q4YTZiMjRiYzJkNmRlODcxZmFmZjBmODBlIn0=";
+    String coinGecko = "https://www.coingecko.com/en";
 
     // Header
     String mainPage = "https://coinstats.app/";
@@ -165,6 +166,11 @@ public class AllURLs {
 
 
     // --------------------------------------- Methods -----------------------------------------------
+
+    public void navigateToCoinGecko()
+    {
+        driver.navigate().to(coinGecko);
+    }
 
     public String getCookie()
     {

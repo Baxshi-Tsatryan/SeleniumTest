@@ -26,9 +26,9 @@ public class Header{
 
     By livePrices = By.cssSelector("nav.nav-items > [href='/en/']");
 
-    By news = By.cssSelector("nav.nav-items > [href='/en/news/']");
+    By pricing = By.cssSelector("nav.jsx-207749059 > [href='/en/pricing/']");
 
-    By pricing = By.cssSelector("nav.nav-items > [href='/en/pricing/']");
+    By alerts = By.cssSelector(".is-new");
 
     By threeDotButton = By.cssSelector(".icon-more_big");
 
@@ -44,6 +44,8 @@ public class Header{
     By blog = By.cssSelector("a[href='https://blog.coinstats.app']");
 
     By widgets = By.cssSelector("a[href='/en/widgets/']");
+
+    By news = By.cssSelector("div.section-bar a:nth-of-type(11)");
 
     By appStore = By.xpath("//*[@id='__next']/main/header/div[2]/div[1]/div/div[5]/a[1]/img");
 
@@ -170,6 +172,12 @@ public class Header{
 
     By searchFieldMaxScreen = By.cssSelector("[placeholder='Search']");
 
+    By firstSearchCoinResult = By.cssSelector("#__next > main > header > div > div.jsx-207749059.header-wrapper.show-desktop > div > div.jsx-207749059.search-dropdowns-container > div.search-wrapper > div > div.jsx-550402856.result-wrapper > div > div:nth-child(2) > a:nth-child(1) > div > span > span.table-row");
+
+    By firstSearchExchangeResult = By.cssSelector("#__next > main > header > div > div.jsx-207749059.header-wrapper.show-desktop > div > div.jsx-207749059.search-dropdowns-container > div.search-wrapper > div > div.jsx-550402856.result-wrapper > div > div:nth-child(4) > a:nth-child(1) > div > span");
+
+
+    By login = By.cssSelector(".login-button");
 
     By getStarted = By.cssSelector("div.header-inner-wrapper .jsx-1426819953");
 
@@ -225,14 +233,14 @@ public class Header{
         utils.clickOnElement(livePrices);
     }
 
-    public void clickOnNews()
-    {
-        utils.clickOnElement(news);
-    }
-
     public void clickOnPricing()
     {
         utils.clickOnElement(pricing);
+    }
+
+    public void clickOnAlerts()
+    {
+        utils.clickOnElement(alerts);
     }
 
     public void clickOn3DotButton()
@@ -266,6 +274,11 @@ public class Header{
     public void clickOnWidgets()
     {
         utils.clickOnElement(widgets);
+    }
+
+    public void clickOnNews()
+    {
+        utils.clickOnElement(news);
     }
 
     public void clickOnAppStore()
@@ -549,6 +562,9 @@ public class Header{
         utils.clickOnElement(turkish);
     }
 
+
+    // Search field
+
     public void openSearchField()
     {
         utils.clickOnElement(searchFieldMinScreen);
@@ -559,11 +575,32 @@ public class Header{
         utils.sendKeysAction(searchFieldMaxScreen, searchString);
     }
 
-    public void clearFromSearchField()
+    public void clearSearchField()
     {
         utils.clear(searchFieldMaxScreen);
     }
 
+    public void clickOnFirstSearchCoinResult()
+    {
+        utils.clickOnElement(firstSearchCoinResult);
+    }
+
+    public void clickOnFirstSearchExchangeResult()
+    {
+        utils.clickOnElement(firstSearchExchangeResult);
+    }
+
+
+
+    public void clickOnLogin()
+    {
+        utils.clickOnElement(login);
+    }
+
+    public Boolean loginIsDisplayed()
+    {
+        return utils.isDisplayed(login);
+    }
 
     public void clickOnGetStarted()
     {
@@ -613,104 +650,19 @@ public class Header{
         utils.clickOnElement(signOut);
     }
 
+
+    // ----------------------------------------------- Scripts ------------------------------------------------
+
+    public void searchAnyCoin(String coinName)
+    {
+        typeInSearchField(coinName);
+        clickOnFirstSearchCoinResult();
+    }
+
+    public void searchAnyExchange(String exchangeName)
+    {
+        typeInSearchField(exchangeName);
+        clickOnFirstSearchExchangeResult();
+    }
+
 }
-
-//    public void clickOnAllCurrencies()
-//    {
-//        int index = 1;
-//
-//        do {
-//
-//            utils.clickOnElement(currenciesDropDown);
-//            driver.findElement(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index + ")")).click();
-//
-//            index++;
-//
-//        } while(index != 37);
-//    }
-
-
-
-
-
-// Search several results (Coins)
-// int index = 1;
-
-// Thread.sleep(3000);
-
-// By alertWindowBy = By.cssSelector("#onesignal-slidedown-cancel-button");
-// WebElement alertWindow = driver.findElement(alertWindowBy);
-// alertWindow.click();
-
-// driver.manage().window().maximize();
-
-// do {
-
-// // By testBy = By.cssSelector(".text-box-wrapper");
-// // WebElement test = driver.findElement(testBy);
-// // test.click();
-
-// By asdBy = By.cssSelector("[placeholder='Search']");
-// WebElement asd = driver.findElement(asdBy);
-// asd.sendKeys("Qt");
-
-// Thread.sleep(2000);
-
-// WebElement results = driver.findElement(By.cssSelector("#__next > main > header > div > div.header-wrapper.show-desktop > div > div.search-dropdowns-container > div.search-wrapper > div > div.jsx-550402856.result-wrapper > div > div:nth-child(2) > a:nth-child(" + index + ") > div"));
-// actions.click(results).build().perform();
-
-// index ++;
-
-// Thread.sleep(2000);
-// }
-// while(index != 5);
-
-
-// Search several results (Exchanges)
-
-// int index = 1;
-
-//  Thread.sleep(3000);
-
-//  By alertWindowBy = By.cssSelector("#onesignal-slidedown-cancel-button");
-//  WebElement alertWindow = driver.findElement(alertWindowBy);
-//  alertWindow.click();
-
-//  driver.manage().window().maximize();
-
-//  do {
-
-// // By testBy = By.cssSelector(".text-box-wrapper");
-// // WebElement test = driver.findElement(testBy);
-// // test.click();
-
-// By asdBy = By.cssSelector("[placeholder='Search']");
-// WebElement asd = driver.findElement(asdBy);
-// asd.sendKeys("b");
-
-// Thread.sleep(2000);
-
-// WebElement results = driver.findElement(By.cssSelector("#__next > main > header > div > div.header-wrapper.show-desktop > div > div.search-dropdowns-container > div.search-wrapper > div > div.jsx-550402856.result-wrapper > div > div:nth-child(4) > a:nth-child(" + index + ") > div"));
-// actions.click(results).build().perform();
-
-// index ++;
-
-// Thread.sleep(2000);
-// }
-//  while(index != 3);
-
-
-//
-//public void clickOnAllLanguages()
-//{
-//    int index = 1;
-//
-//    do{
-//
-//        utils.clickOnElement(languagesDropDown);
-//        driver.findElement(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index + ")")).click();
-//
-//        index++;
-//
-//    } while(index != 14);
-//}

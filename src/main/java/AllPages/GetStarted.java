@@ -14,6 +14,10 @@ public class GetStarted {
         utils = new SeleniumUtils(this.driver);
     }
 
+    By loginButton = By.cssSelector(".login-button");
+
+    By getStartedButton = By.cssSelector(".primary[type='button']");
+
 
     // Get Started page
 
@@ -105,6 +109,27 @@ public class GetStarted {
 
 
     // ----------------------------------------------------- Methods ------------------------------------------------------
+
+    public void clickOnGeneralLogin()
+    {
+        utils.clickOnElement(loginButton);
+    }
+
+    public Boolean generalLoginIsDisplayed()
+    {
+        return utils.isDisplayed(loginButton);
+    }
+
+    public void clickOnGetStarted()
+    {
+        utils.clickOnElement(getStartedButton);
+    }
+
+    public Boolean getStartedIsDisplayed()
+    {
+        return utils.isDisplayed(getStartedButton);
+    }
+
 
     // Get Started page
 

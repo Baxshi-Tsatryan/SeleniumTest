@@ -9,22 +9,19 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.NoSuchElementException;
 
-public class CoinsFavoritesExchanges {
+public class CoinsFavoritesExchangesHeatmap {
 
     WebDriver driver;
     SeleniumUtils utils;
 
-    public CoinsFavoritesExchanges(WebDriver driver) {
+    public CoinsFavoritesExchangesHeatmap(WebDriver driver) {
         this.driver = driver;
         utils = new SeleniumUtils(this.driver);
     }
 
     By topBannerHereButton = By.cssSelector("#__next > main > header > div.jsx-3251546915.top-banner-container > span > a");
 
-
     // Crypto Prices and Portfolio Tracker
-
-    By cryptoPricesAndPortfolioTrackerText = By.cssSelector("a.title");
 
     By marketCapPrice = By.cssSelector("div.big-stats-list li:nth-of-type(1) .big-stats-value > [href='/en/market-cap-charts/']");
 
@@ -46,6 +43,8 @@ public class CoinsFavoritesExchanges {
     By exchangesTab = By.cssSelector("a[href='/en/exchanges/']");
 
     By favoritesTab = By.cssSelector("a[href='/en/favorites/']");
+
+    By heatmapTab = By.cssSelector("a[href='/en/heatmap/']");
 
 
     // Coins Rows Per Page
@@ -103,46 +102,107 @@ public class CoinsFavoritesExchanges {
 
     // Columns
 
-    By columnIcon = By.cssSelector(".icon-edit-cols");
+    By rankColumn = By.cssSelector("th.nowrap > .table-column-title");
 
-    By rankColumn = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(1) .column-wrapper .table-row");
+    By nameColumn = By.cssSelector("thead th:nth-of-type(2) > .table-column-title");
 
-    By change1hColumn = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(2) .column-wrapper .table-row");
+    By change1hColumn = By.cssSelector("thead th:nth-of-type(3) > .table-column-title");
 
-    By change24hColumn = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(3) .column-wrapper .table-row");
+    By change24hColumn = By.cssSelector("thead th:nth-of-type(4) > .table-column-title");
 
-    By change7dColumn = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(4) .column-wrapper .table-row");
+    By change7dColumn = By.cssSelector("thead th:nth-of-type(5) > .table-column-title");
 
-    By priceColumn = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(5) .column-wrapper .table-row");
+    By priceColumn = By.cssSelector("thead th:nth-of-type(6) > .table-column-title");
 
-    By priceBtcColumn = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(6) .column-wrapper .table-row");
+    By priceInBTCColumn = By.cssSelector("thead th:nth-of-type(7) > .table-column-title");
 
-    By marketCapColumn = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(7) .column-wrapper .table-row");
+    By marketCapColumn = By.cssSelector("thead th:nth-of-type(8) > .table-column-title");
 
-    By volume24hColumn = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(8) .column-wrapper .table-row");
+    By volume24hColumn = By.cssSelector("thead th:nth-of-type(9) > .table-column-title");
 
-    By coinStatsScoreColumn = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(9) .column-wrapper .table-row");
+    By CSScoreColumn = By.cssSelector("thead th:nth-of-type(10) > .table-column-title");
 
-    By coinStatsScore24hColumn = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(10) .column-wrapper .table-row");
+    By CSScore24hColumn = By.cssSelector("thead th:nth-of-type(11) > .table-column-title");
 
-    By priceGraphColumn = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(11) .column-wrapper .table-row");
+    By priceGraphColumn = By.cssSelector("thead th:nth-of-type(12) > .table-column-title");
+
+    By customColumnsDropDown = By.cssSelector(".jsx-2095321675");
+
+    By customColumnsRank = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(1) .column-wrapper .table-row");
+
+    By customColumns1hChange = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(2) .column-wrapper .table-row");
+
+    By customColumns24hChange = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(3) .column-wrapper .table-row");
+
+    By customColumns7dChange = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(4) .column-wrapper .table-row");
+
+    By customColumnsPrice = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(5) .column-wrapper .table-row");
+
+    By customColumnsPriceInBTC = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(6) .column-wrapper .table-row");
+
+    By customColumnsMarketCap = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(7) .column-wrapper .table-row");
+
+    By customColumns24hVolume = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(8) .column-wrapper .table-row");
+
+    By customColumnsCSScore = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(9) .column-wrapper .table-row");
+
+    By customColumnsCSScore24h = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(10) .column-wrapper .table-row");
+
+    By customColumnsPriceGraph = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(11) .column-wrapper .table-row");
 
 
     // Exchanges Ranks
 
-    By indexRankExchange = By.cssSelector("thead th:nth-of-type(1) > .table-column-title");
+    By indexColumnExchange = By.cssSelector("thead th:nth-of-type(1) > .table-column-title");
 
-    By nameRankExchange = By.cssSelector("thead th:nth-of-type(2) > .table-column-title");
+    By nameColumnExchange = By.cssSelector("thead th:nth-of-type(2) > .table-column-title");
 
-    By volume24hRankExchange = By.cssSelector("thead th:nth-of-type(3) > .table-column-title");
+    By volume24hColumnExchange = By.cssSelector("thead th:nth-of-type(3) > .table-column-title");
 
-    By volume7dRankExchange = By.cssSelector("thead th:nth-of-type(4) > .table-column-title");
+    By volume7dColumnExchange = By.cssSelector("thead th:nth-of-type(4) > .table-column-title");
 
-    By volume30dRankExchange = By.cssSelector("thead th:nth-of-type(5) > .table-column-title");
+    By volume30dColumnExchange = By.cssSelector("thead th:nth-of-type(5) > .table-column-title");
 
-    By noMarketsRankExchange = By.cssSelector("thead th:nth-of-type(6) > .table-column-title");
+    By noMarketsColumnExchange = By.cssSelector("thead th:nth-of-type(6) > .table-column-title");
 
-    By change24hRankExchange = By.cssSelector("thead th:nth-of-type(7) > .table-column-title"); // thead span:nth-of-type(2)
+    By change24hColumnExchange = By.cssSelector("thead th:nth-of-type(7) > .table-column-title"); // thead span:nth-of-type(2)
+
+
+    // Favorites Ranks
+
+    By rankColumnFavorites = By.cssSelector("th.nowrap > .table-column-title");
+
+    By nameColumnFavorites = By.cssSelector("thead th:nth-of-type(2) > .table-column-title");
+
+    By change24hColumnFavorites = By.cssSelector("thead th:nth-of-type(3) > .table-column-title");
+
+    By priceColumnFavorites = By.cssSelector("thead th:nth-of-type(4) > .table-column-title");
+
+    By priceInBTCColumnFavorites = By.cssSelector("thead th:nth-of-type(5) > .table-column-title");
+
+    By marketCapColumnFavorites = By.cssSelector("thead th:nth-of-type(6) > .table-column-title");
+
+    By volume24hColumnFavorites = By.cssSelector("thead th:nth-of-type(7) > .table-column-title");
+
+    By CSScore24hColumnFavorites = By.cssSelector("thead th:nth-of-type(8) > .table-column-title");
+
+    By priceGraphColumnFavorites = By.cssSelector("thead th:nth-of-type(9) > .table-column-title");
+
+    By customColumnsRankFavorites = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(1) .column-wrapper .table-row");
+
+    By customColumns24hChangeFavorites = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(2) .column-wrapper .table-row");
+
+    By customColumnsPriceFavorites = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(3) .column-wrapper .table-row");
+
+    By customColumnsPriceInBTCFavorites = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(4) .column-wrapper .table-row");
+
+    By customColumnsMarketCapFavorites = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(5) .column-wrapper .table-row");
+
+    By customColumns24hVolumeFavorites = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(6) .column-wrapper .table-row");
+
+    By customColumnsCSScore24hFavorites = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(7) .column-wrapper .table-row");
+
+    By customColumnsPriceGraphFavorites = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(8) .column-wrapper .table-row");
 
 
     // 3 dot button
@@ -160,6 +220,37 @@ public class CoinsFavoritesExchanges {
     By holdingsCoins3Dot = By.cssSelector("div.more-menu-wrapper > div:nth-of-type(5)");
 
 
+    // Heatmap
+
+    By currentPerformanceHeatmap = By.cssSelector("div.treemap-filters > div:nth-of-type(1) > .jsx-1751315535 .filter-value");
+
+    By performanceDropDownHeatmap = By.cssSelector("div.treemap-filters > div:nth-of-type(1) > .jsx-1751315535 > .jsx-1751315535 > .jsx-1751315535");
+
+    By performance1HourHeatmap = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(1) .table-row");
+
+    By performance1DayHeatmap = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(2) .table-row");
+
+    By performance7DaysHeatmap = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(3) .table-row");
+
+    By currentBlockSizeHeatmap = By.cssSelector("div.filter-size > .jsx-1751315535 .filter-value");
+
+    By blockSizeDropDownHeatmap = By.cssSelector("div.filter-size > .jsx-1751315535 > .jsx-1751315535 > .jsx-1751315535");
+
+    By blockSizeMarketCapHeatmap = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(1) .table-row");
+
+    By blockSizeVolumeHeatmap = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(2) .table-row");
+
+    By fullScreenIconHeatmap = By.cssSelector(".icon-full-screen");
+
+    By currentItemsInMapHeatmap = By.cssSelector("div.pagination-filter > .jsx-1751315535 .filter-value");
+
+    By itemsInMapDropDownHeatmap = By.cssSelector("div.pagination-filter > .jsx-1751315535 > .jsx-1751315535 > .jsx-1751315535");
+
+    By itemsInMap20Heatmap = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(1) .table-row");
+
+    By itemsInMap100Heatmap = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(2) .table-row");
+
+
     By goToPortfolioButton = By.xpath("//button[@class='jsx-1426819953 standart-button  primary']");
 
 
@@ -171,10 +262,6 @@ public class CoinsFavoritesExchanges {
     }
 
     // Crypto Prices and Portfolio Tracker
-
-    public void clickOnCryptoPricesAndPortfolioTracker() {
-        utils.clickOnElement(cryptoPricesAndPortfolioTrackerText);
-    }
 
     public void clickOnMarketCap() {
         utils.clickOnElement(marketCapPrice);
@@ -240,6 +327,11 @@ public class CoinsFavoritesExchanges {
 
     public void clickOnFavoritesTab() {
         utils.clickOnElement(favoritesTab);
+    }
+
+    public void clickOnHeatmapTab()
+    {
+        utils.clickOnElement(heatmapTab);
     }
 
 
@@ -342,41 +434,351 @@ public class CoinsFavoritesExchanges {
     }
 
 
-    // Exchanges Ranks
+    // Coins Columns
 
-    public void clickOnIndexRankExchanges()
+    public void clickOnRankColumn()
     {
-        utils.clickOnElement(indexRankExchange);
+        utils.clickOnElement(rankColumn);
     }
 
-    public void clickOnNameRankExchanges()
+    public void clickOnNameColumn()
     {
-        utils.clickOnElement(nameRankExchange);
+        utils.clickOnElement(nameColumn);
     }
 
-    public void clickOnVolume24hRankExchanges()
+    public void clickOnChange1hColumn()
     {
-        utils.clickOnElement(volume24hRankExchange);
+        utils.clickOnElement(change1hColumn);
     }
 
-    public void clickOnVolume7dRankExchanges()
+    public void clickOnChange24hColumn()
     {
-        utils.clickOnElement(volume7dRankExchange);
+        utils.clickOnElement(change24hColumn);
     }
 
-    public void clickOnVolume30dRankExchanges()
+    public void clickOnChange7dColumn()
     {
-        utils.clickOnElement(volume30dRankExchange);
+        utils.clickOnElement(change7dColumn);
     }
 
-    public void clickOnNoMarketsRankExchanges()
+    public void clickOnPriceColumn()
     {
-        utils.clickOnElement(noMarketsRankExchange);
+        utils.clickOnElement(priceColumn);
     }
 
-    public void clickOnChange24hRankExchanges()
+    public void clickOnPriceInBTCColumn()
     {
-        utils.clickOnElement(change24hRankExchange);
+        utils.clickOnElement(priceInBTCColumn);
+    }
+
+    public void clickOnMarketCapColumn()
+    {
+        utils.clickOnElement(marketCapColumn);
+    }
+
+    public void clickOnVolume24hColumn()
+    {
+        utils.clickOnElement(volume24hColumn);
+    }
+
+    public void clickOnCSScoreColumn()
+    {
+        utils.clickOnElement(CSScoreColumn);
+    }
+
+    public void clickOnCSScore24hColumn()
+    {
+        utils.clickOnElement(CSScore24hColumn);
+    }
+
+
+    public Boolean rankColumnIsDisplayed()
+    {
+        return utils.isDisplayed(rankColumn);
+    }
+
+    public Boolean nameColumnIsDisplayed()
+    {
+        return utils.isDisplayed(nameColumn);
+    }
+
+    public Boolean change1hColumnIsDisplayed()
+    {
+        return utils.isDisplayed(change1hColumn);
+    }
+
+    public Boolean change24hColumnIsDisplayed()
+    {
+        return utils.isDisplayed(change24hColumn);
+    }
+
+    public Boolean change7dColumnIsDisplayed()
+    {
+        return utils.isDisplayed(change7dColumn);
+    }
+
+    public Boolean priceColumnIsDisplayed()
+    {
+        return utils.isDisplayed(priceColumn);
+    }
+
+    public Boolean priceInBTCColumnIsDisplayed()
+    {
+        return utils.isDisplayed(priceInBTCColumn);
+    }
+
+    public Boolean marketCapColumnIsDisplayed()
+    {
+        return utils.isDisplayed(marketCapColumn);
+    }
+
+    public Boolean volume24hColumnIsDisplayed()
+    {
+        return utils.isDisplayed(volume24hColumn);
+    }
+
+    public Boolean CSScoreColumnIsDisplayed()
+    {
+        return utils.isDisplayed(CSScoreColumn);
+    }
+
+    public Boolean CSScore24hColumnIsDisplayed()
+    {
+        return utils.isDisplayed(CSScore24hColumn);
+    }
+
+    public Boolean priceGraphColumnIsDisplayed()
+    {
+        return utils.isDisplayed(priceGraphColumn);
+    }
+
+
+    public void clickOnCustomColumnDropDown()
+    {
+        utils.clickOnElement(customColumnsDropDown);
+    }
+
+    public void clickOnCustomColumnsRank()
+    {
+        utils.clickOnElement(customColumnsRank);
+    }
+
+    public void clickOnCustomColumns1hChange()
+    {
+        utils.clickOnElement(customColumns1hChange);
+    }
+
+    public void clickOnCustomColumns24hChange()
+    {
+        utils.clickOnElement(customColumns24hChange);
+    }
+
+    public void clickOnCustomColumns7dChange()
+    {
+        utils.clickOnElement(customColumns7dChange);
+    }
+
+    public void clickOnCustomColumnsPrice()
+    {
+        utils.clickOnElement(customColumnsPrice);
+    }
+
+    public void clickOnCustomColumnsPriceInBTC()
+    {
+        utils.clickOnElement(customColumnsPriceInBTC);
+    }
+
+    public void clickOnCustomColumnsMarketCap()
+    {
+        utils.clickOnElement(customColumnsMarketCap);
+    }
+
+    public void clickOnCustomColumns24hVolume()
+    {
+        utils.clickOnElement(customColumns24hVolume);
+    }
+
+    public void clickOnCustomColumnsCSScore()
+    {
+        utils.clickOnElement(customColumnsCSScore);
+    }
+
+    public void clickOnCustomColumnsCSScore24h()
+    {
+        utils.clickOnElement(customColumnsCSScore24h);
+    }
+
+    public void clickOnCustomColumnsPriceGraph()
+    {
+        utils.clickOnElement(customColumnsPriceGraph);
+    }
+
+
+    // Exchanges Columns
+
+    public void clickOnRankColumnExchanges()
+    {
+        utils.clickOnElement(indexColumnExchange);
+    }
+
+    public void clickOnNameColumnExchanges()
+    {
+        utils.clickOnElement(nameColumnExchange);
+    }
+
+    public void clickOnVolume24hColumnExchanges()
+    {
+        utils.clickOnElement(volume24hColumnExchange);
+    }
+
+    public void clickOnVolume7dColumnExchanges()
+    {
+        utils.clickOnElement(volume7dColumnExchange);
+    }
+
+    public void clickOnVolume30dColumnExchanges()
+    {
+        utils.clickOnElement(volume30dColumnExchange);
+    }
+
+    public void clickOnNoMarketsColumnExchanges()
+    {
+        utils.clickOnElement(noMarketsColumnExchange);
+    }
+
+    public void clickOnChange24hColumnExchanges()
+    {
+        utils.clickOnElement(change24hColumnExchange);
+    }
+
+
+    // Favorites Columns
+
+    public void clickOnRankColumnFavorites()
+    {
+        utils.clickOnElement(rankColumnFavorites);
+    }
+
+    public void clickOnNameColumnFavorites()
+    {
+        utils.clickOnElement(nameColumnFavorites);
+    }
+
+    public void clickOnChange24hColumnFavorites()
+    {
+        utils.clickOnElement(change24hColumnFavorites);
+    }
+
+    public void clickOnPriceColumnFavorites()
+    {
+        utils.clickOnElement(priceColumnFavorites);
+    }
+
+    public void clickOnPriceInBTCColumnFavorites()
+    {
+        utils.clickOnElement(priceInBTCColumnFavorites);
+    }
+
+    public void clickOnMarketCapColumnFavorites()
+    {
+        utils.clickOnElement(marketCapColumnFavorites);
+    }
+
+    public void clickOnVolume24hColumnFavorites()
+    {
+        utils.clickOnElement(volume24hColumnFavorites);
+    }
+
+    public void clickOnCSScore24hColumnFavorites()
+    {
+        utils.clickOnElement(CSScore24hColumnFavorites);
+    }
+
+
+    public Boolean rankColumnIsDisplayedFavorites()
+    {
+        return utils.isDisplayed(rankColumnFavorites);
+    }
+
+    public Boolean nameColumnIsDisplayedFavorites()
+    {
+        return utils.isDisplayed(nameColumnFavorites);
+    }
+
+    public Boolean change24hColumnIsDisplayedFavorites()
+    {
+        return utils.isDisplayed(change24hColumnFavorites);
+    }
+
+    public Boolean priceColumnIsDisplayedFavorites()
+    {
+        return utils.isDisplayed(priceColumnFavorites);
+    }
+
+    public Boolean priceInBTCColumnIsDisplayedFavorites()
+    {
+        return utils.isDisplayed(priceInBTCColumnFavorites);
+    }
+
+    public Boolean marketCapColumnIsDisplayedFavorites()
+    {
+        return utils.isDisplayed(marketCapColumnFavorites);
+    }
+
+    public Boolean volume24hColumnIsDisplayedFavorites()
+    {
+        return utils.isDisplayed(volume24hColumnFavorites);
+    }
+
+    public Boolean CSScore24hColumnIsDisplayedFavorites()
+    {
+        return utils.isDisplayed(CSScore24hColumnFavorites);
+    }
+
+    public Boolean priceGraphIsDisplayedFavorites()
+    {
+        return utils.isDisplayed(priceGraphColumnFavorites);
+    }
+
+
+    public void clickOnCustomColumnsRankFavorites()
+    {
+        utils.clickOnElement(customColumnsRankFavorites);
+    }
+
+    public void clickOnCustomColumns24hChangeFavorites()
+    {
+        utils.clickOnElement(customColumns24hChangeFavorites);
+    }
+
+    public void clickOnCustomColumnsPriceFavorites()
+    {
+        utils.clickOnElement(customColumnsPriceFavorites);
+    }
+
+    public void clickOnCustomColumnsPriceInBTCFavorites()
+    {
+        utils.clickOnElement(customColumnsPriceInBTCFavorites);
+    }
+
+    public void clickOnCustomColumnsMarketCapFavorites()
+    {
+        utils.clickOnElement(customColumnsMarketCapFavorites);
+    }
+
+    public void clickOnCustomColumns24hVolumeFavorites()
+    {
+        utils.clickOnElement(customColumns24hVolumeFavorites);
+    }
+
+    public void clickOnCustomColumnsCSScore24hFavorites()
+    {
+        utils.clickOnElement(customColumnsCSScore24hFavorites);
+    }
+
+    public void clickOnCustomColumnsPriceGraphFavorites()
+    {
+        utils.clickOnElement(customColumnsPriceGraphFavorites);
     }
 
 
@@ -413,77 +815,85 @@ public class CoinsFavoritesExchanges {
     }
 
 
+    // Heatmap
+
+    public String getCurrentPerformanceHeatmap()
+    {
+        return utils.getText(currentPerformanceHeatmap);
+    }
+
+    public void clickOnPerformanceDropDownHeatmap()
+    {
+        utils.clickOnElement(performanceDropDownHeatmap);
+    }
+
+    public void clickOnPerformance1HourHeatmap()
+    {
+        utils.clickOnElement(performance1HourHeatmap);
+    }
+
+    public void clickOnPerformance1DayHeatmap()
+    {
+        utils.clickOnElement(performance1DayHeatmap);
+    }
+
+    public void clickOnPerformance7DaysHeatmap()
+    {
+        utils.clickOnElement(performance7DaysHeatmap);
+    }
+
+    public String getCurrentBlockSizeHeatmap()
+    {
+        return utils.getText(currentBlockSizeHeatmap);
+    }
+
+    public void clickOnBlockSizeDropDownHeatmap()
+    {
+        utils.clickOnElement(blockSizeDropDownHeatmap);
+    }
+
+    public void clickOnBlockSizeMarketCapHeatmap()
+    {
+        utils.clickOnElement(blockSizeMarketCapHeatmap);
+    }
+
+    public void clickOnBlockSizeVolumeHeatmap()
+    {
+        utils.clickOnElement(blockSizeVolumeHeatmap);
+    }
+
+    public void clickOnFullScreenHeatmap()
+    {
+        utils.clickOnElement(fullScreenIconHeatmap);
+    }
+
+    public String getCurrentItemsInMapHeatmap()
+    {
+        return utils.getText(currentItemsInMapHeatmap);
+    }
+
+    public void clickOnItemsInMapDropDownHeatmap()
+    {
+        utils.clickOnElement(itemsInMapDropDownHeatmap);
+    }
+
+    public void clickOnItemsInMap20Heatmap()
+    {
+        utils.clickOnElement(itemsInMap20Heatmap);
+    }
+
+    public void clickOnItemsInMap100Heatmap()
+    {
+        utils.clickOnElement(itemsInMap100Heatmap);
+    }
+
+
     public void clickOnGoToPortfolio()
     {
         utils.clickOnElement(goToPortfolioButton);
     }
 
     // --------------------------------------------- Scripts -----------------------------------------------
-
-
-    // Click on all ranks
-    public void clickOnAllRanks()
-    {
-        int index = 1;
-
-        do {
-            driver.findElement(By.cssSelector("thead th:nth-of-type(" + index + ") > .table-column-title")).click();
-
-            index++;
-        } while(index != 8);
-
-    }
-
-
-    // Get all coins indexes
-    public void AllCoinsByIndex()
-    {
-
-        int index = 1;
-        int index2 = 2;
-
-        do {
-            try {
-                WebElement allCoins = driver.findElement(By.xpath("//html//body//div[1]//main//section//div//div[2]//div[3]//table//tbody//tr[" + index + "]//td[1]//a//span//span"));
-
-                String coinIndexText = allCoins.getText();
-                System.out.println(coinIndexText);
-            } catch (NoSuchElementException e) {}
-
-            index++;
-
-            if (index == 300) {
-
-                driver.get("https://coinstats.app/en/?pagesize=300&page=" + index2);
-                index2++;
-                index = 1;
-
-            }
-        }
-        while (index != 9000);
-    }
-
-    // Click on all coins
-    public void clickOnAllCoins() {
-
-         int index = 1;
-         int index2 = 1;
-
-             do {
-                 driver.findElement(By.xpath("//html//body//div[1]//main//section//div//div[2]//div[3]//table//tbody//tr[" + index + "]//td[1]//a//span//span")).click();
-                 driver.get("https://coinstats.app/en/?pagesize=20&page=" + index2);
-
-             index++;
-
-             if (index == 21) {
-                 index2++;
-                 driver.get("https://coinstats.app/en/?pagesize=20&page=" + index2);
-                 index = 1;
-             }
-         }
-
-             while (index != 9000) ;
-    }
 
     // Get all coins names
     public void getAllCoinsNames()
@@ -584,29 +994,6 @@ public class CoinsFavoritesExchanges {
             }
 
         }while (index != 9000);
-    }
-
-    // Click on all exchanges
-    public void clickOnAllExchanges()
-    {
-
-        int index = 1;
-        int index2 = 1;
-
-        do {
-            driver.findElement(By.xpath("//html//body//div[1]//main//section//div//div[2]//div[3]//table//tbody//tr[" + index + "]//td[1]//a//span//span")).click();
-            driver.get("https://coinstats.app/en/exchanges/?pagesize=100&page=" + index2);
-
-            index++;
-
-            if (index == 101) {
-                index2++;
-                driver.get("https://coinstats.app/en/exchanges/?pagesize=100&page=" + index2);
-                index = 1;
-            }
-        }
-
-        while (index != 400) ;
     }
 
     // Get all exchanges all data

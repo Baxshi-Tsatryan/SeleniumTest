@@ -69,6 +69,7 @@ public class GeneralCoinsPage {
 
     By onChainDataTab = By.cssSelector("#__next > main > section > div > div.coin-info-inner-wrapper > div.coin-info-tabs-wrapper > div > ul > li:nth-child(6) > a");
 
+    By widgetButton = By.cssSelector("button.show-desktop");
 
 
     // ----------------------------------------------------- Methods -------------------------------------------------
@@ -255,6 +256,11 @@ public class GeneralCoinsPage {
     public void clickOnOnChainDataTab()
     {
         utils.clickOnElement(onChainDataTab);
+    }
+
+    public void clickOnWidget()
+    {
+        utils.clickOnElement(widgetButton);
     }
 
 }

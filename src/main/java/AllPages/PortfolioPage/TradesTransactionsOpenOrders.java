@@ -14,6 +14,12 @@ public class TradesTransactionsOpenOrders {
         utils = new SeleniumUtils(this.driver);
     }
 
+    // Tabs
+
+    By transactionsTab = By.cssSelector("a[href='/en/portfolio/transactions/']");
+
+    By openOrdersTab = By.cssSelector("a[href='/en/portfolio/open-orders/']");
+
     // Filters
 
     By searchCoinFieldTrades = By.cssSelector("[placeholder='Search coin']");
@@ -83,6 +89,23 @@ public class TradesTransactionsOpenOrders {
 
 
     // --------------------------------------------- Methods -----------------------------------------------------------
+
+    // Tabs
+
+    public void clickOnTransactionsTab()
+    {
+        utils.clickOnElement(transactionsTab);
+    }
+
+    public Boolean openOrdersTabIsDisplayed()
+    {
+        return utils.isDisplayed(openOrdersTab);
+    }
+
+    public void clickOnOpenOrdersTab()
+    {
+        utils.clickOnElement(openOrdersTab);
+    }
 
     // Trades Filters
 

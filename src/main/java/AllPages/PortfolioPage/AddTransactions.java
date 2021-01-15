@@ -781,4 +781,67 @@ public class AddTransactions {
             index++;
         }
     }
+
+    public String select10Coins(int i)
+    {
+        String coinName = null;
+
+        switch (i) {
+            case 0: {
+                coinName = "Ethereum";
+                break;
+            }
+
+            case 1: {
+                coinName = "Bitcoin";
+                break;
+            }
+
+            case 2: {
+                coinName = "XRP";
+                break;
+            }
+
+            case 3: {
+                coinName = "Tron";
+                break;
+            }
+
+            case 4: {
+                coinName = "Polkadot";
+                break;
+            }
+
+            case 5: {
+                coinName = "EOS";
+                break;
+            }
+
+            case 6: {
+                coinName = "Golem";
+                break;
+            }
+
+            case 7: {
+                coinName = "Aragon";
+                break;
+            }
+
+            case 8: {
+                coinName = "EOSJacks";
+                break;
+            }
+
+            case 9: {
+                coinName = "AdultChain";
+                break;
+            }
+
+            case 10: {
+                coinName = "ZoZoCoin";
+                break;
+            }
+        }
+        return coinName;
+    }
 }

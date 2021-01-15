@@ -47,6 +47,7 @@ public class GeneralPortfolioHoldingsLiquidity {
 
     By trade = By.cssSelector(".primary-bordered");
 
+
     By moreActionsDropDown = By.cssSelector("div.more-actions .primary-nav");
 
     By addTransactionInDropDown = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(1) .table-row");
@@ -75,17 +76,17 @@ public class GeneralPortfolioHoldingsLiquidity {
 
     // Holdings
 
-    //Ranks
+    // Columns
 
-    By holdingsNameRank = By.cssSelector("thead th:nth-of-type(1) > .table-column-title"); //thead th:nth-of-type(1)
+    By holdingsNameColumn = By.cssSelector("thead th:nth-of-type(1) > .table-column-title"); //thead th:nth-of-type(1)
 
-    By holdingsAmountRank = By.cssSelector("thead span:nth-of-type(2)");
+    By holdingsAmountColumn = By.cssSelector("thead span:nth-of-type(2)");
 
-    By holdingsPriceRank = By.cssSelector("thead th:nth-of-type(3) > .table-column-title"); //thead th:nth-of-type(3)
+    By holdingsPriceColumn = By.cssSelector("thead th:nth-of-type(3) > .table-column-title"); //thead th:nth-of-type(3)
 
-    By holdingsTotalRank = By.cssSelector("thead th:nth-of-type(4) > .table-column-title"); //thead th:nth-of-type(4)
+    By holdingsTotalColumn = By.cssSelector("thead th:nth-of-type(4) > .table-column-title"); //thead th:nth-of-type(4)
 
-    By holdingsPLRank = By.cssSelector("th.has-value .table-column-title");
+    By holdingsPLColumn = By.cssSelector("th.has-value .table-column-title");
 
     By holdingsPL3Dot = By.cssSelector("th.has-value .jsx-152191236 > .jsx-152191236 > .jsx-152191236");
 
@@ -98,243 +99,315 @@ public class GeneralPortfolioHoldingsLiquidity {
     By holdingsPLCurrentHoldings = By.cssSelector("div.more-menu-wrapper > div:nth-of-type(4) > .table-row");
 
 
+    By customColumnsDropDown = By.cssSelector(".jsx-2095321675");
+
+    By customColumnsRank = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(1) .column-wrapper .table-row");
+
+    By customColumnsAmount = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(2) .column-wrapper .table-row");
+
+    By customColumnsPrice = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(3) .column-wrapper .table-row");
+
+    By customColumns1hChange = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(4) .column-wrapper .table-row");
+
+    By customColumns24hChange = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(5) .column-wrapper .table-row");
+
+    By customColumnsTotal = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(6) .column-wrapper .table-row");
+
+    By customColumnsPriceInBTC = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(7) .column-wrapper .table-row");
+
+    By customColumnsMarketCap = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(8) .column-wrapper .table-row");
+
+    By customColumns24hVolume = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(9) .column-wrapper .table-row");
+
+    By customColumnsCSScore = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(10) .column-wrapper .table-row");
+
+    By customColumnsCSScore24h = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(11) .column-wrapper .table-row");
+
+    By customColumnsPriceGraph = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(12) .column-wrapper .table-row");
+
+    By customColumnsPL = By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(13) .column-wrapper .table-row");
+
+
     // Liquidity
 
-    // Ranks
+    // Columns
 
-    By liquidityNameRank = By.cssSelector("thead th:nth-of-type(1) > .table-column-title");
+    By liquidityNameColumn = By.cssSelector("thead th:nth-of-type(1) > .table-column-title");
 
-    By liquidityPriceRank = By.cssSelector("thead th:nth-of-type(2) > .table-column-title");
+    By liquidityPriceColumn = By.cssSelector("thead th:nth-of-type(2) > .table-column-title");
 
-    By liquidityRank = By.cssSelector("thead span:nth-of-type(2)");
+    By liquidityColumn = By.cssSelector("thead span:nth-of-type(2)");
 
     By liquidityTotalFeesEarned = By.cssSelector("thead th:nth-of-type(4) > .table-column-title");
-
 
 
     // --------------------------------------------------- Methods -----------------------------------------------------
 
     // General
 
-    public void clickOnUpdate()
-    {
+    public void clickOnUpdate() {
         utils.clickOnElement(updateButton);
     }
 
-    public String getPortfolioAmount()
-    {
+    public String getPortfolioAmount() {
         return utils.getText(portfolioAmount);
     }
 
-    public String getPortfolioProfitLossValue()
-    {
+    public String getPortfolioProfitLossValue() {
         return utils.getText(profitOrLossValue);
     }
 
-    public String getPortfolioProfitLossPercent()
-    {
+    public String getPortfolioProfitLossPercent() {
         return utils.getText(profitOrLossPercent);
     }
 
-    public String getPortfolioProfitLossValueColor()
-    {
+    public String getPortfolioProfitLossValueColor() {
         return utils.getCSSValue(profitOrLossValue, "color");
     }
 
-    public String getPortfolioProfitLossPercentColor()
-    {
+    public String getPortfolioProfitLossPercentColor() {
         return utils.getCSSValue(profitOrLossPercent, "color");
     }
 
-    public String getCurrentRangeTime()
-    {
+    public String getCurrentRangeTime() {
         return utils.getText(currentRange);
     }
 
-    public void clickOnRangeDropDown()
-    {
+    public void clickOnRangeDropDown() {
         utils.clickOnElement(rangeDropDown);
     }
 
-    public void clickOnRange24h()
-    {
+    public void clickOnRange24h() {
         utils.clickOnElement(range24h);
     }
 
-    public void clickOnRange1w()
-    {
+    public void clickOnRange1w() {
         utils.clickOnElement(range1w);
     }
 
-    public void clickOnRange1m()
-    {
+    public void clickOnRange1m() {
         utils.clickOnElement(range1m);
     }
 
-    public void clickOnRange3m()
-    {
+    public void clickOnRange3m() {
         utils.clickOnElement(range3m);
     }
 
-    public void clickOnRange6m()
-    {
+    public void clickOnRange6m() {
         utils.clickOnElement(range6m);
     }
 
-    public void clickOnRange1y()
-    {
+    public void clickOnRange1y() {
         utils.clickOnElement(range1y);
     }
 
-    public void clickOnRangeAll()
-    {
+    public void clickOnRangeAll() {
         utils.clickOnElement(rangeAll);
     }
 
-    public void clickOnSyncAll()
-    {
+    public void clickOnSyncAll() {
         utils.clickOnElement(syncAll);
     }
 
-    public void clickOnTrade()
-    {
+    public Boolean syncAllIsDisplayed() {
+        return utils.isDisplayed(syncAll);
+    }
+
+    public void clickOnTrade() {
         utils.clickOnElement(trade);
     }
 
-    public void clickOnMoreActionsDropDown()
-    {
+    public Boolean tradeIsDisplayed() {
+        return utils.isDisplayed(trade);
+    }
+
+    public void clickOnMoreActionsDropDown() {
         utils.clickOnElement(moreActionsDropDown);
     }
 
-    public void clickOnAddTransactionsInDropDown()
-    {
+    public Boolean moreActionDropDownIsDisplayed() {
+        return utils.isDisplayed(moreActionsDropDown);
+    }
+
+    public void clickOnAddTransactionsInDropDown() {
         utils.clickOnElement(addTransactionInDropDown);
     }
 
-    public void clickOnDepositInDropDown()
-    {
+    public void clickOnDepositInDropDown() {
         utils.clickOnElement(depositInDropDown);
+    }
+
+    public Boolean depositIsDisplayed() {
+        return utils.isDisplayed(depositInDropDown);
     }
 
 
     // Tabs
 
-    public void clickOnHoldingsTab()
-    {
+    public void clickOnHoldingsTab() {
         utils.clickOnElement(holdingsTab);
     }
 
-    public void clickOnLiquidityTab()
-    {
+    public void clickOnLiquidityTab() {
         utils.clickOnElement(liquidityTab);
     }
 
-    public Boolean liquidityTabIsDisplayed()
-    {
+    public Boolean liquidityTabIsDisplayed() {
         return utils.isDisplayed(liquidityTab);
     }
 
-    public void clickOnOpenPositionTab()
-    {
+    public void clickOnOpenPositionTab() {
         utils.clickOnElement(openPositionsTab);
     }
 
-    public Boolean openPositionTabIsDisplayed()
-    {
+    public Boolean openPositionTabIsDisplayed() {
         return utils.isDisplayed(openPositionsTab);
     }
 
-    public void clickOnChartsTab()
-    {
+    public void clickOnChartsTab() {
         utils.clickOnElement(chartsTab);
     }
 
-    public void clickOnOrdersTab()
-    {
+    public void clickOnOrdersTab() {
         utils.clickOnElement(ordersTab);
     }
 
-    public Boolean ordersTabIsDisplayed()
-    {
+    public Boolean ordersTabIsDisplayed() {
         return utils.isDisplayed(ordersTab);
     }
 
-    public void clickOnTradeTab()
-    {
+    public void clickOnTradeTab() {
         utils.clickOnElement(tradesTab);
     }
 
-    public Boolean tradesTabIsDisplayed()
-    {
+    public Boolean tradesTabIsDisplayed() {
         return utils.isDisplayed(tradesTab);
     }
 
-    public void clickOnTransactionsTab()
-    {
+    public void clickOnTransactionsTab() {
         utils.clickOnElement(transactionsTab);
     }
 
-    public void clickOnOpenOrdersTab()
-    {
+    public void clickOnOpenOrdersTab() {
         utils.clickOnElement(openOrdersTab);
     }
 
 
     // Holdings
 
-    public void clickOnNameRankHoldings()
-    {
-        utils.clickOnElement(holdingsNameRank);
+    public void clickOnNameColumnHoldings() {
+        utils.clickOnElement(holdingsNameColumn);
     }
 
-    public void clickOnAmountRankHoldings()
-    {
-        utils.clickOnElement(holdingsAmountRank);
+    public void clickOnAmountColumnHoldings() {
+        utils.clickOnElement(holdingsAmountColumn);
     }
 
-    public void clickOnPriceRankHoldings()
-    {
-        utils.clickOnElement(holdingsPriceRank);
+    public void clickOnPriceColumnHoldings() {
+        utils.clickOnElement(holdingsPriceColumn);
     }
 
-    public void clickOnTotalRankHoldings()
-    {
-        utils.clickOnElement(holdingsTotalRank);
+    public void clickOnTotalColumnHoldings() {
+        utils.clickOnElement(holdingsTotalColumn);
     }
 
-    public void clickOnPLRankHoldings()
-    {
-        utils.clickOnElement(holdingsPLRank);
+    public void clickOnPLColumnHoldings() {
+        utils.clickOnElement(holdingsPLColumn);
     }
 
-    public String getCurrentPLHoldings()
-    {
+    public String getCurrentPLHoldings() {
         return utils.getText(holdingsPLCurrentHoldings);
     }
 
-    public void clickOnPL3DotHoldings()
-    {
+    public void clickOnPL3DotHoldings() {
         utils.clickOnElement(holdingsPL3Dot);
     }
 
-    public void clickOnAllTime3DotHoldings()
-    {
+    public void clickOnAllTime3DotHoldings() {
         utils.clickOnElement(holdingsPLAllTime);
     }
 
-    public void clickOn24hours3DotHoldings()
-    {
+    public void clickOn24hours3DotHoldings() {
         utils.clickOnElement(holdingsPL24hours);
     }
 
-    public void clickOnLastTrade3DotHoldings()
-    {
+    public void clickOnLastTrade3DotHoldings() {
         utils.clickOnElement(holdingsPLLastTrade);
     }
 
-    public void clickOnCurrentHoldings3DotHoldings()
-    {
+    public void clickOnCurrentHoldings3DotHoldings() {
         utils.clickOnElement(holdingsPLCurrentHoldings);
+    }
+
+
+    public void clickOnCustomColumnsDropDown()
+    {
+        utils.clickOnElement(customColumnsDropDown);
+    }
+
+    public void clickOnCustomColumnsRank()
+    {
+        utils.clickOnElement(customColumnsRank);
+    }
+
+    public void clickOnCustomColumnsAmount()
+    {
+        utils.clickOnElement(customColumnsAmount);
+    }
+
+    public void clickOnCustomColumnsPrice()
+    {
+        utils.clickOnElement(customColumnsPrice);
+    }
+
+    public void clickOnCustomColumns1hChange()
+    {
+        utils.clickOnElement(customColumns1hChange);
+    }
+
+    public void clickOnCustomColumns24hChange()
+    {
+        utils.clickOnElement(customColumns24hChange);
+    }
+
+    public void clickOnCustomColumnsTotal()
+    {
+        utils.clickOnElement(customColumnsTotal);
+    }
+
+    public void clickOnCustomColumnsPriceInBTC()
+    {
+        utils.clickOnElement(customColumnsPriceInBTC);
+    }
+
+    public void clickOnCustomColumnsMarketCap()
+    {
+        utils.clickOnElement(customColumnsMarketCap);
+    }
+
+    public void clickOnCustomColumns24hVolume()
+    {
+        utils.clickOnElement(customColumns24hVolume);
+    }
+
+    public void clickOnCustomColumnsCSScore()
+    {
+        utils.clickOnElement(customColumnsCSScore);
+    }
+
+    public void clickOnCustomColumnsCSScore24h()
+    {
+        utils.clickOnElement(customColumnsCSScore24h);
+    }
+
+    public void clickOnCustomColumnsPriceGraph()
+    {
+        utils.clickOnElement(customColumnsPriceGraph);
+    }
+
+    public void clickOnCustomColumnsPL()
+    {
+        utils.clickOnElement(customColumnsPL);
     }
 
 
@@ -342,17 +415,17 @@ public class GeneralPortfolioHoldingsLiquidity {
 
     public void clickOnNameRankLiquidity()
     {
-        utils.clickOnElement(liquidityNameRank);
+        utils.clickOnElement(liquidityNameColumn);
     }
 
     public void clickOnPriceRankLiquidity()
     {
-        utils.clickOnElement(liquidityPriceRank);
+        utils.clickOnElement(liquidityPriceColumn);
     }
 
     public void clickOnLiquidityRankLiquidity()
     {
-        utils.clickOnElement(liquidityRank);
+        utils.clickOnElement(liquidityColumn);
     }
 
     public void clickOnTotalFeesEarnedRankLiquidity()

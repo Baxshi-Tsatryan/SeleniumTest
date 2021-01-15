@@ -309,4 +309,68 @@ public class SeleniumUtils{
         driver.switchTo().alert();
     }
 
+
+    // Parses
+
+    public int parseFromStringToInt(String string)
+    {
+        int intNumber = Integer.parseInt(string);
+
+        return intNumber;
+    }
+
+    public float parseFromStringToFloat(String string)
+    {
+        float floatNumber = Float.parseFloat(string);
+
+        return floatNumber;
+    }
+
+    public String parseFromIntToString(int intNumber)
+    {
+        String string = String.valueOf(intNumber);
+
+        return string;
+    }
+
+    public String parseFromFloatToString(int floatNumber)
+    {
+        String string = String.valueOf(floatNumber);
+
+        return string;
+    }
+
+
+    // Other
+
+    public int randomNumber(int max)
+    {
+        int randNum = (int) (Math.random() * (max - 1) + 1);
+
+        return randNum;
+    }
+
+    public void checkNumbers(int CSNumber, int validNumber, int percent)
+    {
+
+        int validNumberPercent = (validNumber/100) * percent;
+        int CSNumberMax = CSNumber + validNumberPercent;
+        int CSNumberMin = CSNumber - validNumberPercent;
+
+        if (CSNumber > CSNumberMax)
+        {
+            System.err.println("Number is invalid. Should be " + validNumber + ", but is " + CSNumber);
+        }
+
+        else if (CSNumber < CSNumberMin)
+        {
+            System.err.println("Number is invalid. Should be " + validNumber + ", but is " + CSNumber);
+        }
+
+        else
+        {
+            System.out.println("Number is valid");
+        }
+    }
+
 }

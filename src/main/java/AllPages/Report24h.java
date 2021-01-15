@@ -490,9 +490,9 @@ public class Report24h {
         return utils.getText(topGainersThirdIndex);
     }
 
-    public void getTopGainersThirdName()
+    public String getTopGainersThirdName()
     {
-        utils.getText(topGainersThirdName);
+        return utils.getText(topGainersThirdName);
     }
 
     public String getTopGainersThirdPrice()
