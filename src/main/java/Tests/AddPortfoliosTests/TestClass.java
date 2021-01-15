@@ -1,5 +1,6 @@
 package Tests.AddPortfoliosTests;
 
+import AllPages.MainPage.CoinsFavoritesExchangesHeatmap;
 import AllPages.PortfolioPage.AddTransactions;
 import AllPages.PortfolioPage.LeftSideOfPagePortfolios;
 import AllPages.PortfolioPage.PortfolioPageWhenNotLogin;
@@ -19,6 +20,7 @@ public class TestClass extends Driver{
     SeleniumUtils utils;
     Paths paths;
     PortfolioPageWhenNotLogin portfolioPageWhenNotLogin;
+    CoinsFavoritesExchangesHeatmap coinsFavoritesExchangesHeatmap;
 
     @BeforeClass
     public void beforeClass() {
@@ -28,18 +30,12 @@ public class TestClass extends Driver{
         leftSideOfPagePortfolios = new LeftSideOfPagePortfolios(driver);
         paths = new Paths(driver);
         portfolioPageWhenNotLogin = new PortfolioPageWhenNotLogin(driver);
+        coinsFavoritesExchangesHeatmap = new CoinsFavoritesExchangesHeatmap(driver);
     }
 
     @Test(priority = 1)
     public void addAllExchangesCSVPositive() throws InterruptedException, IOException {
 
-        allURLs.navigateToPortfolioPage();
-        utils.enableCookie();
-
-        addTransactions.clickOnAddTransactions();
-        addTransactions.clickOnAnyCoinResult("ZoZoCoin");
-
-        Thread.sleep(3000);
-
+        allURLs.navigateToMainPage();
     }
 }

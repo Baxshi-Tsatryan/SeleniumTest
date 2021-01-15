@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import java.util.NoSuchElementException;
-
 public class CoinsFavoritesExchangesHeatmap {
 
     WebDriver driver;
@@ -1086,5 +1084,9 @@ public class CoinsFavoritesExchangesHeatmap {
         }while (index != 400);
     }
 
+    public void clickOnCoins(int index)
+    {
+        driver.findElement(By.cssSelector("#__next > main > section > div > div.jsx-3226279120.section-wrapper > div.common-table > table > tbody > tr:nth-child(" + index + ") > td.border.left.regular-weight-not-mobile.coin-name-col.qa-coin-name.line-link > a > span:nth-child(2) > span")).click();
+    }
 }
 

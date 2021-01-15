@@ -15,7 +15,9 @@ public class GeneralCoinsPage {
 
     By iconClose = By.cssSelector(".icon-close");
 
-    By coinName = By.cssSelector("h1");
+    By coinName = By.xpath("//*[@id='__next']/main/section/div/div[1]/div[1]/div[3]/div[1]/h1");
+
+    By coinSecondName = By.cssSelector("p.coin-description > span:nth-of-type(1)");
 
     By coinIndex = By.cssSelector(".show-desktop.name-wrapper > .jsx-226630945");
 
@@ -82,6 +84,11 @@ public class GeneralCoinsPage {
     public String getCoinName()
     {
         return utils.getText(coinName);
+    }
+
+    public String getCoinSecondName()
+    {
+        return utils.getText(coinSecondName);
     }
 
     public String getCoinIndex()
