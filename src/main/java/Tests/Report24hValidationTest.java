@@ -97,14 +97,53 @@ public class Report24hValidationTest extends Driver {
         String topExchangesThirdCoinPrice = report24h.getTopExchangesThirdPrice();
 
 
-        // CoinGecko
+        System.out.println(marketOverviewFirstCoinName);
+        System.out.println(marketOverviewSecondCoinName);
+        System.out.println(marketOverviewThirdCoinName);
+        System.out.println(marketOverviewFirstCoinPrice);
+        System.out.println(marketOverviewSecondCoinPrice);
+        System.out.println(marketOverviewThirdCoinPrice);
+        System.out.println(marketOverviewFirstCoinPercent);
+        System.out.println(marketOverviewSecondCoinPercent);
+        System.out.println(marketOverviewThirdCoinPercent);
+        System.out.println();
 
-        allURLs.navigateToCoinGecko();
+        System.out.println(topVolume24hFirstCoinName);
+        System.out.println(topVolume24hSecondCoinName);
+        System.out.println(topVolume24hThirdCoinName);
+        System.out.println(topVolume24hFirstCoinPrice);
+        System.out.println(topVolume24hSecondCoinPrice);
+        System.out.println(topVolume24hThirdCoinPrice);
+        System.out.println();
 
-        coinGecko.typeSearchField(marketOverviewFirstCoinName);
-        coinGecko.clickOnFirstCoinResult();
-        coinGecko.getCoinPrice();
-        coinGecko.getCoinPercent();
+        System.out.println(topGainersFirstCoinName);
+        System.out.println(topGainersSecondCoinName);
+        System.out.println(topGainersThirdCoinName);
+        System.out.println(topGainersFirstCoinPrice);
+        System.out.println(topGainersSecondCoinPrice);
+        System.out.println(topGainersThirdCoinPrice);
+        System.out.println(topGainersFirstCoinPercent);
+        System.out.println(topGainersSecondCoinPercent);
+        System.out.println(topGainersThirdCoinPercent);
+        System.out.println();
+
+        System.out.println(topLosersFirstCoinName);
+        System.out.println(topLosersSecondCoinName);
+        System.out.println(topLosersThirdCoinName);
+        System.out.println(topLosersFirstCoinPrice);
+        System.out.println(topLosersSecondCoinPrice);
+        System.out.println(topLosersThirdCoinPrice);
+        System.out.println(topLosersFirstCoinPercent);
+        System.out.println(topLosersSecondCoinPercent);
+        System.out.println(topLosersThirdCoinPercent);
+        System.out.println();
+
+        System.out.println(topExchangesFirstCoinName);
+        System.out.println(topExchangesSecondCoinName);
+        System.out.println(topExchangesThirdCoinName);
+        System.out.println(topExchangesFirstCoinPrice);
+        System.out.println(topExchangesSecondCoinPrice);
+        System.out.println(topExchangesThirdCoinPrice);
 
     }
 
