@@ -8,6 +8,7 @@ import MainPackage.AllURLs;
 import MainPackage.Driver;
 import MainPackage.Paths;
 import MainPackage.SeleniumUtils;
+import Tests.CheckAllCoinsAllData.CheckAllCoinsExchangesAllData;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.io.IOException;
@@ -21,6 +22,7 @@ public class TestClass extends Driver{
     Paths paths;
     PortfolioPageWhenNotLogin portfolioPageWhenNotLogin;
     CoinsFavoritesExchangesHeatmap coinsFavoritesExchangesHeatmap;
+    CheckAllCoinsExchangesAllData checkAllCoinsExchangesAllData;
 
     @BeforeClass
     public void beforeClass() {
@@ -30,12 +32,13 @@ public class TestClass extends Driver{
         leftSideOfPagePortfolios = new LeftSideOfPagePortfolios(driver);
         paths = new Paths(driver);
         portfolioPageWhenNotLogin = new PortfolioPageWhenNotLogin(driver);
-        coinsFavoritesExchangesHeatmap = new CoinsFavoritesExchangesHeatmap(driver);
+        checkAllCoinsExchangesAllData = new CheckAllCoinsExchangesAllData();
     }
 
     @Test(priority = 1)
     public void addAllExchangesCSVPositive() throws InterruptedException, IOException {
 
         allURLs.navigateToMainPage();
+
     }
 }

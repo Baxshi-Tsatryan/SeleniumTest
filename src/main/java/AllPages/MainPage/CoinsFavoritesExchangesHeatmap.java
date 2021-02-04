@@ -7,14 +7,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import java.util.List;
+
 public class CoinsFavoritesExchangesHeatmap {
 
     WebDriver driver;
     SeleniumUtils utils;
+    Header header;
 
     public CoinsFavoritesExchangesHeatmap(WebDriver driver) {
         this.driver = driver;
         utils = new SeleniumUtils(this.driver);
+        header = new Header(driver);
     }
 
     By topBannerHereButton = By.cssSelector("#__next > main > header > div.jsx-3251546915.top-banner-container > span > a");
@@ -1084,9 +1088,466 @@ public class CoinsFavoritesExchangesHeatmap {
         }while (index != 400);
     }
 
+
+    // Coins Data
+
     public void clickOnCoins(int index)
     {
-        driver.findElement(By.cssSelector("#__next > main > section > div > div.jsx-3226279120.section-wrapper > div.common-table > table > tbody > tr:nth-child(" + index + ") > td.border.left.regular-weight-not-mobile.coin-name-col.qa-coin-name.line-link > a > span:nth-child(2) > span")).click();
+        driver.findElement(By.cssSelector("#__next > main > section > div > div.jsx-3798992717.section-wrapper > div.common-table > table > tbody > tr:nth-child(" + index + ") > td.border.left.regular-weight-not-mobile.coin-name-col.qa-coin-name.line-link > a > span:nth-child(2) > span")).click();
     }
-}
 
+    public String getAllCoinsNames(int index)
+    {
+        List<WebElement> coinsNames = driver.findElements(By.className("qa-coin-name"));
+
+        String coinName = coinsNames.get(index).getText();
+        coinName = coinName.substring(0, coinName.lastIndexOf('•'));
+
+        return coinName;
+    }
+
+    public float getAllCoins1hChanges(int index)
+    {
+        List<WebElement> coins1hChanges = driver.findElements(By.className("qa-coin-1h"));
+        String coin1hChangeStr = coins1hChanges.get(index).getText();
+
+        coin1hChangeStr = coin1hChangeStr.replace("%", "");
+        float coin1hChange = Float.parseFloat(coin1hChangeStr);
+
+        return coin1hChange;
+    }
+
+    public float getAllCoins24hChanges(int index)
+    {
+        List<WebElement> coins24hChanges = driver.findElements(By.className("qa-coin-24h"));
+        String coin24hChangeStr = coins24hChanges.get(index).getText();
+
+        coin24hChangeStr = coin24hChangeStr.replace("%", "");
+        float coin24hChange = Float.parseFloat(coin24hChangeStr);
+
+        return coin24hChange;
+    }
+
+    public float getAllCoins7dChanges(int index)
+    {
+        List<WebElement> coins7dChanges = driver.findElements(By.className("qa-coin-7d"));
+        String coin7dChangeStr = coins7dChanges.get(index).getText();
+
+        coin7dChangeStr = coin7dChangeStr.replace("%", "");
+        float coin7dChange = Float.parseFloat(coin7dChangeStr);
+
+        return coin7dChange;
+    }
+
+    public double getAllCoinsPrices(int index)
+    {
+        List<WebElement> coinsPrices = driver.findElements(By.className("qa-coin-price"));
+        String coinPriceStr = coinsPrices.get(index).getText();
+
+        //coinPriceStr = coinPriceStr.replace("$", "").replace(",", "");
+        double coinPrice = getCoinPriceWithoutSymbols(coinPriceStr);
+
+        return coinPrice;
+    }
+
+    public double getAllCoinsPricesInBTC(int index)
+    {
+        List<WebElement> coinsPricesInBTC = driver.findElements(By.className("qa-coin-price-btc"));
+        String coinPriceInBTCStr = coinsPricesInBTC.get(index).getText();
+
+        double coinPriceInBTC = Double.parseDouble(coinPriceInBTCStr);
+
+        return coinPriceInBTC;
+    }
+
+    public double getAllCoinsMarketCaps(int index)
+    {
+        List<WebElement> coinsMarketCaps = driver.findElements(By.className("qa-coin-market-cap"));
+        String coinMarketCapStr = coinsMarketCaps.get(index).getText();
+
+        //coinMarketCapStr = coinMarketCapStr.replace("$", "").replace("B", "000000000").replace("M", "000000").replace("K", "000");
+        double coinMarketCap = getCoinVolumeCap(coinMarketCapStr);
+
+        return coinMarketCap;
+    }
+
+    public double getAllCoinsVolume24h(int index)
+    {
+        List<WebElement> coinsVolume24h = driver.findElements(By.className("qa-coin-volume-24h"));
+        String coinVolume24hStr = coinsVolume24h.get(index).getText();
+
+        //coinVolume24hStr = coinVolume24hStr.replace("$", "").replace("B", "000000000").replace("M", "000000").replace("K", "000");
+        double coinVolume24h = getCoinVolumeCap(coinVolume24hStr);
+
+        return coinVolume24h;
+    }
+
+
+    // Exchanges Data
+
+    public String getAllExchangesNames(int index)
+    {
+        List<WebElement> exchangesNames = driver.findElements(By.className("qa-exchange-name"));
+        String exchangeName = exchangesNames.get(index).getText();
+
+        return exchangeName;
+    }
+
+    public double getAllExchangesVolumes24h(int index)
+    {
+        List<WebElement> exchangesVolumes24h = driver.findElements(By.className("qa-exchange-volume-24h"));
+        String exchangeVolume24hStr = exchangesVolumes24h.get(index).getText(); //.replace("$", "").replace("B", "").replace("M", "").replace("K", "").replace("T", "");
+
+        double exchangeVolume24h = getCoinVolumeCap(exchangeVolume24hStr);
+
+        return exchangeVolume24h;
+    }
+
+    public double getAllExchangesVolumes7d(int index)
+    {
+        List<WebElement> exchangesVolumes7d = driver.findElements(By.className("qa-exchange-volume-7d"));
+        String exchangeVolume7dStr = exchangesVolumes7d.get(index).getText(); //.replace("$", "").replace("B", "").replace("M", "").replace("K", "").replace("T", "");
+        double exchangeVolume7d = getCoinVolumeCap(exchangeVolume7dStr);
+
+        return exchangeVolume7d;
+    }
+
+    public double getAllExchangesVolumes30d(int index)
+    {
+        List<WebElement> exchangesVolumes30d = driver.findElements(By.className("qa-exchange-volume-1m"));
+        String exchangeVolume30dStr = exchangesVolumes30d.get(index).getText(); //.replace("$", "").replace("B", "").replace("M", "").replace("K", "").replace("T", "");
+        double exchangeVolume30d = getCoinVolumeCap(exchangeVolume30dStr);
+
+        return exchangeVolume30d;
+    }
+
+    public double getAllExchangesChanges24h(int index)
+    {
+        List<WebElement> exchangesChanges24h = driver.findElements(By.className("qa-exchange-24h"));
+        String exchangeChange24hStr = exchangesChanges24h.get(index).getText(); //.replace("%", "");
+        double exchangeChange24h = getCoinPercentWithoutPercent(exchangeChange24hStr);
+
+        return exchangeChange24h;
+    }
+
+    public double getCoinPriceWithoutSymbols(String coinPriceStr)
+    {
+        if(header.getCurrentCurrencyName().equals("ZAR"))
+        {
+            coinPriceStr = coinPriceStr.replace("R", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("TRY"))
+        {
+            coinPriceStr = coinPriceStr.replace("TL", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("THB"))
+        {
+            coinPriceStr = coinPriceStr.replace("฿", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("SGD") || header.getCurrentCurrencyName().equals("NZD") || header.getCurrentCurrencyName().equals("MXN") || header.getCurrentCurrencyName().equals("HKD") || header.getCurrentCurrencyName().equals("CAD") || header.getCurrentCurrencyName().equals("AUD") || header.getCurrentCurrencyName().equals("USD"))
+        {
+            coinPriceStr = coinPriceStr.replace("$", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("SEK") || header.getCurrentCurrencyName().equals("NOK") || header.getCurrentCurrencyName().equals("ISK") || header.getCurrentCurrencyName().equals("DKK"))
+        {
+            coinPriceStr = coinPriceStr.replace("kr", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("RON"))
+        {
+            coinPriceStr = coinPriceStr.replace("RON", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("PLN"))
+        {
+            coinPriceStr = coinPriceStr.replace("zł", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("PHP"))
+        {
+            coinPriceStr = coinPriceStr.replace("₱", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("MYR"))
+        {
+            coinPriceStr = coinPriceStr.replace("RM", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("KRW"))
+        {
+            coinPriceStr = coinPriceStr.replace("₩", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("JPY"))
+        {
+            coinPriceStr = coinPriceStr.replace("￥", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("INR"))
+        {
+            coinPriceStr = coinPriceStr.replace("₹", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("ILS"))
+        {
+            coinPriceStr = coinPriceStr.replace("₪", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("IDR"))
+        {
+            coinPriceStr = coinPriceStr.replace("Rp", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("HUF"))
+        {
+            coinPriceStr = coinPriceStr.replace("Ft", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("HRK"))
+        {
+            coinPriceStr = coinPriceStr.replace("kn", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("CZK"))
+        {
+            coinPriceStr = coinPriceStr.replace("Kč", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("CNY"))
+        {
+            coinPriceStr = coinPriceStr.replace("CN¥", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("CHF"))
+        {
+            coinPriceStr = coinPriceStr.replace("CHF", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("BRL"))
+        {
+            coinPriceStr = coinPriceStr.replace("R$", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("BGN"))
+        {
+            coinPriceStr = coinPriceStr.replace("лв", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("AMD"))
+        {
+            coinPriceStr = coinPriceStr.replace("֏", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("GBP"))
+        {
+            coinPriceStr = coinPriceStr.replace("£", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("EUR"))
+        {
+            coinPriceStr = coinPriceStr.replace("€", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("BTC"))
+        {
+            coinPriceStr = coinPriceStr.replace("฿", "").replace(",", "");
+        }
+
+        else if (header.getCurrentCurrencyName().equals("ETH"))
+        {
+            coinPriceStr = coinPriceStr.replace("Ξ", "").replace(",", "");
+        }
+
+
+        double coinPrice = Double.parseDouble(coinPriceStr);
+
+        return coinPrice;
+    }
+
+    public double getCoinPercentWithoutPercent(String coinPercentStr)
+    {
+        coinPercentStr = coinPercentStr.replace("%", "");
+        double coinPercent = Double.parseDouble(coinPercentStr);
+
+        return coinPercent;
+    }
+
+    public double getCoinVolumeCap(String coinVolumeCapStr)
+    {
+
+        String currencySymbol = "$";
+
+        if(header.getCurrentCurrencyName().equals("ZAR"))
+        {
+            currencySymbol = "R";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("TRY"))
+        {
+            currencySymbol = "TL";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("THB"))
+        {
+            currencySymbol = "฿";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("SGD") || header.getCurrentCurrencyName().equals("NZD") || header.getCurrentCurrencyName().equals("MXN") || header.getCurrentCurrencyName().equals("HKD") || header.getCurrentCurrencyName().equals("CAD") || header.getCurrentCurrencyName().equals("AUD") || header.getCurrentCurrencyName().equals("USD"))
+        {
+            currencySymbol = "$";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("SEK") || header.getCurrentCurrencyName().equals("NOK") || header.getCurrentCurrencyName().equals("ISK") || header.getCurrentCurrencyName().equals("DKK"))
+        {
+            currencySymbol = "kr";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("RON"))
+        {
+            currencySymbol = "RON";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("PLN"))
+        {
+            currencySymbol = "zł";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("PHP"))
+        {
+            currencySymbol = "₱";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("MYR"))
+        {
+            currencySymbol = "RM";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("KRW"))
+        {
+            currencySymbol = "₩";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("JPY"))
+        {
+            currencySymbol = "￥";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("INR"))
+        {
+            currencySymbol = "₹";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("ILS"))
+        {
+            currencySymbol = "₪";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("IDR"))
+        {
+            currencySymbol = "Rp";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("HUF"))
+        {
+            currencySymbol = "Ft";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("HRK"))
+        {
+            currencySymbol = "kn";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("CZK"))
+        {
+            currencySymbol = "Kč";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("CNY"))
+        {
+            currencySymbol = "CN¥";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("CHF"))
+        {
+            currencySymbol = "CHF";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("BRL"))
+        {
+            currencySymbol = "R$";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("BGN"))
+        {
+            currencySymbol = "лв";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("AMD"))
+        {
+            currencySymbol = "֏";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("GBP"))
+        {
+            currencySymbol = "£";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("EUR"))
+        {
+            currencySymbol = "€";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("BTC"))
+        {
+            currencySymbol = "฿";
+        }
+
+        else if (header.getCurrentCurrencyName().equals("ETH"))
+        {
+            currencySymbol = "Ξ";
+        }
+
+
+        if(coinVolumeCapStr.endsWith("B"))
+        {
+            coinVolumeCapStr = coinVolumeCapStr.replace(currencySymbol, "").replace(".", "").replace("B", "000000000");
+        }
+
+        else if(coinVolumeCapStr.endsWith("M"))
+        {
+            coinVolumeCapStr = coinVolumeCapStr.replace(currencySymbol, "").replace(".", "").replace("M", "000000");
+        }
+
+        else if(coinVolumeCapStr.endsWith("K"))
+        {
+            coinVolumeCapStr = coinVolumeCapStr.replace(currencySymbol, "").replace(".", "").replace("K", "000");
+        }
+
+        else if (coinVolumeCapStr.equals("T"))
+        {
+            coinVolumeCapStr = coinVolumeCapStr.replace(currencySymbol, "").replace(".", "").replace("T", "000000000000");
+        }
+
+        else
+        {
+            coinVolumeCapStr = coinVolumeCapStr.replace(currencySymbol, "").replace(".", "");
+        }
+
+        double coinVolumeCap = Double.parseDouble(coinVolumeCapStr);
+
+        return coinVolumeCap;
+    }
+
+    public String getCoinSupplies(String coinSupplyStr)
+    {
+           String coinSupply = coinSupplyStr.replaceAll(",", "");
+
+        return coinSupply;
+    }
+
+
+}

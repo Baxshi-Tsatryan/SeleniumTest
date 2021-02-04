@@ -1,5 +1,6 @@
 package MainPackage;
 
+import AllPages.MainPage.Header;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import java.io.File;
@@ -372,5 +373,4 @@ public class SeleniumUtils{
             System.out.println("Number is valid");
         }
     }
-
 }
