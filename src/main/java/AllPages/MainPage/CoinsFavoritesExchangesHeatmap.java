@@ -46,6 +46,8 @@ public class CoinsFavoritesExchangesHeatmap {
 
     By favoritesTab = By.cssSelector("a[href='/en/favorites/']");
 
+    By defiTab = By.cssSelector("a[href='/en/defi/']");
+
     By heatmapTab = By.cssSelector("a[href='/en/heatmap/']");
 
 
@@ -329,6 +331,11 @@ public class CoinsFavoritesExchangesHeatmap {
 
     public void clickOnFavoritesTab() {
         utils.clickOnElement(favoritesTab);
+    }
+
+    public void clickOnDefiTab()
+    {
+        utils.clickOnElement(defiTab);
     }
 
     public void clickOnHeatmapTab()

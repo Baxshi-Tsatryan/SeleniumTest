@@ -24,6 +24,7 @@ public class AllURLs {
     String APIDocsPage = "https://documenter.getpostman.com/view/5734027/RzZ6Hzr3";
     String blogPage = "https://blog.coinstats.app/";
     String widgetsPage = "https://coinstats.app/en/widgets/";
+    String alertsPage = "https://coinstats.app/en/alerts/";
 
     // Languages
     String englishMainPage = "https://coinstats.app/en/";
@@ -222,6 +223,11 @@ public class AllURLs {
     public void navigateToWidgetsPage()
     {
         driver.navigate().to(widgetsPage);
+    }
+
+    public void navigateToAlertsPage()
+    {
+        driver.navigate().to(alertsPage);
     }
 
 

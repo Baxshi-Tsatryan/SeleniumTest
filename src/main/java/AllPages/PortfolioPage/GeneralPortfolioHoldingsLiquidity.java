@@ -59,7 +59,7 @@ public class GeneralPortfolioHoldingsLiquidity {
 
     By holdingsTab = By.cssSelector("a[href='/en/portfolio/holdings/']");
 
-    By liquidityTab = By.cssSelector("a[href='/en/portfolio/liquidity/']");
+    By defiTab = By.cssSelector("a[href='/en/portfolio/defi/']");
 
     By openPositionsTab = By.cssSelector("a[href='/en/portfolio/open-positions/']");
 
@@ -248,12 +248,12 @@ public class GeneralPortfolioHoldingsLiquidity {
         utils.clickOnElement(holdingsTab);
     }
 
-    public void clickOnLiquidityTab() {
-        utils.clickOnElement(liquidityTab);
+    public void clickOnDefiTab() {
+        utils.clickOnElement(defiTab);
     }
 
-    public Boolean liquidityTabIsDisplayed() {
-        return utils.isDisplayed(liquidityTab);
+    public Boolean defiTabIsDisplayed() {
+        return utils.isDisplayed(defiTab);
     }
 
     public void clickOnOpenPositionTab() {
@@ -411,27 +411,9 @@ public class GeneralPortfolioHoldingsLiquidity {
     }
 
 
-    // Liquidity
+    // Defi
 
-    public void clickOnNameRankLiquidity()
-    {
-        utils.clickOnElement(liquidityNameColumn);
-    }
 
-    public void clickOnPriceRankLiquidity()
-    {
-        utils.clickOnElement(liquidityPriceColumn);
-    }
-
-    public void clickOnLiquidityRankLiquidity()
-    {
-        utils.clickOnElement(liquidityColumn);
-    }
-
-    public void clickOnTotalFeesEarnedRankLiquidity()
-    {
-        utils.clickOnElement(liquidityTotalFeesEarned);
-    }
 
 
 }
