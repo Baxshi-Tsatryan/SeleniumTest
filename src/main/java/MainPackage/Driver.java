@@ -14,7 +14,7 @@ public class Driver {
     public void DriverBeforeSuit()
     {
         String chromeDriverName = "webdriver.chrome.driver";
-        String chromeDriverPath = "//Users//jenkins//Desktop//SeleniumTest//src//main//resources//chromedriver";
+        String chromeDriverPath = "//Users//baxshi//IdeaProjects//SeleniumTest//src//main//resources//chromedriver";
         System.setProperty(chromeDriverName,chromeDriverPath);
 
         // ChromeDriver

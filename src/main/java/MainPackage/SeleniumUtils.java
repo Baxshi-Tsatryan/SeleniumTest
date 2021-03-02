@@ -351,26 +351,4 @@ public class SeleniumUtils{
         return randNum;
     }
 
-    public void checkNumbers(int CSNumber, int validNumber, int percent)
-    {
-
-        int validNumberPercent = (validNumber/100) * percent;
-        int CSNumberMax = CSNumber + validNumberPercent;
-        int CSNumberMin = CSNumber - validNumberPercent;
-
-        if (CSNumber > CSNumberMax)
-        {
-            System.err.println("Number is invalid. Should be " + validNumber + ", but is " + CSNumber);
-        }
-
-        else if (CSNumber < CSNumberMin)
-        {
-            System.err.println("Number is invalid. Should be " + validNumber + ", but is " + CSNumber);
-        }
-
-        else
-        {
-            System.out.println("Number is valid");
-        }
-    }
 }

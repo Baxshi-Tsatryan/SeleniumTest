@@ -59,7 +59,7 @@ public class AddAllExchangesCSVPositive extends Driver {
             if (exchangeName.equals("Crypto.com app"))
             {
                 WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
-                importButton.sendKeys(paths.getCryptoComCSV());
+                importButton.sendKeys(paths.getCryptoComCSV1());
             }
 
             else if (exchangeName.equals("Bittrex"))
