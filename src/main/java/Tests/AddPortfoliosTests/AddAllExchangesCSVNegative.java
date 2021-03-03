@@ -51,14 +51,71 @@ public class AddAllExchangesCSVNegative extends Driver {
             String exchangeName = list.get(i).getText();
             list.get(i).click();
 
-            if (exchangeName.equals("Crypto.com app")) {
+            if (exchangeName.equals("Crypto.com app"))
+            {
                 WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
                 importButton.sendKeys(paths.getBittrexCSV());
                 Thread.sleep(3000);
-                addPortfolio.clickOnSubmit();
-                String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
 
-                System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
+                if(addPortfolio.invalidCSVErrorMessageIsDisplayed() == true) {
+                    String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
+
+                    System.err.println(exchangeName + " negative case passed");
+                    System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
+                    System.out.println();
+                }
+
+                else
+                {
+                    System.out.println(exchangeName + " negative case failed");
+                }
+
+                addPortfolio.clickOnBack();
+                continue;
+            }
+
+            else if (exchangeName.equals("Nexo (beta)") || exchangeName.equals("Nexo"))
+            {
+                WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
+                importButton.sendKeys(paths.getBittrexCSV());
+                Thread.sleep(3000);
+
+                if(addPortfolio.invalidCSVErrorMessageIsDisplayed() == true) {
+                    String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
+
+                    System.err.println(exchangeName + " negative case passed");
+                    System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
+                    System.out.println();
+                }
+
+                else
+                {
+                    System.out.println(exchangeName + " negative case failed");
+                }
+
+                addPortfolio.clickOnBack();
+                continue;
+            }
+
+            else if (exchangeName.equals("BlockFi (beta)") || exchangeName.equals("BlockFi"))
+            {
+                WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
+                importButton.sendKeys(paths.getCoinStatsTemplateCSV());
+                Thread.sleep(3000);
+
+                if(addPortfolio.invalidCSVErrorMessageIsDisplayed() == true) {
+                    String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
+
+                    System.err.println(exchangeName + " negative case passed");
+                    System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
+                    System.out.println();
+                }
+
+                else
+                {
+                    System.out.println(exchangeName + " negative case failed");
+                }
+
                 addPortfolio.clickOnBack();
                 continue;
             }
@@ -69,15 +126,28 @@ public class AddAllExchangesCSVNegative extends Driver {
                 WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
                 importButton.sendKeys(paths.getCoinStatsTemplateCSV());
                 Thread.sleep(3000);
-                addPortfolio.clickOnSubmit();
-                String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
 
-                System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
+                if(addPortfolio.invalidCSVErrorMessageIsDisplayed() == true) {
+                    String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
+
+                    System.err.println(exchangeName + " negative case passed");
+                    System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
+                    System.out.println();
+                }
+
+                else
+                {
+                    System.out.println(exchangeName + " negative case failed");
+                }
+
                 addPortfolio.clickOnBack();
                 continue;
             }
 
-            else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX") || exchangeName.equals("Nexo (beta)")) {
+            else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX")
+                    || exchangeName.equals("Nexo (beta)") || exchangeName.equals("Nexo") || exchangeName.equals("Bitrue")
+                    || exchangeName.equals("BlockFi (beta)") || exchangeName.equals("BlockFi"))
+            {
                 addPortfolio.clickOnBack();
                 continue;
             }
@@ -86,44 +156,26 @@ public class AddAllExchangesCSVNegative extends Driver {
                 {
                 addPortfolio.clickOnCSVTab();
                 WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
-                importButton.sendKeys(paths.getCryptoComCSV());
+                importButton.sendKeys(paths.getCryptoComCSV1());
                 Thread.sleep(3000);
-                addPortfolio.clickOnSubmit();
-                String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
 
-                System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
+                if(addPortfolio.invalidCSVErrorMessageIsDisplayed() == true) {
+                    String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
+
+                    System.err.println(exchangeName + " negative case passed");
+                    System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
+                    System.out.println();
+                }
+
+                else
+                {
+                    System.out.println(exchangeName + " negative case failed");
+                }
+
                 addPortfolio.clickOnBack();
 
             }
         }
 
-            // ZIP file
-            for (int i = 0; i < listTill.size(); i++) {
-
-                List<WebElement> list = driver.findElements(By.className("qa-exchanges"));
-
-                String exchangeName = list.get(i).getText();
-                list.get(i).click();
-
-
-                if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX") || exchangeName.equals("Nexo (beta)") || exchangeName.equals("Crypto.com app")) {
-                    addPortfolio.clickOnBack();
-                    continue;
-                }
-
-                else
-                    {
-                    addPortfolio.clickOnCSVTab();
-                    WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
-                    importButton.sendKeys(paths.getExodusZIP());
-                    Thread.sleep(3000);
-                    addPortfolio.clickOnSubmit();
-                    String errorZIP = addPortfolio.getInvalidCSVErrorMessage();
-
-                    System.out.println(exchangeName + " ZIP file" + " - " + errorZIP);
-                    addPortfolio.clickOnBack();
-                    continue;
-                }
-            }
         }
     }

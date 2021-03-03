@@ -529,6 +529,11 @@ public class AddPortfolio {
         utils.clickOnElement(noShowMeSyncedButton);
     }
 
+    public Boolean noShowMeSyncedIsDisplayed()
+    {
+        return utils.isDisplayed(noShowMeSyncedButton);
+    }
+
     public void clickOnSuccessYes()
     {
         utils.clickOnElement(successYesButton);

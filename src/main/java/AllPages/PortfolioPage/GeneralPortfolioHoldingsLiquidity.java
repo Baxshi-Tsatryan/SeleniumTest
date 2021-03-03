@@ -252,8 +252,12 @@ public class GeneralPortfolioHoldingsLiquidity {
         utils.clickOnElement(defiTab);
     }
 
-    public Boolean defiTabIsDisplayed() {
+    public boolean defiTabIsDisplayed() {
         return utils.isDisplayed(defiTab);
+    }
+
+    public boolean defiTabIsDisplayed2() {
+        return utils.isDisplayed2(defiTab);
     }
 
     public void clickOnOpenPositionTab() {
@@ -262,6 +266,10 @@ public class GeneralPortfolioHoldingsLiquidity {
 
     public Boolean openPositionTabIsDisplayed() {
         return utils.isDisplayed(openPositionsTab);
+    }
+
+    public Boolean openPositionTabIsDisplayed2() {
+        return utils.isDisplayed2(openPositionsTab);
     }
 
     public void clickOnChartsTab() {

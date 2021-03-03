@@ -87,6 +87,7 @@ public class AddAllExchangesCSVPositive extends Driver {
             try {
                 addPortfolio.clickOnNoShowMeSynced();
             }
+
             catch (NoSuchElementException e)
             {
                 System.err.println(exchangeName + " exchange CSV is Invalid or exception with Submit button");

@@ -183,9 +183,23 @@ public class SeleniumUtils{
         return driver.findElement(by).isEnabled();
     }
 
-    public Boolean isDisplayed(By by)
+    public Boolean isDisplayed2(By by)
     {
         return driver.findElement(by).isDisplayed();
+    }
+
+    public Boolean isDisplayed(By by)
+    {
+        try
+        {
+            driver.findElement(by);
+            return true;
+        }
+
+        catch(NoSuchElementException e)
+        {
+            return false;
+        }
     }
 
     public Boolean isSelected(By by)

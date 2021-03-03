@@ -1,6 +1,8 @@
 package MainPackage;
 
 import org.openqa.selenium.WebDriver;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Paths {
 
@@ -65,6 +67,15 @@ public class Paths {
         return blockFiCSV2;
     }
 
+    public String getAllBlockFiCSVs(int indexOfBlockFiCSV)
+    {
+        List<String> blockFiCSVs = new ArrayList<>();
+        blockFiCSVs.add(1, getBlockFiCSV1());
+        blockFiCSVs.add(2, getBlockFiCSV2());
+
+        return blockFiCSVs.get(indexOfBlockFiCSV);
+    }
+
 
     public String getCryptoComCSV1()
     {
@@ -84,6 +95,17 @@ public class Paths {
     public String getCryptoComCSV4()
     {
         return cryptoComCSV4;
+    }
+
+    public String getAllCryptoComCSVs(int indexOfCryptoComCSV)
+    {
+        List<String> cryptoComCSVs = new ArrayList<>();
+        cryptoComCSVs.add(1, getCryptoComCSV1());
+        cryptoComCSVs.add(2, getCryptoComCSV2());
+        cryptoComCSVs.add(3, getCryptoComCSV3());
+        cryptoComCSVs.add(4, getCryptoComCSV4());
+
+        return cryptoComCSVs.get(indexOfCryptoComCSV);
     }
 
 
@@ -120,6 +142,20 @@ public class Paths {
     public String getNexoCSV7()
     {
         return nexoCSV7;
+    }
+
+    public String getAllNexoCSVs(int indexOfNexoCSV)
+    {
+        List<String> nexoCSVs = new ArrayList<>();
+        nexoCSVs.add(1, getNexoCSV1());
+        nexoCSVs.add(2, getNexoCSV2());
+        nexoCSVs.add(3, getNexoCSV3());
+        nexoCSVs.add(4, getNexoCSV4());
+        nexoCSVs.add(5, getNexoCSV5());
+        nexoCSVs.add(6, getNexoCSV6());
+        nexoCSVs.add(7, getNexoCSV7());
+
+        return nexoCSVs.get(indexOfNexoCSV);
     }
 
 }
