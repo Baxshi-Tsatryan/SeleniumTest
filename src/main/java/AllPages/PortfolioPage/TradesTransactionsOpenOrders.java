@@ -92,81 +92,76 @@ public class TradesTransactionsOpenOrders {
 
     // Tabs
 
-    public void clickOnTransactionsTab()
-    {
-        utils.clickOnElement(transactionsTab);
+    public TradesTransactionsOpenOrders clickOnTransactionsTab() {
+        utils.click(transactionsTab);
+        return this;
     }
 
-    public Boolean openOrdersTabIsDisplayed()
-    {
+    public Boolean openOrdersTabIsDisplayed() {
         return utils.isDisplayed(openOrdersTab);
     }
 
-    public void clickOnOpenOrdersTab()
-    {
-        utils.clickOnElement(openOrdersTab);
+    public TradesTransactionsOpenOrders clickOnOpenOrdersTab() {
+        utils.click(openOrdersTab);
+        return this;
     }
 
     // Trades Filters
 
-    public void typeDateFromTrades(String date)
-    {
+    public TradesTransactionsOpenOrders typeDateFromTrades(String date) {
         utils.sendKeysAction(dateFromField, date);
+        return this;
     }
 
-    public String getDateFromTrades()
-    {
+    public String getDateFromTrades() {
         return utils.getText(dateFromField);
     }
 
-    public void clearDateFromTrades()
-    {
+    public TradesTransactionsOpenOrders clearDateFromTrades() {
         utils.clear(dateFromField);
+        return this;
     }
 
-    public void typeDateToTrades(String date)
-    {
+    public TradesTransactionsOpenOrders typeDateToTrades(String date) {
         utils.sendKeysAction(dateToField, date);
+        return this;
     }
 
-    public String getDateToTrades()
-    {
+    public String getDateToTrades() {
         return utils.getText(dateToField);
     }
 
-    public void clearDateToTrades()
-    {
+    public TradesTransactionsOpenOrders clearDateToTrades() {
         utils.clear(dateToField);
+        return this;
     }
 
-    public void clickOnNextMonth()
-    {
-        utils.clickOnElement(nextMonth);
+    public TradesTransactionsOpenOrders clickOnNextMonth() {
+        utils.click(nextMonth);
+        return this;
     }
 
-    public void clickOnPreviousMonth()
-    {
-        utils.clickOnElement(previousMonth);
+    public TradesTransactionsOpenOrders clickOnPreviousMonth() {
+        utils.click(previousMonth);
+        return this;
     }
 
-    public String getCurrentMonthYear()
-    {
+    public String getCurrentMonthYear() {
         return utils.getText(currentMonthYear);
     }
 
-    public void typeCoinNameTrades(String coinName)
-    {
+    public TradesTransactionsOpenOrders typeCoinNameTrades(String coinName) {
         utils.sendKeysAction(searchCoinFieldTrades, coinName);
+        return this;
     }
 
-    public String getCoinNameTrades()
-    {
+    public String getCoinNameTrades() {
         return utils.getText(searchCoinFieldTrades);
     }
 
-    public void clearCoinNameTrades()
-    {
+    public TradesTransactionsOpenOrders clearCoinNameTrades() {
         utils.clear(searchCoinFieldTrades);
+        return this;
     }
 
 
@@ -174,177 +169,151 @@ public class TradesTransactionsOpenOrders {
 
     // Filters
 
-    public void typeCoinNameTransactions(String coinName)
-    {
+    public TradesTransactionsOpenOrders typeCoinNameTransactions(String coinName) {
         utils.sendKeysAction(searchCoinFieldTransactions, coinName);
+        return this;
     }
 
-    public String getCoinNameTransactions()
-    {
+    public String getCoinNameTransactions() {
         return utils.getText(searchCoinFieldTransactions);
     }
 
-    public void clearCoinNameTransactions()
-    {
+    public TradesTransactionsOpenOrders clearCoinNameTransactions() {
         utils.clear(searchCoinFieldTransactions);
+        return this;
     }
 
-    public String getCurrentTypeFilterTransactions()
-    {
+    public String getCurrentTypeFilterTransactions() {
         return utils.getText(currentTypeTransactions);
     }
 
-    public void clickOnTypesDropDownTransactions()
-    {
-        utils.clickOnElement(typeDropDownTransaction);
+    public TradesTransactionsOpenOrders clickOnTypesDropDownTransactions() {
+        utils.click(typeDropDownTransaction);
+        return this;
     }
 
-    public void clickOnApplyTypeTransactions()
-    {
-        utils.clickOnElement(applyTypeTransaction);
+    public TradesTransactionsOpenOrders clickOnApplyTypeTransactions() {
+        utils.click(applyTypeTransaction);
+        return this;
     }
 
-    public Boolean applyTypeTransactionsIsDisplayed()
-    {
+    public Boolean applyTypeTransactionsIsDisplayed() {
         return utils.isDisplayed(applyTypeTransaction);
     }
 
-    public void clickOnExportCSV()
-    {
-        utils.clickOnElement(exportCSV);
+    public TradesTransactionsOpenOrders clickOnExportCSV() {
+        utils.click(exportCSV);
+        return this;
     }
 
 
     // Transactions Last
 
-    public String getLastTransactionType()
-    {
+    public String getLastTransactionType() {
         return utils.getText(transactionTypeLast);
     }
 
-    public String getLastTransactionTypeColor()
-    {
+    public String getLastTransactionTypeColor() {
         return utils.getCSSValue(transactionTypeLast, "color");
     }
 
-    public String getLastTransactionDate()
-    {
+    public String getLastTransactionDate() {
         return utils.getText(transactionDateLast);
     }
 
-    public String getLastTransactionTime()
-    {
+    public String getLastTransactionTime() {
         return utils.getText(transactionTimeLast);
     }
 
-    public String getLastTransactionCoinAmount()
-    {
+    public String getLastTransactionCoinAmount() {
         return utils.getText(transactionCoinAmountLast);
     }
 
-    public String getLastTransactionWorth()
-    {
+    public String getLastTransactionWorth() {
         return utils.getText(transactionWorthLast);
     }
 
-    public String getLastTransactionWorthColor()
-    {
+    public String getLastTransactionWorthColor() {
         return utils.getCSSValue(transactionWorthLast, "color");
     }
 
-    public String getLastTransactionCoinPrice()
-    {
+    public String getLastTransactionCoinPrice() {
         return utils.getText(transactionCoinPriceLast);
     }
 
-    public String getLastTransactionPair()
-    {
+    public String getLastTransactionPair() {
         return utils.getText(transactionPairLast);
     }
 
-    public Boolean lastTransactionPairIsDisplayed()
-    {
+    public Boolean lastTransactionPairIsDisplayed() {
         return utils.isDisplayed(transactionPairLast);
     }
 
-    public String getLastTransactionPairPrice()
-    {
+    public String getLastTransactionPairPrice() {
         return utils.getText(transactionPairPriceLast);
     }
 
-    public Boolean lastTransactionPairPriceIsDisplayed()
-    {
+    public Boolean lastTransactionPairPriceIsDisplayed() {
         return utils.isDisplayed(transactionPairPriceLast);
     }
 
-    public String getLastTransactionFrom()
-    {
+    public String getLastTransactionFrom() {
         return utils.getText(transactionFromLast);
     }
 
-    public Boolean lastTransactionFromIsDisplayed()
-    {
+    public Boolean lastTransactionFromIsDisplayed() {
         return utils.isDisplayed(transactionFromLast);
     }
 
-    public String getLastTransactionTo()
-    {
+    public String getLastTransactionTo() {
         return utils.getText(transactionToLast);
     }
 
-    public Boolean lastTransactionToIsDisplayed()
-    {
+    public Boolean lastTransactionToIsDisplayed() {
         return utils.isDisplayed(transactionToLast);
     }
 
-    public String getLastTransactionFee()
-    {
+    public String getLastTransactionFee() {
         return utils.getText(transactionFeeLast);
     }
 
-    public String getLastTransactionPLFirst()
-    {
+    public String getLastTransactionPLFirst() {
         return utils.getText(transactionPLFirstLast);
     }
 
-    public String getLastTransactionPLSecond()
-    {
+    public String getLastTransactionPLSecond() {
         return utils.getText(transactionPLSecondLast);
     }
 
-    public String getLastTransactionPLFirstColor()
-    {
+    public String getLastTransactionPLFirstColor() {
         return utils.getCSSValue(transactionPLFirstLast, "Color");
     }
 
-    public String getLastTransactionPLSecondColor()
-    {
+    public String getLastTransactionPLSecondColor() {
         return utils.getCSSValue(transactionPLSecondLast, "Color");
     }
 
-    public String getLastTransactionNotes()
-    {
+    public String getLastTransactionNotes() {
         return utils.getText(transactionNotesLast);
     }
 
-    public Boolean lastTransactionNotesIsDisplayed()
-    {
+    public Boolean lastTransactionNotesIsDisplayed() {
         return utils.isDisplayed(transactionNotesLast);
     }
 
-    public void clickOnLastTransaction3Dot()
-    {
-        utils.clickOnElement(transaction3DotLast);
+    public TradesTransactionsOpenOrders clickOnLastTransaction3Dot() {
+        utils.click(transaction3DotLast);
+        return this;
     }
 
-    public void clickOnEditIn3Dot()
-    {
-        utils.clickOnElement(transactionEditIn3Dot);
+    public TradesTransactionsOpenOrders clickOnEditIn3Dot() {
+        utils.click(transactionEditIn3Dot);
+        return this;
     }
 
-    public void clickOnDeleteIn3Dot()
-    {
-        utils.clickOnElement(transactionDeleteIn3Dot);
+    public TradesTransactionsOpenOrders clickOnDeleteIn3Dot() {
+        utils.click(transactionDeleteIn3Dot);
+        return this;
     }
 
 }

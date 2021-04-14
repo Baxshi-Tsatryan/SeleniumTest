@@ -76,198 +76,177 @@ public class GeneralCoinsPage {
 
     // ----------------------------------------------------- Methods -------------------------------------------------
 
-    public void clickOnCloseIcon()
-    {
-        utils.clickOnElement(iconClose);
+    public GeneralCoinsPage clickOnCloseIcon() {
+        utils.click(iconClose);
+        return this;
     }
 
-    public String getCoinName()
-    {
+    public String getCoinName() {
         return utils.getText(coinName);
     }
 
-    public String getCoinSecondName()
-    {
+    public String getCoinSecondName() {
         return utils.getText(coinSecondName);
     }
 
-    public String getCoinIndex()
-    {
+    public String getCoinIndex() {
         return utils.getText(coinIndex);
     }
 
-    public String getCoinPrice()
-    {
+    public String getCoinPrice() {
         return utils.getText(coinPrice);
     }
 
-    public String getCoinPercent()
-    {
+    public String getCoinPercent() {
         return utils.getText(coinPercent);
     }
 
-    public String getCoinPercentColor()
-    {
+    public String getCoinPercentColor() {
         return utils.getCSSValue(coinPercent, "color");
     }
 
-    public String getCoinPriceBTC()
-    {
+    public String getCoinPriceBTC() {
         return utils.getText(coinPriceBTC);
     }
 
-    public String getCoinPercentBTC()
-    {
+    public String getCoinPercentBTC() {
         return utils.getText(coinPercentBTC);
     }
 
-    public String getCoinPercentBTCColor()
-    {
+    public String getCoinPercentBTCColor() {
         return utils.getCSSValue(coinPercentBTC, "color");
     }
 
-    public String getMarketCap()
-    {
+    public String getMarketCap() {
         return utils.getText(marketCapPrice);
     }
 
-    public String getVolume24h()
-    {
+    public String getVolume24h() {
         return utils.getText(volume24hPrice);
     }
 
-    public String getAvailableSupply()
-    {
+    public String getAvailableSupply() {
         return utils.getText(availableSupply);
     }
 
-    public String getTotalSupply()
-    {
+    public String getTotalSupply() {
         return utils.getText(totalSupply);
     }
 
-    public void clickOnWebsite()
-    {
-        utils.clickOnElement(coinWebsite);
+    public GeneralCoinsPage clickOnWebsite() {
+        utils.click(coinWebsite);
+        return this;
     }
 
-    public String getWebsiteColor()
-    {
+    public String getWebsiteColor() {
         return utils.getCSSValue(coinWebsite, "color");
     }
 
-    public void clickOnTwitter()
-    {
-        utils.clickOnElement(coinTwitter);
+    public GeneralCoinsPage clickOnTwitter() {
+        utils.click(coinTwitter);
+        return this;
     }
 
-    public String getTwitterColor()
-    {
+    public String getTwitterColor() {
         return utils.getCSSValue(coinTwitter, "color");
     }
 
-    public void clickOnReddit()
-    {
-        utils.clickOnElement(coinReddit);
+    public GeneralCoinsPage clickOnReddit() {
+        utils.click(coinReddit);
+        return this;
     }
 
-    public String getRedditColor()
-    {
+    public String getRedditColor() {
         return utils.getCSSValue(coinReddit, "color");
     }
 
-    public void clickOnTelegram()
-    {
-        utils.clickOnElement(coinTelegram);
+    public GeneralCoinsPage clickOnTelegram() {
+        utils.click(coinTelegram);
+        return this;
     }
 
-    public String getTelegramColor()
-    {
+    public String getTelegramColor() {
         return utils.getCSSValue(coinTelegram, "color");
     }
 
-    public void clickOnBitcointalk()
-    {
-        utils.clickOnElement(coinBitcointalk);
+    public GeneralCoinsPage clickOnBitcointalk() {
+        utils.click(coinBitcointalk);
+        return this;
     }
 
-    public String getBitcointalkColor()
-    {
+    public String getBitcointalkColor() {
         return utils.getCSSValue(coinBitcointalk, "color");
     }
 
 
-    public void clickOnAddRemoveFavorites()
-    {
-        utils.clickOnElement(addRemoveFavorites);
+    public GeneralCoinsPage clickOnAddRemoveFavorites() {
+        utils.click(addRemoveFavorites);
+        return this;
     }
 
-    public String getAddRemoveFavoritesColor()
-    {
+    public String getAddRemoveFavoritesColor() {
         return utils.getCSSValue(addRemoveFavorites, "color");
     }
 
-    public Boolean addRemoveFavoritesIsEnabled()
-    {
+    public Boolean addRemoveFavoritesIsEnabled() {
         return utils.isEnabled(addRemoveFavorites);
     }
 
-    public Boolean addRemoveFavoritesIsSelected()
-    {
+    public Boolean addRemoveFavoritesIsSelected() {
         return utils.isSelected(addRemoveFavorites);
     }
 
 
-    public void clickOnAddTransaction()
-    {
-        utils.clickOnElement(addTransactionButton);
+    public GeneralCoinsPage clickOnAddTransaction() {
+        utils.click(addTransactionButton);
+        return this;
     }
 
-    public void clickOnTradeCoin()
-    {
-        utils.clickOnElement(tradeCoinButton);
+    public GeneralCoinsPage clickOnTradeCoin() {
+        utils.click(tradeCoinButton);
+        return this;
     }
 
-    public void clickOnBuyCoin()
-    {
-        utils.clickOnElement(buyCoinButton);
+    public GeneralCoinsPage clickOnBuyCoin() {
+        utils.click(buyCoinButton);
+        return this;
     }
 
     // Tabs
 
-    public void clickOnOverviewTab()
-    {
-        utils.clickOnElement(overviewTab);
+    public GeneralCoinsPage clickOnOverviewTab() {
+        utils.click(overviewTab);
+        return this;
     }
 
-    public void clickOnNewsTab()
-    {
-        utils.clickOnElement(newsTab);
+    public GeneralCoinsPage clickOnNewsTab() {
+        utils.click(newsTab);
+        return this;
     }
 
-    public void clickOnMarketsTab()
-    {
-        utils.clickOnElement(marketsTab);
+    public GeneralCoinsPage clickOnMarketsTab() {
+        utils.click(marketsTab);
+        return this;
     }
 
-    public void clickOnHoldingsTab()
-    {
-        utils.clickOnElement(holdingsTab);
+    public GeneralCoinsPage clickOnHoldingsTab() {
+        utils.click(holdingsTab);
+        return this;
     }
 
-    public void clickOnTeamUpdatesTab()
-    {
-        utils.clickOnElement(teamUpdatesTab);
+    public GeneralCoinsPage clickOnTeamUpdatesTab() {
+        utils.click(teamUpdatesTab);
+        return this;
     }
 
-    public void clickOnOnChainDataTab()
-    {
-        utils.clickOnElement(onChainDataTab);
+    public GeneralCoinsPage clickOnOnChainDataTab() {
+        utils.click(onChainDataTab);
+        return this;
     }
 
-    public void clickOnWidget()
-    {
-        utils.clickOnElement(widgetButton);
+    public GeneralCoinsPage clickOnWidget() {
+        utils.click(widgetButton);
+        return this;
     }
 
 }

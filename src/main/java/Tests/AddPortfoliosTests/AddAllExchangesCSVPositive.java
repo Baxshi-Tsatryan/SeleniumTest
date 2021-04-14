@@ -40,11 +40,11 @@ public class AddAllExchangesCSVPositive extends Driver {
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
-        deleteAllPortfolios();
+        //deleteAllPortfolios();
 
-        Thread.sleep(3000);
-        addPortfolio.clickOnAddPortfolio();
-        addPortfolio.clickOnConnectExchange();
+        addPortfolio
+                .clickOnAddPortfolio()
+                .clickOnConnectExchange();
 
         List<WebElement> listTill = driver.findElements(By.className("qa-exchanges"));
 
@@ -69,7 +69,7 @@ public class AddAllExchangesCSVPositive extends Driver {
                 importButton.sendKeys(paths.getBittrexCSV());
             }
 
-            else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX") || exchangeName.equals("Nexo (beta)"))
+            else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX") || exchangeName.equals("Nexo (beta)") || exchangeName.equals("Bitpanda Pro"))
             {
                 addPortfolio.clickOnBack();
                 continue;

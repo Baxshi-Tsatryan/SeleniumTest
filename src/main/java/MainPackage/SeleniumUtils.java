@@ -1,12 +1,15 @@
 package MainPackage;
 
-import AllPages.MainPage.Header;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.io.File;
+
 import static org.testng.internal.Utils.copyFile;
 
-public class SeleniumUtils{
+public class SeleniumUtils {
 
     WebDriver driver;
 
@@ -15,341 +18,361 @@ public class SeleniumUtils{
         this.driver = driver;
     }
 
-    String cookie = "eyJzZXNzaW9uVG9rZW4iOiJyOmRlMzgyYmY0NWUyODJiOTI0ODg0ZDgxZTMzYmQwNzgwIn0=";
+    String cookie = "eyJzZXNzaW9uVG9rZW4iOiJyOjc2YzZlNDFhOTdjZDBjODYzODcwOTkyZDRjOTU0YzQ3In0=";
+
+//    public SeleniumUtils waitVisibility2(By by) {
+//        wait.ignoring(NoSuchElementException.class);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+//        return this;
+//    }
+//
+//    public SeleniumUtils waitTest() {
+//        WebDriverWait wait = new WebDriverWait(driver, 5);
+//        return this;
+//    }
+//
+//    public SeleniumUtils testClick(By by)
+//    {
+//        WebElement webElement = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+//        webElement.click();
+//        return this;
+//    }
+
+    public SeleniumUtils waitVisibility(By by) {
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.ignoring(NoSuchElementException.class);
+        wait.until(ExpectedConditions.presenceOfElementLocated(by));
+        return this;
+    }
+
+    public SeleniumUtils waitClickable(By by) {
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(by));
+        return this;
+    }
 
     // Navigation
 
-    public void openURL(String URL)
-    {
+    public SeleniumUtils navigateTo(String URL) {
         driver.navigate().to(URL);
+        return this;
     }
 
-    public void findElement(By by)
-    {
+    public SeleniumUtils findElement(By by) {
+        waitVisibility(by);
         driver.findElement(by);
+        return this;
     }
 
-    public void clickOnElement(By by)
-    {
+    public SeleniumUtils click(By by) {
+        waitClickable(by);
         driver.findElement(by).click();
+        return this;
     }
 
-    public void actionClickOnElement(By by)
-    {
+    public SeleniumUtils actionClick(By by) {
+        waitClickable(by);
         Actions actions = new Actions(driver);
         actions.click(driver.findElement(by)).build().perform();
+        return this;
     }
 
-    public void goToBackPage()
-    {
+    public SeleniumUtils goToBackPage() {
         driver.navigate().back();
+        return this;
     }
 
-    public void goToForwardPage()
-    {
+    public SeleniumUtils goToForwardPage() {
         driver.navigate().forward();
+        return this;
     }
 
-    public void goToBottom()
-    {
+    public SeleniumUtils goToBottom() {
         Actions actions = new Actions(driver);
         actions.sendKeys(Keys.SPACE).build().perform();
+        return this;
     }
 
-    public void refreshPage()
-    {
+    public SeleniumUtils refreshPage() {
         driver.navigate().refresh();
+        return this;
     }
 
 
     // Work with window
 
-    public String getTitle()
-    {
+    public String getTitle() {
         return driver.getTitle();
     }
 
-    public String getCurrentURL()
-    {
+    public String getCurrentURL() {
         return driver.getCurrentUrl();
     }
 
-    public String getPageSource()
-    {
+    public String getPageSource() {
         return driver.getPageSource();
     }
 
 
     // Manage Windows
 
-    public void makeScreenMax()
-    {
+    public SeleniumUtils makeScreenMax() {
         driver.manage().window().maximize();
+        return this;
     }
 
-    public void makeScreenMin()
-    {
+    public SeleniumUtils makeScreenMin() {
         //driver.manage().window().minimize();
+        return this;
     }
 
-    public void makeFullScreen()
-    {
+    public SeleniumUtils makeFullScreen() {
         driver.manage().window().fullscreen();
+        return this;
     }
 
-    public void getWindowSize()
-    {
+    public SeleniumUtils getWindowSize() {
         driver.manage().window().getSize();
+        return this;
     }
 
-    public void setWindowSize(int width, int height)
-    {
+    public SeleniumUtils setWindowSize(int width, int height) {
         driver.manage().window().setSize(new Dimension(width, height));
+        return this;
     }
 
-    public void getWindowPosition()
-    {
+    public SeleniumUtils getWindowPosition() {
         driver.manage().window().getPosition();
+        return this;
     }
 
-    public void setWindowPosition(int x, int y)
-    {
+    public SeleniumUtils setWindowPosition(int x, int y) {
         driver.manage().window().setPosition(new Point(x, y));
+        return this;
     }
 
-    public void takeAScreenShot()
-    {
-        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+    public SeleniumUtils takeAScreenShot() {
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         copyFile(scrFile, new File("/Users/jenkins"));
+        return this;
     }
 
 
     // Work with Texts
 
-    public void sendKeysAction(By by, String searchString)
-    {
+    public SeleniumUtils sendKeysAction(By by, String searchString) {
+        waitVisibility(by);
         Actions actions = new Actions(driver);
         actions.sendKeys(driver.findElement(by), searchString).build().perform();
+        return this;
     }
 
-    public void sendKeys(By by, String searchString)
-    {
+    public SeleniumUtils sendKeys(By by, String searchString) {
+        waitVisibility(by);
         WebElement element = driver.findElement(by);
         element.sendKeys(searchString);
+        return this;
     }
 
-    public void clear(By by)
-    {
+    public SeleniumUtils clear(By by) {
+        waitVisibility(by);
         driver.findElement(by).clear();
+        return this;
     }
 
 
     // Get data
 
-    public String getText(By by)
-    {
+    public String getText(By by) {
+        waitVisibility(by);
         return driver.findElement(by).getText();
     }
 
-    public String getAttribute(String attributeName, By by)
-    {
+    public String getAttribute(String attributeName, By by) {
         return driver.findElement(by).getAttribute(attributeName);
     }
 
-    public String getCSSValue(By by, String CSSValue)
-    {
+    public String getCSSValue(By by, String CSSValue) {
         return driver.findElement(by).getCssValue(CSSValue);
     }
 
-    public String getTagName(By by)
-    {
+    public String getTagName(By by) {
         return driver.findElement(by).getTagName();
     }
 
-    public void getLocation(By by)
-    {
+    public SeleniumUtils getLocation(By by) {
         driver.findElement(by).getLocation();
+        return this;
     }
 
-    public void getSize(By by)
-    {
+    public SeleniumUtils getSize(By by) {
         driver.findElement(by).getSize();
+        return this;
     }
 
     // Get booleans
 
-    public Boolean isEnabled(By by)
-    {
+    public Boolean isEnabled(By by) {
         return driver.findElement(by).isEnabled();
     }
 
-    public Boolean isDisplayed2(By by)
-    {
-        return driver.findElement(by).isDisplayed();
+    public Boolean isSelected(By by) {
+        return driver.findElement(by).isSelected();
     }
 
-    public Boolean isDisplayed(By by)
-    {
-        try
-        {
-            driver.findElement(by);
+    public boolean isDisplayed(By by) {
+        if (!driver.findElements(by).isEmpty()) {
             return true;
-        }
-
-        catch(NoSuchElementException e)
-        {
+        } else {
             return false;
         }
     }
 
-    public Boolean isSelected(By by)
-    {
-        return driver.findElement(by).isSelected();
+    public boolean isDisplayed2(By by) {
+        if (driver.findElements(by).size() < 1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public Boolean isDisplayed3(By by) {
+        try {
+            driver.findElement(by);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+    }
+
+    public boolean pageSourceContain(String text) {
+        if (driver.getPageSource().contains(text))
+            return true;
+        else return false;
     }
 
 
     // Actions
 
-    public void moveToElement(By by)
-    {
+    public SeleniumUtils moveToElement(By by) {
+        waitVisibility(by);
         Actions actions = new Actions(driver);
         actions.moveToElement(driver.findElement(by)).build().perform();
+        return this;
     }
 
-    public void moveToElementByCoordinates(By by, int x, int y)
-    {
+    public SeleniumUtils moveToElementByCoordinates(By by, int x, int y) {
         Actions actions = new Actions(driver);
         actions.moveToElement(driver.findElement(by), x, y).build().perform();
+        return this;
     }
 
-    public void clickByAction(By by)
-    {
+    public SeleniumUtils clickByAction(By by) {
+        waitVisibility(by);
         Actions actions = new Actions(driver);
         actions.click().build().perform();
+        return this;
     }
 
-    public void doubleClickOnElement(By by)
-    {
+    public SeleniumUtils doubleClickOnElement(By by) {
+        waitVisibility(by);
         Actions actions = new Actions(driver);
         actions.doubleClick().build().perform();
+        return this;
     }
 
-    public void clickAndHold(By by)
-    {
+    public SeleniumUtils clickAndHold(By by) {
+        waitVisibility(by);
         Actions actions = new Actions(driver);
         actions.clickAndHold().build().perform();
+        return this;
     }
 
-    public void rightClickOnElement(By by)
-    {
+    public SeleniumUtils rightClickOnElement(By by) {
+        waitVisibility(by);
         Actions actions = new Actions(driver);
         actions.contextClick().build().perform();
+        return this;
     }
 
-    public void dragAndDrop(By by, By by2)
-    {
+    public SeleniumUtils dragAndDrop(By by, By by2) {
+        waitVisibility(by);
         Actions actions = new Actions(driver);
         actions.dragAndDrop(driver.findElement(by), driver.findElement(by2)).build().perform();
+        return this;
     }
 
-    public void dragAndDropByCoordinates(By by, int x, int y)
-    {
+    public SeleniumUtils dragAndDropByCoordinates(By by, int x, int y) {
+        waitVisibility(by);
         Actions actions = new Actions(driver);
         actions.dragAndDropBy(driver.findElement(by), x, y).build().perform();
+        return this;
     }
 
-    public void pause(int time)
-    {
+    public SeleniumUtils pause(int time) {
         Actions actions = new Actions(driver);
         actions.pause(time).build().perform();
+        return this;
     }
 
 
     // Driver close and quit
 
-    public void driverClose()
-    {
+    public SeleniumUtils driverClose() {
         driver.close();
+        return this;
     }
 
-    public void driverQuit()
-    {
+    public SeleniumUtils driverQuit() {
         driver.quit();
+        return this;
     }
 
 
     // Timeouts
 
-    public void threadSleep(int milliseconds) throws InterruptedException {
+    public SeleniumUtils threadSleep(int milliseconds) throws InterruptedException {
         Thread.sleep(milliseconds);
+        return this;
     }
 
 
     // Cookies
 
-    public void enableCookieShouldChange()
-    {
+    public SeleniumUtils enableCookieShouldChange() {
         driver.manage().addCookie(new Cookie("userData", "eyJzZXNzaW9uVG9rZW4iOiJyOjM1YjIxODQ4YzZlMWRiZGZiODFlOTIzY2ZkMmMzMTEzIn0=="));
         driver.navigate().refresh();
+        return this;
     }
 
-    public void enableCookie()
-    {
+    public SeleniumUtils enableCookie() {
         driver.manage().addCookie(new Cookie("userData", cookie));
         driver.navigate().refresh();
-    }
-
-
-    // Switch Frames and Alerts
-
-    public void switchFrame(int frameI, String frameName)
-    {
-        driver.switchTo().frame(frameI);
-        driver.switchTo().frame(frameName);
-    }
-
-    public void workWithFrame(By by)
-    {
-        driver.switchTo().frame(driver.findElement(by));
-        driver.switchTo().parentFrame();
-    }
-
-    public void navigateToParentFrame()
-    {
-        driver.switchTo().defaultContent();
-    }
-
-    public void switchToAlert()
-    {
-        driver.switchTo().alert();
+        return this;
     }
 
 
     // Parses
 
-    public int parseFromStringToInt(String string)
-    {
+    public int parseFromStringToInt(String string) {
         int intNumber = Integer.parseInt(string);
 
         return intNumber;
     }
 
-    public float parseFromStringToFloat(String string)
-    {
+    public float parseFromStringToFloat(String string) {
         float floatNumber = Float.parseFloat(string);
 
         return floatNumber;
     }
 
-    public String parseFromIntToString(int intNumber)
-    {
+    public String parseFromIntToString(int intNumber) {
         String string = String.valueOf(intNumber);
 
         return string;
     }
 
-    public String parseFromFloatToString(int floatNumber)
-    {
+    public String parseFromFloatToString(int floatNumber) {
         String string = String.valueOf(floatNumber);
 
         return string;
@@ -358,8 +381,7 @@ public class SeleniumUtils{
 
     // Other
 
-    public int randomNumber(int max)
-    {
+    public int randomNumber(int max) {
         int randNum = (int) (Math.random() * (max - 1) + 1);
 
         return randNum;

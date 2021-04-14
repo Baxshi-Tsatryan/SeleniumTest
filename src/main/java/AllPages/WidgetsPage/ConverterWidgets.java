@@ -104,440 +104,412 @@ public class ConverterWidgets {
     By secondCoinPriceSmall = By.cssSelector("coin-stats-converter-widget[type='small'] div:nth-of-type(3) [placeholder='Count']");
 
 
-
     // ------------------------------------------------- Methods -------------------------------------------------------
 
     // On Widget
 
     // Large
 
-    public String getFirstCoinNameLarge()
-    {
+    public String getFirstCoinNameLarge() {
         return utils.getText(firstCoinNameLarge);
     }
 
-    public String getSecondCoinNameLarge()
-    {
+    public String getSecondCoinNameLarge() {
         return utils.getText(secondCoinNameLarge);
     }
 
-    public String getFirstCoinPriceLarge()
-    {
+    public String getFirstCoinPriceLarge() {
         return utils.getText(firstCoinPriceLarge);
     }
 
-    public String getSecondCoinPriceLarge()
-    {
+    public String getSecondCoinPriceLarge() {
         return utils.getText(secondCoinPriceLarge);
     }
 
-    public void clickOnFirstCoinLarge()
-    {
-        utils.clickOnElement(firstCoinNameLarge);
+    public ConverterWidgets clickOnFirstCoinLarge() {
+        utils.click(firstCoinNameLarge);
+        return this;
     }
 
-    public void typeFirstCoinNameLarge(String coinName)
-    {
+    public ConverterWidgets typeFirstCoinNameLarge(String coinName) {
         utils.sendKeysAction(firstCoinNameLarge, coinName);
+        return this;
     }
 
-    public void clearFirstCoinNameLarge()
-    {
+    public ConverterWidgets clearFirstCoinNameLarge() {
         utils.clear(firstCoinNameLarge);
+        return this;
     }
 
-    public void clickOnSecondCoinLarge()
-    {
-        utils.clickOnElement(secondCoinNameLarge);
+    public ConverterWidgets clickOnSecondCoinLarge() {
+        utils.click(secondCoinNameLarge);
+        return this;
     }
 
-    public void typeSecondCoinNameLarge(String coinName)
-    {
+    public ConverterWidgets typeSecondCoinNameLarge(String coinName) {
         utils.sendKeysAction(secondCoinNameLarge, coinName);
+        return this;
     }
 
-    public void clearSecondCoinNameLarge()
-    {
+    public ConverterWidgets clearSecondCoinNameLarge() {
         utils.clear(secondCoinNameLarge);
+        return this;
     }
 
-    public void typeFirstCoinPriceLarge(String price)
-    {
+    public ConverterWidgets typeFirstCoinPriceLarge(String price) {
         utils.sendKeysAction(firstCoinPriceLarge, price);
+        return this;
     }
 
-    public void clearFirstCoinPrice()
-    {
+    public ConverterWidgets clearFirstCoinPrice() {
         utils.clear(firstCoinPriceLarge);
+        return this;
     }
 
-    public void typeSecondCoinPriceLarge(String price)
-    {
+    public ConverterWidgets typeSecondCoinPriceLarge(String price) {
         utils.sendKeysAction(secondCoinPriceLarge, price);
+        return this;
     }
 
-    public void clearSecondCoinPriceLarge()
-    {
+    public ConverterWidgets clearSecondCoinPriceLarge() {
         utils.clear(secondCoinPriceLarge);
+        return this;
     }
 
-    public void clickOnReverse()
-    {
-        utils.clickOnElement(reverseButton);
+    public ConverterWidgets clickOnReverse() {
+        utils.click(reverseButton);
+        return this;
     }
 
 
     // Medium
 
-    public String getFirstCoinNameMedium()
-    {
+    public String getFirstCoinNameMedium() {
         return utils.getText(firstCoinNameMedium);
     }
 
-    public String getSecondCoinNameMedium()
-    {
+    public String getSecondCoinNameMedium() {
         return utils.getText(secondCoinNameMedium);
     }
 
-    public String getFirstCoinPriceMedium()
-    {
+    public String getFirstCoinPriceMedium() {
         return utils.getText(firstCoinPriceMedium);
     }
 
-    public String getSecondCoinPriceMedium()
-    {
+    public String getSecondCoinPriceMedium() {
         return utils.getText(secondCoinPriceMedium);
     }
 
-    public void clickOnFirstCoinMedium()
-    {
-        utils.clickOnElement(firstCoinNameMedium);
+    public ConverterWidgets clickOnFirstCoinMedium() {
+        utils.click(firstCoinNameMedium);
+        return this;
     }
 
-    public void typeFirstCoinNameMedium(String coinName)
-    {
+    public ConverterWidgets typeFirstCoinNameMedium(String coinName) {
         utils.sendKeysAction(firstCoinNameMedium, coinName);
+        return this;
     }
 
-    public void clearFirstCoinNameMedium()
-    {
+    public ConverterWidgets clearFirstCoinNameMedium() {
         utils.clear(firstCoinNameMedium);
+        return this;
     }
 
-    public void clickOnSecondCoinMedium()
-    {
-        utils.clickOnElement(secondCoinNameMedium);
+    public ConverterWidgets clickOnSecondCoinMedium() {
+        utils.click(secondCoinNameMedium);
+        return this;
     }
 
-    public void typeSecondCoinNameMedium(String coinName)
-    {
+    public ConverterWidgets typeSecondCoinNameMedium(String coinName) {
         utils.sendKeysAction(secondCoinNameMedium, coinName);
+        return this;
     }
 
-    public void clearSecondCoinNameMedium()
-    {
+    public ConverterWidgets clearSecondCoinNameMedium() {
         utils.clear(secondCoinNameMedium);
+        return this;
     }
 
-    public void typeFirstCoinPriceMedium(String price)
-    {
+    public ConverterWidgets typeFirstCoinPriceMedium(String price) {
         utils.sendKeysAction(firstCoinPriceMedium, price);
+        return this;
     }
 
-    public void clearFirstCoinMedium()
-    {
+    public ConverterWidgets clearFirstCoinMedium() {
         utils.clear(firstCoinPriceMedium);
+        return this;
     }
 
-    public void typeSecondCoinPriceMedium(String price)
-    {
+    public ConverterWidgets typeSecondCoinPriceMedium(String price) {
         utils.sendKeysAction(secondCoinPriceMedium, price);
+        return this;
     }
 
-    public void clearSecondCoinPriceMedium()
-    {
+    public ConverterWidgets clearSecondCoinPriceMedium() {
         utils.clear(secondCoinPriceMedium);
+        return this;
     }
 
 
     // Small
 
-    public String getFirstCoinSymbolSmall()
-    {
+    public String getFirstCoinSymbolSmall() {
         return utils.getText(firstCoinSymbolSmall);
     }
 
-    public String getSecondCoinSymbolSmall()
-    {
+    public String getSecondCoinSymbolSmall() {
         return utils.getText(secondCoinSymbolSmall);
     }
 
-    public String getFirstCoinPriceSmall()
-    {
+    public String getFirstCoinPriceSmall() {
         return utils.getText(firstCoinPriceSmall);
     }
 
-    public String getSecondCoinPriceSmall()
-    {
+    public String getSecondCoinPriceSmall() {
         return utils.getText(secondCoinPriceSmall);
     }
 
-    public void clickOnFirstCoinSmall()
-    {
-        utils.clickOnElement(firstCoinSymbolSmall);
+    public ConverterWidgets clickOnFirstCoinSmall() {
+        utils.click(firstCoinSymbolSmall);
+        return this;
     }
 
-    public void typeFirstCoinNameSmall(String coinName)
-    {
+    public ConverterWidgets typeFirstCoinNameSmall(String coinName) {
         utils.sendKeysAction(firstCoinSymbolSmall, coinName);
+        return this;
     }
 
-    public void clearFirstCoinNameSmall()
-    {
+    public ConverterWidgets clearFirstCoinNameSmall() {
         utils.clear(firstCoinSymbolSmall);
+        return this;
     }
 
-    public void clickOnSecondCoinSmall()
-    {
-        utils.clickOnElement(secondCoinSymbolSmall);
+    public ConverterWidgets clickOnSecondCoinSmall() {
+        utils.click(secondCoinSymbolSmall);
+        return this;
     }
 
-    public void typeSecondCoinNameSmall(String coinName)
-    {
+    public ConverterWidgets typeSecondCoinNameSmall(String coinName) {
         utils.sendKeysAction(secondCoinSymbolSmall, coinName);
+        return this;
     }
 
-    public void clearSecondCoinNameSmall()
-    {
+    public ConverterWidgets clearSecondCoinNameSmall() {
         utils.clear(secondCoinSymbolSmall);
+        return this;
     }
 
-    public void typeFirstCoinPriceSmall(String price)
-    {
+    public ConverterWidgets typeFirstCoinPriceSmall(String price) {
         utils.sendKeysAction(firstCoinPriceSmall, price);
+        return this;
     }
 
-    public void clearFirstCoinSmall()
-    {
+    public ConverterWidgets clearFirstCoinSmall() {
         utils.clear(firstCoinPriceSmall);
+        return this;
     }
 
-    public void typeSecondCoinPriceSmall(String price)
-    {
+    public ConverterWidgets typeSecondCoinPriceSmall(String price) {
         utils.sendKeysAction(secondCoinPriceSmall, price);
+        return this;
     }
 
-    public void clearSecondCoinPriceSmall()
-    {
+    public ConverterWidgets clearSecondCoinPriceSmall() {
         utils.clear(secondCoinPriceSmall);
+        return this;
     }
 
 
     // Settings
 
-    public String getCurrentType()
-    {
+    public String getCurrentType() {
         return utils.getText(typeDropDown);
     }
 
-    public void clickOnTypeDropDown()
-    {
-        utils.clickOnElement(typeDropDown);
+    public ConverterWidgets clickOnTypeDropDown() {
+        utils.click(typeDropDown);
+        return this;
     }
 
-    public void clickOnLargeType()
-    {
-        utils.clickOnElement(largeType);
+    public ConverterWidgets clickOnLargeType() {
+        utils.click(largeType);
+        return this;
     }
 
-    public void clickOnMediumType()
-    {
-        utils.clickOnElement(mediumType);
+    public ConverterWidgets clickOnMediumType() {
+        utils.click(mediumType);
+        return this;
     }
 
-    public void clickOnSmallType()
-    {
-        utils.clickOnElement(smallType);
+    public ConverterWidgets clickOnSmallType() {
+        utils.click(smallType);
+        return this;
     }
 
-    public String getCurrentSellCoinName()
-    {
+    public String getCurrentSellCoinName() {
         return utils.getText(currentSellCoin);
     }
 
-    public void clickOnClearCurrentSellCoin()
-    {
-        utils.clickOnElement(clearSellCoin);
+    public ConverterWidgets clickOnClearCurrentSellCoin() {
+        utils.click(clearSellCoin);
+        return this;
     }
 
-    public void clickOnCurrentSellCoin()
-    {
-        utils.clickOnElement(currentSellCoin);
+    public ConverterWidgets clickOnCurrentSellCoin() {
+        utils.click(currentSellCoin);
+        return this;
     }
 
-    public void typeSellCoin(String coinName)
-    {
+    public ConverterWidgets typeSellCoin(String coinName) {
         utils.sendKeysAction(searchSellCoin, coinName);
+        return this;
     }
 
-    public void clearSellCoinName()
-    {
+    public ConverterWidgets clearSellCoinName() {
         utils.clear(searchSellCoin);
+        return this;
     }
 
-    public String getTypedSellCoinName()
-    {
+    public String getTypedSellCoinName() {
         return utils.getText(searchSellCoin);
     }
 
-    public String getCurrentBuyCoinName()
-    {
+    public String getCurrentBuyCoinName() {
         return utils.getText(currentBuyCoin);
     }
 
-    public void clickOnClearCurrentBuyCoin()
-    {
-        utils.clickOnElement(clearBuyCoin);
+    public ConverterWidgets clickOnClearCurrentBuyCoin() {
+        utils.click(clearBuyCoin);
+        return this;
     }
 
-    public void clickOnCurrentBuyCoin()
-    {
-        utils.clickOnElement(currentBuyCoin);
+    public ConverterWidgets clickOnCurrentBuyCoin() {
+        utils.click(currentBuyCoin);
+        return this;
     }
 
-    public void typeBuyCoin(String coinName)
-    {
+    public ConverterWidgets typeBuyCoin(String coinName) {
         utils.sendKeysAction(searchBuyCoin, coinName);
+        return this;
     }
 
-    public void clearBuyCoinName()
-    {
+    public ConverterWidgets clearBuyCoinName() {
         utils.clear(searchBuyCoin);
+        return this;
     }
 
-    public String getTypedBuyCoinName()
-    {
+    public String getTypedBuyCoinName() {
         return utils.getText(searchBuyCoin);
     }
 
-    public String getCurrentTheme()
-    {
+    public String getCurrentTheme() {
         return utils.getText(themeDropDown);
     }
 
-    public void clickOnThemeDropDown()
-    {
-        utils.clickOnElement(themeDropDown);
+    public ConverterWidgets clickOnThemeDropDown() {
+        utils.click(themeDropDown);
+        return this;
     }
 
-    public void clickOnLightMode()
-    {
-        utils.clickOnElement(lightMode);
+    public ConverterWidgets clickOnLightMode() {
+        utils.click(lightMode);
+        return this;
     }
 
-    public void clickOnDarkMode()
-    {
-        utils.clickOnElement(darkMode);
+    public ConverterWidgets clickOnDarkMode() {
+        utils.click(darkMode);
+        return this;
     }
 
-    public String getWidth()
-    {
+    public String getWidth() {
         return utils.getText(widthField);
     }
 
-    public void clearWidth()
-    {
+    public ConverterWidgets clearWidth() {
         utils.clear(widthField);
+        return this;
     }
 
-    public void typeWidth(String width)
-    {
+    public ConverterWidgets typeWidth(String width) {
         utils.sendKeysAction(widthField, width);
+        return this;
     }
 
 
     // Colors fields
 
-    public String getBackgroundColorText()
-    {
+    public String getBackgroundColorText() {
         return utils.getText(backgroundColorField);
     }
 
-    public void clearBackgroundColorText()
-    {
+    public ConverterWidgets clearBackgroundColorText() {
         utils.clear(backgroundColorField);
+        return this;
     }
 
-    public void typeBackgroundColorText(String colorText)
-    {
+    public ConverterWidgets typeBackgroundColorText(String colorText) {
         utils.sendKeysAction(backgroundColorField, colorText);
+        return this;
     }
 
-    public String getTextColorText()
-    {
+    public String getTextColorText() {
         return utils.getText(textColorField);
     }
 
-    public void clearTextColorText()
-    {
+    public ConverterWidgets clearTextColorText() {
         utils.clear(textColorField);
+        return this;
     }
 
-    public void typeTextColorText(String colorText)
-    {
+    public ConverterWidgets typeTextColorText(String colorText) {
         utils.sendKeysAction(textColorField, colorText);
+        return this;
     }
 
-    public String getWidgetBorderColorText()
-    {
+    public String getWidgetBorderColorText() {
         return utils.getText(widgetBorderColorField);
     }
 
-    public void clearWidgetBorderColorText()
-    {
+    public ConverterWidgets clearWidgetBorderColorText() {
         utils.clear(widgetBorderColorField);
+        return this;
     }
 
-    public void typeWidgetBorderColorText(String colorText)
-    {
+    public ConverterWidgets typeWidgetBorderColorText(String colorText) {
         utils.sendKeysAction(widgetBorderColorField, colorText);
+        return this;
     }
 
-    public String getRotateButtonColorText()
-    {
+    public String getRotateButtonColorText() {
         return utils.getText(rotateButtonColorField);
     }
 
-    public void clearRotateButtonColorText()
-    {
+    public ConverterWidgets clearRotateButtonColorText() {
         utils.clear(rotateButtonColorField);
+        return this;
     }
 
-    public void typeRotateButtonColorText(String colorText)
-    {
+    public ConverterWidgets typeRotateButtonColorText(String colorText) {
         utils.sendKeysAction(rotateButtonColorField, colorText);
+        return this;
     }
 
 
     // Colors
 
-    public String getBackgroundColor()
-    {
+    public String getBackgroundColor() {
         return utils.getCSSValue(backgroundColor, "color");
     }
 
-    public String getTextColor()
-    {
+    public String getTextColor() {
         return utils.getCSSValue(textColor, "color");
     }
 
-    public String getWidgetBorderColor()
-    {
+    public String getWidgetBorderColor() {
         return utils.getCSSValue(widgetBorderColor, "color");
     }
 
-    public String getRotateButtonColor()
-    {
+    public String getRotateButtonColor() {
         return utils.getCSSValue(rotateButtonColor, "color");
     }
 

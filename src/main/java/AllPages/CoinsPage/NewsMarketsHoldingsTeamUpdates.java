@@ -90,172 +90,163 @@ public class NewsMarketsHoldingsTeamUpdates {
 
     // Tabs
 
-    public void clickOnNewsTab()
-    {
-        utils.clickOnElement(newsTab);
+    public NewsMarketsHoldingsTeamUpdates clickOnNewsTab() {
+        utils.click(newsTab);
+        return this;
     }
 
-    public void clickOnMarketsTab()
-    {
-        utils.clickOnElement(marketsTab);
+    public NewsMarketsHoldingsTeamUpdates clickOnMarketsTab() {
+        utils.click(marketsTab);
+        return this;
     }
 
-    public void clickOnHoldingsTab()
-    {
-        utils.clickOnElement(holdingsTab);
+    public NewsMarketsHoldingsTeamUpdates clickOnHoldingsTab() {
+        utils.click(holdingsTab);
+        return this;
     }
 
-    public void clickOnTeamUpdatesTab()
-    {
-        utils.clickOnElement(teamUpdatesTab);
+    public NewsMarketsHoldingsTeamUpdates clickOnTeamUpdatesTab() {
+        utils.click(teamUpdatesTab);
+        return this;
     }
 
 
     // Markets
 
-    public void clickOnMarketsExchangeRank()
-    {
-        utils.clickOnElement(marketsExchangeRank);
+    public NewsMarketsHoldingsTeamUpdates clickOnMarketsExchangeRank() {
+        utils.click(marketsExchangeRank);
+        return this;
     }
 
-    public void clickOnMarketsPairRank()
-    {
-        utils.clickOnElement(marketsPairRank);
+    public NewsMarketsHoldingsTeamUpdates clickOnMarketsPairRank() {
+        utils.click(marketsPairRank);
+        return this;
     }
 
-    public void clickOnMarketsVolume24hRank()
-    {
-        utils.clickOnElement(marketsVolume24hRank);
+    public NewsMarketsHoldingsTeamUpdates clickOnMarketsVolume24hRank() {
+        utils.click(marketsVolume24hRank);
+        return this;
     }
 
-    public void clickOnMarketsVolumePercentRank()
-    {
-        utils.clickOnElement(marketsVolumePercentRank);
+    public NewsMarketsHoldingsTeamUpdates clickOnMarketsVolumePercentRank() {
+        utils.click(marketsVolumePercentRank);
+        return this;
     }
 
-    public void clickOnMarketsPriceRank()
-    {
-        utils.clickOnElement(marketsPriceRank);
+    public NewsMarketsHoldingsTeamUpdates clickOnMarketsPriceRank() {
+        utils.click(marketsPriceRank);
+        return this;
     }
 
-    public void clickOnMarketsLastUpdatedRank()
-    {
-        utils.clickOnElement(marketsLastUpdatedRank);
+    public NewsMarketsHoldingsTeamUpdates clickOnMarketsLastUpdatedRank() {
+        utils.click(marketsLastUpdatedRank);
+        return this;
     }
 
 
     // Holdings
 
-    public String getHoldingsTotalCoin()
-    {
+    public String getHoldingsTotalCoin() {
         return utils.getText(holdingsTotalCoin);
     }
 
-    public String getHoldingsAVGBuy()
-    {
+    public String getHoldingsAVGBuy() {
         return utils.getText(holdingsAVGBuy);
     }
 
-    public String getHoldingsAVGSell()
-    {
+    public String getHoldingsAVGSell() {
         return utils.getText(holdingsAVGSell);
     }
 
-    public String getHoldingsTotalWorth()
-    {
+    public String getHoldingsTotalWorth() {
         return utils.getText(holdingsTotalWorth);
     }
 
-    public String getHoldingsPLPrice()
-    {
+    public String getHoldingsPLPrice() {
         return utils.getText(holdingsPLPrice);
     }
 
-    public String getHoldingsPLPriceColor()
-    {
+    public String getHoldingsPLPriceColor() {
         return utils.getCSSValue(holdingsPLPrice, "color");
     }
 
-    public String getHoldingsPLPercent()
-    {
+    public String getHoldingsPLPercent() {
         return utils.getText(holdingsPLPercent);
     }
 
-    public String getHoldingsPLPercentColor()
-    {
+    public String getHoldingsPLPercentColor() {
         return utils.getCSSValue(holdingsPLPercent, "color");
     }
 
-    public void clickOnHoldingsPL3Dot()
-    {
-        utils.clickOnElement(holdingsPL3Dot);
+    public NewsMarketsHoldingsTeamUpdates clickOnHoldingsPL3Dot() {
+        utils.click(holdingsPL3Dot);
+        return this;
     }
 
-    public void clickOnHoldingsPLAllTime()
-    {
-        utils.clickOnElement(holdingsPLAllTime);
+    public NewsMarketsHoldingsTeamUpdates clickOnHoldingsPLAllTime() {
+        utils.click(holdingsPLAllTime);
+        return this;
     }
 
-    public void clickOnHoldingsPL24h()
-    {
-        utils.clickOnElement(holdingsPL24h);
+    public NewsMarketsHoldingsTeamUpdates clickOnHoldingsPL24h() {
+        utils.click(holdingsPL24h);
+        return this;
     }
 
-    public void clickOnHoldingsPLLastTrade()
-    {
-        utils.clickOnElement(holdingsPLLastTrade);
+    public NewsMarketsHoldingsTeamUpdates clickOnHoldingsPLLastTrade() {
+        utils.click(holdingsPLLastTrade);
+        return this;
     }
 
-    public void clickOnHoldingsPLCurrentHoldings()
-    {
-        utils.clickOnElement(holdingsPLCurrentHoldings);
+    public NewsMarketsHoldingsTeamUpdates clickOnHoldingsPLCurrentHoldings() {
+        utils.click(holdingsPLCurrentHoldings);
+        return this;
     }
 
-    public String getHoldingsCurrentPL()
-    {
+    public String getHoldingsCurrentPL() {
         return utils.getText(holdingsCurrentTime);
     }
 
-    public void clickOnHoldingsPortfolioRank()
-    {
-        utils.clickOnElement(holdingsPortfolioRank);
+    public NewsMarketsHoldingsTeamUpdates clickOnHoldingsPortfolioRank() {
+        utils.click(holdingsPortfolioRank);
+        return this;
     }
 
-    public void clickOnHoldingsTotalCoinRank()
-    {
-        utils.clickOnElement(holdingsTotalCoinRank);
+    public NewsMarketsHoldingsTeamUpdates clickOnHoldingsTotalCoinRank() {
+        utils.click(holdingsTotalCoinRank);
+        return this;
     }
 
-    public void clickOnHoldingsAVGBuyRank()
-    {
-        utils.clickOnElement(holdingsAVGBuyRank);
+    public NewsMarketsHoldingsTeamUpdates clickOnHoldingsAVGBuyRank() {
+        utils.click(holdingsAVGBuyRank);
+        return this;
     }
 
-    public void clickOnHoldingsAVGSellRank()
-    {
-        utils.clickOnElement(holdingsAVGSellRank);
+    public NewsMarketsHoldingsTeamUpdates clickOnHoldingsAVGSellRank() {
+        utils.click(holdingsAVGSellRank);
+        return this;
     }
 
-    public void clickOnHoldingsTotalWorthRank()
-    {
-        utils.clickOnElement(holdingsTotalWorthRank);
+    public NewsMarketsHoldingsTeamUpdates clickOnHoldingsTotalWorthRank() {
+        utils.click(holdingsTotalWorthRank);
+        return this;
     }
 
-    public void clickOnHoldingsPLRank()
-    {
-        utils.clickOnElement(holdingsPLRank);
+    public NewsMarketsHoldingsTeamUpdates clickOnHoldingsPLRank() {
+        utils.click(holdingsPLRank);
+        return this;
     }
 
-    public void clickOnStartTracking()
-    {
-        utils.clickOnElement(startTrackingButton);
+    public NewsMarketsHoldingsTeamUpdates clickOnStartTracking() {
+        utils.click(startTrackingButton);
+        return this;
     }
 
     // Team Updates
 
-    public void clickOnTeamUpdatesTweetNow()
-    {
-        utils.clickOnElement(teamUpdatesTweetNow);
+    public NewsMarketsHoldingsTeamUpdates clickOnTeamUpdatesTweetNow() {
+        utils.click(teamUpdatesTweetNow);
+        return this;
     }
 
 }

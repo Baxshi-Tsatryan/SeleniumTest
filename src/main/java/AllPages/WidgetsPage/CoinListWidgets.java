@@ -78,232 +78,211 @@ public class CoinListWidgets {
     By widgetBorderColor = By.cssSelector("table.colors-container-grid tr:nth-of-type(3) .widget-color-rectangle");
 
 
-
     // ----------------------------------------------- Methods --------------------------------------------------
 
-    public String getCurrentType()
-    {
+    public String getCurrentType() {
         return utils.getText(typeDropDown);
     }
 
-    public void clickOnTypeDropDown()
-    {
-        utils.clickOnElement(typeDropDown);
+    public CoinListWidgets clickOnTypeDropDown() {
+        utils.click(typeDropDown);
+        return this;
     }
 
-    public void clickOnLarge()
-    {
-        utils.clickOnElement(largeType);
+    public CoinListWidgets clickOnLarge() {
+        utils.click(largeType);
+        return this;
     }
 
-    public void clickOnMedium()
-    {
-        utils.clickOnElement(mediumType);
+    public CoinListWidgets clickOnMedium() {
+        utils.click(mediumType);
+        return this;
     }
 
-    public void clickOnSmall()
-    {
-        utils.clickOnElement(smallType);
+    public CoinListWidgets clickOnSmall() {
+        utils.click(smallType);
+        return this;
     }
 
-    public void clickOnCustomCoinsList()
-    {
-        utils.clickOnElement(customCoinsList);
+    public CoinListWidgets clickOnCustomCoinsList() {
+        utils.click(customCoinsList);
+        return this;
     }
 
-    public Boolean customCoinsListIsEnabled()
-    {
+    public Boolean customCoinsListIsEnabled() {
         return utils.isEnabled(customCoinsList);
     }
 
-    public Boolean customCoinsListIsSelected()
-    {
+    public Boolean customCoinsListIsSelected() {
         return utils.isSelected(customCoinsList);
     }
 
-    public void clickOnTopCoinsList()
-    {
-        utils.clickOnElement(topCoinsList);
+    public CoinListWidgets clickOnTopCoinsList() {
+        utils.click(topCoinsList);
+        return this;
     }
 
-    public Boolean topCoinsListIsEnabled()
-    {
+    public Boolean topCoinsListIsEnabled() {
         return utils.isEnabled(topCoinsList);
     }
 
-    public Boolean topCoinsListIsSelected()
-    {
+    public Boolean topCoinsListIsSelected() {
         return utils.isSelected(topCoinsList);
     }
 
-    public void typeCustomCoin(String coinName)
-    {
+    public CoinListWidgets typeCustomCoin(String coinName) {
         utils.sendKeysAction(searchFieldCustomCoins, coinName);
+        return this;
     }
 
-    public String getCurrentCoinsCount()
-    {
+    public String getCurrentCoinsCount() {
         return utils.getText(coinsCountDropDown);
     }
 
-    public void clickOnCoinsCountDropDown()
-    {
-        utils.clickOnElement(coinsCountDropDown);
+    public CoinListWidgets clickOnCoinsCountDropDown() {
+        utils.click(coinsCountDropDown);
+        return this;
     }
 
-    public String getTheme()
-    {
+    public String getTheme() {
         return utils.getText(themeDropDown);
     }
 
-    public void clickOnThemeDropDown()
-    {
-        utils.clickOnElement(themeDropDown);
+    public CoinListWidgets clickOnThemeDropDown() {
+        utils.click(themeDropDown);
+        return this;
     }
 
-    public void clickOnDarkMode()
-    {
-        utils.clickOnElement(darkMode);
+    public CoinListWidgets clickOnDarkMode() {
+        utils.click(darkMode);
+        return this;
     }
 
-    public void clickOnLightMode()
-    {
-        utils.clickOnElement(lightMode);
+    public CoinListWidgets clickOnLightMode() {
+        utils.click(lightMode);
+        return this;
     }
 
-    public String getCurrentCurrency()
-    {
+    public String getCurrentCurrency() {
         return utils.getText(currencyDropDown);
     }
 
-    public void clickOnCurrencyDropDown()
-    {
-        utils.clickOnElement(currencyDropDown);
+    public CoinListWidgets clickOnCurrencyDropDown() {
+        utils.click(currencyDropDown);
+        return this;
     }
 
-    public String getWidth()
-    {
+    public String getWidth() {
         return utils.getText(widthField);
     }
 
-    public void clearWidth()
-    {
+    public CoinListWidgets clearWidth() {
         utils.clear(widthField);
+        return this;
     }
 
-    public void typeWidth(String width)
-    {
+    public CoinListWidgets typeWidth(String width) {
         utils.sendKeysAction(widthField, width);
+        return this;
     }
 
-    public String getCurrentTheme()
-    {
+    public String getCurrentTheme() {
         return utils.getText(themeDropDown);
     }
 
 
     // Color field
 
-    public String getBackgroundColorText()
-    {
+    public String getBackgroundColorText() {
         return utils.getText(backgroundColorField);
     }
 
-    public void clearBackgroundColorText()
-    {
+    public CoinListWidgets clearBackgroundColorText() {
         utils.clear(backgroundColorField);
+        return this;
     }
 
-    public void typeBackgroundColorText(String colorText)
-    {
+    public CoinListWidgets typeBackgroundColorText(String colorText) {
         utils.sendKeysAction(backgroundColorField, colorText);
+        return this;
     }
 
-    public String getTextColorText()
-    {
+    public String getTextColorText() {
         return utils.getText(textColorField);
     }
 
-    public void clearTextColorText()
-    {
+    public CoinListWidgets clearTextColorText() {
         utils.clear(textColorField);
+        return this;
     }
 
-    public void typeTextColorText(String colorText)
-    {
+    public CoinListWidgets typeTextColorText(String colorText) {
         utils.sendKeysAction(textColorField, colorText);
+        return this;
     }
 
-    public String getPositivePercentageColorText()
-    {
+    public String getPositivePercentageColorText() {
         return utils.getText(positivePercentageColorField);
     }
 
-    public void clearPositivePercentageColorText()
-    {
+    public CoinListWidgets clearPositivePercentageColorText() {
         utils.clear(positivePercentageColorField);
+        return this;
     }
 
-    public void typePositivePercentageColorText(String colorText)
-    {
+    public CoinListWidgets typePositivePercentageColorText(String colorText) {
         utils.sendKeysAction(positivePercentageColorField, colorText);
+        return this;
     }
 
-    public String getNegativePercentageColorText()
-    {
+    public String getNegativePercentageColorText() {
         return utils.getText(negativePercentageColorField);
     }
 
-    public void clearNegativePercentageColorText()
-    {
+    public CoinListWidgets clearNegativePercentageColorText() {
         utils.clear(negativePercentageColorField);
+        return this;
     }
 
-    public void typeNegativePercentageColorText(String colorText)
-    {
+    public CoinListWidgets typeNegativePercentageColorText(String colorText) {
         utils.sendKeysAction(negativePercentageColorField, colorText);
+        return this;
     }
 
-    public String getWidgetBorderColorText()
-    {
+    public String getWidgetBorderColorText() {
         return utils.getText(widgetBorderColorField);
     }
 
-    public void clearWidgetBorderColorText()
-    {
+    public CoinListWidgets clearWidgetBorderColorText() {
         utils.clear(widgetBorderColorField);
+        return this;
     }
 
-    public void typeWidgetBorderColorText(String colorText)
-    {
+    public CoinListWidgets typeWidgetBorderColorText(String colorText) {
         utils.sendKeysAction(widgetBorderColorField, colorText);
+        return this;
     }
 
 
     // Colors
 
-    public String getBackgroundColor()
-    {
+    public String getBackgroundColor() {
         return utils.getCSSValue(backgroundColor, "color");
     }
 
-    public String getTextColor()
-    {
+    public String getTextColor() {
         return utils.getCSSValue(textColor, "color");
     }
 
-    public String getPositivePercentageColor()
-    {
+    public String getPositivePercentageColor() {
         return utils.getCSSValue(positivePercentageColor, "color");
     }
 
-    public String getNegativePercentageColor()
-    {
+    public String getNegativePercentageColor() {
         return utils.getCSSValue(negativePercentageColor, "color");
     }
 
-    public String getWidgetBorderColor()
-    {
+    public String getWidgetBorderColor() {
         return utils.getCSSValue(widgetBorderColor, "color");
     }
 

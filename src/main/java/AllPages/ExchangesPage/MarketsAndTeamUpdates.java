@@ -42,60 +42,60 @@ public class MarketsAndTeamUpdates {
 
     // -------------------------------------------------- Methods -----------------------------------------------------
 
-    public void clickOnMarketsTab()
-    {
-        utils.clickOnElement(marketsTab);
+    public MarketsAndTeamUpdates clickOnMarketsTab() {
+        utils.click(marketsTab);
+        return this;
     }
 
-    public void clickOnTeamUpdatesTab()
-    {
-        utils.clickOnElement(teamUpdatesTab);
+    public MarketsAndTeamUpdates clickOnTeamUpdatesTab() {
+        utils.click(teamUpdatesTab);
+        return this;
     }
 
 
     // Markets
 
-    public void clickOnMarketsIndexRank()
-    {
-        utils.clickOnElement(marketsIndexRank);
+    public MarketsAndTeamUpdates clickOnMarketsIndexRank() {
+        utils.click(marketsIndexRank);
+        return this;
     }
 
-    public void clickOnMarketsNameRank()
-    {
-        utils.clickOnElement(marketsNameRank);
+    public MarketsAndTeamUpdates clickOnMarketsNameRank() {
+        utils.click(marketsNameRank);
+        return this;
     }
 
-    public void clickOnMarketsPairRank()
-    {
-        utils.clickOnElement(marketPairRank);
+    public MarketsAndTeamUpdates clickOnMarketsPairRank() {
+        utils.click(marketPairRank);
+        return this;
     }
 
-    public void clickOnMarketsVolume24hRank()
-    {
-        utils.clickOnElement(marketsVolume24hRank);
+    public MarketsAndTeamUpdates clickOnMarketsVolume24hRank() {
+        utils.click(marketsVolume24hRank);
+        return this;
     }
 
-    public void clickOnMarketsVolumePercentRank()
-    {
-        utils.clickOnElement(marketsVolumePercentRank);
+    public MarketsAndTeamUpdates clickOnMarketsVolumePercentRank() {
+        utils.click(marketsVolumePercentRank);
+        return this;
     }
 
-    public void clickOnMarketsPriceRank()
-    {
-        utils.clickOnElement(marketsPriceRank);
+    public MarketsAndTeamUpdates clickOnMarketsPriceRank() {
+        utils.click(marketsPriceRank);
+        return this;
     }
 
-    public void clickOnMarketsLastUpdatedRank()
-    {
-        utils.clickOnElement(marketsLastUpdatedRank);
+    public MarketsAndTeamUpdates clickOnMarketsLastUpdatedRank() {
+        utils.click(marketsLastUpdatedRank);
+        return this;
     }
 
 
     // Team Updates
 
-    public void clickOnTeamUpdatesTweetNow()
-    {
-        utils.clickOnElement(teamUpdatesTweetNow);
+    public MarketsAndTeamUpdates clickOnTeamUpdatesTweetNow() {
+        utils.click(teamUpdatesTweetNow);
+        return this;
     }
 
 

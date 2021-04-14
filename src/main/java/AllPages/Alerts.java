@@ -125,367 +125,337 @@ public class Alerts extends Driver {
 
     // Auto
 
-    public void clickOnPriceNotificationsSwitcher()
-    {
-        utils.clickOnElement(priceNotificationsSwitcher);
+    public Alerts clickOnPriceNotificationsSwitcher() {
+        utils.click(priceNotificationsSwitcher);
+        return this;
     }
 
-    public boolean priceNotificationsSwitcherIsEnabled()
-    {
+    public boolean priceNotificationsSwitcherIsEnabled() {
         return utils.isEnabled(priceNotificationsSwitcher);
     }
 
-    public boolean priceNotificationsSwitcherIsSelected()
-    {
+    public boolean priceNotificationsSwitcherIsSelected() {
         return utils.isSelected(priceNotificationsSwitcher);
     }
 
-    public void clickOnPriceNotificationsLow()
-    {
-        utils.clickOnElement(priceNotificationsLow);
+    public Alerts clickOnPriceNotificationsLow() {
+        utils.click(priceNotificationsLow);
+        return this;
     }
 
-    public void clickOnPriceNotificationsMedium()
-    {
-        utils.clickOnElement(priceNotificationsMedium);
+    public Alerts clickOnPriceNotificationsMedium() {
+        utils.click(priceNotificationsMedium);
+        return this;
     }
 
-    public void clickOnPriceNotificationsHigh()
-    {
-        utils.clickOnElement(priceNotificationsHigh);
+    public Alerts clickOnPriceNotificationsHigh() {
+        utils.click(priceNotificationsHigh);
+        return this;
     }
 
-    public void clickOnBreakingNewsNotificationsSwitcher()
-    {
-        utils.clickOnElement(breakingNewsNotificationsSwitcher);
+    public Alerts clickOnBreakingNewsNotificationsSwitcher() {
+        utils.click(breakingNewsNotificationsSwitcher);
+        return this;
     }
 
-    public boolean breakingNewsNotificationsSwitcherIsEnabled()
-    {
+    public boolean breakingNewsNotificationsSwitcherIsEnabled() {
         return utils.isEnabled(breakingNewsNotificationsSwitcher);
     }
 
-    public boolean breakingNewsNotificationsSwitcherIsSelected()
-    {
+    public boolean breakingNewsNotificationsSwitcherIsSelected() {
         return utils.isSelected(breakingNewsNotificationsSwitcher);
     }
 
-    public void clickOnNewPairNotificationsSwitcher()
-    {
-        utils.clickOnElement(newPairNotificationsSwitcher);
+    public Alerts clickOnNewPairNotificationsSwitcher() {
+        utils.click(newPairNotificationsSwitcher);
+        return this;
     }
 
-    public boolean newPairNotificationsSwitcherIsEnabled()
-    {
+    public boolean newPairNotificationsSwitcherIsEnabled() {
         return utils.isEnabled(newPairNotificationsSwitcher);
     }
 
-    public boolean newPairNotificationsSwitcherIsSelected()
-    {
+    public boolean newPairNotificationsSwitcherIsSelected() {
         return utils.isSelected(newPairNotificationsSwitcher);
     }
 
-    public void clickOnPumpNotificationsSwitcher()
-    {
-        utils.clickOnElement(pumpNotificationsSwitcher);
+    public Alerts clickOnPumpNotificationsSwitcher() {
+        utils.click(pumpNotificationsSwitcher);
+        return this;
     }
 
-    public boolean pumpNotificationsSwitcherIsEnabled()
-    {
+    public boolean pumpNotificationsSwitcherIsEnabled() {
         return utils.isEnabled(pumpNotificationsSwitcher);
     }
 
-    public boolean pumpNotificationsSwitcherIsSelected()
-    {
+    public boolean pumpNotificationsSwitcherIsSelected() {
         return utils.isSelected(pumpNotificationsSwitcher);
     }
 
-    public void clickOnTeamUpdateNotificationsSwitcher()
-    {
-        utils.clickOnElement(teamUpdateNotificationsSwitcher);
+    public Alerts clickOnTeamUpdateNotificationsSwitcher() {
+        utils.click(teamUpdateNotificationsSwitcher);
+        return this;
     }
 
-    public boolean teamUpdateNotificationsSwitcherIsEnabled()
-    {
+    public boolean teamUpdateNotificationsSwitcherIsEnabled() {
         return utils.isEnabled(teamUpdateNotificationsSwitcher);
     }
 
-    public boolean teamUpdateNotificationsSwitcherIsSelected()
-    {
+    public boolean teamUpdateNotificationsSwitcherIsSelected() {
         return utils.isSelected(teamUpdateNotificationsSwitcher);
     }
 
-    public void clickOnPortfolioValueNotificationSwitcher()
-    {
-        utils.clickOnElement(portfolioValueNotificationSwitcher);
+    public Alerts clickOnPortfolioValueNotificationSwitcher() {
+        utils.click(portfolioValueNotificationSwitcher);
+        return this;
     }
 
-    public boolean portfolioValueNotificationSwitcherIsEnabled()
-    {
+    public boolean portfolioValueNotificationSwitcherIsEnabled() {
         return utils.isEnabled(portfolioValueNotificationSwitcher);
     }
 
-    public boolean portfolioValueNotificationSwitcherIsSelected()
-    {
+    public boolean portfolioValueNotificationSwitcherIsSelected() {
         return utils.isSelected(portfolioValueNotificationSwitcher);
     }
 
-    public String getCurrentPortfolioValueNotificationTime()
-    {
+    public String getCurrentPortfolioValueNotificationTime() {
         return utils.getText(portfolioValueNotificationCurrentTime);
     }
 
-    public void typePortfolioValueNotificationTime(String time)
-    {
+    public Alerts typePortfolioValueNotificationTime(String time) {
         utils.sendKeys(portfolioValueNotificationCurrentTime, time);
+        return this;
     }
 
-    public void clearPortfolioValueNotificationTime()
-    {
+    public Alerts clearPortfolioValueNotificationTime() {
         utils.clear(portfolioValueNotificationCurrentTime);
+        return this;
     }
 
-    public void clickOnPortfolioValueNotificationTime()
-    {
-        utils.clickOnElement(portfolioValueNotificationCurrentTime);
+    public Alerts clickOnPortfolioValueNotificationTime() {
+        utils.click(portfolioValueNotificationCurrentTime);
+        return this;
     }
 
-    public void clickOnLearnMore()
-    {
-        utils.clickOnElement(learnMoreButton);
+    public Alerts clickOnLearnMore() {
+        utils.click(learnMoreButton);
+        return this;
     }
 
 
     // Custom
 
-    public void clickOnPriceLimit()
-    {
-        utils.clickOnElement(priceLimit);
+    public Alerts clickOnPriceLimit() {
+        utils.click(priceLimit);
+        return this;
     }
 
-    public void clickOnMarketCap()
-    {
-        utils.clickOnElement(marketCap);
+    public Alerts clickOnMarketCap() {
+        utils.click(marketCap);
+        return this;
     }
 
-    public void clickOnVolume()
-    {
-        utils.clickOnElement(volume);
+    public Alerts clickOnVolume() {
+        utils.click(volume);
+        return this;
     }
 
 
     // Modal
 
-    public String getCurrentCoin()
-    {
+    public String getCurrentCoin() {
         return utils.getText(currentCoin);
     }
 
-    public void clickOnCoinField()
-    {
-        utils.clickOnElement(currentCoin);
+    public Alerts clickOnCoinField() {
+        utils.click(currentCoin);
+        return this;
     }
 
-    public void clickOnClearCurrentCoinIcon()
-    {
-        utils.clickOnElement(clearCurrentCoinIcon);
+    public Alerts clickOnClearCurrentCoinIcon() {
+        utils.click(clearCurrentCoinIcon);
+        return this;
     }
 
-    public void typeCoinName(String coinName)
-    {
+    public Alerts typeCoinName(String coinName) {
         utils.sendKeys(coinField, coinName);
+        return this;
     }
 
-    public void clearCoinName()
-    {
+    public Alerts clearCoinName() {
         utils.clear(coinField);
+        return this;
     }
 
-    public void clickOnFirstCoinResult()
-    {
-        utils.clickOnElement(firstCoinResult);
+    public Alerts clickOnFirstCoinResult() {
+        utils.click(firstCoinResult);
+        return this;
     }
 
-    public void clickOnPriceLimitPairField()
-    {
-        utils.clickOnElement(pairFieldPriceLimit);
+    public Alerts clickOnPriceLimitPairField() {
+        utils.click(pairFieldPriceLimit);
+        return this;
     }
 
-    public void typePriceLimitPair(String pair)
-    {
+    public Alerts typePriceLimitPair(String pair) {
         utils.sendKeys(pairFieldPriceLimit, pair);
+        return this;
     }
 
-    public String getCurrentPriceLimitPair()
-    {
+    public String getCurrentPriceLimitPair() {
         return utils.getText(currentPairPriceLimit);
     }
 
-    public void clearPriceLimitPair()
-    {
+    public Alerts clearPriceLimitPair() {
         utils.clear(pairFieldPriceLimit);
+        return this;
     }
 
-    public String getCurrentCondition()
-    {
+    public String getCurrentCondition() {
         return utils.getText(currentCondition);
     }
 
-    public void clickOnConditionDropDown()
-    {
-        utils.clickOnElement(conditionDropDown);
+    public Alerts clickOnConditionDropDown() {
+        utils.click(conditionDropDown);
+        return this;
     }
 
-    public void clickOnConditionMoreThan()
-    {
-        utils.clickOnElement(moreThanCondition);
+    public Alerts clickOnConditionMoreThan() {
+        utils.click(moreThanCondition);
+        return this;
     }
 
-    public void clickOnConditionLessThan()
-    {
-        utils.clickOnElement(lessThanCondition);
+    public Alerts clickOnConditionLessThan() {
+        utils.click(lessThanCondition);
+        return this;
     }
 
-    public void clickOnConditionIncreasedBy()
-    {
-        utils.clickOnElement(increasedByCondition);
+    public Alerts clickOnConditionIncreasedBy() {
+        utils.click(increasedByCondition);
+        return this;
     }
 
-    public void clickOnConditionDecreasedBy()
-    {
-        utils.clickOnElement(decreasedByCondition);
+    public Alerts clickOnConditionDecreasedBy() {
+        utils.click(decreasedByCondition);
+        return this;
     }
 
-    public void clickOnConditionChangedBy()
-    {
-        utils.clickOnElement(changedByCondition);
+    public Alerts clickOnConditionChangedBy() {
+        utils.click(changedByCondition);
+        return this;
     }
 
-    public String getCurrentAlertFrequency()
-    {
+    public String getCurrentAlertFrequency() {
         return utils.getText(currentAlertFrequency);
     }
 
-    public void clickOnAlertFrequencyDropDown()
-    {
-        utils.clickOnElement(alertFrequencyDropDown);
+    public Alerts clickOnAlertFrequencyDropDown() {
+        utils.click(alertFrequencyDropDown);
+        return this;
     }
 
-    public void clickOnAlertFrequency1Time()
-    {
-        utils.clickOnElement(time1AlertFrequency);
+    public Alerts clickOnAlertFrequency1Time() {
+        utils.click(time1AlertFrequency);
+        return this;
     }
 
-    public void clickOnAlertFrequencyPersistent()
-    {
-        utils.clickOnElement(persistentAlertFrequency);
+    public Alerts clickOnAlertFrequencyPersistent() {
+        utils.click(persistentAlertFrequency);
+        return this;
     }
 
-    public String getCurrentPrice()
-    {
+    public String getCurrentPrice() {
         return utils.getText(priceField);
     }
 
-    public void typePrice(String price)
-    {
+    public Alerts typePrice(String price) {
         utils.sendKeys(priceField, price);
+        return this;
     }
 
-    public void clearPrice()
-    {
+    public Alerts clearPrice() {
         utils.clear(priceField);
+        return this;
     }
 
-    public String getCurrentPriceCurrency()
-    {
+    public String getCurrentPriceCurrency() {
         return utils.getText(currentPriceCurrency);
     }
 
-    public void typeNote(String note)
-    {
+    public Alerts typeNote(String note) {
         utils.sendKeys(notes, note);
+        return this;
     }
 
-    public void clearNotes()
-    {
+    public Alerts clearNotes() {
         utils.clear(notes);
+        return this;
     }
 
-    public void clickOnSave()
-    {
-        utils.clickOnElement(save);
+    public Alerts clickOnSave() {
+        utils.click(save);
+        return this;
     }
 
-    public void clickOnCancel()
-    {
-        utils.clickOnElement(cancel);
+    public Alerts clickOnCancel() {
+        utils.click(cancel);
+        return this;
     }
 
 
     // Last alert
 
-    public boolean lastCoinNameIsDisplayed()
-    {
+    public boolean lastCoinNameIsDisplayed() {
         return utils.isDisplayed(lastCoinName);
     }
 
-    public String getLastCoinName()
-    {
+    public String getLastCoinName() {
         return utils.getText(lastCoinName);
     }
 
-    public boolean lastCoinSymbolIsDisplayed()
-    {
+    public boolean lastCoinSymbolIsDisplayed() {
         return utils.isDisplayed(lastCoinSymbol);
     }
 
-    public String getLastCoinSymbol()
-    {
+    public String getLastCoinSymbol() {
         return utils.getText(lastCoinSymbol);
     }
 
-    public boolean lastTotalMarketCapTextIsDisplayed()
-    {
+    public boolean lastTotalMarketCapTextIsDisplayed() {
         return utils.isDisplayed(lastTotalMarketCapType);
     }
 
-    public String getLastAlertExchange()
-    {
+    public String getLastAlertExchange() {
         return utils.getText(lastPriceLimitExchange);
     }
 
-    public String getLastAlertPriceOrPercent()
-    {
+    public String getLastAlertPriceOrPercent() {
         return utils.getText(lastPriceOrPercent);
     }
 
-    public String getLastCondition()
-    {
+    public String getLastCondition() {
         return utils.getText(lastCondition);
     }
 
-    public String getLastFrequency()
-    {
+    public String getLastFrequency() {
         return utils.getText(lastFrequency);
     }
 
-    public void clickOnLastAlert3Dot()
-    {
-        utils.clickOnElement(last3DotButton);
+    public Alerts clickOnLastAlert3Dot() {
+        utils.click(last3DotButton);
+        return this;
     }
 
-    public void clickOnDeleteIn3Dot()
-    {
-        utils.clickOnElement(deleteCustomAlertIn3Dot);
+    public Alerts clickOnDeleteIn3Dot() {
+        utils.click(deleteCustomAlertIn3Dot);
+        return this;
     }
 
-    public boolean lastNoteIsDisplayed()
-    {
+    public boolean lastNoteIsDisplayed() {
         return utils.isDisplayed(lastNotes);
     }
 
-    public String getLastNote()
-    {
+    public String getLastNote() {
         return utils.getText(lastNotes);
     }
 }

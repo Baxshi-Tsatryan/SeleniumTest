@@ -124,405 +124,365 @@ public class CoinPriceWidgets {
     By widgetBorderColorSmall = By.cssSelector("tbody > tr:nth-of-type(2) .widget-color-rectangle");
 
 
-
-
     // ----------------------------------------------------- Methods ------------------------------------------------
 
 
     // On Widget
 
-    public void clickOnWidgetLarge()
-    {
-        utils.clickOnElement(coinName);
+    public CoinPriceWidgets clickOnWidgetLarge() {
+        utils.click(coinName);
+        return this;
     }
 
-    public String getCoinName()
-    {
+    public String getCoinName() {
         return utils.getText(coinName);
     }
 
-    public String getCoinIndex()
-    {
+    public String getCoinIndex() {
         return utils.getText(coinIndex);
     }
 
-    public String getCoinPrice()
-    {
+    public String getCoinPrice() {
         return utils.getText(coinPrice);
     }
 
-    public String getCoinPercentLarge()
-    {
+    public String getCoinPercentLarge() {
         return utils.getText(coinPercentLarge);
     }
 
-    public String getCoinPercentColorLarge()
-    {
+    public String getCoinPercentColorLarge() {
         return utils.getCSSValue(coinPercentLarge, "color");
     }
 
-    public String getCoinPriceBTCLarge()
-    {
+    public String getCoinPriceBTCLarge() {
         return utils.getText(coinPriceBTCLarge);
     }
 
-    public String getCoinPercentBTCLarge()
-    {
+    public String getCoinPercentBTCLarge() {
         return utils.getText(coinPercentBTCLarge);
     }
 
-    public String getCoinIndexColor()
-    {
+    public String getCoinIndexColor() {
         return utils.getCSSValue(coinIndex, "color");
     }
 
-    public String getCoinPercentMedium()
-    {
+    public String getCoinPercentMedium() {
         return utils.getText(coinPercentMedium);
     }
 
-    public String getCoinPercentColorMedium()
-    {
+    public String getCoinPercentColorMedium() {
         return utils.getCSSValue(coinPercentMedium, "color");
     }
 
-    public String getCoinPriceSmall()
-    {
+    public String getCoinPriceSmall() {
         return utils.getText(coinPriceSmall);
     }
 
-    public String getCoinPriceColorSmall()
-    {
+    public String getCoinPriceColorSmall() {
         return utils.getCSSValue(coinPriceSmall, "color");
     }
 
-    public void clickOnWidgetSmall()
-    {
-        utils.clickOnElement(coinPriceSmall);
+    public CoinPriceWidgets clickOnWidgetSmall() {
+        utils.click(coinPriceSmall);
+        return this;
     }
 
 
     // Settings
 
-    public String getCurrentType()
-    {
+    public String getCurrentType() {
         return utils.getText(typeDropDown);
     }
 
-    public void clickOnTypeDropDown()
-    {
-        utils.clickOnElement(typeDropDown);
+    public CoinPriceWidgets clickOnTypeDropDown() {
+        utils.click(typeDropDown);
+        return this;
     }
 
-    public void clickOnLargeType()
-    {
-        utils.clickOnElement(largeType);
+    public CoinPriceWidgets clickOnLargeType() {
+        utils.click(largeType);
+        return this;
     }
 
-    public void clickOnMediumType()
-    {
-        utils.clickOnElement(mediumType);
+    public CoinPriceWidgets clickOnMediumType() {
+        utils.click(mediumType);
+        return this;
     }
 
-    public void clickOnSmallType()
-    {
-        utils.clickOnElement(smallType);
+    public CoinPriceWidgets clickOnSmallType() {
+        utils.click(smallType);
+        return this;
     }
 
-    public String getCurrentCoin()
-    {
+    public String getCurrentCoin() {
         return utils.getText(currentCoin);
     }
 
-    public void clickOnClearCurrentCoin()
-    {
-        utils.clickOnElement(clearCurrentCoin);
+    public CoinPriceWidgets clickOnClearCurrentCoin() {
+        utils.click(clearCurrentCoin);
+        return this;
     }
 
-    public void clickOnCurrentCoin()
-    {
-        utils.clickOnElement(currentCoin);
+    public CoinPriceWidgets clickOnCurrentCoin() {
+        utils.click(currentCoin);
+        return this;
     }
 
-    public void typeCoinName(String coinName)
-    {
-        utils.clickOnElement(coinSearchField);
+    public CoinPriceWidgets typeCoinName(String coinName) {
+        utils.click(coinSearchField);
+        return this;
     }
 
-    public void clickOnAllCoins()
-    {
-        utils.clickOnElement(allCoins);
+    public CoinPriceWidgets clickOnAllCoins() {
+        utils.click(allCoins);
+        return this;
     }
 
-    public String getCurrentTheme()
-    {
+    public String getCurrentTheme() {
         return utils.getText(themeDropDown);
     }
 
-    public void clickOnThemeDropDown()
-    {
-        utils.clickOnElement(themeDropDown);
+    public CoinPriceWidgets clickOnThemeDropDown() {
+        utils.click(themeDropDown);
+        return this;
     }
 
-    public void clickOnDarkMode()
-    {
-        utils.clickOnElement(darkMode);
+    public CoinPriceWidgets clickOnDarkMode() {
+        utils.click(darkMode);
+        return this;
     }
 
-    public void clickOnLightMode()
-    {
-        utils.clickOnElement(lightMode);
+    public CoinPriceWidgets clickOnLightMode() {
+        utils.click(lightMode);
+        return this;
     }
 
-    public String getCurrentCurrency()
-    {
+    public String getCurrentCurrency() {
         return utils.getText(currencyDropDown);
     }
 
-    public void clickOnCurrencyDropDown()
-    {
-        utils.clickOnElement(currencyDropDown);
+    public CoinPriceWidgets clickOnCurrencyDropDown() {
+        utils.click(currencyDropDown);
+        return this;
     }
 
-    public String getWidth()
-    {
+    public String getWidth() {
         return utils.getText(widthField);
     }
 
-    public void clearWidth()
-    {
+    public CoinPriceWidgets clearWidth() {
         utils.clear(widthField);
+        return this;
     }
 
-    public void typeWidth(String width)
-    {
+    public CoinPriceWidgets typeWidth(String width) {
         utils.sendKeysAction(widthField, width);
+        return this;
     }
 
-    public String getHeight()
-    {
+    public String getHeight() {
         return utils.getText(heightField);
     }
 
-    public void clearHeight()
-    {
+    public CoinPriceWidgets clearHeight() {
         utils.clear(heightField);
+        return this;
     }
 
-    public void typeHeight(String height)
-    {
+    public CoinPriceWidgets typeHeight(String height) {
         utils.sendKeysAction(heightField, height);
+        return this;
     }
 
 
     // Colors field
 
-    public String getBackgroundColorText()
-    {
+    public String getBackgroundColorText() {
         return utils.getText(backgroundColorField);
     }
 
-    public void clearBackgroundColorText()
-    {
+    public CoinPriceWidgets clearBackgroundColorText() {
         utils.clear(backgroundColorField);
+        return this;
     }
 
-    public void typeBackgroundColorText(String colorText)
-    {
+    public CoinPriceWidgets typeBackgroundColorText(String colorText) {
         utils.sendKeysAction(backgroundColorField, colorText);
+        return this;
     }
 
-    public String getTextColorText()
-    {
+    public String getTextColorText() {
         return utils.getText(textColorField);
     }
 
-    public void clearTextColorText()
-    {
+    public CoinPriceWidgets clearTextColorText() {
         utils.clear(textColorField);
+        return this;
     }
 
-    public void typeTextColorText(String colorText)
-    {
+    public CoinPriceWidgets typeTextColorText(String colorText) {
         utils.sendKeysAction(textColorField, colorText);
+        return this;
     }
 
-    public String getPercentageArrowUpColorText()
-    {
+    public String getPercentageArrowUpColorText() {
         return utils.getText(percentageArrowUpField);
     }
 
-    public void clearPercentageArrowUpColorText()
-    {
+    public CoinPriceWidgets clearPercentageArrowUpColorText() {
         utils.clear(percentageArrowUpField);
+        return this;
     }
 
-    public void typePercentageArrowUpColorText(String colorText)
-    {
+    public CoinPriceWidgets typePercentageArrowUpColorText(String colorText) {
         utils.sendKeysAction(percentageArrowUpField, colorText);
+        return this;
     }
 
-    public String getPercentageArrowDownColorText()
-    {
+    public String getPercentageArrowDownColorText() {
         return utils.getText(percentageArrowDownField);
     }
 
-    public void clearPercentageArrowDownColorText()
-    {
+    public CoinPriceWidgets clearPercentageArrowDownColorText() {
         utils.clear(percentageArrowDownField);
+        return this;
     }
 
-    public void typePercentageArrowDownColorText(String colorText)
-    {
+    public CoinPriceWidgets typePercentageArrowDownColorText(String colorText) {
         utils.sendKeysAction(rankBackgroundField, colorText);
+        return this;
     }
 
-    public String getRankBackgroundColorText()
-    {
+    public String getRankBackgroundColorText() {
         return utils.getText(rankBackgroundField);
     }
 
-    public void clearRankBackgroundColorText()
-    {
+    public CoinPriceWidgets clearRankBackgroundColorText() {
         utils.clear(rankBackgroundField);
+        return this;
     }
 
-    public void typeRankBackgroundColorText(String colorText)
-    {
+    public CoinPriceWidgets typeRankBackgroundColorText(String colorText) {
         utils.sendKeysAction(rankBackgroundField, colorText);
+        return this;
     }
 
-    public String getRankTextColorText()
-    {
+    public String getRankTextColorText() {
         return utils.getText(rankTextField);
     }
 
-    public void clearRankTextColorText()
-    {
+    public CoinPriceWidgets clearRankTextColorText() {
         utils.clear(rankTextField);
+        return this;
     }
 
-    public void typeRankTextColorText(String colorText)
-    {
+    public CoinPriceWidgets typeRankTextColorText(String colorText) {
         utils.sendKeysAction(rankTextField, colorText);
+        return this;
     }
 
-    public String getWidgetBorderColorText()
-    {
+    public String getWidgetBorderColorText() {
         return utils.getText(widgetBorderColorField);
     }
 
-    public void clearWidgetBorderColorText()
-    {
+    public CoinPriceWidgets clearWidgetBorderColorText() {
         utils.clear(widgetBorderColorField);
+        return this;
     }
 
-    public void typeWidgetBorderColorText(String colorText)
-    {
+    public CoinPriceWidgets typeWidgetBorderColorText(String colorText) {
         utils.sendKeysAction(widgetBorderColorField, colorText);
+        return this;
     }
 
 
     // Colors
 
-    public String getBackgroundColor()
-    {
+    public String getBackgroundColor() {
         return utils.getCSSValue(backgroundColor, "color");
     }
 
-    public String getTextColor()
-    {
+    public String getTextColor() {
         return utils.getCSSValue(textColor, "color");
     }
 
-    public String getPercentageArrowUpColor()
-    {
+    public String getPercentageArrowUpColor() {
         return utils.getCSSValue(percentageArrowUp, "color");
     }
 
-    public String getPercentageArrowDownColor()
-    {
+    public String getPercentageArrowDownColor() {
         return utils.getCSSValue(percentageArrowDown, "color");
     }
 
-    public String getRankBackgroundColor()
-    {
+    public String getRankBackgroundColor() {
         return utils.getCSSValue(rankBackground, "color");
     }
 
-    public String getRankTextColor()
-    {
+    public String getRankTextColor() {
         return utils.getCSSValue(rankText, "color");
     }
 
-    public String getWidgetBorderColor()
-    {
+    public String getWidgetBorderColor() {
         return utils.getCSSValue(widgetBorderColor, "color");
     }
 
 
     // Small Colors fields
 
-    public String getBackgroundColorTextSmall()
-    {
+    public String getBackgroundColorTextSmall() {
         return utils.getText(backgroundColorFieldSmall);
     }
 
-    public void clearBackgroundColorTextSmall()
-    {
+    public CoinPriceWidgets clearBackgroundColorTextSmall() {
         utils.clear(backgroundColorFieldSmall);
+        return this;
     }
 
-    public void typeBackgroundColorTextSmall(String colorText)
-    {
+    public CoinPriceWidgets typeBackgroundColorTextSmall(String colorText) {
         utils.sendKeysAction(backgroundColorFieldSmall, colorText);
+        return this;
     }
 
-    public String getTextColorTextSmall()
-    {
+    public String getTextColorTextSmall() {
         return utils.getText(textColorFieldSmall);
     }
 
-    public void clearTextColorTextSmall()
-    {
+    public CoinPriceWidgets clearTextColorTextSmall() {
         utils.clear(textColorFieldSmall);
+        return this;
     }
 
-    public void typeTextColorTextSmall(String colorText)
-    {
+    public CoinPriceWidgets typeTextColorTextSmall(String colorText) {
         utils.sendKeysAction(textColorFieldSmall, colorText);
+        return this;
     }
 
-    public String getWidgetBorderColorTextSmall()
-    {
+    public String getWidgetBorderColorTextSmall() {
         return utils.getText(widgetBorderColorFieldSmall);
     }
 
-    public void clearWidgetBorderColorTextSmall()
-    {
+    public CoinPriceWidgets clearWidgetBorderColorTextSmall() {
         utils.clear(widgetBorderColorFieldSmall);
+        return this;
     }
 
-    public void typeWidgetBorderColorTextSmall(String colorText)
-    {
+    public CoinPriceWidgets typeWidgetBorderColorTextSmall(String colorText) {
         utils.sendKeysAction(widgetBorderColorFieldSmall, colorText);
+        return this;
     }
 
 
     // Small Colors
 
-    public String getBackgroundColorSmall()
-    {
+    public String getBackgroundColorSmall() {
         return utils.getCSSValue(backgroundColorSmall, "color");
     }
 
-    public String getTextColorSmall()
-    {
+    public String getTextColorSmall() {
         return utils.getCSSValue(textColorSmall, "color");
     }
 
-    public String getWidgetBorderColorSmall()
-    {
+    public String getWidgetBorderColorSmall() {
         return utils.getCSSValue(widgetBorderColorSmall, "color");
     }
 

@@ -11,7 +11,7 @@ public class Deposit extends Driver {
     WebDriver driver;
     SeleniumUtils utils;
 
-    public Deposit (WebDriver driver) {
+    public Deposit(WebDriver driver) {
         this.driver = driver;
         utils = new SeleniumUtils(this.driver);
     }
@@ -41,76 +41,69 @@ public class Deposit extends Driver {
 
     // ----------------------------------------------- Methods --------------------------------------------------
 
-    public String getCurrentPortfolio()
-    {
+    public String getCurrentPortfolio() {
         return utils.getText(currentPortfolio);
     }
 
-    public void clickOnPortfolioDropDown()
-    {
-        utils.clickOnElement(portfolioNameDropDown);
+    public Deposit clickOnPortfolioDropDown() {
+        utils.click(portfolioNameDropDown);
+        return this;
     }
 
-    public String getCurrentCoin()
-    {
+    public String getCurrentCoin() {
         return utils.getText(currentCoin);
     }
 
-    public void clickOnCurrentCoin()
-    {
-        utils.clickOnElement(currentCoin);
+    public Deposit clickOnCurrentCoin() {
+        utils.click(currentCoin);
+        return this;
     }
 
-    public void typeCoinName(String coinName)
-    {
+    public Deposit typeCoinName(String coinName) {
         utils.sendKeys(coinSearchField, coinName);
+        return this;
     }
 
-    public void clearCoinName()
-    {
+    public Deposit clearCoinName() {
         utils.clear(coinSearchField);
+        return this;
     }
 
-    public void clickOnFirstCoinResult()
-    {
-        utils.clickOnElement(firstCoinResult);
+    public Deposit clickOnFirstCoinResult() {
+        utils.click(firstCoinResult);
+        return this;
     }
 
-    public String getDepositAddress()
-    {
+    public String getDepositAddress() {
         return utils.getText(currentDepositAddress);
     }
 
-    public void clickOnCopy()
-    {
-        utils.clickOnElement(copyAddress);
+    public Deposit clickOnCopy() {
+        utils.click(copyAddress);
+        return this;
     }
 
 
     // -------------------------------------------- Scripts ------------------------------------------------------
 
-    public void selectAnyPortfolio(String portfolioName)
-    {
+    public void selectAnyPortfolio(String portfolioName) {
         int index = 1;
         clickOnPortfolioDropDown();
         String allPortfolios;
 
         try {
             allPortfolios = driver.findElement(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index + ") .table-row")).getText();
-        }
-        catch (NoSuchElementException e)
-        {
+        } catch (NoSuchElementException e) {
             System.out.println("There isn't" + portfolioName + " portfolio");
             return;
         }
         do {
-            if (allPortfolios.equals(portfolioName))
-            {
-                utils.clickOnElement(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index + ") .table-row"));
+            if (allPortfolios.equals(portfolioName)) {
+                utils.click(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index + ") .table-row"));
                 return;
             }
 
             index++;
-        }while (true);
+        } while (true);
     }
 }

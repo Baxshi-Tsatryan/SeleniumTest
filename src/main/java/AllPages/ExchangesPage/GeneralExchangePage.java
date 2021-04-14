@@ -66,165 +66,143 @@ public class GeneralExchangePage {
     By teamUpdatesTab = By.cssSelector("#__next > main > section > div > div.exchange-info-inner-wrapper > div.exchange-info-tabs-wrapper > div > ul > li:nth-child(3) > a");
 
 
-
     // ----------------------------------------------- Methods --------------------------------------------------
 
-    public void clickOnIconClose()
-    {
-        utils.clickOnElement(iconClose);
+    public GeneralExchangePage clickOnIconClose() {
+        utils.click(iconClose);
+        return this;
     }
 
-    public String getExchangeName()
-    {
+    public String getExchangeName() {
         return utils.getText(exchangeName);
     }
 
-    public String getExchangeIndex()
-    {
+    public String getExchangeIndex() {
         return utils.getText(exchangeIndex);
     }
 
-    public String getExchangeVolume()
-    {
+    public String getExchangeVolume() {
         return utils.getText(exchangeVolume);
     }
 
-    public String getExchangeVolumePercent()
-    {
+    public String getExchangeVolumePercent() {
         return utils.getText(exchangeVolumePercent);
     }
 
-    public String getExchangeVolumePercentColor()
-    {
+    public String getExchangeVolumePercentColor() {
         return utils.getCSSValue(exchangeVolumePercent, "color");
     }
 
-    public String getExchangeVolumeBTC()
-    {
+    public String getExchangeVolumeBTC() {
         return utils.getText(exchangeVolumeBTC);
     }
 
-    public String getExchangeVolumeBTCPercent()
-    {
+    public String getExchangeVolumeBTCPercent() {
         return utils.getText(exchangeVolumeBTCPercent);
     }
 
-    public String getExchangeVolumeBTCPercentColor()
-    {
+    public String getExchangeVolumeBTCPercentColor() {
         return utils.getCSSValue(exchangeVolumeBTCPercent, "color");
     }
 
-    public String getExchangeVolume24h()
-    {
+    public String getExchangeVolume24h() {
         return utils.getText(exchangeVolume24h);
     }
 
-    public String getExchangeVolume7d()
-    {
+    public String getExchangeVolume7d() {
         return utils.getText(exchangeVolume7d);
     }
 
-    public String getExchangeVolume30d()
-    {
+    public String getExchangeVolume30d() {
         return utils.getText(exchangeVolume30d);
     }
 
-    public String getExchangeNoMarkets()
-    {
+    public String getExchangeNoMarkets() {
         return utils.getText(exchangeNoMarkets);
     }
 
-    public String getExchangeFee()
-    {
+    public String getExchangeFee() {
         return utils.getText(exchangeFee);
     }
 
-    public String getExchangeLaunched()
-    {
+    public String getExchangeLaunched() {
         return utils.getText(exchangeLaunched);
     }
 
-    public String getExchangesType()
-    {
+    public String getExchangesType() {
         return utils.getText(exchangeType);
     }
 
-    public String getExchangeCountry()
-    {
+    public String getExchangeCountry() {
         return utils.getText(exchangeCountry);
     }
 
-    public void clickOnExchangeWebsite()
-    {
-        utils.clickOnElement(exchangeWebsite);
+    public GeneralExchangePage clickOnExchangeWebsite() {
+        utils.click(exchangeWebsite);
+        return this;
     }
 
-    public String getExchangeWebsiteColor()
-    {
+    public String getExchangeWebsiteColor() {
         return utils.getCSSValue(exchangeWebsite, "color");
     }
 
-    public void clickOnExchangeTwitter()
-    {
-        utils.clickOnElement(exchangeTwitter);
+    public GeneralExchangePage clickOnExchangeTwitter() {
+        utils.click(exchangeTwitter);
+        return this;
     }
 
-    public String getExchangeTwitterColor()
-    {
+    public String getExchangeTwitterColor() {
         return utils.getCSSValue(exchangeTwitter, "color");
     }
 
-    public void clickOnExchangeReddit()
-    {
-        utils.clickOnElement(exchangeReddit);
+    public GeneralExchangePage clickOnExchangeReddit() {
+        utils.click(exchangeReddit);
+        return this;
     }
 
-    public String getExchangeRedditColor()
-    {
+    public String getExchangeRedditColor() {
         return utils.getCSSValue(exchangeReddit, "color");
     }
 
-    public void clickOnExchangeTelegram()
-    {
-        utils.clickOnElement(exchangeTelegram);
+    public GeneralExchangePage clickOnExchangeTelegram() {
+        utils.click(exchangeTelegram);
+        return this;
     }
 
-    public String getExchangeTelegramColor()
-    {
+    public String getExchangeTelegramColor() {
         return utils.getCSSValue(exchangeTelegram, "color");
     }
 
-    public void clickOnExchangeBitcointalk()
-    {
-        utils.clickOnElement(exchangeBitcointalk);
+    public GeneralExchangePage clickOnExchangeBitcointalk() {
+        utils.click(exchangeBitcointalk);
+        return this;
     }
 
-    public String getExchangeBitcointalkColor()
-    {
+    public String getExchangeBitcointalkColor() {
         return utils.getCSSValue(exchangeBitcointalk, "color");
     }
 
 
     // Tabs
 
-    public void clickOnConnectExchangeButton()
-    {
-        utils.clickOnElement(connectExchangeButton);
+    public GeneralExchangePage clickOnConnectExchangeButton() {
+        utils.click(connectExchangeButton);
+        return this;
     }
 
-    public void clickOnOverviewTab()
-    {
-        utils.clickOnElement(overviewTab);
+    public GeneralExchangePage clickOnOverviewTab() {
+        utils.click(overviewTab);
+        return this;
     }
 
-    public void clickOnMarketsTab()
-    {
-        utils.clickOnElement(marketsTab);
+    public GeneralExchangePage clickOnMarketsTab() {
+        utils.click(marketsTab);
+        return this;
     }
 
-    public void clickOnTeamUpdatesTab()
-    {
-        utils.clickOnElement(teamUpdatesTab);
+    public GeneralExchangePage clickOnTeamUpdatesTab() {
+        utils.click(teamUpdatesTab);
+        return this;
     }
 
 }

@@ -148,443 +148,421 @@ public class AddTransactions {
     By timeFieldTransfer = By.cssSelector("#__next > main > div > div.jsx-4109874676.universal-modal > div > div > div.jsx-4109874676.changing-content-wrapper > div > div.jsx-693624628.manual-transaction-modal > div.jsx-693624628.date-time-section > div.jsx-693624628.time-section > div > div > div > input[type=text]");
 
 
-
     // --------------------------------------------- Methods ----------------------------------------------
 
 
-    public void clickOnMoreActionsDropDown()
-    {
-        utils.clickOnElement(moreActionsDropDown);
+    public AddTransactions clickOnMoreActionsDropDown() {
+        utils.click(moreActionsDropDown);
+        return this;
     }
 
-    public void clickOnAddTransactions()
-    {
-        utils.clickOnElement(addTransaction);
+    public AddTransactions clickOnAddTransactions() {
+        utils.click(addTransaction);
+        return this;
     }
 
-    public void clickOnAddTransactionsInDropDown()
-    {
-        utils.clickOnElement(addTransactionInDropDown);
+    public AddTransactions clickOnAddTransactionsInDropDown() {
+        utils.click(addTransactionInDropDown);
+        return this;
     }
 
-    public void clickOnDepositInDropDown()
-    {
-        utils.clickOnElement(depositInDropDown);
+    public AddTransactions clickOnDepositInDropDown() {
+        utils.click(depositInDropDown);
+        return this;
     }
 
-    public void clickOnBuyTab()
-    {
-        utils.clickOnElement(buyTab);
+    public AddTransactions clickOnBuyTab() {
+        utils.click(buyTab);
+        return this;
     }
 
-    public void clickOnSellTab()
-    {
-        utils.clickOnElement(sellTab);
+    public AddTransactions clickOnSellTab() {
+        utils.click(sellTab);
+        return this;
     }
 
-    public void clickOnTransferTab()
-    {
-        utils.clickOnElement(transferTab);
+    public AddTransactions clickOnTransferTab() {
+        utils.click(transferTab);
+        return this;
     }
 
 
     // Buy/Sell
 
-    public void clickOnPortfolioDropDown()
-    {
-        utils.clickOnElement(portfolioDropDown);
+    public AddTransactions clickOnPortfolioDropDown() {
+        utils.click(portfolioDropDown);
+        return this;
     }
 
-    public String getCurrentPortfolioName()
-    {
+    public String getCurrentPortfolioName() {
         return utils.getText(selectedPortfolioName);
     }
 
-    public void typeCoinName(String coinName)
-    {
+    public AddTransactions typeCoinName(String coinName) {
         utils.sendKeysAction(coinSearchField, coinName);
+        return this;
     }
 
-    public void deleteCoinName()
-    {
+    public AddTransactions deleteCoinName() {
         utils.clear(coinSearchField);
+        return this;
     }
 
-    public void clickOnFirstCoinResult()
-    {
-        utils.clickOnElement(firstCoinResult);
+    public AddTransactions clickOnFirstCoinResult() {
+        utils.click(firstCoinResult);
+        return this;
     }
 
-    public String getFirstCoinResult()
-    {
+    public String getFirstCoinResult() {
         return utils.getText(firstCoinResult);
     }
 
-    public void clickOnCoinNameField()
-    {
-        utils.clickOnElement(coinSearchField);
+    public AddTransactions clickOnCoinNameField() {
+        utils.click(coinSearchField);
+        return this;
     }
 
-    public void clickOnPairField()
-    {
-        utils.clickOnElement(pairField);
+    public AddTransactions clickOnPairField() {
+        utils.click(pairField);
+        return this;
     }
 
-    public void typePair(String pairName)
-    {
+    public AddTransactions typePair(String pairName) {
         utils.sendKeysAction(pairField, pairName);
+        return this;
     }
 
-    public void deletePair()
-    {
+    public AddTransactions deletePair() {
         utils.clear(pairField);
+        return this;
     }
 
-    public void getCurrentPair()
-    {
+    public AddTransactions getCurrentPair() {
         utils.getText(currentPair);
+        return this;
     }
 
-    public void clickOnCurrentPair()
-    {
-        utils.clickOnElement(currentPair);
+    public AddTransactions clickOnCurrentPair() {
+        utils.click(currentPair);
+        return this;
     }
 
-    public String getCurrentDate()
-    {
+    public String getCurrentDate() {
         return utils.getText(dateField);
     }
 
-    public void clickOnDate()
-    {
-        utils.clickOnElement(dateField);
+    public AddTransactions clickOnDate() {
+        utils.click(dateField);
+        return this;
     }
 
-    public void clickOnPreviousMonth()
-    {
-        utils.clickOnElement(previousMonth);
+    public AddTransactions clickOnPreviousMonth() {
+        utils.click(previousMonth);
+        return this;
     }
 
-    public void clickOnNextMonth()
-    {
-        utils.clickOnElement(nextMonth);
+    public AddTransactions clickOnNextMonth() {
+        utils.click(nextMonth);
+        return this;
     }
 
-    public String getCurrentMonthAndYear()
-    {
+    public String getCurrentMonthAndYear() {
         return utils.getText(currentMonthAndYear);
     }
 
-    public String getCurrentTime()
-    {
+    public String getCurrentTime() {
         return utils.getText(timeField);
     }
 
-    public void clearTime()
-    {
+    public AddTransactions clearTime() {
         utils.clear(timeField);
+        return this;
     }
 
-    public void clickOnTime()
-    {
-        utils.clickOnElement(timeField);
+    public AddTransactions clickOnTime() {
+        utils.click(timeField);
+        return this;
     }
 
-    public void typeTime(String time)
-    {
+    public AddTransactions typeTime(String time) {
         utils.sendKeysAction(timeField, time);
+        return this;
     }
 
-    public void typeAmount(String amount)
-    {
+    public AddTransactions typeAmount(String amount) {
         utils.sendKeysAction(amountField, amount);
+        return this;
     }
 
-    public String getAmount()
-    {
+    public String getAmount() {
         return utils.getText(amountField);
     }
 
-    public void clearAmount()
-    {
+    public AddTransactions clearAmount() {
         utils.clear(amountField);
+        return this;
     }
 
-    public String getPrice()
-    {
+    public String getPrice() {
         return utils.getText(priceField);
     }
 
-    public void typePrice(String price)
-    {
+    public AddTransactions typePrice(String price) {
         utils.sendKeysAction(priceField, price);
+        return this;
     }
 
-    public void deletePrice()
-    {
+    public AddTransactions deletePrice() {
         utils.clear(priceField);
+        return this;
     }
 
-    public String getPriceCurrency()
-    {
+    public String getPriceCurrency() {
         return utils.getText(priceCurrency);
     }
 
-    public void typeFee(String fee)
-    {
+    public AddTransactions typeFee(String fee) {
         utils.sendKeysAction(feeField, fee);
+        return this;
     }
 
-    public void clearFee()
-    {
+    public AddTransactions clearFee() {
         utils.clear(feeField);
+        return this;
     }
 
-    public String getFee()
-    {
+    public String getFee() {
         return utils.getText(feeField);
     }
 
-    public String getCurrentFeeType()
-    {
+    public String getCurrentFeeType() {
         return utils.getText(currentFeeType);
     }
 
-    public void clickOnFeeTypeDropDown()
-    {
-        utils.clickOnElement(feeTypeDropDown);
+    public AddTransactions clickOnFeeTypeDropDown() {
+        utils.click(feeTypeDropDown);
+        return this;
     }
 
-    public void clickOnFeeOtherTypeInDropDown()
-    {
-        utils.clickOnElement(feeOtherTypeInDropDown);
+    public AddTransactions clickOnFeeOtherTypeInDropDown() {
+        utils.click(feeOtherTypeInDropDown);
+        return this;
     }
 
-    public String getCurrentFeeCurrency()
-    {
+    public String getCurrentFeeCurrency() {
         return utils.getText(currentFeeCurrency);
     }
 
-    public void typeFeeCurrency(String feeCurrency)
-    {
+    public AddTransactions typeFeeCurrency(String feeCurrency) {
         utils.sendKeys(feeCurrencySearchField, feeCurrency);
+        return this;
     }
 
-    public void clickOnFeeCurrencyFirstResult()
-    {
-        utils.clickOnElement(firstFeeCurrencyResult);
+    public AddTransactions clickOnFeeCurrencyFirstResult() {
+        utils.click(firstFeeCurrencyResult);
+        return this;
     }
 
-    public String getFirstFeeCurrencyResultSymbol()
-    {
+    public String getFirstFeeCurrencyResultSymbol() {
         return utils.getText(firstFeeCurrencyResultSymbol);
     }
 
-    public void clickOnCurrentFeeCurrency()
-    {
-        utils.clickOnElement(currentFeeCurrency);
+    public AddTransactions clickOnCurrentFeeCurrency() {
+        utils.click(currentFeeCurrency);
+        return this;
     }
 
-    public void typeNote(String note)
-    {
+    public AddTransactions typeNote(String note) {
         utils.sendKeysAction(notesField, note);
+        return this;
     }
 
-    public String getNote()
-    {
+    public String getNote() {
         return utils.getText(notesField);
     }
 
-    public void clearNote()
-    {
+    public AddTransactions clearNote() {
         utils.clear(notesField);
+        return this;
     }
 
-    public void clickOnChecklist()
-    {
-        utils.clickOnElement(checklist);
+    public AddTransactions clickOnChecklist() {
+        utils.click(checklist);
+        return this;
     }
 
 
     // Transfer
 
-    public String getCurrentPortfolioTransfer()
-    {
+    public String getCurrentPortfolioTransfer() {
         return utils.getText(currentPortfolioTransfer);
     }
 
-    public void clickOnPortfolioDropDownTransfer()
-    {
-        utils.clickOnElement(portfolioDropDownTransfer);
+    public AddTransactions clickOnPortfolioDropDownTransfer() {
+        utils.click(portfolioDropDownTransfer);
+        return this;
     }
 
-    public String getCurrentCoinTransfer()
-    {
+    public String getCurrentCoinTransfer() {
         return utils.getText(coinFieldTransfer);
     }
 
-    public void clickOnCurrentCoinTransfer()
-    {
-        utils.clickOnElement(currentCoinTransfer);
+    public AddTransactions clickOnCurrentCoinTransfer() {
+        utils.click(currentCoinTransfer);
+        return this;
     }
 
-    public void typeCoinNameTransfer(String coinName)
-    {
+    public AddTransactions typeCoinNameTransfer(String coinName) {
         utils.sendKeys(coinFieldTransfer, coinName);
+        return this;
     }
 
-    public String getCurrentFromType()
-    {
+    public String getCurrentFromType() {
         return utils.getText(currentFromType);
     }
 
-    public String getCurrentToType()
-    {
+    public String getCurrentToType() {
         return utils.getText(currentToType);
     }
 
-    public void clickOnFromDropDown()
-    {
-        utils.clickOnElement(fromDropDown);
+    public AddTransactions clickOnFromDropDown() {
+        utils.click(fromDropDown);
+        return this;
     }
 
-    public void clickOnToDropDown()
-    {
-        utils.clickOnElement(toDropDown);
+    public AddTransactions clickOnToDropDown() {
+        utils.click(toDropDown);
+        return this;
     }
 
-    public void clickOnFromMyWallet()
-    {
-        utils.clickOnElement(fromMyWallet);
+    public AddTransactions clickOnFromMyWallet() {
+        utils.click(fromMyWallet);
+        return this;
     }
 
-    public void clickOnFromExchange()
-    {
-        utils.clickOnElement(fromExchange);
+    public AddTransactions clickOnFromExchange() {
+        utils.click(fromExchange);
+        return this;
     }
 
-    public void clickOnFromOtherWallet()
-    {
-        utils.clickOnElement(fromOtherWallet);
+    public AddTransactions clickOnFromOtherWallet() {
+        utils.click(fromOtherWallet);
+        return this;
     }
 
-    public void clickOnFromAirdrop()
-    {
-        utils.clickOnElement(fromAirdrop);
+    public AddTransactions clickOnFromAirdrop() {
+        utils.click(fromAirdrop);
+        return this;
     }
 
-    public void clickOnFromMining()
-    {
-        utils.clickOnElement(fromMining);
+    public AddTransactions clickOnFromMining() {
+        utils.click(fromMining);
+        return this;
     }
 
-    public void clickOnFromFork()
-    {
-        utils.clickOnElement(fromFork);
+    public AddTransactions clickOnFromFork() {
+        utils.click(fromFork);
+        return this;
     }
 
-    public void clickOnFromDividends()
-    {
-        utils.clickOnElement(fromDividends);
+    public AddTransactions clickOnFromDividends() {
+        utils.click(fromDividends);
+        return this;
     }
 
-    public void clickOnFromOtherUnknown()
-    {
-        utils.clickOnElement(fromOtherUnknown);
+    public AddTransactions clickOnFromOtherUnknown() {
+        utils.click(fromOtherUnknown);
+        return this;
     }
 
-    public void clickOnToMyWallet()
-    {
-        utils.clickOnElement(toMyWallet);
+    public AddTransactions clickOnToMyWallet() {
+        utils.click(toMyWallet);
+        return this;
     }
 
-    public void clickOnToExchange()
-    {
-        utils.clickOnElement(toExchange);
+    public AddTransactions clickOnToExchange() {
+        utils.click(toExchange);
+        return this;
     }
 
-    public void clickOnToOtherWallet()
-    {
-        utils.clickOnElement(toOtherWallet);
+    public AddTransactions clickOnToOtherWallet() {
+        utils.click(toOtherWallet);
+        return this;
     }
 
-    public void clickOnToOtherUnknown()
-    {
-        utils.clickOnElement(toOtherUnknown);
+    public AddTransactions clickOnToOtherUnknown() {
+        utils.click(toOtherUnknown);
+        return this;
     }
 
-    public String getCurrentFromExchange()
-    {
+    public String getCurrentFromExchange() {
         return utils.getText(fromCurrentExchange);
     }
 
-    public void clickOnCurrentFromExchange()
-    {
-        utils.clickOnElement(fromCurrentExchange);
+    public AddTransactions clickOnCurrentFromExchange() {
+        utils.click(fromCurrentExchange);
+        return this;
     }
 
-    public void typeFromExchange(String exchangeName)
-    {
+    public AddTransactions typeFromExchange(String exchangeName) {
         utils.sendKeys(fromExchangeField, exchangeName);
+        return this;
     }
 
-    public void clickOnFromExchangeFirstResult()
-    {
-        utils.clickOnElement(fromExchangeFirstResult);
+    public AddTransactions clickOnFromExchangeFirstResult() {
+        utils.click(fromExchangeFirstResult);
+        return this;
     }
 
-    public void clickOnToExchangeFirstResult()
-    {
-        utils.clickOnElement(toExchangeFirstResult);
+    public AddTransactions clickOnToExchangeFirstResult() {
+        utils.click(toExchangeFirstResult);
+        return this;
     }
 
-    public String getCurrentToExchange()
-    {
+    public String getCurrentToExchange() {
         return utils.getText(toCurrentExchange);
     }
 
-    public void clickOnCurrentToExchange()
-    {
-        utils.clickOnElement(toCurrentExchange);
+    public AddTransactions clickOnCurrentToExchange() {
+        utils.click(toCurrentExchange);
+        return this;
     }
 
-    public void typeToExchange(String exchangeName)
-    {
+    public AddTransactions typeToExchange(String exchangeName) {
         utils.sendKeys(toExchangeField, exchangeName);
+        return this;
     }
 
-    public String getCurrentTimeTransfer()
-    {
+    public String getCurrentTimeTransfer() {
         return utils.getText(timeFieldTransfer);
     }
 
-    public void clickOnTimeTransfer()
-    {
-        utils.clickOnElement(timeFieldTransfer);
+    public AddTransactions clickOnTimeTransfer() {
+        utils.click(timeFieldTransfer);
+        return this;
     }
 
-    public void typeTimeTransfer(String time)
-    {
+    public AddTransactions typeTimeTransfer(String time) {
         utils.sendKeysAction(timeFieldTransfer, time);
+        return this;
     }
 
 
-    public void clickOnSave()
-    {
-        utils.clickOnElement(saveButton);
+    public AddTransactions clickOnSave() {
+        utils.click(saveButton);
+        return this;
     }
 
-    public void clickOnCancel()
-    {
-        utils.clickOnElement(cancelButton);
+    public AddTransactions clickOnCancel() {
+        utils.click(cancelButton);
+        return this;
     }
 
 
     // -------------------------------------------- Scripts -----------------------------------------------
 
-    public void clickOnAnyPortfolioFromDropDown(String portfolioName)
-    {
-        utils.clickOnElement(portfolioDropDown);
+    public AddTransactions clickOnAnyPortfolioFromDropDown(String portfolioName) {
+        utils.click(portfolioDropDown);
 
         int index = 1;
 
@@ -594,25 +572,22 @@ public class AddTransactions {
                 WebElement allPortfolios = driver.findElement(allPortfoliosBy);
                 String allPortfoliosNames = allPortfolios.getText();
 
-                if (allPortfoliosNames.equals(portfolioName))
-                {
+                if (allPortfoliosNames.equals(portfolioName)) {
                     allPortfolios.click();
                     break;
                 }
-            }
-            catch (NoSuchElementException e)
-            {
+            } catch (NoSuchElementException e) {
                 System.out.println("There isn't your portfolio");
                 break;
             }
 
             index++;
         }
+        return this;
     }
 
-    public void clickOnAnyCoinResult(String coinName)
-    {
-        utils.clickOnElement(coinSearchField);
+    public AddTransactions clickOnAnyCoinResult(String coinName) {
+        utils.click(coinSearchField);
         typeCoinName(coinName);
 
         int index = 1;
@@ -623,53 +598,44 @@ public class AddTransactions {
                 WebElement allResults = driver.findElement(allResultsBy);
                 String allResultsString = allResults.getText();
 
-                if (allResultsString.equals(coinName))
-                {
+                if (allResultsString.equals(coinName)) {
                     allResults.click();
                     break;
                 }
-            }
-            catch (NoSuchElementException e)
-            {
+            } catch (NoSuchElementException e) {
                 System.out.println("There isn't your result");
                 break;
             }
 
             index++;
         }
+        return this;
     }
 
-    public void selectAnyDate (String monthAndYear, String day)
-    {
+    public AddTransactions selectAnyDate(String monthAndYear, String day) {
         clickOnDate();
 
         do {
             getCurrentMonthAndYear();
-            if (!monthAndYear.equals(getCurrentMonthAndYear()))
-            {
+            if (!monthAndYear.equals(getCurrentMonthAndYear())) {
                 clickOnPreviousMonth();
-            }
-            else
-            {
+            } else {
                 break;
             }
         } while (true);
 
         int length = String.valueOf(day).length();
 
-        if (length == 1)
-        {
+        if (length == 1) {
             driver.findElement(By.cssSelector(".react-datepicker__day--00" + day)).click();
-        }
-        else if (length == 2)
-        {
+        } else if (length == 2) {
             driver.findElement(By.cssSelector(".react-datepicker__day--0" + day)).click();
         }
+        return this;
     }
 
-    public void selectAnyTime(String time)
-    {
-        utils.clickOnElement(timeField);
+    public AddTransactions selectAnyTime(String time) {
+        utils.click(timeField);
 
         int index = 1;
 
@@ -679,25 +645,22 @@ public class AddTransactions {
                 WebElement allTimes = driver.findElement(allTimesBy);
                 String allTimesString = allTimes.getText();
 
-                if (allTimesString.equals(time))
-                {
+                if (allTimesString.equals(time)) {
                     allTimes.click();
                     break;
                 }
-            }
-            catch (NoSuchElementException e)
-            {
+            } catch (NoSuchElementException e) {
                 System.out.println("There isn't your time");
                 break;
             }
 
             index++;
         }
+        return this;
     }
 
-    public void clickOnAnyFeeCurrencyResult(String coinName)
-    {
-        utils.clickOnElement(currentFeeCurrency);
+    public AddTransactions clickOnAnyFeeCurrencyResult(String coinName) {
+        utils.click(currentFeeCurrency);
         typeFeeCurrency(coinName);
 
         int index = 1;
@@ -708,25 +671,22 @@ public class AddTransactions {
                 WebElement allResult = driver.findElement(allResultBy);
                 String allResultsString = allResult.getText();
 
-                if (allResultsString.equals(coinName))
-                {
+                if (allResultsString.equals(coinName)) {
                     allResult.click();
                     break;
                 }
-            }
-            catch (NoSuchElementException e)
-            {
+            } catch (NoSuchElementException e) {
                 System.out.println("There isn't your result");
                 break;
             }
 
             index++;
         }
+        return this;
     }
 
-    public void clickOnAnyFromExchangeResultTransfer(String exchangeName)
-    {
-        utils.clickOnElement(fromExchangeField);
+    public AddTransactions clickOnAnyFromExchangeResultTransfer(String exchangeName) {
+        utils.click(fromExchangeField);
         typeFromExchange(exchangeName);
 
         int index = 1;
@@ -737,25 +697,22 @@ public class AddTransactions {
                 WebElement allExchanges = driver.findElement(allExchangesBy);
                 String allResultsString = allExchanges.getText();
 
-                if (allResultsString.equals(exchangeName))
-                {
+                if (allResultsString.equals(exchangeName)) {
                     allExchanges.click();
                     break;
                 }
-            }
-            catch (NoSuchElementException e)
-            {
+            } catch (NoSuchElementException e) {
                 System.out.println("There isn't your result");
                 break;
             }
 
             index++;
         }
+        return this;
     }
 
-    public void clickOnAnyToExchangeResultTransfer(String exchangeName)
-    {
-        utils.clickOnElement(toExchangeField);
+    public AddTransactions clickOnAnyToExchangeResultTransfer(String exchangeName) {
+        utils.click(toExchangeField);
         typeToExchange(exchangeName);
 
         int index = 1;
@@ -766,24 +723,21 @@ public class AddTransactions {
                 WebElement allExchanges = driver.findElement(allExchangesBy);
                 String allResultsString = allExchanges.getText();
 
-                if (allResultsString.equals(exchangeName))
-                {
+                if (allResultsString.equals(exchangeName)) {
                     allExchanges.click();
                     break;
                 }
-            }
-            catch (NoSuchElementException e)
-            {
+            } catch (NoSuchElementException e) {
                 System.out.println("There isn't your result");
                 break;
             }
 
             index++;
         }
+        return this;
     }
 
-    public String select10Coins(int i)
-    {
+    public String select10Coins(int i) {
         String coinName = null;
 
         switch (i) {

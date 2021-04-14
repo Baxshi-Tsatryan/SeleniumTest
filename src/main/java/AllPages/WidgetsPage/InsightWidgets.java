@@ -108,7 +108,6 @@ public class InsightWidgets {
     By forthInsightShowChart = By.cssSelector("coin-stats-insight-widget[type='tradesToday'] > div > div > div [target='_blank']");
 
 
-
     // -------------------------------------------------- Methods ------------------------------------------------
 
 
@@ -116,276 +115,256 @@ public class InsightWidgets {
 
     // How many CoinStats users hold BTC?
 
-    public String getFirstInsightPercent()
-    {
+    public String getFirstInsightPercent() {
         return utils.getText(firstInsightPercent);
     }
 
-    public void clickOnFirstInsightShowChart()
-    {
-        utils.clickOnElement(firstInsightShowChart);
+    public InsightWidgets clickOnFirstInsightShowChart() {
+        utils.click(firstInsightShowChart);
+        return this;
     }
 
 
     // BTC dominance in CoinStats portfolios
 
-    public String getSecondInsightPercent()
-    {
+    public String getSecondInsightPercent() {
         return utils.getText(secondInsightPercent);
     }
 
-    public void clickOnSecondInsightShowChart()
-    {
-        utils.clickOnElement(secondInsightShowChart);
+    public InsightWidgets clickOnSecondInsightShowChart() {
+        utils.click(secondInsightShowChart);
+        return this;
     }
 
 
     // Where CoinStats users hold BTC?
 
-    public String getThirdInsightPercent()
-    {
+    public String getThirdInsightPercent() {
         return utils.getText(thirdInsightPercent);
     }
 
-    public String getThirdInsightWalletPercent()
-    {
+    public String getThirdInsightWalletPercent() {
         return utils.getText(thirdInsightWalletPercent);
     }
 
-    public String getThirdInsightExchangePercent()
-    {
+    public String getThirdInsightExchangePercent() {
         return utils.getText(thirdInsightExchangePercent);
     }
 
-    public void clickOnThirdInsightShowChart()
-    {
-        utils.clickOnElement(thirdInsightShowChart);
+    public InsightWidgets clickOnThirdInsightShowChart() {
+        utils.click(thirdInsightShowChart);
+        return this;
     }
 
 
     // BTC trades today
 
-    public String getForthInsightPercent()
-    {
+    public String getForthInsightPercent() {
         return utils.getText(forthInsightPercent);
     }
 
-    public String getForthInsightBuyPercent()
-    {
+    public String getForthInsightBuyPercent() {
         return utils.getText(forthInsightBuyPercent);
     }
 
-    public String getForthInsightSellPercent()
-    {
+    public String getForthInsightSellPercent() {
         return utils.getText(forthInsightSellPercent);
     }
 
-    public void clickOnForthInsightShowChart()
-    {
-        utils.clickOnElement(forthInsightShowChart);
+    public InsightWidgets clickOnForthInsightShowChart() {
+        utils.click(forthInsightShowChart);
+        return this;
     }
 
 
     // Settings
 
-    public String getCurrentInsightType()
-    {
+    public String getCurrentInsightType() {
         return utils.getText(insightTypeDropDown);
     }
 
-    public void clickOnInsightTypeDropDown()
-    {
-        utils.clickOnElement(insightTypeDropDown);
+    public InsightWidgets clickOnInsightTypeDropDown() {
+        utils.click(insightTypeDropDown);
+        return this;
     }
 
-    public void clickOnFirstInsightType() // How many CoinStats users hold BTC?
+    public InsightWidgets clickOnFirstInsightType() // How many CoinStats users hold BTC?
     {
-        utils.clickOnElement(firstInsightType);
+        utils.click(firstInsightType);
+        return this;
     }
 
-    public void clickOnSecondInsightType()
+    public InsightWidgets clickOnSecondInsightType() // BTC dominance in CoinStats portfolios
     {
-        utils.clickOnElement(secondInsightType); // BTC dominance in CoinStats portfolios
+        utils.click(secondInsightType);
+        return this;
     }
 
-    public void clickOnThirdInsightType() // Where CoinStats users hold BTC?
+    public InsightWidgets clickOnThirdInsightType() // Where CoinStats users hold BTC?
     {
-        utils.clickOnElement(thirdInsightType);
+        utils.click(thirdInsightType);
+        return this;
     }
 
-    public void clickOnForthInsightType() // BTC trades today
+    public InsightWidgets clickOnForthInsightType() // BTC trades today
     {
-        utils.clickOnElement(forthInsightType);
+        utils.click(forthInsightType);
+        return this;
     }
 
-    public String getCurrentCoin()
-    {
+    public String getCurrentCoin() {
         return utils.getText(currentCoin);
     }
 
-    public void clickOnClearCurrentCoin()
-    {
-        utils.clickOnElement(clearCurrentCoin);
+    public InsightWidgets clickOnClearCurrentCoin() {
+        utils.click(clearCurrentCoin);
+        return this;
     }
 
-    public void typeCoinName(String coinName)
-    {
+    public InsightWidgets typeCoinName(String coinName) {
         utils.sendKeysAction(searchCoinField, coinName);
+        return this;
     }
 
-    public void clearCoinName()
-    {
+    public InsightWidgets clearCoinName() {
         utils.clear(searchCoinField);
+        return this;
     }
 
-    public String getCoinName()
-    {
+    public String getCoinName() {
         return utils.getText(searchCoinField);
     }
 
-    public String getCurrentTheme()
-    {
+    public String getCurrentTheme() {
         return utils.getText(themeDropDown);
     }
 
-    public void clickOnThemeDropDown()
-    {
-        utils.clickOnElement(themeDropDown);
+    public InsightWidgets clickOnThemeDropDown() {
+        utils.click(themeDropDown);
+        return this;
     }
 
-    public void clickOnDarkMode()
-    {
-        utils.clickOnElement(darkMode);
+    public InsightWidgets clickOnDarkMode() {
+        utils.click(darkMode);
+        return this;
     }
 
-    public void clickOnLightMode()
-    {
-        utils.clickOnElement(lightMode);
+    public InsightWidgets clickOnLightMode() {
+        utils.click(lightMode);
+        return this;
     }
 
 
     // Colors field
 
-    public String getBackgroundColorText()
-    {
+    public String getBackgroundColorText() {
         return utils.getText(backgroundColorField);
     }
 
-    public void clearBackgroundColorText()
-    {
+    public InsightWidgets clearBackgroundColorText() {
         utils.clear(backgroundColorField);
+        return this;
     }
 
-    public void typeBackgroundColorText(String colorText)
-    {
+    public InsightWidgets typeBackgroundColorText(String colorText) {
         utils.sendKeysAction(backgroundColorField, colorText);
+        return this;
     }
 
-    public String getTextColorText()
-    {
+    public String getTextColorText() {
         return utils.getText(textColorField);
     }
 
-    public void clearTextColorText()
-    {
+    public InsightWidgets clearTextColorText() {
         utils.clear(textColorField);
+        return this;
     }
 
-    public void typeTextColorText(String colorText)
-    {
+    public InsightWidgets typeTextColorText(String colorText) {
         utils.sendKeysAction(textColorField, colorText);
+        return this;
     }
 
-    public String getChartPrimaryColorText()
-    {
+    public String getChartPrimaryColorText() {
         return utils.getText(chartPrimaryColorField);
     }
 
-    public void clearChartPrimaryColorText()
-    {
+    public InsightWidgets clearChartPrimaryColorText() {
         utils.clear(chartPrimaryColorField);
+        return this;
     }
 
-    public void typeChartPrimaryColorText(String colorText)
-    {
+    public InsightWidgets typeChartPrimaryColorText(String colorText) {
         utils.sendKeysAction(chartPrimaryColorField, colorText);
+        return this;
     }
 
-    public String getChartSecondaryColorText()
-    {
+    public String getChartSecondaryColorText() {
         return utils.getText(chartSecondaryColorField);
     }
 
-    public void clearChartSecondaryColorText()
-    {
+    public InsightWidgets clearChartSecondaryColorText() {
         utils.clear(chartSecondaryColorField);
+        return this;
     }
 
-    public void typeChartSecondaryColorText(String colorText)
-    {
+    public InsightWidgets typeChartSecondaryColorText(String colorText) {
         utils.sendKeysAction(chartSecondaryColorField, colorText);
+        return this;
     }
 
-    public String getButtonColorText()
-    {
+    public String getButtonColorText() {
         return utils.getText(buttonColorField);
     }
 
-    public void clearButtonColorText()
-    {
+    public InsightWidgets clearButtonColorText() {
         utils.clear(buttonColorField);
+        return this;
     }
 
-    public void typeButtonColorText(String colorText)
-    {
+    public InsightWidgets typeButtonColorText(String colorText) {
         utils.sendKeysAction(buttonColorField, colorText);
+        return this;
     }
 
-    public String getWidgetBorderColorText()
-    {
+    public String getWidgetBorderColorText() {
         return utils.getText(widgetBorderColorField);
     }
 
-    public void clearWidgetBorderColorText()
-    {
+    public InsightWidgets clearWidgetBorderColorText() {
         utils.clear(widgetBorderColorField);
+        return this;
     }
 
-    public void typeWidgetBorderColorText(String colorText)
-    {
+    public InsightWidgets typeWidgetBorderColorText(String colorText) {
         utils.sendKeysAction(widgetBorderColorField, colorText);
+        return this;
     }
 
 
     // Colors
 
-    public String getBackgroundColor()
-    {
+    public String getBackgroundColor() {
         return utils.getCSSValue(backgroundColor, "color");
     }
 
-    public String getTextColor()
-    {
+    public String getTextColor() {
         return utils.getCSSValue(textColor, "color");
     }
 
-    public String getChartPrimaryColor()
-    {
+    public String getChartPrimaryColor() {
         return utils.getCSSValue(chartPrimaryColor, "color");
     }
 
-    public String getChartSecondaryColor()
-    {
+    public String getChartSecondaryColor() {
         return utils.getCSSValue(chartSecondaryColor, "color");
     }
 
-    public String getButtonColor()
-    {
+    public String getButtonColor() {
         return utils.getCSSValue(buttonColor, "color");
     }
 
-    public String getWidgetBorderColor()
-    {
+    public String getWidgetBorderColor() {
         return utils.getCSSValue(widgetBorderColor, "color");
     }
 

@@ -80,230 +80,213 @@ public class LeftSideOfPagePortfolios {
     By addPortfolioInManagePortfolios = By.cssSelector("div.add-button-block > .jsx-1426819953");
 
 
-
     // ------------------------------------------------- Methods --------------------------------------------------
 
 
     // General
 
-    public void searchPortfoliosOrCoins(String portfoliosOrCoins)
-    {
+    public LeftSideOfPagePortfolios searchPortfoliosOrCoins(String portfoliosOrCoins) {
         utils.sendKeysAction(searchPortfoliosOrCoins, portfoliosOrCoins);
+        return this;
     }
 
-    public String getSearchPortfoliosOrCoinsName()
-    {
+    public String getSearchPortfoliosOrCoinsName() {
         return utils.getText(searchPortfoliosOrCoins);
     }
 
-    public void clearPortfoliosOrCoinsName()
-    {
+    public LeftSideOfPagePortfolios clearPortfoliosOrCoinsName() {
         utils.clear(searchPortfoliosOrCoins);
+        return this;
     }
 
-    public void clickOnA_ZFilter()
-    {
-        utils.clickOnElement(filterA_Z);
+    public LeftSideOfPagePortfolios clickOnA_ZFilter() {
+        utils.click(filterA_Z);
+        return this;
     }
 
-    public Boolean filterA_ZIsEnabled()
-    {
+    public Boolean filterA_ZIsEnabled() {
         return utils.isEnabled(filterA_Z);
     }
 
-    public Boolean filterA_ZIsSelected()
-    {
+    public Boolean filterA_ZIsSelected() {
         return utils.isSelected(filterA_Z);
     }
 
-    public void clickOnAllAssets()
-    {
-        utils.clickOnElement(allAssets);
+    public LeftSideOfPagePortfolios clickOnAllAssets() {
+        utils.click(allAssets);
+        return this;
     }
 
-    public boolean firstPortfolioIsDisplayed()
-    {
+    public boolean firstPortfolioIsDisplayed() {
         boolean firstPortfolioIsDisplayed = utils.isDisplayed(firstPortfolioName);
 
         return firstPortfolioIsDisplayed;
     }
 
-    public String getSecondPortfolioName()
-    {
+    public String getSecondPortfolioName() {
         String secondPortfolioName2 = utils.getText(secondPortfolioName);
 
         return secondPortfolioName2;
     }
 
-    public void moveToFirstPortfolioName()
-    {
+    public LeftSideOfPagePortfolios moveToFirstPortfolioName() {
         utils.moveToElement(firstPortfolioName);
+        return this;
     }
 
-    public void clickOnFirstPortfolioDelete()
-    {
-        utils.clickOnElement(firstPortfolioDelete);
+    public LeftSideOfPagePortfolios clickOnFirstPortfolioDelete() {
+        utils.click(firstPortfolioDelete);
+        return this;
     }
 
-    public void clickOnFirstPortfolioDeleteWithMove()
-    {
+    public LeftSideOfPagePortfolios clickOnFirstPortfolioDeleteWithMove() {
         utils.moveToElement(firstPortfolioName);
-        utils.clickOnElement(firstPortfolioDelete);
+        utils.click(firstPortfolioDelete);
+        return this;
     }
 
-    public void moveToSecondPortfolioName()
-    {
+    public LeftSideOfPagePortfolios moveToSecondPortfolioName() {
         utils.moveToElement(secondPortfolioName);
+        return this;
     }
 
-    public void clickOnSecondPortfolioDelete()
-    {
-        utils.clickOnElement(secondPortfolioDelete);
+    public LeftSideOfPagePortfolios clickOnSecondPortfolioDelete() {
+        utils.click(secondPortfolioDelete);
+        return this;
     }
 
-    public void clickOnSecondPortfolioDeleteWithMove()
-    {
+    public LeftSideOfPagePortfolios clickOnSecondPortfolioDeleteWithMove() {
         utils.moveToElement(secondPortfolioName);
-        utils.clickOnElement(secondPortfolioDelete);
+        utils.click(secondPortfolioDelete);
+        return this;
     }
 
-    public void clickOnSettings()
-    {
-        utils.clickOnElement(portfolioSettings);
+    public LeftSideOfPagePortfolios clickOnSettings() {
+        utils.click(portfolioSettings);
+        return this;
     }
 
-    public void clickOnLinkSharing()
-    {
-        utils.clickOnElement(linkSharing);
+    public LeftSideOfPagePortfolios clickOnLinkSharing() {
+        utils.click(linkSharing);
+        return this;
     }
 
-    public void clickOnManagePortfolios()
-    {
-        utils.clickOnElement(managePortfolios);
+    public LeftSideOfPagePortfolios clickOnManagePortfolios() {
+        utils.click(managePortfolios);
+        return this;
     }
 
 
     // Settings
 
-    public void clickOnPercentHoldings()
-    {
-        utils.clickOnElement(percentHoldings);
+    public LeftSideOfPagePortfolios clickOnPercentHoldings() {
+        utils.click(percentHoldings);
+        return this;
     }
 
-    public Boolean percentageHoldingsIsEnabled()
-    {
+    public Boolean percentageHoldingsIsEnabled() {
         return utils.isEnabled(percentHoldings);
     }
 
-    public Boolean percentageHoldingsIsSelected()
-    {
+    public Boolean percentageHoldingsIsSelected() {
         return utils.isSelected(percentHoldings);
     }
 
-    public void clickOnHideSmallBalances()
-    {
-        utils.clickOnElement(hideSmallBalances);
+    public LeftSideOfPagePortfolios clickOnHideSmallBalances() {
+        utils.click(hideSmallBalances);
+        return this;
     }
 
-    public Boolean hideSmallBalancesIsEnabled()
-    {
+    public Boolean hideSmallBalancesIsEnabled() {
         return utils.isEnabled(hideSmallBalances);
     }
 
-    public Boolean hideSmallBalancesIsSelected()
-    {
+    public Boolean hideSmallBalancesIsSelected() {
         return utils.isSelected(hideSmallBalances);
     }
 
-    public void clickOnHideUnidentifiedBalances()
-    {
-        utils.clickOnElement(hideUnidentifiedBalances);
+    public LeftSideOfPagePortfolios clickOnHideUnidentifiedBalances() {
+        utils.click(hideUnidentifiedBalances);
+        return this;
     }
 
-    public Boolean hideUnidentifiedBalancesIsEnabled()
-    {
+    public Boolean hideUnidentifiedBalancesIsEnabled() {
         return utils.isEnabled(hideUnidentifiedBalances);
     }
 
-    public Boolean hideUnidentifiedBalancesIsSelected()
-    {
+    public Boolean hideUnidentifiedBalancesIsSelected() {
         return utils.isSelected(hideUnidentifiedBalances);
     }
 
-    public void clickOnCoinBlacklist()
-    {
-        utils.clickOnElement(coinBlacklist);
+    public LeftSideOfPagePortfolios clickOnCoinBlacklist() {
+        utils.click(coinBlacklist);
+        return this;
     }
 
     // Blacklist
 
-    public void typeCoinNameBlackList(String coinName)
-    {
+    public LeftSideOfPagePortfolios typeCoinNameBlackList(String coinName) {
         utils.sendKeysAction(searchCoinsBlacklist, coinName);
+        return this;
     }
 
-    public String getCoinNameBlacklist()
-    {
+    public String getCoinNameBlacklist() {
         return utils.getText(searchCoinsBlacklist);
     }
 
-    public void clearCoinNameBlacklist()
-    {
+    public LeftSideOfPagePortfolios clearCoinNameBlacklist() {
         utils.clear(searchCoinsBlacklist);
+        return this;
     }
 
-    public void clickOnNameRankBlacklist()
-    {
-        utils.clickOnElement(rankNameBlacklist);
+    public LeftSideOfPagePortfolios clickOnNameRankBlacklist() {
+        utils.click(rankNameBlacklist);
+        return this;
     }
 
 
     // Manage Portfolios
 
-    public void clickOnBackToALlAssets()
-    {
-        utils.clickOnElement(backToAllAssets);
+    public LeftSideOfPagePortfolios clickOnBackToALlAssets() {
+        utils.click(backToAllAssets);
+        return this;
     }
 
-    public void clickOnAddPortfolioInManagePortfolio()
-    {
-        utils.clickOnElement(addPortfolioInManagePortfolios);
+    public LeftSideOfPagePortfolios clickOnAddPortfolioInManagePortfolio() {
+        utils.click(addPortfolioInManagePortfolios);
+        return this;
     }
 
     // Delete window
 
-    public void clickOnCancelInDelete()
-    {
-        utils.clickOnElement(cancelButtonInDelete);
+    public LeftSideOfPagePortfolios clickOnCancelInDelete() {
+        utils.click(cancelButtonInDelete);
+        return this;
     }
 
-    public void clickOnDeleteInDelete()
-    {
-        utils.clickOnElement(deleteButtonInDelete);
+    public LeftSideOfPagePortfolios clickOnDeleteInDelete() {
+        utils.click(deleteButtonInDelete);
+        return this;
     }
 
-    public void clickOnOkGotItInManagePortfolioNewPopOp()
-    {
-        utils.clickOnElement(managePortfoliosNewPopOp);
+    public LeftSideOfPagePortfolios clickOnOkGotItInManagePortfolioNewPopOp() {
+        utils.click(managePortfoliosNewPopOp);
+        return this;
     }
 
     // API window
 
-    public String getPortfolioNameInAPIKey()
-    {
+    public String getPortfolioNameInAPIKey() {
         return utils.getText(myPortfolioNameInAPIKeyWindow);
     }
 
-    public String getPortfolioAPIKey()
-    {
+    public String getPortfolioAPIKey() {
         return utils.getText(myPortfolioAPIKey);
     }
 
-    public String getPortfolioAPISecret()
-    {
+    public String getPortfolioAPISecret() {
         return utils.getText(myPortfolioAPISecret);
     }
-
 
 
 }

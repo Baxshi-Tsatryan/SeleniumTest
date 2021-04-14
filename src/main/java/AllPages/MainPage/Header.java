@@ -5,7 +5,7 @@ import MainPackage.SeleniumUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Header{
+public class Header {
 
     WebDriver driver;
     SeleniumUtils utils;
@@ -20,7 +20,7 @@ public class Header{
 
     By iconButton = By.cssSelector(".icon-logo");
 
-    By lightDarkModeSelector = By .cssSelector("i");
+    By lightDarkModeSelector = By.cssSelector("i");
 
     By portfolioTracker = By.cssSelector(".portfolio-tab");
 
@@ -198,471 +198,461 @@ public class Header{
 
     // -------------------------------------------- Methods -----------------------------------------------
 
-    public void clickOnNoThanks()
-    {
-        utils.clickOnElement(noThanks);
+    public Header clickOnNoThanks() {
+        utils.click(noThanks);
+        return this;
     }
 
-    public void clickOnIcon()
-    {
-        utils.clickOnElement(iconButton);
+    public Header clickOnIcon() {
+        utils.click(iconButton);
+        return this;
     }
 
-    public void clickOnLightMode()
-    {
-        utils.clickOnElement(lightDarkModeSelector);
+    public Header clickOnLightMode() {
+        utils.click(lightDarkModeSelector);
+        return this;
     }
 
-    public Boolean lightDarkModeIsEnabled()
-    {
+    public Boolean lightDarkModeIsEnabled() {
         return utils.isEnabled(lightDarkModeSelector);
     }
 
-    public Boolean lightDarkModeIsSelected()
-    {
+    public Boolean lightDarkModeIsSelected() {
         return utils.isSelected(lightDarkModeSelector);
     }
 
-    public void clickOnPortfolioTracker()
-    {
-        utils.clickOnElement(portfolioTracker);
+    public Header clickOnPortfolioTracker() {
+        utils.click(portfolioTracker);
+        return this;
     }
 
-    public void clickOnLivePrices()
-    {
-        utils.clickOnElement(livePrices);
+    public Header clickOnLivePrices() {
+        utils.click(livePrices);
+        return this;
     }
 
-    public void clickOnPricing()
-    {
-        utils.clickOnElement(pricing);
+    public Header clickOnPricing() {
+        utils.click(pricing);
+        return this;
     }
 
-    public void clickOnAlerts()
-    {
-        utils.clickOnElement(alerts);
+    public Header clickOnAlerts() {
+        utils.click(alerts);
+        return this;
     }
 
-    public void clickOn3DotButton()
-    {
-        utils.clickOnElement(threeDotButton);
+    public Header clickOn3DotButton() {
+        utils.click(threeDotButton);
+        return this;
     }
 
 
     // 3 dot button
 
-    public void clickOn24hReport()
-    {
-        utils.clickOnElement(report24);
+    public Header clickOn24hReport() {
+        utils.click(report24);
+        return this;
     }
 
-    public void clickOnPressKit()
-    {
-        utils.clickOnElement(pressKit);
+    public Header clickOnPressKit() {
+        utils.click(pressKit);
+        return this;
     }
 
-    public void clickOnAPIDocs()
-    {
-        utils.clickOnElement(APIDocs);
+    public Header clickOnAPIDocs() {
+        utils.click(APIDocs);
+        return this;
     }
 
-    public void clickOnBlog()
-    {
-        utils.clickOnElement(blog);
+    public Header clickOnBlog() {
+        utils.click(blog);
+        return this;
     }
 
-    public void clickOnWidgets()
-    {
-        utils.clickOnElement(widgets);
+    public Header clickOnWidgets() {
+        utils.click(widgets);
+        return this;
     }
 
-    public void clickOnNews()
-    {
-        utils.clickOnElement(news);
+    public Header clickOnNews() {
+        utils.click(news);
+        return this;
     }
 
-    public void clickOnAppStore()
-    {
-        utils.clickOnElement(appStore);
+    public Header clickOnAppStore() {
+        utils.click(appStore);
+        return this;
     }
 
-    public void clickOnGooglePlay()
-    {
-        utils.clickOnElement(googlePlay);
+    public Header clickOnGooglePlay() {
+        utils.click(googlePlay);
+        return this;
     }
 
 
     // Currencies
 
-    public void clickOnCurrenciesDropDown()
-    {
-        utils.clickOnElement(currenciesDropDown);
+    public Header clickOnCurrenciesDropDown() {
+        utils.click(currenciesDropDown);
+        return this;
     }
 
-    public String getCurrentCurrencyName()
-    {
+    public String getCurrentCurrencyName() {
         return utils.getText(currentCurrency);
     }
 
-    public void clickOnUSD()
-    {
-        utils.clickOnElement(USD);
+    public Header clickOnUSD() {
+        utils.click(USD);
+        return this;
     }
 
-    public void clickOnBTC()
-    {
-        utils.clickOnElement(BTC);
+    public Header clickOnBTC() {
+        utils.click(BTC);
+        return this;
     }
 
-    public void clickOnETH()
-    {
-        utils.clickOnElement(ETH);
+    public Header clickOnETH() {
+        utils.click(ETH);
+        return this;
     }
 
-    public void clickOnAMD()
-    {
-        utils.clickOnElement(AMD);
+    public Header clickOnAMD() {
+        utils.click(AMD);
+        return this;
     }
 
-    public void clickOnAUD()
-    {
-        utils.clickOnElement(AUD);
+    public Header clickOnAUD() {
+        utils.click(AUD);
+        return this;
     }
 
-    public void clickOnBGN()
-    {
-        utils.clickOnElement(BGN);
+    public Header clickOnBGN() {
+        utils.click(BGN);
+        return this;
     }
 
-    public void clickOnBRL()
-    {
-        utils.clickOnElement(BRL);
+    public Header clickOnBRL() {
+        utils.click(BRL);
+        return this;
     }
 
-    public void clickOnCAD()
-    {
-        utils.clickOnElement(CAD);
+    public Header clickOnCAD() {
+        utils.click(CAD);
+        return this;
     }
 
-    public void clickOnCHF()
-    {
-        utils.clickOnElement(CHF);
+    public Header clickOnCHF() {
+        utils.click(CHF);
+        return this;
     }
 
-    public void clickOnCNY()
-    {
-        utils.clickOnElement(CNY);
+    public Header clickOnCNY() {
+        utils.click(CNY);
+        return this;
     }
 
-    public void clickOnCZK()
-    {
-        utils.clickOnElement(CZK);
+    public Header clickOnCZK() {
+        utils.click(CZK);
+        return this;
     }
 
-    public void clickOnDKK()
-    {
-        utils.clickOnElement(DKK);
+    public Header clickOnDKK() {
+        utils.click(DKK);
+        return this;
     }
 
-    public void clickOnEUR()
-    {
-        utils.clickOnElement(EUR);
+    public Header clickOnEUR() {
+        utils.click(EUR);
+        return this;
     }
 
-    public void clickOnGBP()
-    {
-        utils.clickOnElement(GBP);
+    public Header clickOnGBP() {
+        utils.click(GBP);
+        return this;
     }
 
-    public void clickOnHKD()
-    {
-        utils.clickOnElement(HKD);
+    public Header clickOnHKD() {
+        utils.click(HKD);
+        return this;
     }
 
-    public void clickOnHRK()
-    {
-        utils.clickOnElement(HRK);
+    public Header clickOnHRK() {
+        utils.click(HRK);
+        return this;
     }
 
-    public void clickOnHUF()
-    {
-        utils.clickOnElement(HUF);
+    public Header clickOnHUF() {
+        utils.click(HUF);
+        return this;
     }
 
-    public void clickOnIDR()
-    {
-        utils.clickOnElement(IDR);
+    public Header clickOnIDR() {
+        utils.click(IDR);
+        return this;
     }
 
-    public void clickOnILS()
-    {
-        utils.clickOnElement(ILS);
+    public Header clickOnILS() {
+        utils.click(ILS);
+        return this;
     }
 
-    public void clickOnINR()
-    {
-        utils.clickOnElement(INR);
+    public Header clickOnINR() {
+        utils.click(INR);
+        return this;
     }
 
-    public void clickOnISK()
-    {
-        utils.clickOnElement(ISK);
+    public Header clickOnISK() {
+        utils.click(ISK);
+        return this;
     }
 
-    public void clickOnJPY()
-    {
-        utils.clickOnElement(JPY);
+    public Header clickOnJPY() {
+        utils.click(JPY);
+        return this;
     }
 
-    public void clickOnKRW()
-    {
-        utils.clickOnElement(KRW);
+    public Header clickOnKRW() {
+        utils.click(KRW);
+        return this;
     }
 
-    public void clickOnMXN()
-    {
-        utils.clickOnElement(MXN);
+    public Header clickOnMXN() {
+        utils.click(MXN);
+        return this;
     }
 
-    public void clickOnMYR()
-    {
-        utils.clickOnElement(MYR);
+    public Header clickOnMYR() {
+        utils.click(MYR);
+        return this;
     }
 
-    public void clickOnNOK()
-    {
-        utils.clickOnElement(NOK);
+    public Header clickOnNOK() {
+        utils.click(NOK);
+        return this;
     }
 
-    public void clickOnNZD()
-    {
-        utils.clickOnElement(NZD);
+    public Header clickOnNZD() {
+        utils.click(NZD);
+        return this;
     }
 
-    public void clickOnPHP()
-    {
-        utils.clickOnElement(PHP);
+    public Header clickOnPHP() {
+        utils.click(PHP);
+        return this;
     }
 
-    public void clickOnPLN()
-    {
-        utils.clickOnElement(PLN);
+    public Header clickOnPLN() {
+        utils.click(PLN);
+        return this;
     }
 
-    public void clickOnRON()
-    {
-        utils.clickOnElement(RON);
+    public Header clickOnRON() {
+        utils.click(RON);
+        return this;
     }
 
-    public void clickOnRUB()
-    {
-        utils.clickOnElement(RUB);
+    public Header clickOnRUB() {
+        utils.click(RUB);
+        return this;
     }
 
-    public void clickOnSEK()
-    {
-        utils.clickOnElement(SEK);
+    public Header clickOnSEK() {
+        utils.click(SEK);
+        return this;
     }
 
-    public void clickOnSGD()
-    {
-        utils.clickOnElement(SGD);
+    public Header clickOnSGD() {
+        utils.click(SGD);
+        return this;
     }
 
-    public void clickOnTHB()
-    {
-        utils.clickOnElement(THB);
+    public Header clickOnTHB() {
+        utils.click(THB);
+        return this;
     }
 
-    public void clickOnTRY()
-    {
-        utils.clickOnElement(TRY);
+    public Header clickOnTRY() {
+        utils.click(TRY);
+        return this;
     }
 
-    public void clickOnZAR()
-    {
-        utils.clickOnElement(ZAR);
+    public Header clickOnZAR() {
+        utils.click(ZAR);
+        return this;
     }
 
 
     // Languages
 
-    public void clickOnLanguagesDropDown()
-    {
-        utils.clickOnElement(languagesDropDown);
+    public Header clickOnLanguagesDropDown() {
+        utils.click(languagesDropDown);
+        return this;
     }
 
-    public String getCurrentLanguageName()
-    {
+    public String getCurrentLanguageName() {
         return utils.getText(currentLanguage);
     }
 
-    public void clickOnEnglish()
-    {
-        utils.clickOnElement(english);
+    public Header clickOnEnglish() {
+        utils.click(english);
+        return this;
     }
 
-    public void clickOnGerman()
-    {
-        utils.clickOnElement(german);
+    public Header clickOnGerman() {
+        utils.click(german);
+        return this;
     }
 
-    public void clickOnKorean()
-    {
-        utils.clickOnElement(korean);
+    public Header clickOnKorean() {
+        utils.click(korean);
+        return this;
     }
 
-    public void clickOnJapanese()
-    {
-        utils.clickOnElement(japanese);
+    public Header clickOnJapanese() {
+        utils.click(japanese);
+        return this;
     }
 
-    public void clickOnChinese()
-    {
-        utils.clickOnElement(chinese);
+    public Header clickOnChinese() {
+        utils.click(chinese);
+        return this;
     }
 
-    public void clickOnSpanish()
-    {
-        utils.clickOnElement(spanish);
+    public Header clickOnSpanish() {
+        utils.click(spanish);
+        return this;
     }
 
-    public void clickOnFrench()
-    {
-        utils.clickOnElement(french);
+    public Header clickOnFrench() {
+        utils.click(french);
+        return this;
     }
 
-    public void clickOnArmenian()
-    {
-        utils.clickOnElement(armenian);
+    public Header clickOnArmenian() {
+        utils.click(armenian);
+        return this;
     }
 
-    public void clickOnDutch()
-    {
-        utils.clickOnElement(dutch);
+    public Header clickOnDutch() {
+        utils.click(dutch);
+        return this;
     }
 
-    public void clickOnRussian()
-    {
-        utils.clickOnElement(russian);
+    public Header clickOnRussian() {
+        utils.click(russian);
+        return this;
     }
 
-    public void clickOnItalian()
-    {
-        utils.clickOnElement(italian);
+    public Header clickOnItalian() {
+        utils.click(italian);
+        return this;
     }
 
-    public void clickOnPortuguese()
-    {
-        utils.clickOnElement(portuguese);
+    public Header clickOnPortuguese() {
+        utils.click(portuguese);
+        return this;
     }
 
-    public void clickOnTurkish()
-    {
-        utils.clickOnElement(turkish);
+    public Header clickOnTurkish() {
+        utils.click(turkish);
+        return this;
     }
 
 
     // Search field
 
-    public void openSearchField()
-    {
-        utils.clickOnElement(searchFieldMinScreen);
+    public Header openSearchField() {
+        utils.click(searchFieldMinScreen);
+        return this;
     }
 
-    public void typeInSearchField(String searchString)
-    {
+    public Header typeInSearchField(String searchString) {
         utils.sendKeysAction(searchFieldMaxScreen, searchString);
+        return this;
     }
 
-    public void clearSearchField()
-    {
+    public Header clearSearchField() {
         utils.clear(searchFieldMaxScreen);
+        return this;
     }
 
-    public void clickOnFirstSearchCoinResult()
-    {
-        utils.clickOnElement(firstSearchCoinResult);
+    public Header clickOnFirstSearchCoinResult() {
+        utils.click(firstSearchCoinResult);
+        return this;
     }
 
-    public void clickOnFirstSearchExchangeResult()
-    {
-        utils.clickOnElement(firstSearchExchangeResult);
+    public Header clickOnFirstSearchExchangeResult() {
+        utils.click(firstSearchExchangeResult);
+        return this;
     }
 
 
-
-    public void clickOnLogin()
-    {
-        utils.clickOnElement(login);
+    public Header clickOnLogin() {
+        utils.click(login);
+        return this;
     }
 
-    public Boolean loginIsDisplayed()
-    {
+    public Boolean loginIsDisplayed() {
         return utils.isDisplayed(login);
     }
 
-    public void clickOnGetStarted()
-    {
-        utils.clickOnElement(getStarted);
+    public Header clickOnGetStarted() {
+        utils.click(getStarted);
+        return this;
     }
 
-    public Boolean getStartedIsDisplayed()
-    {
+    public Boolean getStartedIsDisplayed() {
         return utils.isDisplayed(getStarted);
     }
 
-    public void clickOnAccountDropDown()
-    {
-        utils.clickOnElement(accountDropDown);
+    public Header clickOnAccountDropDown() {
+        utils.click(accountDropDown);
+        return this;
     }
 
-    public Boolean accountDropDownIsDisplayed()
-    {
+    public Boolean accountDropDownIsDisplayed() {
         return utils.isDisplayed(accountDropDown);
     }
 
-    public String getCurrentAccountName()
-    {
+    public String getCurrentAccountName() {
         return utils.getText(currentAccountName);
     }
 
 
     // Account DropDown
 
-    public void clickOnBecomePro()
-    {
-        utils.clickOnElement(becomePro);
+    public Header clickOnBecomePro() {
+        utils.click(becomePro);
+        return this;
     }
 
-    public Boolean becomeProIsDisplayed()
-    {
+    public Boolean becomeProIsDisplayed() {
         return utils.isDisplayed(becomePro);
     }
 
-    public void clickOnSettings()
-    {
-        utils.clickOnElement(settings);
+    public Header clickOnSettings() {
+        utils.click(settings);
+        return this;
     }
 
-    public void clickOnSignOut()
-    {
-        utils.clickOnElement(signOut);
+    public Header clickOnSignOut() {
+        utils.click(signOut);
+        return this;
     }
 
 
     // ----------------------------------------------- Scripts ------------------------------------------------
 
-    public void searchAnyCoin(String coinName)
-    {
+    public Header searchAnyCoin(String coinName) {
         typeInSearchField(coinName);
         clickOnFirstSearchCoinResult();
+        return this;
     }
 
-    public void searchAnyExchange(String exchangeName)
-    {
+    public Header searchAnyExchange(String exchangeName) {
         typeInSearchField(exchangeName);
         clickOnFirstSearchExchangeResult();
+        return this;
     }
 
 }

@@ -59,97 +59,95 @@ public class News {
 
     // News Sources and coins news
 
-    public void searchCoinNews(String coinName)
-    {
+    public News searchCoinNews(String coinName) {
         utils.sendKeysAction(searchCoinNewsField, coinName);
+        return this;
     }
 
-    public void clickOnSourcesDropDown()
-    {
-        utils.clickOnElement(sourcesDropDown);
+    public News clickOnSourcesDropDown() {
+        utils.click(sourcesDropDown);
+        return this;
     }
 
-    public String getUncheckAllResetButtonText()
-    {
+    public String getUncheckAllResetButtonText() {
         return utils.getText(uncheckAllResetNewsSources);
     }
 
-    public void clickOnUncheckAllReset()
-    {
-        utils.clickOnElement(uncheckAllResetNewsSources);
+    public News clickOnUncheckAllReset() {
+        utils.click(uncheckAllResetNewsSources);
+        return this;
     }
 
-    public void clickOnApply()
-    {
-        utils.clickOnElement(applyNewsSources);
+    public News clickOnApply() {
+        utils.click(applyNewsSources);
+        return this;
     }
 
 
     // Types
 
-    public void clickOnHandpicked()
-    {
-        utils.clickOnElement(handpicked);
+    public News clickOnHandpicked() {
+        utils.click(handpicked);
+        return this;
     }
 
-    public void clickOnTrending()
-    {
-        utils.clickOnElement(trending);
+    public News clickOnTrending() {
+        utils.click(trending);
+        return this;
     }
 
-    public void clickOnLatest()
-    {
-        utils.clickOnElement(latest);
+    public News clickOnLatest() {
+        utils.click(latest);
+        return this;
     }
 
-    public void clickOnMostBullish()
-    {
-        utils.clickOnElement(mostBullish);
+    public News clickOnMostBullish() {
+        utils.click(mostBullish);
+        return this;
     }
 
-    public void clickOnMostBearish()
-    {
-        utils.clickOnElement(mostBearish);
+    public News clickOnMostBearish() {
+        utils.click(mostBearish);
+        return this;
     }
 
-    public void clickOnTeamUpdates()
-    {
-        utils.clickOnElement(teamUpdates);
+    public News clickOnTeamUpdates() {
+        utils.click(teamUpdates);
+        return this;
     }
 
 
     // Stay In Touch
 
-    public void clickOnTelegramIcon()
-    {
-        utils.clickOnElement(telegramIcon);
+    public News clickOnTelegramIcon() {
+        utils.click(telegramIcon);
+        return this;
     }
 
-    public void clickOnFacebookIcon()
-    {
-        utils.clickOnElement(facebookIcon);
+    public News clickOnFacebookIcon() {
+        utils.click(facebookIcon);
+        return this;
     }
 
-    public void clickOnTwitterIcon()
-    {
-        utils.clickOnElement(twitterIcon);
+    public News clickOnTwitterIcon() {
+        utils.click(twitterIcon);
+        return this;
     }
 
-    public void clickOnSteemitIcon()
-    {
-        utils.clickOnElement(steemitIcon);
+    public News clickOnSteemitIcon() {
+        utils.click(steemitIcon);
+        return this;
     }
 
-    public void clickOnMediumIcon()
-    {
-        utils.clickOnElement(mediumIcon);
+    public News clickOnMediumIcon() {
+        utils.click(mediumIcon);
+        return this;
     }
 
-    public void clickOnInstagramIcon()
-    {
-        utils.clickOnElement(instagramIcon);
+    public News clickOnInstagramIcon() {
+        utils.click(instagramIcon);
+        return this;
     }
-
 
 
 }

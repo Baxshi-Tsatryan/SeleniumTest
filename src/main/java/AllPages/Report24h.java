@@ -126,7 +126,6 @@ public class Report24h {
     By topGainersThirdPercent = By.cssSelector("div.market-report-grid tr:nth-of-type(3) > td > div > .text-up > .table-row");
 
 
-
     // Top Losers
 
     // All data
@@ -157,7 +156,6 @@ public class Report24h {
     By topLosersSecondPercent = By.cssSelector("div.market-report-grid > div:nth-of-type(5) tr:nth-of-type(2) .percent-preview > .table-row");
 
     By topLosersThirdPercent = By.cssSelector("div.market-report-grid > div:nth-of-type(5) tr:nth-of-type(3) .percent-preview > .table-row");
-
 
 
     // Top Exchanges
@@ -194,499 +192,427 @@ public class Report24h {
     By subscribeButton = By.cssSelector(".primary-bordered");
 
 
-
     // ----------------------------------------------- Methods ---------------------------------------------
 
 
-    public Boolean setupPortfolioIsDisplayed()
-    {
+    public Boolean setupPortfolioIsDisplayed() {
         return utils.isDisplayed(setupPortfolio);
     }
 
-    public void clickOnSetupPortfolio()
-    {
-        utils.clickOnElement(setupPortfolio);
+    public Report24h clickOnSetupPortfolio() {
+        utils.click(setupPortfolio);
+        return this;
     }
 
 
     // Your Portfolio
 
-    public String getCurrentValue()
-    {
+    public String getCurrentValue() {
         return utils.getText(currentValue);
     }
 
-    public String get24hChangePrice()
-    {
+    public String get24hChangePrice() {
         return utils.getText(change24hPrice);
     }
 
-    public String get24hChangePercent()
-    {
+    public String get24hChangePercent() {
         return utils.getText(change24hPercent);
     }
 
-    public String get24hChangePercentColor()
-    {
+    public String get24hChangePercentColor() {
         return utils.getCSSValue(change24hPercent, "color");
     }
 
-    public String getTopPerformingCoinPrice()
-    {
+    public String getTopPerformingCoinPrice() {
         return utils.getText(topPerformingCoinPrice);
     }
 
-    public String getTopPerformingCoinPercent()
-    {
+    public String getTopPerformingCoinPercent() {
         return utils.getText(topPerformingCoinPercent);
     }
 
-    public String getTopPerformingCoinPercentColor()
-    {
+    public String getTopPerformingCoinPercentColor() {
         return utils.getCSSValue(topPerformingCoinPercent, "color");
     }
 
-    public void clickOnViewPortfolio()
-    {
-        utils.clickOnElement(viewPortfolio);
+    public Report24h clickOnViewPortfolio() {
+        utils.click(viewPortfolio);
+        return this;
     }
 
 
     // Market Overview
 
-    public void clickOnMarketOverviewFirstCoin()
-    {
-        utils.clickOnElement(marketOverviewFirstName);
+    public Report24h clickOnMarketOverviewFirstCoin() {
+        utils.click(marketOverviewFirstName);
+        return this;
     }
 
-    public void clickOnMarketOverviewSecondCoin()
-    {
-        utils.clickOnElement(marketOverviewSecondName);
+    public Report24h clickOnMarketOverviewSecondCoin() {
+        utils.click(marketOverviewSecondName);
+        return this;
     }
 
-    public void clickOnMarketOverviewThirdCoin()
-    {
-        utils.clickOnElement(marketOverviewThirdName);
+    public Report24h clickOnMarketOverviewThirdCoin() {
+        utils.click(marketOverviewThirdName);
+        return this;
     }
 
-    public String getMarketOverviewFirstIndex()
-    {
+    public String getMarketOverviewFirstIndex() {
         return utils.getText(marketOverviewFirstIndex);
     }
 
-    public String getMarketOverviewFirstName()
-    {
+    public String getMarketOverviewFirstName() {
         return utils.getText(marketOverviewFirstName);
     }
 
-    public String getMarketOverviewFirstPrice()
-    {
+    public String getMarketOverviewFirstPrice() {
         return utils.getText(marketOverviewFirstPrice);
     }
 
-    public String getMarketOverviewFirstPercent()
-    {
+    public String getMarketOverviewFirstPercent() {
         return utils.getText(marketOverviewFirstPercent);
     }
 
-    public String getMarketOverviewFirstPercentColor()
-    {
+    public String getMarketOverviewFirstPercentColor() {
         return utils.getCSSValue(marketOverviewFirstPercent, "color");
     }
 
-    public String getMarketOverviewSecondIndex()
-    {
+    public String getMarketOverviewSecondIndex() {
         return utils.getText(marketOverviewSecondIndex);
     }
 
-    public String getMarketOverviewSecondName()
-    {
+    public String getMarketOverviewSecondName() {
         return utils.getText(marketOverviewSecondName);
     }
 
-    public String getMarketOverviewSecondPrice()
-    {
+    public String getMarketOverviewSecondPrice() {
         return utils.getText(marketOverviewSecondPrice);
     }
 
-    public String getMarketOverviewSecondPercent()
-    {
+    public String getMarketOverviewSecondPercent() {
         return utils.getText(marketOverviewSecondPercent);
     }
 
-    public String getMarketOverviewSecondPercentColor()
-    {
+    public String getMarketOverviewSecondPercentColor() {
         return utils.getCSSValue(marketOverviewSecondPercent, "color");
     }
 
-    public String getMarketOverviewThirdIndex()
-    {
+    public String getMarketOverviewThirdIndex() {
         return utils.getText(marketOverviewThirdIndex);
     }
 
-    public String getMarketOverviewThirdName()
-    {
+    public String getMarketOverviewThirdName() {
         return utils.getText(marketOverviewThirdName);
     }
 
-    public String getMarketOverviewThirdPrice()
-    {
+    public String getMarketOverviewThirdPrice() {
         return utils.getText(marketOverviewThirdPrice);
     }
 
-    public String getMarketOverviewThirdPercent()
-    {
+    public String getMarketOverviewThirdPercent() {
         return utils.getText(marketOverviewThirdPercent);
     }
 
-    public String getMarketOverviewThirdPercentColor()
-    {
+    public String getMarketOverviewThirdPercentColor() {
         return utils.getCSSValue(marketOverviewThirdPercent, "color");
     }
 
-    public void clickOnMarketOverviewViewLivePricesButton()
-    {
-        utils.clickOnElement(marketOverviewViewLivePricesButton);
+    public Report24h clickOnMarketOverviewViewLivePricesButton() {
+        utils.click(marketOverviewViewLivePricesButton);
+        return this;
     }
 
 
     // Top Volume 24h
 
-    public void clickOnTopVolume24hFirstCoin()
-    {
-        utils.clickOnElement(topVolume24hFirstName);
+    public Report24h clickOnTopVolume24hFirstCoin() {
+        utils.click(topVolume24hFirstName);
+        return this;
     }
 
-    public void clickOnTopVolume24hSecondCoin()
-    {
-        utils.clickOnElement(topVolume24hSecondName);
+    public Report24h clickOnTopVolume24hSecondCoin() {
+        utils.click(topVolume24hSecondName);
+        return this;
     }
 
-    public void clickOnTopVolume24hThirdCoin()
-    {
-        utils.clickOnElement(topVolume24hThirdName);
+    public Report24h clickOnTopVolume24hThirdCoin() {
+        utils.click(topVolume24hThirdName);
+        return this;
     }
 
-    public String getTopVolume24hFirstIndex()
-    {
+    public String getTopVolume24hFirstIndex() {
         return utils.getText(topVolume24hFirstIndex);
     }
 
-    public String getTopVolume24hFirstName()
-    {
+    public String getTopVolume24hFirstName() {
         return utils.getText(topVolume24hFirstName);
     }
 
-    public String getTopVolume24hFirstPrice()
-    {
+    public String getTopVolume24hFirstPrice() {
         return utils.getText(topVolume24hFirstPrice);
     }
 
-    public String getTopVolume24hSecondIndex()
-    {
+    public String getTopVolume24hSecondIndex() {
         return utils.getText(topVolume24hSecondIndex);
     }
 
-    public String getTopVolume24hSecondName()
-    {
+    public String getTopVolume24hSecondName() {
         return utils.getText(topVolume24hSecondName);
     }
 
-    public String getTopVolume24hSecondPrice()
-    {
+    public String getTopVolume24hSecondPrice() {
         return utils.getText(topVolume24hSecondPrice);
     }
 
-    public String getTopVolume24hThirdIndex()
-    {
+    public String getTopVolume24hThirdIndex() {
         return utils.getText(topVolume24hThirdIndex);
     }
 
-    public String getTopVolume24hThirdName()
-    {
+    public String getTopVolume24hThirdName() {
         return utils.getText(topVolume24hThirdName);
     }
 
-    public String getTopVolume24hThirdPrice()
-    {
+    public String getTopVolume24hThirdPrice() {
         return utils.getText(topVolume24hThirdPrice);
     }
 
-    public void clickOnTopVolume24hViewLivePricesButton()
-    {
-        utils.clickOnElement(topVolume24hViewLivePricesButton);
+    public Report24h clickOnTopVolume24hViewLivePricesButton() {
+        utils.click(topVolume24hViewLivePricesButton);
+        return this;
     }
 
 
     // Top Gainers
 
-    public void clickOnTopGainersFirstCoin()
-    {
-        utils.clickOnElement(topGainersFirstName);
+    public Report24h clickOnTopGainersFirstCoin() {
+        utils.click(topGainersFirstName);
+        return this;
     }
 
-    public void clickOnTopGainersSecondCoin()
-    {
-        utils.clickOnElement(topGainersSecondName);
+    public Report24h clickOnTopGainersSecondCoin() {
+        utils.click(topGainersSecondName);
+        return this;
     }
 
-    public void clickOnTopGainersThirdCoin()
-    {
-        utils.clickOnElement(topGainersThirdName);
+    public Report24h clickOnTopGainersThirdCoin() {
+        utils.click(topGainersThirdName);
+        return this;
     }
 
-    public String getTopGainersFirstIndex()
-    {
+    public String getTopGainersFirstIndex() {
         return utils.getText(topGainersFirstIndex);
     }
 
-    public String getTopGainersFirstName()
-    {
+    public String getTopGainersFirstName() {
         return utils.getText(topGainersFirstName);
     }
 
-    public String getTopGainersFirstPrice()
-    {
+    public String getTopGainersFirstPrice() {
         return utils.getText(topGainersFirstPrice);
     }
 
-    public String getTopGainersFirstPercent()
-    {
+    public String getTopGainersFirstPercent() {
         return utils.getText(topGainersFirstPercent);
     }
 
-    public String getTopGainersFirstPercentColor()
-    {
+    public String getTopGainersFirstPercentColor() {
         return utils.getCSSValue(topGainersFirstPercent, "color");
     }
 
-    public String getTopGainersSecondIndex()
-    {
+    public String getTopGainersSecondIndex() {
         return utils.getText(topGainersSecondIndex);
     }
 
-    public String getTopGainersSecondName()
-    {
+    public String getTopGainersSecondName() {
         return utils.getText(topGainersSecondName);
     }
 
-    public String getTopGainersSecondPrice()
-    {
+    public String getTopGainersSecondPrice() {
         return utils.getText(topGainersSecondPrice);
     }
 
-    public String getTopGainersSecondPercent()
-    {
+    public String getTopGainersSecondPercent() {
         return utils.getText(topGainersSecondPercent);
     }
 
-    public String getTopGainersSecondPercentColor()
-    {
+    public String getTopGainersSecondPercentColor() {
         return utils.getCSSValue(topGainersSecondPercent, "color");
     }
 
-    public String getTopGainersThirdIndex()
-    {
+    public String getTopGainersThirdIndex() {
         return utils.getText(topGainersThirdIndex);
     }
 
-    public String getTopGainersThirdName()
-    {
+    public String getTopGainersThirdName() {
         return utils.getText(topGainersThirdName);
     }
 
-    public String getTopGainersThirdPrice()
-    {
+    public String getTopGainersThirdPrice() {
         return utils.getText(topGainersThirdPrice);
     }
 
-    public String getTopGainersThirdPercent()
-    {
+    public String getTopGainersThirdPercent() {
         return utils.getText(topGainersThirdPercent);
     }
 
-    public String getTopGainersThirdPercentColor()
-    {
+    public String getTopGainersThirdPercentColor() {
         return utils.getCSSValue(topGainersThirdPercent, "color");
     }
 
 
     // Top Losers
 
-    public void clickOnTopLosersFirstCoin()
-    {
-        utils.clickOnElement(topLosersFirstName);
+    public Report24h clickOnTopLosersFirstCoin() {
+        utils.click(topLosersFirstName);
+        return this;
     }
 
-    public void clickOnTopLosersSecondCoin()
-    {
-        utils.clickOnElement(topLosersSecondName);
+    public Report24h clickOnTopLosersSecondCoin() {
+        utils.click(topLosersSecondName);
+        return this;
     }
 
-    public void clickOnTopLosersThirdCoin()
-    {
-        utils.clickOnElement(topLosersThirdName);
+    public Report24h clickOnTopLosersThirdCoin() {
+        utils.click(topLosersThirdName);
+        return this;
     }
 
-    public String getTopLosersFirstIndex()
-    {
+    public String getTopLosersFirstIndex() {
         return utils.getText(topLosersFirstIndex);
     }
 
-    public String getTopLosersFirstName()
-    {
+    public String getTopLosersFirstName() {
         return utils.getText(topLosersFirstName);
     }
 
-    public String getTopLosersFirstPrice()
-    {
+    public String getTopLosersFirstPrice() {
         return utils.getText(topLosersFirstPrice);
     }
 
-    public String getTopLosersFirstPercent()
-    {
+    public String getTopLosersFirstPercent() {
         return utils.getText(topLosersFirstPercent);
     }
 
-    public String getTopLosersFirstPercentColor()
-    {
+    public String getTopLosersFirstPercentColor() {
         return utils.getCSSValue(topLosersFirstPercent, "color");
     }
 
-    public String getTopLosersSecondIndex()
-    {
+    public String getTopLosersSecondIndex() {
         return utils.getText(topLosersSecondIndex);
     }
 
-    public String getTopLosersSecondName()
-    {
+    public String getTopLosersSecondName() {
         return utils.getText(topLosersSecondName);
     }
 
-    public String getTopLosersSecondPrice()
-    {
+    public String getTopLosersSecondPrice() {
         return utils.getText(topLosersSecondPrice);
     }
 
-    public String getTopLosersSecondPercent()
-    {
+    public String getTopLosersSecondPercent() {
         return utils.getText(topLosersSecondPercent);
     }
 
-    public String getTopLosersSecondPercentColor()
-    {
+    public String getTopLosersSecondPercentColor() {
         return utils.getCSSValue(topLosersSecondPercent, "color");
     }
 
-    public String getTopLosersThirdIndex()
-    {
+    public String getTopLosersThirdIndex() {
         return utils.getText(topLosersThirdIndex);
     }
 
-    public String getTopLosersThirdName()
-    {
+    public String getTopLosersThirdName() {
         return utils.getText(topLosersThirdName);
     }
 
-    public String getTopLosersThirdPrice()
-    {
+    public String getTopLosersThirdPrice() {
         return utils.getText(topLosersThirdPrice);
     }
 
-    public String getTopLosersThirdPercent()
-    {
+    public String getTopLosersThirdPercent() {
         return utils.getText(topLosersThirdPercent);
     }
 
-    public String getTopLosersThirdPercentColor()
-    {
+    public String getTopLosersThirdPercentColor() {
         return utils.getCSSValue(topLosersThirdPercent, "color");
     }
 
 
     // Top Exchanges
 
-    public void clickOnTopExchangesFirstCoin()
-    {
-        utils.clickOnElement(topExchangesFirstName);
+    public Report24h clickOnTopExchangesFirstCoin() {
+        utils.click(topExchangesFirstName);
+        return this;
     }
 
-    public void clickOnTopExchangesSecondCoin()
-    {
-        utils.clickOnElement(topExchangesSecondName);
+    public Report24h clickOnTopExchangesSecondCoin() {
+        utils.click(topExchangesSecondName);
+        return this;
     }
 
-    public void clickOnTopExchangesThirdCoin()
-    {
-        utils.clickOnElement(topExchangesThirdName);
+    public Report24h clickOnTopExchangesThirdCoin() {
+        utils.click(topExchangesThirdName);
+        return this;
     }
 
-    public String getTopExchangesFirstIndex()
-    {
+    public String getTopExchangesFirstIndex() {
         return utils.getText(topExchangesFirstIndex);
     }
 
-    public String getTopExchangesFirstName()
-    {
+    public String getTopExchangesFirstName() {
         return utils.getText(topExchangesFirstName);
     }
 
-    public String getTopExchangesFirstPrice()
-    {
+    public String getTopExchangesFirstPrice() {
         return utils.getText(topExchangesFirstPrice);
     }
 
-    public String getTopExchangesSecondIndex()
-    {
+    public String getTopExchangesSecondIndex() {
         return utils.getText(topExchangesSecondIndex);
     }
 
-    public String getTopExchangesSecondName()
-    {
+    public String getTopExchangesSecondName() {
         return utils.getText(topExchangesSecondName);
     }
 
-    public String getTopExchangesSecondPrice()
-    {
+    public String getTopExchangesSecondPrice() {
         return utils.getText(topExchangesSecondPrice);
     }
 
-    public String getTopExchangesThirdIndex()
-    {
+    public String getTopExchangesThirdIndex() {
         return utils.getText(topExchangesThirdIndex);
     }
 
-    public String getTopExchangesThirdName()
-    {
+    public String getTopExchangesThirdName() {
         return utils.getText(topExchangesThirdName);
     }
 
-    public String getTopExchangesThirdPrice()
-    {
+    public String getTopExchangesThirdPrice() {
         return utils.getText(topExchangesThirdPrice);
     }
 
-    public void clickOnMoreExchangesButton()
-    {
-        utils.clickOnElement(topExchangesMoreExchangesButton);
+    public Report24h clickOnMoreExchangesButton() {
+        utils.click(topExchangesMoreExchangesButton);
+        return this;
     }
 
 
     // Subscribtion
 
-    public void typeEmailForSubscribtion(String email)
-    {
+    public Report24h typeEmailForSubscribtion(String email) {
         utils.sendKeysAction(subscribeEmailField, email);
+        return this;
     }
 
-    public void clearEmailSubscribeField()
-    {
+    public Report24h clearEmailSubscribeField() {
         utils.clear(subscribeEmailField);
+        return this;
     }
 
-    public void clickOnSubscribe()
-    {
-        utils.clickOnElement(subscribeButton);
+    public Report24h clickOnSubscribe() {
+        utils.click(subscribeButton);
+        return this;
     }
 
 }

@@ -87,231 +87,212 @@ public class Settings {
     By testText = By.cssSelector(".title");
 
 
-
     // ----------------------------------------------------- Methods --------------------------------------------------
 
     // Always
 
-    public void uploadPhoto(String pathToPhoto)
-    {
+    public Settings uploadPhoto(String pathToPhoto) {
         utils.sendKeysAction(uploadPhoto, pathToPhoto);
+        return this;
     }
 
-    public String getPhotoText()
-    {
+    public String getPhotoText() {
         return utils.getText(uploadPhoto);
     }
 
-    public String getPhotoTextSOUT()
-    {
+    public String getPhotoTextSOUT() {
         return utils.getText(uploadPhoto);
     }
 
-    public void clickOnEditPhoto()
-    {
-        utils.clickOnElement(editPhoto);
+    public Settings clickOnEditPhoto() {
+        utils.click(editPhoto);
+        return this;
     }
 
-    public void uploadNewPhoto(String pathToPhoto)
-    {
+    public Settings uploadNewPhoto(String pathToPhoto) {
         utils.sendKeysAction(editUploadPhoto, pathToPhoto);
+        return this;
     }
 
-    public void clickOnDeletePhoto()
-    {
-        utils.clickOnElement(deletePhoto);
+    public Settings clickOnDeletePhoto() {
+        utils.click(deletePhoto);
+        return this;
     }
 
     // If PRO and not verified
 
-    public void clickOnResendSend()
-    {
-        utils.clickOnElement(resendSendEmail);
+    public Settings clickOnResendSend() {
+        utils.click(resendSendEmail);
+        return this;
     }
 
-    public Boolean resendSendIsDisplayed()
-    {
+    public Boolean resendSendIsDisplayed() {
         return utils.isDisplayed(resendSendEmail);
     }
 
-    public void clickOnUpgradeAccount()
-    {
-        utils.clickOnElement(upgradeButton);
+    public Settings clickOnUpgradeAccount() {
+        utils.click(upgradeButton);
+        return this;
     }
 
-    public Boolean upgradeIsDisplayed()
-    {
+    public Boolean upgradeIsDisplayed() {
         return utils.isDisplayed(upgradeButton);
     }
 
-    public String getUsername()
-    {
+    public String getUsername() {
         return utils.getText(userNameField);
     }
 
-    public void clearUsername()
-    {
+    public Settings clearUsername() {
         utils.clear(userNameField);
+        return this;
     }
 
-    public void typeUsername(String username)
-    {
+    public Settings typeUsername(String username) {
         utils.sendKeysAction(userNameField, username);
+        return this;
     }
 
-    public String getEmail()
-    {
+    public String getEmail() {
         return utils.getText(emailField);
     }
 
-    public void clickOnSaveChanges()
-    {
-        utils.clickOnElement(saveChanges);
+    public Settings clickOnSaveChanges() {
+        utils.click(saveChanges);
+        return this;
     }
 
 
     // 2FA
 
-    public String get2FAText()
-    {
+    public String get2FAText() {
         return utils.getText(enable2FA);
     }
 
-    public void clickOnEnable2FA()
-    {
-        utils.clickOnElement(enable2FA);
+    public Settings clickOnEnable2FA() {
+        utils.click(enable2FA);
+        return this;
     }
 
-    public String getGAKey()
-    {
+    public String getGAKey() {
         return utils.getText(GAKey);
     }
 
-    public void typePassword2FA(String password)
-    {
+    public Settings typePassword2FA(String password) {
         utils.sendKeysAction(passwordFor2FA, password);
+        return this;
     }
 
-    public void clearPassword2FA()
-    {
+    public Settings clearPassword2FA() {
         utils.clear(passwordFor2FA);
+        return this;
     }
 
-    public String getPasswordFieldText2FA()
-    {
+    public String getPasswordFieldText2FA() {
         return utils.getText(passwordFor2FA);
     }
 
-    public void typeGoogleVerificationCode2FA(String googleVerificationCode)
-    {
+    public Settings typeGoogleVerificationCode2FA(String googleVerificationCode) {
         utils.sendKeysAction(this.googleVerificationCode, googleVerificationCode);
+        return this;
     }
 
-    public void clearGoogleVerificationCode()
-    {
+    public Settings clearGoogleVerificationCode() {
         utils.clear(googleVerificationCode);
+        return this;
     }
 
-    public String getGoogleVerificationCode()
-    {
+    public String getGoogleVerificationCode() {
         return utils.getText(googleVerificationCode);
     }
 
-    public void clickOnEnable2FAInWindow()
-    {
-        utils.clickOnElement(enable2FAButton);
+    public Settings clickOnEnable2FAInWindow() {
+        utils.click(enable2FAButton);
+        return this;
     }
 
-    public Boolean enable2FADisabledIsDisplayed()
-    {
+    public Boolean enable2FADisabledIsDisplayed() {
         return utils.isDisplayed(enable2FAButtonDisable);
     }
 
-    public void clickOnCancel2FAWindow()
-    {
-        utils.clickOnElement(cancel2FAWindowButton);
+    public Settings clickOnCancel2FAWindow() {
+        utils.click(cancel2FAWindowButton);
+        return this;
     }
 
-    public String get2FAErrorMessage()
-    {
+    public String get2FAErrorMessage() {
         return utils.getText(errorMessage2FA);
     }
 
 
     // Change Password
 
-    public void clickOnChangePassword()
-    {
-        utils.clickOnElement(changePassword);
+    public Settings clickOnChangePassword() {
+        utils.click(changePassword);
+        return this;
     }
 
-    public void typeOldPassword(String oldPassword)
-    {
+    public Settings typeOldPassword(String oldPassword) {
         utils.sendKeysAction(oldPasswordField, oldPassword);
+        return this;
     }
 
-    public void clearOldPassword()
-    {
+    public Settings clearOldPassword() {
         utils.clear(oldPasswordField);
+        return this;
     }
 
-    public String getOldPassword()
-    {
+    public String getOldPassword() {
         return utils.getText(oldPasswordField);
     }
 
-    public void clickOnOldPasswordEye()
-    {
-        utils.clickOnElement(visiblePasswordForOldPasswordField);
+    public Settings clickOnOldPasswordEye() {
+        utils.click(visiblePasswordForOldPasswordField);
+        return this;
     }
 
-    public void typeNewPassword(String newPassword)
-    {
+    public Settings typeNewPassword(String newPassword) {
         utils.sendKeysAction(newPasswordField, newPassword);
+        return this;
     }
 
-    public void clearNewPassword()
-    {
+    public Settings clearNewPassword() {
         utils.clear(newPasswordField);
+        return this;
     }
 
-    public String getNewPassword()
-    {
+    public String getNewPassword() {
         return utils.getText(newPasswordField);
     }
 
-    public void clickOnNewPasswordEye()
-    {
-        utils.clickOnElement(visiblePasswordForNewPasswordField);
+    public Settings clickOnNewPasswordEye() {
+        utils.click(visiblePasswordForNewPasswordField);
+        return this;
     }
 
-    public String getNewPasswordFirstIndicatorColor()
-    {
+    public String getNewPasswordFirstIndicatorColor() {
         return utils.getCSSValue(firstNewPasswordIndicator, "color");
     }
 
-    public String getNewPasswordSecondIndicatorColor()
-    {
+    public String getNewPasswordSecondIndicatorColor() {
         return utils.getCSSValue(secondNewPasswordIndicator, "color");
     }
 
-    public String getNewPasswordThirdIndicatorColor()
-    {
+    public String getNewPasswordThirdIndicatorColor() {
         return utils.getCSSValue(thirdNewPasswordIndicator, "color");
     }
 
-    public void clickOnSaveNewPassword()
-    {
-        utils.clickOnElement(saveNewPassword);
+    public Settings clickOnSaveNewPassword() {
+        utils.click(saveNewPassword);
+        return this;
     }
 
-    public void clickOnCancelNewPassword()
-    {
-        utils.clickOnElement(cancelChangePasswordWindow);
+    public Settings clickOnCancelNewPassword() {
+        utils.click(cancelChangePasswordWindow);
+        return this;
     }
 
-    public String getChangePasswordErrorMessage()
-    {
+    public String getChangePasswordErrorMessage() {
         return utils.getText(errorMessageChangePassword);
     }
 

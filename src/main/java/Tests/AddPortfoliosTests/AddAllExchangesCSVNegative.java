@@ -10,6 +10,7 @@ import MainPackage.SeleniumUtils;
 import org.openqa.selenium.*;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
 import java.util.List;
 
 public class AddAllExchangesCSVNegative extends Driver {
@@ -31,15 +32,15 @@ public class AddAllExchangesCSVNegative extends Driver {
         portfolioPageWhenNotLogin = new PortfolioPageWhenNotLogin(driver);
     }
 
-    @Test (priority = 1)
+    @Test
     public void addAllExchangesNegative() throws InterruptedException {
 
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
-        Thread.sleep(3000);
-        addPortfolio.clickOnAddPortfolio();
-        addPortfolio.clickOnConnectExchange();
+        addPortfolio
+                .clickOnAddPortfolio()
+                .clickOnConnectExchange();
 
         List<WebElement> listTill = driver.findElements(By.className("qa-exchanges"));
 
@@ -51,131 +52,66 @@ public class AddAllExchangesCSVNegative extends Driver {
             String exchangeName = list.get(i).getText();
             list.get(i).click();
 
-            if (exchangeName.equals("Crypto.com app"))
-            {
-                WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
-                importButton.sendKeys(paths.getBittrexCSV());
-                Thread.sleep(3000);
+            switch (exchangeName) {
+                case "Crypto.com app":
+                case "Nexo (beta)":
+                case "Nexo":
+                case "BlockFi (beta)":
+                case "BlockFi:": {
+                    WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
+                    importButton.sendKeys(paths.getCoinStatsTemplateCSV());
 
-                if(addPortfolio.invalidCSVErrorMessageIsDisplayed() == true) {
-                    String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
+                    if (addPortfolio.invalidCSVErrorMessageIsDisplayed() == true) {
+                        String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
 
-                    System.err.println(exchangeName + " negative case passed");
-                    System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
-                    System.out.println();
+                        System.out.println(exchangeName + " negative case passed");
+                        System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
+                        System.out.println();
+                    } else {
+                        System.err.println(exchangeName + " negative case failed");
+                    }
+
+                    addPortfolio.clickOnBack();
+                    continue;
                 }
 
-                else
-                {
-                    System.out.println(exchangeName + " negative case failed");
+                case "Bitbuy":
+                case "Bybit":
+                case "Bitrue":
+                case "Bitpanda pro":
+                case "Currency.com":
+                case "FTX": {
+                    addPortfolio.clickOnBack();
+                    continue;
                 }
 
-                addPortfolio.clickOnBack();
-                continue;
-            }
+                default: {
+                    try {
+                        addPortfolio.clickOnCSVTab();
+                    }
+                    catch (Exception e)
+                    {
+                        addPortfolio.clickOnBack();
+                        continue;
+                    }
+                    WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
+                    importButton.sendKeys(paths.getCryptoComCSV1());
 
-            else if (exchangeName.equals("Nexo (beta)") || exchangeName.equals("Nexo"))
-            {
-                WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
-                importButton.sendKeys(paths.getBittrexCSV());
-                Thread.sleep(3000);
+                    if (addPortfolio.invalidCSVErrorMessageIsDisplayed() == true) {
+                        String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
 
-                if(addPortfolio.invalidCSVErrorMessageIsDisplayed() == true) {
-                    String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
+                        System.out.println(exchangeName + " negative case passed");
+                        System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
+                        System.out.println();
+                    } else {
+                        System.err.println(exchangeName + " negative case failed");
+                    }
 
-                    System.err.println(exchangeName + " negative case passed");
-                    System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
-                    System.out.println();
+                    addPortfolio.clickOnBack();
+
                 }
-
-                else
-                {
-                    System.out.println(exchangeName + " negative case failed");
-                }
-
-                addPortfolio.clickOnBack();
-                continue;
-            }
-
-            else if (exchangeName.equals("BlockFi (beta)") || exchangeName.equals("BlockFi"))
-            {
-                WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
-                importButton.sendKeys(paths.getCoinStatsTemplateCSV());
-                Thread.sleep(3000);
-
-                if(addPortfolio.invalidCSVErrorMessageIsDisplayed() == true) {
-                    String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
-
-                    System.err.println(exchangeName + " negative case passed");
-                    System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
-                    System.out.println();
-                }
-
-                else
-                {
-                    System.out.println(exchangeName + " negative case failed");
-                }
-
-                addPortfolio.clickOnBack();
-                continue;
-            }
-
-            else if (exchangeName.equals("Bittrex"))
-            {
-                addPortfolio.clickOnCSVTab();
-                WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
-                importButton.sendKeys(paths.getCoinStatsTemplateCSV());
-                Thread.sleep(3000);
-
-                if(addPortfolio.invalidCSVErrorMessageIsDisplayed() == true) {
-                    String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
-
-                    System.err.println(exchangeName + " negative case passed");
-                    System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
-                    System.out.println();
-                }
-
-                else
-                {
-                    System.out.println(exchangeName + " negative case failed");
-                }
-
-                addPortfolio.clickOnBack();
-                continue;
-            }
-
-            else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX")
-                    || exchangeName.equals("Nexo (beta)") || exchangeName.equals("Nexo") || exchangeName.equals("Bitrue")
-                    || exchangeName.equals("BlockFi (beta)") || exchangeName.equals("BlockFi"))
-            {
-                addPortfolio.clickOnBack();
-                continue;
-            }
-
-            else
-                {
-                addPortfolio.clickOnCSVTab();
-                WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
-                importButton.sendKeys(paths.getCryptoComCSV1());
-                Thread.sleep(3000);
-
-                if(addPortfolio.invalidCSVErrorMessageIsDisplayed() == true) {
-                    String errorCSV = addPortfolio.getInvalidCSVErrorMessage();
-
-                    System.err.println(exchangeName + " negative case passed");
-                    System.out.println(exchangeName + " invalid CSV" + " - " + errorCSV);
-                    System.out.println();
-                }
-
-                else
-                {
-                    System.out.println(exchangeName + " negative case failed");
-                }
-
-                addPortfolio.clickOnBack();
-
             }
         }
 
-        }
     }
+}

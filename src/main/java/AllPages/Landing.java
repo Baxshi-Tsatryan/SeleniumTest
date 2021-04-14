@@ -60,99 +60,99 @@ public class Landing {
 
     // ------------------------------------------ Methods -----------------------------------------------
 
-    public void clickOnGetStartedTop()
-    {
-        utils.clickOnElement(getStartedButtonTop);
+    public Landing clickOnGetStartedTop() {
+        utils.click(getStartedButtonTop);
+        return this;
     }
 
-    public void clickOnKevinRoseTwitter()
-    {
-        utils.clickOnElement(kevinRoseTwitter);
+    public Landing clickOnKevinRoseTwitter() {
+        utils.click(kevinRoseTwitter);
+        return this;
     }
 
 
     // Exchanges / Wallets buttons
 
-    public void clickOnBinance()
-    {
-        utils.clickOnElement(binance);
+    public Landing clickOnBinance() {
+        utils.click(binance);
+        return this;
     }
 
-    public void clickOnCoinbase()
-    {
-        utils.clickOnElement(coinbase);
+    public Landing clickOnCoinbase() {
+        utils.click(coinbase);
+        return this;
     }
 
-    public void clickOnEthereum()
-    {
-        utils.clickOnElement(ethereum);
+    public Landing clickOnEthereum() {
+        utils.click(ethereum);
+        return this;
     }
 
-    public void clickOnLedger()
-    {
-        utils.clickOnElement(ledger);
+    public Landing clickOnLedger() {
+        utils.click(ledger);
+        return this;
     }
 
-    public void clickOnMetamask()
-    {
-        utils.clickOnElement(metamask);
+    public Landing clickOnMetamask() {
+        utils.click(metamask);
+        return this;
     }
 
-    public void clickOnMoreButton()
-    {
-        utils.clickOnElement(moreButton);
+    public Landing clickOnMoreButton() {
+        utils.click(moreButton);
+        return this;
     }
 
 
     // Testimonials
 
-    public void clickOnSebastianGronewoldTwitter()
-    {
-        utils.clickOnElement(sebastianGronewoldTwitter);
+    public Landing clickOnSebastianGronewoldTwitter() {
+        utils.click(sebastianGronewoldTwitter);
+        return this;
     }
 
-    public void clickOnTyDanielSmithTwitter()
-    {
-        utils.clickOnElement(tyDanielSmithTwitter);
+    public Landing clickOnTyDanielSmithTwitter() {
+        utils.click(tyDanielSmithTwitter);
+        return this;
     }
 
-    public void clickOnAdelDeMeyerTwitter()
-    {
-        utils.clickOnElement(adelDeMeyerTwitter);
+    public Landing clickOnAdelDeMeyerTwitter() {
+        utils.click(adelDeMeyerTwitter);
+        return this;
     }
 
 
     // Media buttons
 
-    public void clickOnYahooFinance()
-    {
-        utils.clickOnElement(yahooFinance);
+    public Landing clickOnYahooFinance() {
+        utils.click(yahooFinance);
+        return this;
     }
 
-    public void clickOnCryptoslate()
-    {
-        utils.clickOnElement(cryptoSlate);
+    public Landing clickOnCryptoslate() {
+        utils.click(cryptoSlate);
+        return this;
     }
 
-    public void clickOnCryptoglobe()
-    {
-        utils.clickOnElement(cryptoGlobe);
+    public Landing clickOnCryptoglobe() {
+        utils.click(cryptoGlobe);
+        return this;
     }
 
-    public void clickOnHackernoon()
-    {
-        utils.clickOnElement(hackernoon);
+    public Landing clickOnHackernoon() {
+        utils.click(hackernoon);
+        return this;
     }
 
-    public void clickOnProductHunt()
-    {
-        utils.clickOnElement(productHunt);
+    public Landing clickOnProductHunt() {
+        utils.click(productHunt);
+        return this;
     }
 
 
-    public void clickOnGetStartedBottom()
-    {
-        utils.clickOnElement(getStartedButtonBottom);
+    public Landing clickOnGetStartedBottom() {
+        utils.click(getStartedButtonBottom);
+        return this;
     }
 
 }

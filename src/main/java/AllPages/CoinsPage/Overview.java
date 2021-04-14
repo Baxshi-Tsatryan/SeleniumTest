@@ -181,467 +181,427 @@ public class Overview {
 
     // ----------------------------------------------- Methods -------------------------------------------------
 
-    public void clickOnIconClose()
-    {
-        utils.clickOnElement(iconClose);
+    public Overview clickOnIconClose() {
+        utils.click(iconClose);
+        return this;
     }
 
-    public void clickOnOverviewTab()
-    {
-        utils.clickOnElement(overviewTab);
+    public Overview clickOnOverviewTab() {
+        utils.click(overviewTab);
+        return this;
     }
 
 
     // Chart
 
-    public String get24hChange()
-    {
+    public String get24hChange() {
         return utils.getText(change24h);
     }
 
-    public String get24hChangeColor()
-    {
+    public String get24hChangeColor() {
         return utils.getCSSValue(change24h, "color");
     }
 
-    public void clickOnCandle()
-    {
-        utils.clickOnElement(candleChart);
+    public Overview clickOnCandle() {
+        utils.click(candleChart);
+        return this;
     }
 
-    public void clickOn24hChart()
-    {
-        utils.clickOnElement(chart24h);
+    public Overview clickOn24hChart() {
+        utils.click(chart24h);
+        return this;
     }
 
-    public void clickOn1wChart()
-    {
-        utils.clickOnElement(chart1w);
+    public Overview clickOn1wChart() {
+        utils.click(chart1w);
+        return this;
     }
 
-    public void clickOn1mChart()
-    {
-        utils.clickOnElement(chart1m);
+    public Overview clickOn1mChart() {
+        utils.click(chart1m);
+        return this;
     }
 
-    public void clickOn3mChart()
-    {
-        utils.clickOnElement(chart3m);
+    public Overview clickOn3mChart() {
+        utils.click(chart3m);
+        return this;
     }
 
-    public void clickOn6mChart()
-    {
-        utils.clickOnElement(chart6m);
+    public Overview clickOn6mChart() {
+        utils.click(chart6m);
+        return this;
     }
 
-    public void clickOn1yChart()
-    {
-        utils.clickOnElement(chart1y);
+    public Overview clickOn1yChart() {
+        utils.click(chart1y);
+        return this;
     }
 
-    public void clickOnAllChart()
-    {
-        utils.clickOnElement(chartAll);
+    public Overview clickOnAllChart() {
+        utils.click(chartAll);
+        return this;
     }
 
-    public void clickOnChartBTC()
-    {
-        utils.clickOnElement(chartBTC);
+    public Overview clickOnChartBTC() {
+        utils.click(chartBTC);
+        return this;
     }
 
-    public Boolean chartBTCIsEnabled()
-    {
+    public Boolean chartBTCIsEnabled() {
         return utils.isEnabled(chartBTC);
     }
 
-    public Boolean chartBTCIsSelected()
-    {
+    public Boolean chartBTCIsSelected() {
         return utils.isSelected(chartBTC);
     }
 
-    public void clickOnChartUSD()
-    {
-        utils.clickOnElement(chartUSD);
+    public Overview clickOnChartUSD() {
+        utils.click(chartUSD);
+        return this;
     }
 
-    public Boolean chartUSDIsEnabled()
-    {
+    public Boolean chartUSDIsEnabled() {
         return utils.isEnabled(chartUSD);
     }
 
-    public Boolean chartUSDIsSelected()
-    {
+    public Boolean chartUSDIsSelected() {
         return utils.isSelected(chartUSD);
     }
 
-    public void clickOnChartETH()
-    {
-        utils.clickOnElement(chartETH);
+    public Overview clickOnChartETH() {
+        utils.click(chartETH);
+        return this;
     }
 
-    public Boolean chartETHIsEnabled()
-    {
+    public Boolean chartETHIsEnabled() {
         return utils.isEnabled(chartETH);
     }
 
-    public Boolean chartETHIsSelected()
-    {
+    public Boolean chartETHIsSelected() {
         return utils.isSelected(chartETH);
     }
 
 
     // Description
 
-    public String getCoinNameDescription()
-    {
+    public String getCoinNameDescription() {
         return utils.getText(coinNameDescription);
     }
 
-    public String getCoinAvailableSupplyDescription()
-    {
+    public String getCoinAvailableSupplyDescription() {
         return utils.getText(coinAvailableSupplyDescription);
     }
 
-    public String getCoinTotalSupplyDescription()
-    {
+    public String getCoinTotalSupplyDescription() {
         return utils.getText(coinTotalSupplyDescription);
     }
 
-    public String getCoinMarketCapDescription()
-    {
+    public String getCoinMarketCapDescription() {
         return utils.getText(coinMarketCapDescription);
     }
 
-    public String getCoin24hTradingVolumeDescription()
-    {
+    public String getCoin24hTradingVolumeDescription() {
         return utils.getText(coin24hTradingVolumeDescription);
     }
 
-    public String getCoinMostActiveExchangeDescription()
-    {
+    public String getCoinMostActiveExchangeDescription() {
         return utils.getText(coinMostActiveExchangeDescription);
     }
 
 
     // Coin Calc
 
-    public void clickOnInvestInvested()
-    {
-        utils.clickOnElement(investInvested);
+    public Overview clickOnInvestInvested() {
+        utils.click(investInvested);
+        return this;
     }
 
-    public Boolean coinCalcIsDisplayed()
-    {
+    public Boolean coinCalcIsDisplayed() {
         return utils.isDisplayed(investInvested);
     }
 
-    public String getInvestInvestedText()
-    {
+    public String getInvestInvestedText() {
         return utils.getText(investInvested);
     }
 
-    public void typeFirstValueCalc(String price)
-    {
+    public Overview typeFirstValueCalc(String price) {
         utils.sendKeysAction(firstValueCalc, price);
+        return this;
     }
 
-    public void clearFirstValueCalc()
-    {
+    public Overview clearFirstValueCalc() {
         utils.clear(firstValueCalc);
+        return this;
     }
 
-    public String getFirstValueCalc()
-    {
+    public String getFirstValueCalc() {
         return utils.getText(firstValueCalc);
     }
 
-    public String getCoinNameCalc()
-    {
+    public String getCoinNameCalc() {
         return utils.getText(coinNameCalc);
     }
 
-    public void typeSecondValueCalc(String price)
-    {
+    public Overview typeSecondValueCalc(String price) {
         utils.sendKeysAction(secondValueCalc, price);
+        return this;
     }
 
-    public void clearSecondValueCalc()
-    {
+    public Overview clearSecondValueCalc() {
         utils.clear(secondValueCalc);
+        return this;
     }
 
-    public String getSecondValueCalc()
-    {
+    public String getSecondValueCalc() {
         return utils.getText(secondValueCalc);
     }
 
-    public String getDateCalc()
-    {
+    public String getDateCalc() {
         return utils.getText(dateCalc);
     }
 
-    public void typeDateCalc(String date)
-    {
+    public Overview typeDateCalc(String date) {
         utils.sendKeysAction(dateCalc, date);
+        return this;
     }
 
-    public void clickOnDateCalc()
-    {
-        utils.clickOnElement(dateCalc);
+    public Overview clickOnDateCalc() {
+        utils.click(dateCalc);
+        return this;
     }
 
-    public String getCurrentDateCalc()
-    {
+    public String getCurrentDateCalc() {
         return utils.getText(dateCalc);
     }
 
-    public void clickOnNextMonthCalc() {
-        utils.clickOnElement(calendarNextMonth);
+    public Overview clickOnNextMonthCalc() {
+        utils.click(calendarNextMonth);
+        return this;
     }
 
-    public void clickOnPreviousMonthCalc()
-    {
-        utils.clickOnElement(calendarPreviousMonth);
+    public Overview clickOnPreviousMonthCalc() {
+        utils.click(calendarPreviousMonth);
+        return this;
     }
 
-    public String getResultCalc()
-    {
+    public String getResultCalc() {
         return utils.getText(calcResult);
     }
 
 
     // Poll
 
-    public void clickOnBuyPoll()
-    {
-        utils.clickOnElement(buyPoll);
+    public Overview clickOnBuyPoll() {
+        utils.click(buyPoll);
+        return this;
     }
 
-    public Boolean pollIsDisplayed()
-    {
+    public Boolean pollIsDisplayed() {
         return utils.isDisplayed(buyPoll);
     }
 
-    public void clickOnSellPoll()
-    {
-        utils.clickOnElement(sellPoll);
+    public Overview clickOnSellPoll() {
+        utils.click(sellPoll);
+        return this;
     }
 
-    public void clickOnHoldPoll()
-    {
-        utils.clickOnElement(holdPoll);
+    public Overview clickOnHoldPoll() {
+        utils.click(holdPoll);
+        return this;
     }
 
-    public String getBuyPercentPoll()
-    {
+    public String getBuyPercentPoll() {
         return utils.getText(buyPercentPoll);
     }
 
-    public String getSellPercentPoll()
-    {
+    public String getSellPercentPoll() {
         return utils.getText(sellPercentPoll);
     }
 
-    public String getHoldPercentPoll()
-    {
+    public String getHoldPercentPoll() {
         return utils.getText(holdPercentPoll);
     }
 
 
     // Insights
 
-    public void clickOnInsightsHelp()
-    {
-        utils.clickOnElement(helpInsights);
+    public Overview clickOnInsightsHelp() {
+        utils.click(helpInsights);
+        return this;
     }
 
-    public Boolean insightsIsDisplayed()
-    {
+    public Boolean insightsIsDisplayed() {
         return utils.isDisplayed(firstInsightShowChart);
     }
 
-    public String getFirstInsightPercent()
-    {
+    public String getFirstInsightPercent() {
         return utils.getText(firstInsightPercent);
     }
 
-    public void clickOnFirstInsightShowChart()
-    {
-        utils.clickOnElement(firstInsightShowChart);
+    public Overview clickOnFirstInsightShowChart() {
+        utils.click(firstInsightShowChart);
+        return this;
     }
 
-    public String getSecondInsightPercent()
-    {
+    public String getSecondInsightPercent() {
         return utils.getText(secondInsightPercent);
     }
 
-    public void clickOnSecondInsightShowChart()
-    {
-        utils.clickOnElement(secondInsightShowChart);
+    public Overview clickOnSecondInsightShowChart() {
+        utils.click(secondInsightShowChart);
+        return this;
     }
 
-    public Boolean secondInsightShowChartIsDisplayed()
-    {
+    public Boolean secondInsightShowChartIsDisplayed() {
         return utils.isDisplayed(secondInsightShowChart);
     }
 
-    public void clickOnSecondInsightGetPRO()
-    {
-        utils.clickOnElement(secondInsightGetPRO);
+    public Overview clickOnSecondInsightGetPRO() {
+        utils.click(secondInsightGetPRO);
+        return this;
     }
 
-    public Boolean secondInsightGetPROIsDisplayed()
-    {
+    public Boolean secondInsightGetPROIsDisplayed() {
         return utils.isDisplayed(secondInsightGetPRO);
     }
 
-    public String getThirdInsightPercent()
-    {
+    public String getThirdInsightPercent() {
         return utils.getText(thirdInsightPercent);
     }
 
-    public String getThirdInsightWalletPercent()
-    {
+    public String getThirdInsightWalletPercent() {
         return utils.getText(thirdInsightWalletPercent);
     }
 
-    public String getThirdInsightExchangePercent()
-    {
+    public String getThirdInsightExchangePercent() {
         return utils.getText(thirdInsightExchangePercent);
     }
 
-    public void clickOnThirdInsightShowChart()
-    {
-        utils.clickOnElement(thirdInsightShowChart);
+    public Overview clickOnThirdInsightShowChart() {
+        utils.click(thirdInsightShowChart);
+        return this;
     }
 
-    public String getForthInsightPercent()
-    {
+    public String getForthInsightPercent() {
         return utils.getText(forthInsightPercent);
     }
 
-    public String getForthInsightBuyPercent()
-    {
+    public String getForthInsightBuyPercent() {
         return utils.getText(forthInsightBuyPercent);
     }
 
-    public String getForthInsightSellPercent()
-    {
+    public String getForthInsightSellPercent() {
         return utils.getText(forthInsightSellPercent);
     }
 
-    public void clickOnForthInsightShowChart()
-    {
-        utils.clickOnElement(forthInsightShowChart);
+    public Overview clickOnForthInsightShowChart() {
+        utils.click(forthInsightShowChart);
+        return this;
     }
 
-    public Boolean forthInsightShowChartIsDisplayed()
-    {
+    public Boolean forthInsightShowChartIsDisplayed() {
         return utils.isDisplayed(secondInsightShowChart);
     }
 
-    public void clickOnForthInsightGetPRO()
-    {
-        utils.clickOnElement(forthInsightGetPRO);
+    public Overview clickOnForthInsightGetPRO() {
+        utils.click(forthInsightGetPRO);
+        return this;
     }
 
-    public Boolean forthInsightGetPROIsDisplayed()
-    {
+    public Boolean forthInsightGetPROIsDisplayed() {
         return utils.isDisplayed(forthInsightGetPRO);
     }
 
 
     // Insight window
 
-    public String getCurrentInsightName()
-    {
+    public String getCurrentInsightName() {
         return utils.getText(insightName);
     }
 
-    public void clickOnNextInsight()
-    {
-        utils.clickOnElement(nextInsight);
+    public Overview clickOnNextInsight() {
+        utils.click(nextInsight);
+        return this;
     }
 
-    public void clickOnPreviousInsight()
-    {
-        utils.clickOnElement(previousInsight);
+    public Overview clickOnPreviousInsight() {
+        utils.click(previousInsight);
+        return this;
     }
 
-    public void clickOnFirstInsightPoint()
-    {
-        utils.clickOnElement(firstInsightPoint);
+    public Overview clickOnFirstInsightPoint() {
+        utils.click(firstInsightPoint);
+        return this;
     }
 
-    public void clickOnSecondInsightPoint()
-    {
-        utils.clickOnElement(secondInsightPoint);
+    public Overview clickOnSecondInsightPoint() {
+        utils.click(secondInsightPoint);
+        return this;
     }
 
-    public void clickOnThirdInsightPoint()
-    {
-        utils.clickOnElement(thirdInsightPoint);
+    public Overview clickOnThirdInsightPoint() {
+        utils.click(thirdInsightPoint);
+        return this;
     }
 
-    public void clickOnForthInsightPoint()
-    {
-        utils.clickOnElement(forthInsightPoint);
+    public Overview clickOnForthInsightPoint() {
+        utils.click(forthInsightPoint);
+        return this;
     }
 
-    public Boolean secondAndForthInsightsLearnMoreIsDisplayed()
-    {
+    public Boolean secondAndForthInsightsLearnMoreIsDisplayed() {
         return utils.isDisplayed(secondAndForthInsightsLearnMore);
     }
 
-    public void clickOnSecondAndForthInsightsLearnMore()
-    {
-        utils.clickOnElement(secondAndForthInsightsLearnMore);
+    public Overview clickOnSecondAndForthInsightsLearnMore() {
+        utils.click(secondAndForthInsightsLearnMore);
+        return this;
     }
 
 
     // Markets
 
-    public void clickOnShowMoreMarkets()
-    {
-        utils.clickOnElement(marketShowMore);
+    public Overview clickOnShowMoreMarkets() {
+        utils.click(marketShowMore);
+        return this;
     }
 
-    public void clickOnMarketExchangeRank()
-    {
-        utils.clickOnElement(marketExchangeRank);
+    public Overview clickOnMarketExchangeRank() {
+        utils.click(marketExchangeRank);
+        return this;
     }
 
-    public void clickOnMarketPairRank()
-    {
-        utils.clickOnElement(marketPairRank);
+    public Overview clickOnMarketPairRank() {
+        utils.click(marketPairRank);
+        return this;
     }
 
-    public void clickOnMarketVolume24hRank()
-    {
-        utils.clickOnElement(marketVolume24hRank);
+    public Overview clickOnMarketVolume24hRank() {
+        utils.click(marketVolume24hRank);
+        return this;
     }
 
-    public void clickOnMarketVolumePercentRank()
-    {
-        utils.clickOnElement(marketVolumePercentRank);
+    public Overview clickOnMarketVolumePercentRank() {
+        utils.click(marketVolumePercentRank);
+        return this;
     }
 
-    public void clickOnMarketPriceRank()
-    {
-        utils.clickOnElement(marketPriceRank);
+    public Overview clickOnMarketPriceRank() {
+        utils.click(marketPriceRank);
+        return this;
     }
 
-    public void clickOnMarketLastUpdatedRank()
-    {
-        utils.clickOnElement(marketLastUpdatedRank);
+    public Overview clickOnMarketLastUpdatedRank() {
+        utils.click(marketLastUpdatedRank);
+        return this;
     }
 
 
     // News
 
-    public void clickOnShowMoreNews()
-    {
-        utils.clickOnElement(newsShowMore);
+    public Overview clickOnShowMoreNews() {
+        utils.click(newsShowMore);
+        return this;
     }
 
 }

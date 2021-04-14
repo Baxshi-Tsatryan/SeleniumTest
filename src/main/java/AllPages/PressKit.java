@@ -60,101 +60,101 @@ public class PressKit {
     By appScreensThird = By.cssSelector("a[href='https://static.coinstats.app/presskit/banners/appScreens_1024x512_3.png']");
 
 
-
     // ---------------------------------------------- Methods --------------------------------------------------
 
     // Logo Assets
 
-    public void clickOnLogoForDarkBackgroundSVG()
-    {
-        utils.clickOnElement(logoForDarkBackgroundSVG);
+    public PressKit clickOnLogoForDarkBackgroundSVG() {
+        utils.click(logoForDarkBackgroundSVG);
+        return this;
     }
 
-    public void clickOnLogoForDarkBackgroundPNG()
-    {
-        utils.clickOnElement(logoForDarkBackgroundPNG);
+    public PressKit clickOnLogoForDarkBackgroundPNG() {
+        utils.click(logoForDarkBackgroundPNG);
+        return this;
     }
 
-    public void clickOnLogoSymbolForDarkAndLightBackgroundSVG()
-    {
-        utils.clickOnElement(logoSymbolForDarkAndLightBackgroundSVG);
+    public PressKit clickOnLogoSymbolForDarkAndLightBackgroundSVG() {
+        utils.click(logoSymbolForDarkAndLightBackgroundSVG);
+        return this;
     }
 
-    public void clickOnLogoSymbolForDarkAndLightBackgroundPNG()
-    {
-        utils.clickOnElement(logoSymbolForDarkAndLightBackgroundPNG);
+    public PressKit clickOnLogoSymbolForDarkAndLightBackgroundPNG() {
+        utils.click(logoSymbolForDarkAndLightBackgroundPNG);
+        return this;
     }
 
-    public void clickOnLogoForLightBackgroundSVG()
-    {
-        utils.clickOnElement(logoForLightBackgroundSVG);
+    public PressKit clickOnLogoForLightBackgroundSVG() {
+        utils.click(logoForLightBackgroundSVG);
+        return this;
     }
 
-    public void clickOnLogoForLightBackgroundPNG()
-    {
-        utils.clickOnElement(logoForLightBackgroundPNG);
+    public PressKit clickOnLogoForLightBackgroundPNG() {
+        utils.click(logoForLightBackgroundPNG);
+        return this;
     }
 
 
     // Main Colors
 
-    public void clickOnCopyMainColorForDarkBackground()
-    {
-        utils.clickOnElement(copyMainColorForDarkBackground);
+    public PressKit clickOnCopyMainColorForDarkBackground() {
+        utils.click(copyMainColorForDarkBackground);
+        return this;
     }
 
-    public void clickOnCopyMainColorForLightBackground()
-    {
-        utils.clickOnElement(copyMainColorForLightBackground);
+    public PressKit clickOnCopyMainColorForLightBackground() {
+        utils.click(copyMainColorForLightBackground);
+        return this;
     }
 
 
     // Banner & Brand Images
 
-    public void clickOnGeneralLargeBanner()
-    {
-        utils.clickOnElement(generalBannerLarge);
+    public PressKit clickOnGeneralLargeBanner() {
+        utils.click(generalBannerLarge);
+        return this;
     }
 
-    public void clickOnGeneralMediumBanner()
-    {
-        utils.clickOnElement(generalBannerMedium);
+    public PressKit clickOnGeneralMediumBanner() {
+        utils.click(generalBannerMedium);
+        return this;
     }
 
-    public void clickOnGeneralSmallBanner()
-    {
-        utils.clickOnElement(generalBannerSmall);
-    }
-
-
-    public void clickOnPortfolioLargeBanner()
-    {
-        utils.clickOnElement(portfolioBannerLarge);
-    }
-
-    public void clickOnPortfolioMediumBanner()
-    {
-        utils.clickOnElement(portfolioBannerMedium);
-    }
-
-    public void clickOnPortfolioSmallBanner()
-    {
-        utils.clickOnElement(portfolioBannerSmall);
+    public PressKit clickOnGeneralSmallBanner() {
+        utils.click(generalBannerSmall);
+        return this;
     }
 
 
-    public void clickOnAppScreensFirstBanner()
-    {
-        utils.clickOnElement(appScreensFirst);
+    public PressKit clickOnPortfolioLargeBanner() {
+        utils.click(portfolioBannerLarge);
+        return this;
     }
 
-    public void clickOnAppScreensSecondBanner()
-    {
-        utils.clickOnElement(appScreensSecond);
+    public PressKit clickOnPortfolioMediumBanner() {
+        utils.click(portfolioBannerMedium);
+        return this;
     }
 
-    public void clickOnAppScreensThirdBanner() {
-        utils.clickOnElement(appScreensThird);
+    public PressKit clickOnPortfolioSmallBanner() {
+        utils.click(portfolioBannerSmall);
+        return this;
+    }
+
+
+    public PressKit clickOnAppScreensFirstBanner() {
+        utils.click(appScreensFirst);
+        return this;
+    }
+
+    public PressKit clickOnAppScreensSecondBanner() {
+        utils.click(appScreensSecond);
+        return this;
+    }
+
+    public PressKit clickOnAppScreensThirdBanner() {
+        utils.click(appScreensThird);
+        return this;
     }
 
 }

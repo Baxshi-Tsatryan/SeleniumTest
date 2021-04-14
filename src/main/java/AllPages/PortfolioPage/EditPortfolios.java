@@ -90,354 +90,325 @@ public class EditPortfolios {
 
     // Exchange
 
-    public void typeConnectionNameExchangeWallet(String exchangeWalletName)
-    {
+    public EditPortfolios typeConnectionNameExchangeWallet(String exchangeWalletName) {
         utils.sendKeysAction(connectionNameFieldExchangeWallet, exchangeWalletName);
+        return this;
     }
 
-    public String getConnectionNameExchangeWallet()
-    {
+    public String getConnectionNameExchangeWallet() {
         return utils.getText(connectionNameFieldExchangeWallet);
     }
 
-    public void clearConnectionNameExchangeWallet()
-    {
+    public EditPortfolios clearConnectionNameExchangeWallet() {
         utils.clear(connectionNameFieldExchangeWallet);
+        return this;
     }
 
-    public String getExchangeWalletName()
-    {
+    public String getExchangeWalletName() {
         return utils.getText(exchangeWalletNameField);
     }
 
-    public void clickOnWithTransactionHistoryExchange()
-    {
-        utils.clickOnElement(withTransactionHistoryExchange);
+    public EditPortfolios clickOnWithTransactionHistoryExchange() {
+        utils.click(withTransactionHistoryExchange);
+        return this;
     }
 
-    public Boolean withTransactionHistoryIsEnabled()
-    {
+    public Boolean withTransactionHistoryIsEnabled() {
         return utils.isEnabled(withTransactionHistoryExchange);
     }
 
-    public Boolean withTransactionHistoryIsSelected()
-    {
+    public Boolean withTransactionHistoryIsSelected() {
         return utils.isSelected(withTransactionHistoryExchange);
     }
 
-    public void typeAPIKeyExchange(String APIKey)
-    {
+    public EditPortfolios typeAPIKeyExchange(String APIKey) {
         utils.sendKeysAction(APIKeyFieldExchange, APIKey);
+        return this;
     }
 
-    public String getAPIKeyExchange()
-    {
+    public String getAPIKeyExchange() {
         return utils.getText(APIKeyFieldExchange);
     }
 
-    public void clearAPIKeyExchange()
-    {
+    public EditPortfolios clearAPIKeyExchange() {
         utils.clear(APIKeyFieldExchange);
+        return this;
     }
 
-    public Boolean APISecretFieldExchangeIsDisplayed()
-    {
+    public Boolean APISecretFieldExchangeIsDisplayed() {
         return utils.isDisplayed(APISecretFieldExchange);
     }
 
-    public void typeAPISecretExchange(String APISecret)
-    {
+    public EditPortfolios typeAPISecretExchange(String APISecret) {
         utils.sendKeysAction(APISecretFieldExchange, APISecret);
+        return this;
     }
 
-    public String getAPISecretExchange()
-    {
+    public String getAPISecretExchange() {
         return utils.getText(APISecretFieldExchange);
     }
 
-    public void clearAPISecretExchange()
-    {
+    public EditPortfolios clearAPISecretExchange() {
         utils.clear(APISecretFieldExchange);
+        return this;
     }
 
-    public Boolean passphraseExchangeIsDisplayed()
-    {
+    public Boolean passphraseExchangeIsDisplayed() {
         return utils.isDisplayed(passphraseFieldExchange);
     }
 
-    public void typePassphraseExchange(String passphrase)
-    {
+    public EditPortfolios typePassphraseExchange(String passphrase) {
         utils.sendKeysAction(passphraseFieldExchange, passphrase);
+        return this;
     }
 
-    public String getPassphraseExchange()
-    {
+    public String getPassphraseExchange() {
         return utils.getText(passphraseFieldExchange);
     }
 
-    public void clearPassphraseExchange()
-    {
+    public EditPortfolios clearPassphraseExchange() {
         utils.clear(passphraseFieldExchange);
+        return this;
     }
 
-    public void clickOnCalculateAmountOnTotalExchange()
-    {
-        utils.clickOnElement(calculateAmountOnTotalExchange);
+    public EditPortfolios clickOnCalculateAmountOnTotalExchange() {
+        utils.click(calculateAmountOnTotalExchange);
+        return this;
     }
 
-    public Boolean calculateAmountOnTotalExchangeIsEnabled()
-    {
+    public Boolean calculateAmountOnTotalExchangeIsEnabled() {
         return utils.isEnabled(calculateAmountOnTotalExchange);
     }
 
-    public Boolean calculateAmountOnTotalExchangeIsSelected()
-    {
+    public Boolean calculateAmountOnTotalExchangeIsSelected() {
         return utils.isSelected(calculateAmountOnTotalExchange);
     }
 
-    public void typeTotalCostExchange(String totalCost)
-    {
+    public EditPortfolios typeTotalCostExchange(String totalCost) {
         utils.sendKeysAction(totalCostFieldExchange, totalCost);
+        return this;
     }
 
-    public String getTotalCostExchange()
-    {
+    public String getTotalCostExchange() {
         return utils.getText(totalCostFieldExchange);
     }
 
-    public void clearTotalCostExchange()
-    {
+    public EditPortfolios clearTotalCostExchange() {
         utils.clear(totalCostFieldExchange);
+        return this;
     }
 
-    public void clickOnSave()
-    {
-        utils.clickOnElement(save);
+    public EditPortfolios clickOnSave() {
+        utils.click(save);
+        return this;
     }
 
-    public void clickOnCancel()
-    {
-        utils.clickOnElement(cancel);
+    public EditPortfolios clickOnCancel() {
+        utils.click(cancel);
+        return this;
     }
 
 
     // Coinbase
 
-    public Boolean loginWithCoinbaseIsDisplayed()
-    {
+    public Boolean loginWithCoinbaseIsDisplayed() {
         return utils.isDisplayed(loginWithCoinbase);
     }
 
-    public void clickOnLoginWithCoinbase()
-    {
-        utils.clickOnElement(loginWithCoinbase);
+    public EditPortfolios clickOnLoginWithCoinbase() {
+        utils.click(loginWithCoinbase);
+        return this;
     }
 
-    public void typeTotalCostCoinbase(String totalCost)
-    {
+    public EditPortfolios typeTotalCostCoinbase(String totalCost) {
         utils.sendKeysAction(totalCostFieldCoinbase, totalCost);
+        return this;
     }
 
-    public String getTotalCostCoinbase()
-    {
+    public String getTotalCostCoinbase() {
         return utils.getText(totalCostFieldCoinbase);
     }
 
-    public void clearTotalCostCoinbase()
-    {
+    public EditPortfolios clearTotalCostCoinbase() {
         utils.clear(totalCostFieldCoinbase);
+        return this;
     }
 
 
     // Exchange CSV
 
-    public String getPortfolioNameCSV()
-    {
+    public String getPortfolioNameCSV() {
         return utils.getText(portfolioNameFieldCSV);
     }
 
-    public void typeConnectionNameCSV(String connectionName)
-    {
+    public EditPortfolios typeConnectionNameCSV(String connectionName) {
         utils.sendKeysAction(connectionNameFieldCSV, connectionName);
+        return this;
     }
 
-    public String getConnectionNameCSV()
-    {
+    public String getConnectionNameCSV() {
         return utils.getText(connectionNameFieldCSV);
     }
 
-    public void clearConnectionNameCSV()
-    {
+    public EditPortfolios clearConnectionNameCSV() {
         utils.clear(connectionNameFieldCSV);
+        return this;
     }
 
-    public void typeTotalCostCSV(String totalCost)
-    {
+    public EditPortfolios typeTotalCostCSV(String totalCost) {
         utils.sendKeysAction(totalCostFieldCSV, totalCost);
+        return this;
     }
 
-    public String getTotalCostCSV()
-    {
+    public String getTotalCostCSV() {
         return utils.getText(totalCostFieldCSV);
     }
 
-    public void clearTotalCostCSV()
-    {
+    public EditPortfolios clearTotalCostCSV() {
         utils.clear(totalCostFieldCSV);
+        return this;
     }
 
-    public void clickOnAddAnotherCSV()
-    {
-        utils.clickOnElement(addAnotherCSV);
+    public EditPortfolios clickOnAddAnotherCSV() {
+        utils.click(addAnotherCSV);
+        return this;
     }
 
-    public void typePathToAnotherCSV(String path)
-    {
+    public EditPortfolios typePathToAnotherCSV(String path) {
         utils.sendKeysAction(addAnotherCSV, path);
+        return this;
     }
 
-    public String getErrorMessageCSV()
-    {
+    public String getErrorMessageCSV() {
         return utils.getText(errorMessageCSV);
     }
 
 
     // Wallet
 
-    public void typeWalletAddress(String walletAddress)
-    {
+    public EditPortfolios typeWalletAddress(String walletAddress) {
         utils.sendKeysAction(walletAddressField, walletAddress);
+        return this;
     }
 
-    public String getWalletAddress()
-    {
+    public String getWalletAddress() {
         return utils.getText(walletAddressField);
     }
 
-    public void clearWalletAddress()
-    {
+    public EditPortfolios clearWalletAddress() {
         utils.clear(walletAddressField);
+        return this;
     }
 
-    public void clickOnCalculateAmountOnTotalWallet()
-    {
-        utils.clickOnElement(calculateAmountOnTotalWallet);
+    public EditPortfolios clickOnCalculateAmountOnTotalWallet() {
+        utils.click(calculateAmountOnTotalWallet);
+        return this;
     }
 
-    public Boolean calculateAmountOnTotalWalletIsEnabled()
-    {
+    public Boolean calculateAmountOnTotalWalletIsEnabled() {
         return utils.isEnabled(calculateAmountOnTotalWallet);
     }
 
-    public Boolean calculateAmountOnTotalWalletIsSelected()
-    {
+    public Boolean calculateAmountOnTotalWalletIsSelected() {
         return utils.isSelected(calculateAmountOnTotalWallet);
     }
 
-    public void typeTotalCostWallet(String totalCost)
-    {
+    public EditPortfolios typeTotalCostWallet(String totalCost) {
         utils.sendKeysAction(totalCostFieldWallet, totalCost);
+        return this;
     }
 
-    public String getTotalCostWallet()
-    {
+    public String getTotalCostWallet() {
         return utils.getText(totalCostFieldWallet);
     }
 
-    public void clearTotalCostWallet()
-    {
+    public EditPortfolios clearTotalCostWallet() {
         utils.clear(totalCostFieldWallet);
+        return this;
     }
 
 
     // Multi-Coins Wallet
 
-    public void typeConnectionNameMultiWallet(String multiWalletName)
-    {
+    public EditPortfolios typeConnectionNameMultiWallet(String multiWalletName) {
         utils.sendKeysAction(connectionNameFieldMultiWallet, multiWalletName);
+        return this;
     }
 
-    public String getConnectionNameMultiWallet()
-    {
+    public String getConnectionNameMultiWallet() {
         return utils.getText(connectionNameFieldMultiWallet);
     }
 
-    public void clearConnectionNameMultiWallet()
-    {
+    public EditPortfolios clearConnectionNameMultiWallet() {
         utils.clear(connectionNameFieldMultiWallet);
+        return this;
     }
 
-    public void clickOnCalculateAmountOnTotalMultiWallet()
-    {
-        utils.clickOnElement(calculateAmountOnTotalMultiWallet);
+    public EditPortfolios clickOnCalculateAmountOnTotalMultiWallet() {
+        utils.click(calculateAmountOnTotalMultiWallet);
+        return this;
     }
 
-    public Boolean calculateAmountOnTotalMultiWalletIsEnabled()
-    {
+    public Boolean calculateAmountOnTotalMultiWalletIsEnabled() {
         return utils.isEnabled(calculateAmountOnTotalMultiWallet);
     }
 
-    public Boolean calculateAmountOnTotalMultiWalletIsSelected()
-    {
+    public Boolean calculateAmountOnTotalMultiWalletIsSelected() {
         return utils.isSelected(calculateAmountOnTotalMultiWallet);
     }
 
-    public void typeTotalCostMultiWallet(String totalCost)
-    {
+    public EditPortfolios typeTotalCostMultiWallet(String totalCost) {
         utils.sendKeysAction(totalCostFieldMultiWallet, totalCost);
+        return this;
     }
 
-    public String getTotalCostMultiWallet()
-    {
+    public String getTotalCostMultiWallet() {
         return utils.getText(totalCostFieldMultiWallet);
     }
 
-    public void clearTotalCostMultiWallet()
-    {
+    public EditPortfolios clearTotalCostMultiWallet() {
         utils.clear(totalCostFieldMultiWallet);
+        return this;
     }
 
-    public void clickOnConnectNewWalletMulti()
-    {
-        utils.clickOnElement(connectNewWalletMultiWallet);
+    public EditPortfolios clickOnConnectNewWalletMulti() {
+        utils.click(connectNewWalletMultiWallet);
+        return this;
     }
 
 
     // Sub wallet
 
-    public void typeConnectionNameSubWallet(String subWalletName)
-    {
+    public EditPortfolios typeConnectionNameSubWallet(String subWalletName) {
         utils.sendKeysAction(connectionNameFieldSubWallet, subWalletName);
+        return this;
     }
 
-    public String getConnectionNameSubWallet()
-    {
+    public String getConnectionNameSubWallet() {
         return utils.getText(connectionNameFieldSubWallet);
     }
 
-    public void clearConnectionNameSubWallet()
-    {
+    public EditPortfolios clearConnectionNameSubWallet() {
         utils.clear(connectionNameFieldSubWallet);
+        return this;
     }
 
-    public String getSubWalletName()
-    {
+    public String getSubWalletName() {
         return utils.getText(walletNameFieldSubWallet);
     }
 
-    public void typeSubWalletAddress(String subWalletAddress)
-    {
+    public EditPortfolios typeSubWalletAddress(String subWalletAddress) {
         utils.sendKeysAction(walletAddressFieldSubWallet, subWalletAddress);
+        return this;
     }
 
-    public String getSubWalletAddress()
-    {
+    public String getSubWalletAddress() {
         return utils.getText(walletAddressFieldSubWallet);
     }
 
-    public void clearSubWalletAddress()
-    {
+    public EditPortfolios clearSubWalletAddress() {
         utils.clear(walletAddressFieldSubWallet);
+        return this;
     }
 
 }

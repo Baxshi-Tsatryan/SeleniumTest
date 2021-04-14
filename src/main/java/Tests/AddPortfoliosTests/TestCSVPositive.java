@@ -8,14 +8,12 @@ import MainPackage.Driver;
 import MainPackage.Paths;
 import MainPackage.SeleniumUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.util.List;
 
-public class TestClass extends Driver {
+public class TestCSVPositive extends Driver {
 
     AddPortfolio addPortfolio;
     LeftSideOfPagePortfolios leftSideOfPagePortfolios;
@@ -40,11 +38,11 @@ public class TestClass extends Driver {
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
-        //deleteAllPortfolios();
+        deleteAllPortfolios();
 
-        Thread.sleep(3000);
-        addPortfolio.clickOnAddPortfolio();
-        addPortfolio.clickOnConnectExchange();
+        addPortfolio
+                .clickOnAddPortfolio()
+                .clickOnConnectExchange();
 
         List<WebElement> listTill = driver.findElements(By.className("qa-exchanges"));
 
@@ -58,14 +56,14 @@ public class TestClass extends Driver {
 
             if (exchangeName.equals("Crypto.com app"))
             {
-                for(int j = 1; j <= 4; j++)
+                for(int j = 0; j <= 3; j++)
                 {
                     WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
                     importButton.sendKeys(paths.getAllCryptoComCSVs(j));
 
                     if (addPortfolio.invalidCSVErrorMessageIsDisplayed() == true)
                     {
-                        System.err.println(exchangeName + " exchange CSV is Invalid");
+                        System.err.println(exchangeName + " " + j + "th  exchange CSV is Invalid");
                         addPortfolio.clickOnBack();
                         continue;
                     }
@@ -75,6 +73,72 @@ public class TestClass extends Driver {
                         addPortfolio.clickOnBack();
                         continue;
                     }
+
+                    else
+                    {
+                        System.out.println(exchangeName + j + " th exchange CSV passed");
+                    }
+
+                    list.get(i).click();
+                }
+            }
+
+            else if (exchangeName.equals("Nexo (beta)") || exchangeName.equals("Nexo"))
+            {
+                for(int j = 0; j <= 6; j++)
+                {
+                    WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
+                    importButton.sendKeys(paths.getAllCryptoComCSVs(j));
+
+                    if (addPortfolio.invalidCSVErrorMessageIsDisplayed() == true)
+                    {
+                        System.err.println(exchangeName + " " + j + "th  exchange CSV is Invalid");
+                        addPortfolio.clickOnBack();
+                        continue;
+                    }
+
+                    if (afterCSVUploading(exchangeName) == false)
+                    {
+                        addPortfolio.clickOnBack();
+                        continue;
+                    }
+
+                    else
+                    {
+                        System.out.println(exchangeName + j + " th exchange CSV passed");
+                    }
+
+                    list.get(i).click();
+
+                }
+            }
+
+            else if (exchangeName.equals("BlockFi (beta)") || exchangeName.equals("BlockFi"))
+            {
+                for(int j = 0; j <= 1; j++)
+                {
+                    WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
+                    importButton.sendKeys(paths.getAllCryptoComCSVs(j));
+
+                    if (addPortfolio.invalidCSVErrorMessageIsDisplayed() == true)
+                    {
+                        System.err.println(exchangeName + " " + j + "th  exchange CSV is Invalid");
+                        addPortfolio.clickOnBack();
+                        continue;
+                    }
+
+                    if (afterCSVUploading(exchangeName) == false)
+                    {
+                        addPortfolio.clickOnBack();
+                        continue;
+                    }
+
+                    else
+                    {
+                        System.out.println(exchangeName + j + " th exchange CSV passed");
+                    }
+
+                    list.get(i).click();
 
                 }
             }
@@ -97,9 +161,14 @@ public class TestClass extends Driver {
                     addPortfolio.clickOnBack();
                     continue;
                 }
+
+                else
+                {
+                    System.out.println(exchangeName + " exchange CSV passed");
+                }
             }
 
-            else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX") || exchangeName.equals("Nexo (beta)"))
+            else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX") || exchangeName.equals("Bitrue"))
             {
                 addPortfolio.clickOnBack();
                 continue;
@@ -123,6 +192,11 @@ public class TestClass extends Driver {
                     addPortfolio.clickOnBack();
                     continue;
                 }
+
+                else
+                {
+                    System.out.println(exchangeName + " exchange CSV passed");
+                }
             }
         }
 
@@ -131,13 +205,11 @@ public class TestClass extends Driver {
 
     public Boolean afterCSVUploading(String exchangeName) throws InterruptedException {
 
-        Thread.sleep(3000);
         addPortfolio.clickOnSubmit();
 
         if (addPortfolio.invalidCSVErrorMessageIsDisplayed() == true)
         {
             System.err.println(exchangeName + " exchange CSV is Invalid");
-            addPortfolio.clickOnBack();
             return false;
         }
 
@@ -145,7 +217,6 @@ public class TestClass extends Driver {
         {
             addPortfolio.clickOnNoShowMeSynced();
         }
-
 
         List<WebElement> list2 = driver.findElements(By.className("qa-portfolios"));
         String addedExchangeName = list2.get(list2.size() - 1)
@@ -163,27 +234,22 @@ public class TestClass extends Driver {
     }
 
     public void deleteAllPortfolios() throws InterruptedException {
-        allURLs.navigateToPortfolioPage();
+        List<WebElement> listTill = driver.findElements(By.className("qa-portfolios"));
 
-        while (true) {
+        if (listTill.size() < 2) {
+            System.out.println("There is only 1 portfolio");
+            return;
+        }
 
-            try {
-                leftSideOfPagePortfolios.moveToSecondPortfolioName();
-                Thread.sleep(1000);
-                try {
-                    leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
-                } catch (Exception e) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("ul#portfolio-list > li:nth-of-type(3) .icon-delete")));
-                }
-                leftSideOfPagePortfolios.clickOnDeleteInDelete();
-                Thread.sleep(3000);
-            }
-            catch (NoSuchElementException e)
-            {
-                break;
-            }
+        for (int i = 0; i < listTill.size() - 2; i++) {
+
+            List<WebElement> list = driver.findElements(By.className("qa-portfolios"));
+
+            leftSideOfPagePortfolios.moveToSecondPortfolioName();
+            Thread.sleep(1000);
+            leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
+            leftSideOfPagePortfolios.clickOnDeleteInDelete();
+            Thread.sleep(3000);
         }
     }
-
 }

@@ -51,100 +51,95 @@ public class BuyCoin {
 
     // General
 
-    public void clickOnBuyCoin()
-    {
-        utils.clickOnElement(buyCoinButton);
+    public BuyCoin clickOnBuyCoin() {
+        utils.click(buyCoinButton);
+        return this;
     }
 
-    public void clickOnMercuryo()
-    {
-        utils.clickOnElement(mercuryo);
+    public BuyCoin clickOnMercuryo() {
+        utils.click(mercuryo);
+        return this;
     }
 
-    public void clickOnBinance()
-    {
-        utils.clickOnElement(binance);
+    public BuyCoin clickOnBinance() {
+        utils.click(binance);
+        return this;
     }
 
-    public void clickOnWyre()
-    {
-        utils.clickOnElement(wyre);
+    public BuyCoin clickOnWyre() {
+        utils.click(wyre);
+        return this;
     }
 
 
     // Mercuryo / Wyre
 
-    public String getCurrentCurrency()
-    {
+    public String getCurrentCurrency() {
         return utils.getText(currentCurrency);
     }
 
-    public void clickOnCurrenciesDropDown()
-    {
-        utils.clickOnElement(currencyDropDown);
+    public BuyCoin clickOnCurrenciesDropDown() {
+        utils.click(currencyDropDown);
+        return this;
     }
 
-    public void typeFirstCurrencyAmount(String amount)
-    {
+    public BuyCoin typeFirstCurrencyAmount(String amount) {
         utils.sendKeysAction(firstAmountField, amount);
+        return this;
     }
 
-    public String getFirstCurrencyAmount()
-    {
+    public String getFirstCurrencyAmount() {
         return utils.getText(firstAmountField);
     }
 
-    public void clearFirstCurrencyAmount()
-    {
+    public BuyCoin clearFirstCurrencyAmount() {
         utils.clear(firstAmountField);
+        return this;
     }
 
-    public void typeSecondCurrencyAmount(String amount)
-    {
+    public BuyCoin typeSecondCurrencyAmount(String amount) {
         utils.sendKeysAction(secondAmountField, amount);
+        return this;
     }
 
-    public String getSecondCurrencyAmount()
-    {
+    public String getSecondCurrencyAmount() {
         return utils.getText(secondAmountField);
     }
 
-    public void clearSecondCurrencyAmount()
-    {
+    public BuyCoin clearSecondCurrencyAmount() {
         utils.clear(secondAmountField);
+        return this;
     }
 
-    public String getErrorMessage()
-    {
+    public String getErrorMessage() {
         return utils.getText(errorMessage);
     }
 
-    public void clickOnContinue()
-    {
-        utils.clickOnElement(continueButton);
+    public BuyCoin clickOnContinue() {
+        utils.click(continueButton);
+        return this;
     }
 
 
     // Wallets / Exchanges page
 
-    public void typeWalletAddress(String walletAddress)
-    {
+    public BuyCoin typeWalletAddress(String walletAddress) {
         utils.sendKeysAction(walletAddressField, walletAddress);
+        return this;
     }
 
-    public String getWalletAddress()
-    {
+    public String getWalletAddress() {
         return utils.getText(walletAddressField);
     }
 
-    public void clearWalletAddress()
-    {
+    public BuyCoin clearWalletAddress() {
         utils.clear(walletAddressField);
+        return this;
     }
 
-    public void clickOnBuy()
-    {
-        utils.clickOnElement(buyButton);
+    public BuyCoin clickOnBuy() {
+        utils.click(buyButton);
+        return this;
     }
 
 }

@@ -91,254 +91,237 @@ public class CoinPriceMarqueeWidgets {
     By widgetBorderColor = By.cssSelector("tbody > tr:nth-of-type(3) > td:nth-of-type(2) .widget-color-rectangle");
 
 
-
     // -------------------------------------------- Methods -------------------------------------------------
 
     // On Widget
 
     // Static
 
-    public void clickOnNextStatic()
-    {
-        utils.clickOnElement(nextButtonStatic);
+    public CoinPriceMarqueeWidgets clickOnNextStatic() {
+        utils.click(nextButtonStatic);
+        return this;
     }
 
-    public void clickOnPreviousStatic()
-    {
-        utils.clickOnElement(previousButtonStatic);
+    public CoinPriceMarqueeWidgets clickOnPreviousStatic() {
+        utils.click(previousButtonStatic);
+        return this;
     }
 
 
     // Fixed Top
 
-    public void clickOnNextFixedTop()
-    {
-        utils.clickOnElement(nextButtonFixedTop);
+    public CoinPriceMarqueeWidgets clickOnNextFixedTop() {
+        utils.click(nextButtonFixedTop);
+        return this;
     }
 
-    public void clickOnPreviousFixedTop()
-    {
-        utils.clickOnElement(previousButtonFixedTop);
+    public CoinPriceMarqueeWidgets clickOnPreviousFixedTop() {
+        utils.click(previousButtonFixedTop);
+        return this;
     }
 
 
     // Fixed Bottom
 
-    public void clickOnNextFixedBottom()
-    {
-        utils.clickOnElement(nextButtonFixedBottom);
+    public CoinPriceMarqueeWidgets clickOnNextFixedBottom() {
+        utils.click(nextButtonFixedBottom);
+        return this;
     }
 
-    public void clickOnPreviousFixedBottom()
-    {
-        utils.clickOnElement(previousButtonFixedBottom);
+    public CoinPriceMarqueeWidgets clickOnPreviousFixedBottom() {
+        utils.click(previousButtonFixedBottom);
+        return this;
     }
 
 
     // Settings
 
-    public String getCurrentPosition()
-    {
+    public String getCurrentPosition() {
         return utils.getText(positionDropDown);
     }
 
-    public void clickOnPositionDropDown()
-    {
-        utils.clickOnElement(positionDropDown);
+    public CoinPriceMarqueeWidgets clickOnPositionDropDown() {
+        utils.click(positionDropDown);
+        return this;
     }
 
-    public void clickOnStaticPosition()
-    {
-        utils.clickOnElement(staticPosition);
+    public CoinPriceMarqueeWidgets clickOnStaticPosition() {
+        utils.click(staticPosition);
+        return this;
     }
 
-    public void clickOnFixedTopPosition()
-    {
-        utils.clickOnElement(fixedTopPosition);
+    public CoinPriceMarqueeWidgets clickOnFixedTopPosition() {
+        utils.click(fixedTopPosition);
+        return this;
     }
 
-    public void clickOnFixedBottomPosition()
-    {
-        utils.clickOnElement(fixedBottomPosition);
+    public CoinPriceMarqueeWidgets clickOnFixedBottomPosition() {
+        utils.click(fixedBottomPosition);
+        return this;
     }
 
-    public String getCurrentCoinsCount()
-    {
+    public String getCurrentCoinsCount() {
         return utils.getText(coinsCountDropDown);
     }
 
-    public void clickOnCoinsCountDropDown()
-    {
-        utils.clickOnElement(coinsCountDropDown);
+    public CoinPriceMarqueeWidgets clickOnCoinsCountDropDown() {
+        utils.click(coinsCountDropDown);
+        return this;
     }
 
-    public String getCurrentTheme()
-    {
+    public String getCurrentTheme() {
         return utils.getText(themeDropDown);
     }
 
-    public void clickOnThemeDropDown()
-    {
-        utils.clickOnElement(themeDropDown);
+    public CoinPriceMarqueeWidgets clickOnThemeDropDown() {
+        utils.click(themeDropDown);
+        return this;
     }
 
-    public void clickOnLightMode()
-    {
-        utils.clickOnElement(lightMode);
+    public CoinPriceMarqueeWidgets clickOnLightMode() {
+        utils.click(lightMode);
+        return this;
     }
 
-    public void clickOnDarkMode()
-    {
-        utils.clickOnElement(darkMode);
+    public CoinPriceMarqueeWidgets clickOnDarkMode() {
+        utils.click(darkMode);
+        return this;
     }
 
-    public String getCurrentCurrency()
-    {
+    public String getCurrentCurrency() {
         return utils.getText(currencyDropDown);
     }
 
-    public void clickOnCurrencyDropDown()
-    {
-        utils.clickOnElement(currencyDropDown);
+    public CoinPriceMarqueeWidgets clickOnCurrencyDropDown() {
+        utils.click(currencyDropDown);
+        return this;
     }
 
-    public String getWidth()
-    {
+    public String getWidth() {
         return utils.getText(widthField);
     }
 
-    public void clearWidth()
-    {
+    public CoinPriceMarqueeWidgets clearWidth() {
         utils.clear(widthField);
+        return this;
     }
 
-    public void typeWidth(String width)
-    {
+    public CoinPriceMarqueeWidgets typeWidth(String width) {
         utils.sendKeysAction(widthField, width);
+        return this;
     }
 
 
     // Colors fields
 
-    public String getBackgroundColorText()
-    {
+    public String getBackgroundColorText() {
         return utils.getText(backgroundColorField);
     }
 
-    public void clearBackgroundColorText()
-    {
+    public CoinPriceMarqueeWidgets clearBackgroundColorText() {
         utils.clear(backgroundColorField);
+        return this;
     }
 
-    public void typeBackgroundColorText(String colorText)
-    {
+    public CoinPriceMarqueeWidgets typeBackgroundColorText(String colorText) {
         utils.sendKeysAction(backgroundColorField, "color");
+        return this;
     }
 
-    public String getTextColorText()
-    {
+    public String getTextColorText() {
         return utils.getText(textColorField);
     }
 
-    public void clearTextColorText()
-    {
+    public CoinPriceMarqueeWidgets clearTextColorText() {
         utils.clear(textColorField);
+        return this;
     }
 
-    public void typeTextColorText(String colorText)
-    {
+    public CoinPriceMarqueeWidgets typeTextColorText(String colorText) {
         utils.sendKeysAction(textColorField, "color");
+        return this;
     }
 
-    public String getPercentageArrowUpColorText()
-    {
+    public String getPercentageArrowUpColorText() {
         return utils.getText(percentageArrowUpColorField);
     }
 
-    public void clearPercentageArrowUpColorText()
-    {
+    public CoinPriceMarqueeWidgets clearPercentageArrowUpColorText() {
         utils.clear(percentageArrowUpColorField);
+        return this;
     }
 
-    public void typePercentageArrowUpColorText(String colorText)
-    {
+    public CoinPriceMarqueeWidgets typePercentageArrowUpColorText(String colorText) {
         utils.sendKeysAction(percentageArrowUpColorField, "color");
+        return this;
     }
 
-    public String getPercentageArrowDownColorText()
-    {
+    public String getPercentageArrowDownColorText() {
         return utils.getText(percentageArrowDownColorField);
     }
 
-    public void clearPercentageArrowDownColorText()
-    {
+    public CoinPriceMarqueeWidgets clearPercentageArrowDownColorText() {
         utils.clear(percentageArrowDownColorField);
+        return this;
     }
 
-    public void typePercentageArrowDownColorText(String colorText)
-    {
+    public CoinPriceMarqueeWidgets typePercentageArrowDownColorText(String colorText) {
         utils.sendKeysAction(navigationButtonsColorField, "color");
+        return this;
     }
 
-    public String getNavigationButtonsColorText()
-    {
+    public String getNavigationButtonsColorText() {
         return utils.getText(navigationButtonsColorField);
     }
 
-    public void clearNavigationButtonsColorText()
-    {
+    public CoinPriceMarqueeWidgets clearNavigationButtonsColorText() {
         utils.clear(navigationButtonsColorField);
+        return this;
     }
 
-    public void typeNavigationButtonsColorText(String colorText)
-    {
+    public CoinPriceMarqueeWidgets typeNavigationButtonsColorText(String colorText) {
         utils.sendKeysAction(navigationButtonsColorField, "color");
+        return this;
     }
 
-    public String getWidgetBorderColorText()
-    {
+    public String getWidgetBorderColorText() {
         return utils.getText(widgetBorderColorField);
     }
 
-    public void clearWidgetBorderColorText()
-    {
+    public CoinPriceMarqueeWidgets clearWidgetBorderColorText() {
         utils.clear(widgetBorderColorField);
+        return this;
     }
 
-    public void typeWidgetBorderColorText(String colorText)
-    {
+    public CoinPriceMarqueeWidgets typeWidgetBorderColorText(String colorText) {
         utils.sendKeysAction(widgetBorderColorField, "color");
+        return this;
     }
 
 
     // Colors
 
-    public String getBackgroundColor()
-    {
+    public String getBackgroundColor() {
         return utils.getCSSValue(backgroundColor, "color");
     }
 
-    public String getTextColor(){
+    public String getTextColor() {
         return utils.getCSSValue(textColor, "color");
     }
 
-    public String getPercentageArrowUpColor()
-    {
+    public String getPercentageArrowUpColor() {
         return utils.getCSSValue(percentageArrowUpColor, "color");
     }
 
-    public String getPercentageArrowDownColor()
-    {
+    public String getPercentageArrowDownColor() {
         return utils.getCSSValue(percentageArrowDownColor, "color");
     }
 
-    public String getNavigationButtonsColor()
-    {
+    public String getNavigationButtonsColor() {
         return utils.getCSSValue(navigationButtonsColor, "color");
     }
 
-    public String getWidgetBorderColor()
-    {
+    public String getWidgetBorderColor() {
         return utils.getCSSValue(widgetBorderColor, "color");
     }
 

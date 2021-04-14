@@ -67,160 +67,149 @@ public class TradeCoin {
     By successOK = By.cssSelector(".primary");
 
 
-
     // ----------------------------------------------- Methods ------------------------------------------------------
 
     // General
 
-    public void clickOnTradeCoin()
-    {
-        utils.clickOnElement(tradeCoin);
+    public TradeCoin clickOnTradeCoin() {
+        utils.click(tradeCoin);
+        return this;
     }
 
-    public void clickOnBuyCoin()
-    {
-        utils.clickOnElement(buyCoin);
+    public TradeCoin clickOnBuyCoin() {
+        utils.click(buyCoin);
+        return this;
     }
 
-    public void clickOnSellCoin()
-    {
-        utils.clickOnElement(sellCoin);
+    public TradeCoin clickOnSellCoin() {
+        utils.click(sellCoin);
+        return this;
     }
 
 
     // Trading page
 
-    public void clickOnIconBack()
-    {
-        utils.clickOnElement(iconBack);
+    public TradeCoin clickOnIconBack() {
+        utils.click(iconBack);
+        return this;
     }
 
-    public String getExchangeTotal()
-    {
+    public String getExchangeTotal() {
         return utils.getText(exchangeTotal);
     }
 
-    public void typeWithCoinName(String coinName)
-    {
+    public TradeCoin typeWithCoinName(String coinName) {
         utils.sendKeysAction(withCoinField, coinName);
+        return this;
     }
 
-    public void clickOnWithCoinField()
-    {
-        utils.clickOnElement(withCoinField);
+    public TradeCoin clickOnWithCoinField() {
+        utils.click(withCoinField);
+        return this;
     }
 
-    public String getWithCoinNameAndAmount()
-    {
+    public String getWithCoinNameAndAmount() {
         return utils.getText(currentWithCoinNameAndAmount);
     }
 
-    public void clickOnClearWithCoinIcon()
-    {
-        utils.clickOnElement(clearWithCoinIcon);
+    public TradeCoin clickOnClearWithCoinIcon() {
+        utils.click(clearWithCoinIcon);
+        return this;
     }
 
-    public void typeBuyingCoinName(String coinName)
-    {
+    public TradeCoin typeBuyingCoinName(String coinName) {
         utils.sendKeysAction(buyingCoinField, coinName);
+        return this;
     }
 
-    public void clickOnBuyingCoinField()
-    {
-        utils.clickOnElement(buyingCoinField);
+    public TradeCoin clickOnBuyingCoinField() {
+        utils.click(buyingCoinField);
+        return this;
     }
 
-    public String getBuyingCoinNameAndAmount()
-    {
+    public String getBuyingCoinNameAndAmount() {
         return utils.getText(currentBuyingCoinNameAndAmount);
     }
 
-    public void clickOnClearBuyingCoinIcon()
-    {
-        utils.clickOnElement(clearBuyingCoinIcon);
+    public TradeCoin clickOnClearBuyingCoinIcon() {
+        utils.click(clearBuyingCoinIcon);
+        return this;
     }
 
-    public void typeWithCoinAmount(String amount)
-    {
+    public TradeCoin typeWithCoinAmount(String amount) {
         utils.sendKeysAction(withCoinAmountField, amount);
+        return this;
     }
 
-    public String getWithCoinSymbol()
-    {
+    public String getWithCoinSymbol() {
         return utils.getText(withCoinAmountSymbol);
     }
 
-    public void clearWithCoinAmountField()
-    {
+    public TradeCoin clearWithCoinAmountField() {
         utils.clear(withCoinAmountField);
+        return this;
     }
 
-    public String getWithCoinAmount()
-    {
+    public String getWithCoinAmount() {
         return utils.getText(withCoinAmountField);
     }
 
-    public void typeBuyingCoinAmount(String amount)
-    {
+    public TradeCoin typeBuyingCoinAmount(String amount) {
         utils.sendKeysAction(buyingCoinAmountField, amount);
+        return this;
     }
 
-    public String getBuyingCoinSymbol()
-    {
+    public String getBuyingCoinSymbol() {
         return utils.getText(buyingCoinAmountSymbol);
     }
 
-    public void clearBuyingCoinAmountField()
-    {
+    public TradeCoin clearBuyingCoinAmountField() {
         utils.clear(buyingCoinAmountField);
+        return this;
     }
 
-    public String getBuyingCoinAmount()
-    {
+    public String getBuyingCoinAmount() {
         return utils.getText(buyingCoinAmountField);
     }
 
-    public void clickOn100Percent()
-    {
-        utils.clickOnElement(button100);
+    public TradeCoin clickOn100Percent() {
+        utils.click(button100);
+        return this;
     }
 
-    public void clickOn50Percent()
-    {
-        utils.clickOnElement(button50);
+    public TradeCoin clickOn50Percent() {
+        utils.click(button50);
+        return this;
     }
 
-    public void clickOn25Percent()
-    {
-        utils.clickOnElement(button25);
+    public TradeCoin clickOn25Percent() {
+        utils.click(button25);
+        return this;
     }
 
-    public void clickOnSubmitTrade()
-    {
-        utils.clickOnElement(submitTrade);
+    public TradeCoin clickOnSubmitTrade() {
+        utils.click(submitTrade);
+        return this;
     }
 
 
     // Success page
 
-    public String getSuccessBought()
-    {
+    public String getSuccessBought() {
         return utils.getText(successBought);
     }
 
-    public String getSuccessSold()
-    {
+    public String getSuccessSold() {
         return utils.getText(successSold);
     }
 
-    public Boolean successPageIsDisplayed()
-    {
+    public Boolean successPageIsDisplayed() {
         return utils.isDisplayed(successBought);
     }
 
-    public void clickOnSuccessOK()
-    {
-        utils.clickOnElement(successOK);
+    public TradeCoin clickOnSuccessOK() {
+        utils.click(successOK);
+        return this;
     }
 
 }

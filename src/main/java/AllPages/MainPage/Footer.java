@@ -103,55 +103,64 @@ public class Footer {
 
     // Stay In Touch
 
-    public void clickOnTelegramIcon() {
-        utils.clickOnElement(telegramIcon);
+    public Footer clickOnTelegramIcon() {
+        utils.click(telegramIcon);
+        return this;
     }
 
-    public void clickOnFacebookIcon() {
-        utils.clickOnElement(facebookIcon);
+    public Footer clickOnFacebookIcon() {
+        utils.click(facebookIcon);
+        return this;
     }
 
-    public void clickOnTwitterIcon() {
-        utils.clickOnElement(twitterIcon);
+    public Footer clickOnTwitterIcon() {
+        utils.click(twitterIcon);
+        return this;
     }
 
-    public void clickOnSteemitIcon() {
-        utils.clickOnElement(steemitIcon);
+    public Footer clickOnSteemitIcon() {
+        utils.click(steemitIcon);
+        return this;
     }
 
-    public void clickOnMediumIcon() {
-        utils.clickOnElement(mediumIcon);
+    public Footer clickOnMediumIcon() {
+        utils.click(mediumIcon);
+        return this;
     }
 
-    public void clickOnMailtoIcon() {
-        utils.clickOnElement(mailtoIcon);
+    public Footer clickOnMailtoIcon() {
+        utils.click(mailtoIcon);
+        return this;
     }
 
 
     // Explore Our Product
 
-    public void clickOnMacAppStore() {
+    public Footer clickOnMacAppStore() {
         Actions action = new Actions(driver);
         action.sendKeys(Keys.SPACE).build().perform();
         action.sendKeys(Keys.SPACE).build().perform();
 
-        utils.clickOnElement(macAppStore);
+        utils.click(macAppStore);
+        return this;
     }
 
-    public void clickOnAppStore() {
+    public Footer clickOnAppStore() {
         Actions action = new Actions(driver);
         action.sendKeys(Keys.SPACE).build().perform();
         action.sendKeys(Keys.SPACE).build().perform();
 
-        utils.clickOnElement(appStore);
+        utils.click(appStore);
+        return this;
     }
 
-    public void clickOnGooglePlayMarket() {
+    public Footer clickOnGooglePlayMarket() {
         Actions action = new Actions(driver);
         action.sendKeys(Keys.SPACE).build().perform();
         action.sendKeys(Keys.SPACE).build().perform();
 
-        utils.clickOnElement(googlePlayMarket);
+        utils.click(googlePlayMarket);
+        return this;
     }
 
 
@@ -159,111 +168,129 @@ public class Footer {
 
     // Company
 
-    public void clickOnLivePrices() {
-        utils.clickOnElement(livePrices);
+    public Footer clickOnLivePrices() {
+        utils.click(livePrices);
+        return this;
     }
 
-    public void clickOn24hMarketReport() {
-        utils.clickOnElement(report24h);
+    public Footer clickOn24hMarketReport() {
+        utils.click(report24h);
+        return this;
     }
 
-    public void clickOnNews() {
-        utils.clickOnElement(news);
+    public Footer clickOnNews() {
+        utils.click(news);
+        return this;
     }
 
-    public void clickOnPortfolioTracker() {
-        utils.clickOnElement(portfolioTracker);
+    public Footer clickOnPortfolioTracker() {
+        utils.click(portfolioTracker);
+        return this;
     }
 
 
     //Learn
 
-    public void clickOnLearnConnectExchange() {
-        utils.clickOnElement(learnConnectExchangeAccount);
+    public Footer clickOnLearnConnectExchange() {
+        utils.click(learnConnectExchangeAccount);
+        return this;
     }
 
-    public void clickOnLearnConnectWallet() {
-        utils.clickOnElement(learnConnectWalletAccount);
+    public Footer clickOnLearnConnectWallet() {
+        utils.click(learnConnectWalletAccount);
+        return this;
     }
 
-    public void clickOnLearnTradeOnYourExchanges() {
-        utils.clickOnElement(learnTradeOnYourExchanges);
+    public Footer clickOnLearnTradeOnYourExchanges() {
+        utils.click(learnTradeOnYourExchanges);
+        return this;
     }
 
-    public void clickOnLearnAddTransactions() {
-        utils.clickOnElement(learnAddTransaction);
+    public Footer clickOnLearnAddTransactions() {
+        utils.click(learnAddTransaction);
+        return this;
     }
 
-    public void clickOnLearnPLCalculation() {
-        utils.clickOnElement(learnPLCalculation);
+    public Footer clickOnLearnPLCalculation() {
+        utils.click(learnPLCalculation);
+        return this;
     }
 
 
     // Resources
 
-    public void clickOnPressKit() {
-        utils.clickOnElement(pressKit);
+    public Footer clickOnPressKit() {
+        utils.click(pressKit);
+        return this;
     }
 
-    public void clickOnAPIDocs() {
-        utils.clickOnElement(APIDocs);
+    public Footer clickOnAPIDocs() {
+        utils.click(APIDocs);
+        return this;
     }
 
-    public void clickOnBlog() {
-        utils.clickOnElement(blog);
+    public Footer clickOnBlog() {
+        utils.click(blog);
+        return this;
     }
 
 
     // Other Products
 
-    public void clickOnMacOSWidget() {
-        utils.clickOnElement(macOSWidget);
+    public Footer clickOnMacOSWidget() {
+        utils.click(macOSWidget);
+        return this;
     }
 
-    public void clickOnMozillaExtension() {
-        utils.clickOnElement(mozillaExtension);
+    public Footer clickOnMozillaExtension() {
+        utils.click(mozillaExtension);
+        return this;
     }
 
-    public void clickOnChromeExtension() {
-        utils.clickOnElement(chromeExtension);
+    public Footer clickOnChromeExtension() {
+        utils.click(chromeExtension);
+        return this;
     }
 
-    public void clickOnAppleTV() {
-        utils.clickOnElement(appleTV);
+    public Footer clickOnAppleTV() {
+        utils.click(appleTV);
+        return this;
     }
 
 
     // Company
 
-    public void clickOnPricing() {
-        utils.clickOnElement(pricing);
+    public Footer clickOnPricing() {
+        utils.click(pricing);
+        return this;
     }
 
-    public void clickOnPrivacyPolicy() {
-        utils.clickOnElement(privacyPolicy);
+    public Footer clickOnPrivacyPolicy() {
+        utils.click(privacyPolicy);
+        return this;
     }
 
-    public void clickOnTermsOfUse()
-    {
-        utils.clickOnElement(termsOfUse);
+    public Footer clickOnTermsOfUse() {
+        utils.click(termsOfUse);
+        return this;
     }
 
 
     // Contact Us
 
-    public void clickOnHelpCenter()
-    {
-        utils.clickOnElement(helpCenter);
+    public Footer clickOnHelpCenter() {
+        utils.click(helpCenter);
+        return this;
     }
 
-    public void clickOnFeatureRequest()
-    {
-        utils.clickOnElement(featureRequest);
+    public Footer clickOnFeatureRequest() {
+        utils.click(featureRequest);
+        return this;
     }
 
-    public void clickOnAdvertiseAtCoinStats()
-    {
-        utils.clickOnElement(advertiseAtCoinStats);
+    public Footer clickOnAdvertiseAtCoinStats() {
+        utils.click(advertiseAtCoinStats);
+        return this;
     }
 
 }

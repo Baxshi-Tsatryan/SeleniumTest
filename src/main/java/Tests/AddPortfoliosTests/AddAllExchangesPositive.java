@@ -4,7 +4,6 @@ import AllPages.PortfolioPage.AddPortfolio;
 import AllPages.PortfolioPage.LeftSideOfPagePortfolios;
 import MainPackage.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
@@ -78,12 +77,12 @@ public class AddAllExchangesPositive extends Driver {
                     break;
                 }
 
-               //case "Bitmex": {
-               //    //firstAPI = exchangesWalletsAPIs.getBitmexID();
-               //    //secondAPI = exchangesWalletsAPIs.getBitmexAPISecret();
-               //    loop = 2;
-               //    break;
-               //}
+                //case "Bitmex": {
+                //    //firstAPI = exchangesWalletsAPIs.getBitmexID();
+                //    //secondAPI = exchangesWalletsAPIs.getBitmexAPISecret();
+                //    loop = 2;
+                //    break;
+                //}
 
                 case "Bitfinex": {
                     firstAPI = exchangesWalletsAPIs.getBitfinexAPIKey();
@@ -186,63 +185,80 @@ public class AddAllExchangesPositive extends Driver {
                     break;
                 }
 
-                default:
-                {
+                default: {
                     Thread.sleep(1000);
                     addPortfolio.clickOnBack();
                     continue;
                 }
             }
 
-            if (loop == 1)
-            {
+            if (loop == 1) {
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPI(secondAPI);
                 Thread.sleep(1000);
                 addPortfolio.clickOnSubmit();
+
+                if (addPortfolio.errorMessageIsDisplayed() == true) {
+                    String errorMessage = addPortfolio.getErrorMessage();
+                    System.out.println(exchangeName + " API is invalid");
+                    System.out.print(exchangeName + " error message is - " + errorMessage);
+                    addPortfolio.clickOnBack();
+                    continue;
+                }
+
+//                else if (addPortfolio.errorMessage2IsDisplayed() == true)
+//                {
+//                    String errorMessage2 = addPortfolio.getErrorMessage2();
+//                    System.err.println(exchangeName + " API is invalid");
+//                    System.out.print(exchangeName + " error message is - " + errorMessage2);
+//                    addPortfolio.clickOnBack();
+//                    continue;
+//                }
+
                 addPortfolio.clickOnBinanceAddAccounts();
                 addPortfolio.clickOnSuccessYes();
                 addPortfolio.clickOnConnectExchange();
                 continue;
-            }
-
-            else if (loop == 2)
-            {
+            } else if (loop == 2) {
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPI(secondAPI);
-            }
-
-            else if (loop == 8)
-            {
+            } else if (loop == 8) {
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPIByBit(secondAPI);
-            }
-
-            else if (loop == 3)
-            {
+            } else if (loop == 3) {
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPI(secondAPI);
                 addPortfolio.typeThirdAPI(thirdAPI);
             }
-            
+
             Thread.sleep(1000);
             addPortfolio.clickOnSubmit();
-            try {
-                addPortfolio.clickOnNoShowMeSynced();
-            }
-            catch (NoSuchElementException e)
-            {
-                System.err.println(exchangeName + " exchange API is Invalid or exception with Submit button");
+
+            if (addPortfolio.errorMessageIsDisplayed() == true) {
+                String errorMessage = addPortfolio.getErrorMessage();
+                System.out.println(exchangeName + " API is invalid");
+                System.out.print(exchangeName + " error message is - " + errorMessage);
                 addPortfolio.clickOnBack();
                 continue;
+            } else if (addPortfolio.errorMessage2IsDisplayed() == true) {
+                String errorMessage2 = addPortfolio.getErrorMessage2();
+                System.err.println(exchangeName + " API is invalid");
+                System.out.print(exchangeName + " error message is - " + errorMessage2);
+                addPortfolio.clickOnBack();
+                continue;
+            }
+
+            try {
+                addPortfolio.clickOnNoShowMeSynced();
+            } catch (NoSuchElementException e) {
+                System.err.println(exchangeName + " No, Show me Synced button is not appears");
             }
 
             List<WebElement> list2 = driver.findElements(By.className("qa-portfolios"));
             String addedExchangeName = list2.get(list2.size() - 1).getText();
 
-            if (!exchangeName.equals(addedExchangeName))
-            {
-                System.err.println(exchangeName + " exchange API is invalid");
+            if (!exchangeName.equals(addedExchangeName)) {
+                System.err.println(exchangeName + " exchange name is invalid");
             }
 
             Thread.sleep(2000);
@@ -254,28 +270,24 @@ public class AddAllExchangesPositive extends Driver {
         deleteAllPortfolios();
     }
 
-
     public void deleteAllPortfolios() throws InterruptedException {
-        allURLs.navigateToPortfolioPage();
 
-        while (true) {
+        List<WebElement> listTill = driver.findElements(By.className("qa-portfolios"));
 
-            try {
-                leftSideOfPagePortfolios.moveToSecondPortfolioName();
-                Thread.sleep(1000);
-                try {
-                    leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
-                } catch (Exception e) {
-                    JavascriptExecutor executor = (JavascriptExecutor) driver;
-                    executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("ul#portfolio-list > li:nth-of-type(3) .icon-delete")));
-                }
-                leftSideOfPagePortfolios.clickOnDeleteInDelete();
-                Thread.sleep(3000);
-            }
-            catch (NoSuchElementException e)
-            {
-                break;
-            }
+        if (listTill.size() < 2) {
+            System.out.println("There is only 1 portfolio");
+            return;
+        }
+
+        for (int i = 0; i < listTill.size() - 2; i++) {
+
+            List<WebElement> list = driver.findElements(By.className("qa-portfolios"));
+
+            leftSideOfPagePortfolios.moveToSecondPortfolioName();
+            Thread.sleep(1000);
+            leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
+            leftSideOfPagePortfolios.clickOnDeleteInDelete();
+            Thread.sleep(3000);
         }
     }
 }

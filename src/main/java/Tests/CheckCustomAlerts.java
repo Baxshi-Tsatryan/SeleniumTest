@@ -39,11 +39,11 @@ public class CheckCustomAlerts extends Driver {
 
                 alerts.clickOnConditionDropDown();
                 driver.findElement(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index + ") .table-row")).getText();
-                utils.clickOnElement(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index + ") .table-row"));
+                utils.click(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index + ") .table-row"));
 
                 alerts.clickOnAlertFrequencyDropDown();
                 driver.findElement(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index2 + ") .table-row")).getText();
-                utils.clickOnElement(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index2 + ") .table-row"));
+                utils.click(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index2 + ") .table-row"));
 
                 alerts.typePrice(randNum);
                 alerts.typeNote("AnyNote");

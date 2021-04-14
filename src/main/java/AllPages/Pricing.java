@@ -57,111 +57,105 @@ public class Pricing {
     // ----------------------------------------------- Methods ----------------------------------------------------
 
 
-    public Boolean monthlyAnnualSwitcherIsEnabled()
-    {
+    public Boolean monthlyAnnualSwitcherIsEnabled() {
         return utils.isEnabled(monthlyAnnualSwitcher);
     }
 
-    public Boolean monthlyAnnualSwitcherIsSelected()
-    {
+    public Boolean monthlyAnnualSwitcherIsSelected() {
         return utils.isSelected(monthlyAnnualSwitcher);
     }
 
-    public void clickOnMonthlyAnnualSwitcher()
-    {
-        utils.clickOnElement(monthlyAnnualSwitcher);
+    public Pricing clickOnMonthlyAnnualSwitcher() {
+        utils.click(monthlyAnnualSwitcher);
+        return this;
     }
 
-    public String getPricePRO()
-    {
+    public String getPricePRO() {
         return utils.getText(pricePRO);
     }
 
-    public String getPricePremium()
-    {
+    public String getPricePremium() {
         return utils.getText(pricePremium);
     }
 
-    public void clickOniOSLinkPRO()
-    {
-        utils.clickOnElement(iOSLinkPRO);
+    public Pricing clickOniOSLinkPRO() {
+        utils.click(iOSLinkPRO);
+        return this;
     }
 
-    public void clickOnAndroidLinkPRO()
-    {
-        utils.clickOnElement(androidLinkPRO);
+    public Pricing clickOnAndroidLinkPRO() {
+        utils.click(androidLinkPRO);
+        return this;
     }
 
-    public void clickOniOSLinkPremium()
-    {
-        utils.clickOnElement(iOSLinkPremium);
+    public Pricing clickOniOSLinkPremium() {
+        utils.click(iOSLinkPremium);
+        return this;
     }
 
-    public void clickOnAndroidLinkPremium()
-    {
-        utils.clickOnElement(androidLinkPremium);
+    public Pricing clickOnAndroidLinkPremium() {
+        utils.click(androidLinkPremium);
+        return this;
     }
 
-    public void clickOnPromoCodePRO()
-    {
-        utils.clickOnElement(promoCodePRONotPRO);
+    public Pricing clickOnPromoCodePRO() {
+        utils.click(promoCodePRONotPRO);
+        return this;
     }
 
-    public void clickOnPromoCodePremium()
-    {
-        utils.clickOnElement(promoCodePremiumNotPRO);
+    public Pricing clickOnPromoCodePremium() {
+        utils.click(promoCodePremiumNotPRO);
+        return this;
     }
 
-    public void clickOnStartFreeTrialPRO()
-    {
-        utils.clickOnElement(startFreeTrialPRO);
+    public Pricing clickOnStartFreeTrialPRO() {
+        utils.click(startFreeTrialPRO);
+        return this;
     }
 
-    public void clickOnStartFreeTrialPremium()
-    {
-        utils.clickOnElement(startFreeTrialPremium);
+    public Pricing clickOnStartFreeTrialPremium() {
+        utils.click(startFreeTrialPremium);
+        return this;
     }
 
-    public void clickOnContactUSCommunity()
-    {
-        utils.clickOnElement(contactUSCommunity);
+    public Pricing clickOnContactUSCommunity() {
+        utils.click(contactUSCommunity);
+        return this;
     }
 
-    public void clickOnContactUSBottom()
-    {
-        utils.clickOnElement(contactUSBottom);
+    public Pricing clickOnContactUSBottom() {
+        utils.click(contactUSBottom);
+        return this;
     }
 
 
     // Promo Code
 
-    public void typePromoCode(String promoCode)
-    {
+    public Pricing typePromoCode(String promoCode) {
         utils.sendKeysAction(promoCodeField, promoCode);
+        return this;
     }
 
-    public String getPromoCode()
-    {
+    public String getPromoCode() {
         return utils.getText(promoCodeField);
     }
 
-    public void clearPromoCode()
-    {
+    public Pricing clearPromoCode() {
         utils.clear(promoCodeField);
+        return this;
     }
 
-    public void clickOnCopy()
-    {
-        utils.clickOnElement(promoCodePaste);
+    public Pricing clickOnCopy() {
+        utils.click(promoCodePaste);
+        return this;
     }
 
-    public void clickOnSubmitPromoCode()
-    {
-        utils.clickOnElement(promoCodeSubmit);
+    public Pricing clickOnSubmitPromoCode() {
+        utils.click(promoCodeSubmit);
+        return this;
     }
 
-    public String getPromoCodeErrorMessage()
-    {
+    public String getPromoCodeErrorMessage() {
         return utils.getText(promoCodeErrorMessage);
     }
 

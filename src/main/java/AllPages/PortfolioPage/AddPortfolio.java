@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.asserts.Assertion;
 
 public class AddPortfolio {
 
@@ -14,6 +15,7 @@ public class AddPortfolio {
     public AddPortfolio(WebDriver driver) {
         this.driver = driver;
         utils = new SeleniumUtils(this.driver);
+
     }
 
     By addPortfolio = By.cssSelector(".primary");
@@ -29,21 +31,23 @@ public class AddPortfolio {
 
     By exchangeAPISyncTab = By.cssSelector("div.tabs-section > div:nth-of-type(1) > .tab-label");
 
-    By firstAPIField = By.cssSelector("div.jsx-2422867904 > .inputs-section > div:nth-of-type(1) [placeholder='Enter here']");
+    By firstAPIField = By.cssSelector("div.jsx-636662421 > .inputs-section > div:nth-of-type(1) [placeholder='Enter here']");
 
     By exchangeFirstPaste = By.cssSelector("div.jsx-2795784314 > .inputs-section > div:nth-of-type(1) .jsx-1426819953");
 
-    By secondAPIField = By.cssSelector("div.jsx-2422867904 div:nth-of-type(2) [name]");
+    By secondAPIField = By.cssSelector("div.jsx-636662421 div:nth-of-type(2) [name]");
 
-    By secondAPIByBitField = By.cssSelector("div.jsx-2422867904 > .inputs-section > div:nth-of-type(2) [name]");
+    By secondAPIByBitField = By.cssSelector("div.jsx-636662421 > .inputs-section > div:nth-of-type(2) [name]");
 
     By exchangeSecondPaste = By.cssSelector("div.jsx-2795784314 div:nth-of-type(2) .jsx-1426819953");
 
-    By thirdAPIField = By.cssSelector("div.jsx-2422867904 div:nth-of-type(3) [name]");
+    By thirdAPIField = By.cssSelector("div.jsx-636662421 div:nth-of-type(3) [name]");
 
     By exchangeThirdPaste = By.cssSelector("div.jsx-2795784314 div:nth-of-type(3) .jsx-1426819953");
 
     By errorMessages = By.cssSelector("div.error-text > span");
+
+    By errorMessage2 = By.cssSelector("div.text-down > span");
 
     By submitButton = By.cssSelector("div.submit-section > .jsx-1426819953");
 
@@ -155,187 +159,198 @@ public class AddPortfolio {
 
     // ------------------------------------------ Methods ------------------------------------------------
 
-
-    public void clickOnAddPortfolio() {
+    public AddPortfolio clickOnAddPortfolio() {
 
         try {
-            utils.clickOnElement(addPortfolio);
-        }
-        catch (Exception e) {
+            utils.click(addPortfolio);
+        } catch (Exception e) {
             JavascriptExecutor executor = (JavascriptExecutor) driver;
             executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".primary")));
         }
+        return this;
     }
 
-    public void clickOnAddPortfolioAction()
-    {
-        utils.actionClickOnElement(addPortfolio);
+    public AddPortfolio clickOnAddPortfolioAction() {
+        utils.actionClick(addPortfolio);
+        return this;
     }
 
 
     // Exchanges
 
-    public void clickOnConnectExchange() {
-        utils.clickOnElement(connectExchange);
+    public AddPortfolio clickOnConnectExchange() {
+        utils.click(connectExchange);
+        return this;
     }
 
-    public void searchExchange(String exchangeName) {
+    public AddPortfolio searchExchange(String exchangeName) {
         utils.sendKeysAction(searchExchanges, exchangeName);
+        return this;
     }
 
-    public void deleteExchangeName()
-    {
+    public AddPortfolio deleteExchangeName() {
         utils.clear(exchangeNameField);
+        return this;
     }
 
-    public void typeExchangeName(String exchangeName) {
+    public AddPortfolio typeExchangeName(String exchangeName) {
         utils.sendKeysAction(exchangeNameField, exchangeName);
+        return this;
     }
 
-    public String getExchangeName()
-    {
+    public String getExchangeName() {
         return utils.getText(exchangeNameField);
     }
 
-    public void clearExchangeName()
-    {
+    public AddPortfolio clearExchangeName() {
         utils.clear(exchangeNameField);
+        return this;
     }
 
-    public void clickOnAPISyncTab() {
-        utils.clickOnElement(exchangeAPISyncTab);
+    public AddPortfolio clickOnAPISyncTab() {
+        utils.click(exchangeAPISyncTab);
+        return this;
     }
 
-    public void typeFirstAPI(String firstAPI) {
+    public AddPortfolio typeFirstAPI(String firstAPI) {
         utils.sendKeysAction(firstAPIField, firstAPI);
+        return this;
     }
 
-    public String getTypedFirstAPI()
-    {
+    public String getTypedFirstAPI() {
         return utils.getText(firstAPIField);
     }
 
-    public void clearTypedFirstAPI()
-    {
+    public AddPortfolio clearTypedFirstAPI() {
         utils.clear(firstAPIField);
+        return this;
     }
 
-    public void typeSecondAPI(String secondAPI) {
+    public AddPortfolio typeSecondAPI(String secondAPI) {
         utils.sendKeysAction(secondAPIField, secondAPI);
+        return this;
     }
 
-    public void typeSecondAPIByBit(String secondAPIByBit)
-    {
+    public AddPortfolio typeSecondAPIByBit(String secondAPIByBit) {
         utils.sendKeysAction(secondAPIByBitField, secondAPIByBit);
+        return this;
     }
 
-    public String getTypedSecondAPI()
-    {
+    public String getTypedSecondAPI() {
         return utils.getText(secondAPIField);
     }
 
-    public void clearTypedSecondAPI()
-    {
+    public AddPortfolio clearTypedSecondAPI() {
         utils.clear(secondAPIField);
+        return this;
     }
 
-    public Boolean secondAPIFieldIsDisplayed()
-    {
+    public Boolean secondAPIFieldIsDisplayed() {
         return utils.isDisplayed(secondAPIField);
     }
 
-    public void typeThirdAPI(String thirdAPI) {
+    public AddPortfolio typeThirdAPI(String thirdAPI) {
         utils.sendKeysAction(thirdAPIField, thirdAPI);
+        return this;
     }
 
-    public String getTypedThirdAPI()
-    {
+    public String getTypedThirdAPI() {
         return utils.getText(thirdAPIField);
     }
 
-    public void clearTypedThirdAPI()
-    {
+    public AddPortfolio clearTypedThirdAPI() {
         utils.clear(thirdAPIField);
+        return this;
     }
 
-    public Boolean thirdAPIFieldIsDisplayed()
-    {
+    public Boolean thirdAPIFieldIsDisplayed() {
         return utils.isDisplayed(thirdAPIField);
     }
 
-    public void clickOnFirstPaste() {
-        utils.clickOnElement(exchangeFirstPaste);
+    public AddPortfolio clickOnFirstPaste() {
+        utils.click(exchangeFirstPaste);
+        return this;
     }
 
-    public void clickOnSecondPaste() {
-        utils.clickOnElement(exchangeSecondPaste);
+    public AddPortfolio clickOnSecondPaste() {
+        utils.click(exchangeSecondPaste);
+        return this;
     }
 
-    public Boolean secondPasteIsDisplayed()
-    {
+    public Boolean secondPasteIsDisplayed() {
         return utils.isDisplayed(exchangeSecondPaste);
     }
 
-    public void clickOnThirdPaste() {
-        utils.clickOnElement(exchangeThirdPaste);
+    public AddPortfolio clickOnThirdPaste() {
+        utils.click(exchangeThirdPaste);
+        return this;
     }
 
-    public Boolean thirdPasteIsDisplayed()
-    {
+    public Boolean thirdPasteIsDisplayed() {
         return utils.isDisplayed(exchangeThirdPaste);
+    }
+
+    public Boolean errorMessageIsDisplayed() {
+        return utils.isDisplayed(errorMessages);
+    }
+
+    public Boolean errorMessage2IsDisplayed() {
+        return utils.isDisplayed(errorMessage2);
     }
 
     public String getErrorMessage() {
         return utils.getText(errorMessages);
     }
 
+    public String getErrorMessage2() {
+        return utils.getText(errorMessage2);
+    }
+
 
     // Binance
 
-    public void clickOnSpotAccount() {
-        utils.clickOnElement(binanceSpotAccount);
+    public AddPortfolio clickOnSpotAccount() {
+        utils.click(binanceSpotAccount);
+        return this;
     }
 
-    public Boolean spotAccountIsSelected()
-    {
+    public Boolean spotAccountIsSelected() {
         return utils.isSelected(binanceSpotAccount);
     }
 
-    public Boolean spotAccountIsEnabled()
-    {
+    public Boolean spotAccountIsEnabled() {
         return utils.isEnabled(binanceSpotAccount);
     }
 
-    public void clickOnMarginAccount() {
-        utils.clickOnElement(binanceMarginAccount);
+    public AddPortfolio clickOnMarginAccount() {
+        utils.click(binanceMarginAccount);
+        return this;
     }
 
-    public Boolean marginAccountIsSelected()
-    {
+    public Boolean marginAccountIsSelected() {
         return utils.isSelected(binanceMarginAccount);
     }
 
-    public Boolean marginAccountIsEnabled()
-    {
+    public Boolean marginAccountIsEnabled() {
         return utils.isEnabled(binanceMarginAccount);
     }
 
-    public void clickOnFuturesAccount() {
-        utils.clickOnElement(binanceFuturesAccount);
+    public AddPortfolio clickOnFuturesAccount() {
+        utils.click(binanceFuturesAccount);
+        return this;
     }
 
-    public Boolean futuresAccountIsSelected()
-    {
+    public Boolean futuresAccountIsSelected() {
         return utils.isSelected(binanceFuturesAccount);
     }
 
-    public Boolean futuresAccountIsEnabled()
-    {
+    public Boolean futuresAccountIsEnabled() {
         return utils.isEnabled(binanceFuturesAccount);
     }
 
-    public void clickOnBinanceAddAccounts() {
-        utils.clickOnElement(binanceAddAccountsButton);
+    public AddPortfolio clickOnBinanceAddAccounts() {
+        utils.click(binanceAddAccountsButton);
+        return this;
     }
 
     public String getFuturesErrorMessage() {
@@ -353,61 +368,69 @@ public class AddPortfolio {
 
     // CSV
 
-    public void clickOnCSVTab() {
-        utils.clickOnElement(CSVTab);
+    public AddPortfolio clickOnCSVTab() {
+        utils.click(CSVTab);
+        return this;
     }
 
-    public void importCSVFile(String pathToCSVFile) {
+    public AddPortfolio importCSVFile(String pathToCSVFile) {
         utils.sendKeysAction(importCSVField, pathToCSVFile);
+        return this;
     }
 
-    public void clickOnImportCSVFile()
-    {
-        utils.clickOnElement(importCSVField);
+    public AddPortfolio clickOnImportCSVFile() {
+        utils.click(importCSVField);
+        return this;
     }
 
-    public void clickOnCSVTemplate() {
-        utils.clickOnElement(downloadCSVTemplateButton);
+    public AddPortfolio clickOnCSVTemplate() {
+        utils.click(downloadCSVTemplateButton);
+        return this;
     }
 
-    public void importAnotherCSVFile(String pathToCSVFile) {
+    public AddPortfolio importAnotherCSVFile(String pathToCSVFile) {
         utils.sendKeysAction(addAnotherCSVButton, pathToCSVFile);
+        return this;
     }
 
-    public void clickOnDeleteCSVFileButton() {
-        utils.clickOnElement(deleteCSVButton);
+    public AddPortfolio clickOnDeleteCSVFileButton() {
+        utils.click(deleteCSVButton);
+        return this;
     }
 
     public String getInvalidCSVErrorMessage() {
         return utils.getText(invalidCSVFileErrorMessage);
     }
 
-    public Boolean invalidCSVErrorMessageIsDisplayed()
-    {
+    public Boolean invalidCSVErrorMessageIsDisplayed() {
         return utils.isDisplayed(invalidCSVFileErrorMessage);
     }
 
-
     // Wallets
 
-    public void clickOnConnectWallet() {
-        utils.clickOnElement(connectWallet);
+    public AddPortfolio clickOnConnectWallet() {
+        utils.click(connectWallet);
+        return this;
     }
 
-    public void searchWallet(String walletName) {
+    public AddPortfolio searchWallet(String walletName) {
         utils.sendKeysAction(searchWallets, walletName);
+        return this;
     }
 
-    public void typeWalletName(String walletName) {
+    public AddPortfolio typeWalletName(String walletName) {
         utils.sendKeysAction(walletNameField, walletName);
+        return this;
     }
 
-    public void typeWalletAddress(String walletAddress) {
+    public AddPortfolio typeWalletAddress(String walletAddress) {
         utils.sendKeysAction(walletAddressField, walletAddress);
+        return this;
     }
 
-    public void clickOnPasteWallet() {
-        utils.clickOnElement(walletPasteButton);
+    public AddPortfolio clickOnPasteWallet() {
+        utils.click(walletPasteButton);
+        return this;
     }
 
     public String getWalletError() {
@@ -417,138 +440,137 @@ public class AddPortfolio {
 
     // Multi-Coins Wallets
 
-    public void clickOnSearchDropDownMultiCoinsWallets() {
-        utils.clickOnElement(searchDropDownMultiCoinsWallets);
+    public AddPortfolio clickOnSearchDropDownMultiCoinsWallets() {
+        utils.click(searchDropDownMultiCoinsWallets);
+        return this;
     }
 
-    public void clickOnFirstMultiCoinResult()
-    {
-        utils.clickOnElement(multiCoinsFirstResult);
+    public AddPortfolio clickOnFirstMultiCoinResult() {
+        utils.click(multiCoinsFirstResult);
+        return this;
     }
 
-    public void typeMultiCoinsWallet(String multiCoinName) {
+    public AddPortfolio typeMultiCoinsWallet(String multiCoinName) {
         utils.sendKeysAction(searchFieldInMultiCoinsWallet, multiCoinName);
+        return this;
     }
 
-    public void clickOnDeleteSelectedCoinFromSearchDropDownButton()
-    {
-        utils.clickOnElement(deleteSelectedCoinFromSearchDropDown);
+    public AddPortfolio clickOnDeleteSelectedCoinFromSearchDropDownButton() {
+        utils.click(deleteSelectedCoinFromSearchDropDown);
+        return this;
     }
 
-    public void clickOnAddAnotherCoin()
-    {
-        utils.clickOnElement(addAnotherCoinInMultiCoinsWallet);
+    public AddPortfolio clickOnAddAnotherCoin() {
+        utils.click(addAnotherCoinInMultiCoinsWallet);
+        return this;
     }
 
-    public String getMultiCoinsError()
-    {
+    public String getMultiCoinsError() {
         return utils.getText(multiCoinsErrorMessage);
     }
 
 
     // ZIP
 
-    public void clickOnZIPFileTab()
-    {
-        utils.clickOnElement(ZIPFileTab);
+    public AddPortfolio clickOnZIPFileTab() {
+        utils.click(ZIPFileTab);
+        return this;
     }
 
-    public void clickOnManualTab()
-    {
-        utils.clickOnElement(manualTab);
+    public AddPortfolio clickOnManualTab() {
+        utils.click(manualTab);
+        return this;
     }
 
-    public void importZIPFile(String pathToZIPFile)
-    {
+    public AddPortfolio importZIPFile(String pathToZIPFile) {
         utils.sendKeysAction(importZIPFile, pathToZIPFile);
+        return this;
     }
 
-    public String getZIPFileError()
-    {
+    public String getZIPFileError() {
         return utils.getText(errorMessageCSVZIP);
     }
 
 
     // Manual Portfolios
 
-    public void clickOnAddManualPortfolio() {
-        utils.clickOnElement(addManualPortfolio);
+    public AddPortfolio clickOnAddManualPortfolio() {
+        utils.click(addManualPortfolio);
+        return this;
     }
 
-    public void typeManualPortfolioName(String manualPortfolioName)
-    {
+    public AddPortfolio typeManualPortfolioName(String manualPortfolioName) {
         utils.sendKeysAction(manualPortfolioNameField, manualPortfolioName);
+        return this;
     }
 
-    public void typeManualPortfolioTotalCost(String manualPortfolioTotalCost)
-    {
+    public AddPortfolio typeManualPortfolioTotalCost(String manualPortfolioTotalCost) {
         utils.sendKeysAction(manualPortfolioTotalCostField, manualPortfolioTotalCost);
+        return this;
     }
 
-    public void disableCalculateAmountInTotal()
-    {
-        utils.clickOnElement(manualPortfolioCalculateAmountOnTotal);
+    public AddPortfolio disableCalculateAmountInTotal() {
+        utils.click(manualPortfolioCalculateAmountOnTotal);
+        return this;
     }
 
-    public void clickOnSaveButtonInManualPortfolio()
-    {
-        utils.clickOnElement(manualPortfolioSaveButton);
+    public AddPortfolio clickOnSaveButtonInManualPortfolio() {
+        utils.click(manualPortfolioSaveButton);
+        return this;
     }
 
-    public void clickOnCancelButtonInManualPortfolio() {
-        utils.clickOnElement(manualPortfolioCancelButton);
+    public AddPortfolio clickOnCancelButtonInManualPortfolio() {
+        utils.click(manualPortfolioCancelButton);
+        return this;
     }
 
-    public void clickOnConnectAfterAddManualPortfolio()
-    {
-        utils.clickOnElement(connectButtonAfterManualAdded);
+    public AddPortfolio clickOnConnectAfterAddManualPortfolio() {
+        utils.click(connectButtonAfterManualAdded);
+        return this;
     }
 
 
     // General
 
-    public void clickOnClose()
-    {
-        utils.clickOnElement(closeButton);
+    public AddPortfolio clickOnClose() {
+        utils.click(closeButton);
+        return this;
     }
 
-    public void clickOnBack()
-    {
-        try
-        {
-            utils.clickOnElement(backButton);
-        }
-        catch (Exception ee) {
+    public AddPortfolio clickOnBack() {
+        try {
+            utils.click(backButton);
+        } catch (Exception ee) {
             JavascriptExecutor executor = (JavascriptExecutor) driver;
             executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".icon-back")));
         }
+        return this;
     }
 
-    public void clickOnNoShowMeSynced()
-    {
-        utils.clickOnElement(noShowMeSyncedButton);
+    public AddPortfolio clickOnNoShowMeSynced() {
+        utils.click(noShowMeSyncedButton);
+        return this;
     }
 
-    public Boolean noShowMeSyncedIsDisplayed()
-    {
+    public Boolean noShowMeSyncedIsDisplayed() {
         return utils.isDisplayed(noShowMeSyncedButton);
     }
 
-    public void clickOnSuccessYes()
-    {
-        utils.clickOnElement(successYesButton);
+    public AddPortfolio clickOnSuccessYes() {
+        utils.click(successYesButton);
+        return this;
     }
 
-    public void clickOnSubmit() {
-        utils.clickOnElement(submitButton);
+    public AddPortfolio clickOnSubmit() {
+        utils.click(submitButton);
+        return this;
     }
 
 
     // ------------------------------------------- Scripts -----------------------------------------------
 
 
-
-    public void getExchangesResults() {
+    public AddPortfolio getExchangesResults() {
         int index = 1;
 
         do {
@@ -559,9 +581,10 @@ public class AddPortfolio {
             index++;
         } while (index != 15);
 
+        return this;
     }
 
-    public void clickOnAllExchanges() {
+    public AddPortfolio clickOnAllExchanges() {
         int index = 1;
 
         do {
@@ -571,9 +594,10 @@ public class AddPortfolio {
 
             index++;
         } while (index != 25);
+        return this;
     }
 
-    public void getWalletsResults() {
+    public AddPortfolio getWalletsResults() {
         int index = 1;
 
         do {
@@ -583,10 +607,11 @@ public class AddPortfolio {
 
             index++;
         } while (index != 15);
+        return this;
 
     }
 
-    public void clickOnAllWallets() {
+    public AddPortfolio clickOnAllWallets() {
         int index = 1;
 
         do {
@@ -596,9 +621,10 @@ public class AddPortfolio {
 
             index++;
         } while (index != 27);
+        return this;
     }
 
-    public void getMultiWalletsResults() {
+    public AddPortfolio getMultiWalletsResults() {
         int index = 1;
 
         do {
@@ -608,10 +634,11 @@ public class AddPortfolio {
 
             index++;
         } while (index != 15);
+        return this;
 
     }
 
-    public void clickOnMultiWalletsResults() {
+    public AddPortfolio clickOnMultiWalletsResults() {
         int index = 1;
 
         do {
@@ -621,6 +648,7 @@ public class AddPortfolio {
 
             index++;
         } while (index != 15);
+        return this;
 
     }
 

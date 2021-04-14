@@ -79,246 +79,220 @@ public class OpenPositionsChartsOrders {
     By currentMonthYear = By.cssSelector(".react-datepicker__current-month");
 
 
-
     // --------------------------------------------------- Methods -------------------------------------------------
 
-    public void clickOnOpenPositionsTab()
-    {
-        utils.clickOnElement(openPositionsTab);
+    public OpenPositionsChartsOrders clickOnOpenPositionsTab() {
+        utils.click(openPositionsTab);
+        return this;
     }
 
-    public void clickOnChartsTab()
-    {
-        utils.clickOnElement(chartsTab);
+    public OpenPositionsChartsOrders clickOnChartsTab() {
+        utils.click(chartsTab);
+        return this;
     }
 
-    public void clickOnOrdersTab()
-    {
-        utils.clickOnElement(ordersTab);
+    public OpenPositionsChartsOrders clickOnOrdersTab() {
+        utils.click(ordersTab);
+        return this;
     }
 
-    public Boolean openPositionsTabIsDisplayed()
-    {
+    public Boolean openPositionsTabIsDisplayed() {
         return utils.isDisplayed(openPositionsTab);
     }
 
-    public Boolean ordersTabIsDisplayed()
-    {
+    public Boolean ordersTabIsDisplayed() {
         return utils.isDisplayed(ordersTab);
     }
 
 
     // Charts
 
-    public void clickOnChart24h()
-    {
-        utils.clickOnElement(chart24h);
+    public OpenPositionsChartsOrders clickOnChart24h() {
+        utils.click(chart24h);
+        return this;
     }
 
-    public void clickOnChart1w()
-    {
-        utils.clickOnElement(chart1w);
+    public OpenPositionsChartsOrders clickOnChart1w() {
+        utils.click(chart1w);
+        return this;
     }
 
-    public void clickOnChart1m()
-    {
-        utils.clickOnElement(chart1m);
+    public OpenPositionsChartsOrders clickOnChart1m() {
+        utils.click(chart1m);
+        return this;
     }
 
-    public void clickOnChart3m()
-    {
-        utils.clickOnElement(chart3m);
+    public OpenPositionsChartsOrders clickOnChart3m() {
+        utils.click(chart3m);
+        return this;
     }
 
-    public void clickOnChart6m()
-    {
-        utils.clickOnElement(chart6m);
+    public OpenPositionsChartsOrders clickOnChart6m() {
+        utils.click(chart6m);
+        return this;
     }
 
-    public void clickOnChart1y()
-    {
-        utils.clickOnElement(chart1y);
+    public OpenPositionsChartsOrders clickOnChart1y() {
+        utils.click(chart1y);
+        return this;
     }
 
-    public void clickOnChartAll()
-    {
-        utils.clickOnElement(chartAll);
+    public OpenPositionsChartsOrders clickOnChartAll() {
+        utils.click(chartAll);
+        return this;
     }
 
-    public void clickOnChartUSD()
-    {
-        utils.clickOnElement(chartUSD);
+    public OpenPositionsChartsOrders clickOnChartUSD() {
+        utils.click(chartUSD);
+        return this;
     }
 
-    public Boolean chartUSDIsSelected()
-    {
+    public Boolean chartUSDIsSelected() {
         return utils.isSelected(chartUSD);
     }
 
-    public Boolean chartUSDIsEnabled()
-    {
+    public Boolean chartUSDIsEnabled() {
         return utils.isEnabled(chartUSD);
     }
 
-    public void clickOnChartBTC()
-    {
-        utils.clickOnElement(chartBTC);
+    public OpenPositionsChartsOrders clickOnChartBTC() {
+        utils.click(chartBTC);
+        return this;
     }
 
-    public Boolean chartBTCIsSelected()
-    {
+    public Boolean chartBTCIsSelected() {
         return utils.isSelected(chartBTC);
     }
 
-    public Boolean chartBTCIsEnabled()
-    {
+    public Boolean chartBTCIsEnabled() {
         return utils.isEnabled(chartBTC);
     }
 
-    public void clickOnChartETH()
-    {
-        utils.clickOnElement(chartETH);
+    public OpenPositionsChartsOrders clickOnChartETH() {
+        utils.click(chartETH);
+        return this;
     }
 
-    public Boolean chartETHIsSelected()
-    {
+    public Boolean chartETHIsSelected() {
         return utils.isSelected(chartETH);
     }
 
-    public Boolean chartETHIsEnabled()
-    {
+    public Boolean chartETHIsEnabled() {
         return utils.isEnabled(chartETH);
     }
 
-    public Boolean heatmapIsDisplayed()
-    {
+    public Boolean heatmapIsDisplayed() {
         return utils.isDisplayed(heatmap);
     }
 
 
     // Analytics
 
-    public String getTotalTradeCountAnalytics()
-    {
+    public String getTotalTradeCountAnalytics() {
         return utils.getText(totalTradeCountAnalytics);
     }
 
-    public Boolean totalTradeCountAnalyticsIsDisplayed()
-    {
+    public Boolean totalTradeCountAnalyticsIsDisplayed() {
         return utils.isDisplayed(totalTradeCountAnalytics);
     }
 
-    public String getTotalWithdrawAnalytics()
-    {
+    public String getTotalWithdrawAnalytics() {
         return utils.getText(totalWithdrawAnalytics);
     }
 
-    public Boolean totalWithdrawAnalyticsIsDisplayed()
-    {
+    public Boolean totalWithdrawAnalyticsIsDisplayed() {
         return utils.isDisplayed(totalWithdrawAnalytics);
     }
 
-    public String getTotalFeePaidAnalytics()
-    {
+    public String getTotalFeePaidAnalytics() {
         return utils.getText(totalFeePaidAnalytics);
     }
 
-    public Boolean totalFeePaidAnalyticsIsDisplayed()
-    {
+    public Boolean totalFeePaidAnalyticsIsDisplayed() {
         return utils.isDisplayed(totalFeePaidAnalytics);
     }
 
-    public String getTotalDepositsAnalytics()
-    {
+    public String getTotalDepositsAnalytics() {
         return utils.getText(totalDepositsAnalytics);
     }
 
-    public Boolean totalDepositsAnalyticsIsDisplayed()
-    {
+    public Boolean totalDepositsAnalyticsIsDisplayed() {
         return utils.isDisplayed(totalDepositsAnalytics);
     }
 
-    public String getTopTradedPairAnalytics()
-    {
+    public String getTopTradedPairAnalytics() {
         return utils.getText(topTradedPairAnalytics);
     }
 
-    public Boolean topTradedPairAnalyticsIsDisplayed()
-    {
+    public Boolean topTradedPairAnalyticsIsDisplayed() {
         return utils.isDisplayed(topTradedPairAnalytics);
     }
 
-    public String getTopTradeCountPairAnalytics()
-    {
+    public String getTopTradeCountPairAnalytics() {
         return utils.getText(topTradeCountAnalytics);
     }
 
-    public Boolean topTradeCountPairAnalyticsIsDisplayed()
-    {
+    public Boolean topTradeCountPairAnalyticsIsDisplayed() {
         return utils.isDisplayed(topTradeCountAnalytics);
     }
 
 
     // Orders Filters
 
-    public void typeDateFromOrders(String date)
-    {
+    public OpenPositionsChartsOrders typeDateFromOrders(String date) {
         utils.sendKeysAction(dateFromFieldOrders, date);
+        return this;
     }
 
-    public String getDateFromOrders()
-    {
+    public String getDateFromOrders() {
         return utils.getText(dateFromFieldOrders);
     }
 
-    public void clearDateFromOrders()
-    {
+    public OpenPositionsChartsOrders clearDateFromOrders() {
         utils.clear(dateFromFieldOrders);
+        return this;
     }
 
-    public void typeDateToOrders(String date)
-    {
+    public OpenPositionsChartsOrders typeDateToOrders(String date) {
         utils.sendKeysAction(dateToFieldOrders, date);
+        return this;
     }
 
-    public String getDateToOrders()
-    {
+    public String getDateToOrders() {
         return utils.getText(dateToFieldOrders);
     }
 
-    public void clearDateToOrders()
-    {
+    public OpenPositionsChartsOrders clearDateToOrders() {
         utils.clear(dateToFieldOrders);
+        return this;
     }
 
-    public void clickOnNextMonth()
-    {
-        utils.clickOnElement(nextMonth);
+    public OpenPositionsChartsOrders clickOnNextMonth() {
+        utils.click(nextMonth);
+        return this;
     }
 
-    public void clickOnPreviousMonth()
-    {
-        utils.clickOnElement(previousMonth);
+    public OpenPositionsChartsOrders clickOnPreviousMonth() {
+        utils.click(previousMonth);
+        return this;
     }
 
-    public String getCurrentMonthYear()
-    {
+    public String getCurrentMonthYear() {
         return utils.getText(currentMonthYear);
     }
 
-    public void typeCoinNameOrders(String coinName)
-    {
+    public OpenPositionsChartsOrders typeCoinNameOrders(String coinName) {
         utils.sendKeysAction(searchCoinFieldOrders, coinName);
+        return this;
     }
 
-    public String getCoinNameOrders()
-    {
+    public String getCoinNameOrders() {
         return utils.getText(searchCoinFieldOrders);
     }
 
-    public void clearCoinNameOrders()
-    {
+    public OpenPositionsChartsOrders clearCoinNameOrders() {
         utils.clear(searchCoinFieldOrders);
+        return this;
     }
 
 }

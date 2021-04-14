@@ -67,153 +67,145 @@ public class Overview {
 
     // ----------------------------------------------------- Methods ------------------------------------------------
 
-    public void clickOnOverviewTab()
-    {
-        utils.clickOnElement(overviewTab);
+    public Overview clickOnOverviewTab() {
+        utils.click(overviewTab);
+        return this;
     }
 
 
     // Chart
 
-    public String get24hChange()
-    {
+    public String get24hChange() {
         return utils.getText(change24h);
     }
 
-    public String get24hChangeColor()
-    {
+    public String get24hChangeColor() {
         return utils.getCSSValue(change24h, "color");
     }
 
-    public void clickOnChart24h()
-    {
-        utils.clickOnElement(chart24h);
+    public Overview clickOnChart24h() {
+        utils.click(chart24h);
+        return this;
     }
 
-    public void clickOnChart1w()
-    {
-        utils.clickOnElement(chart1w);
+    public Overview clickOnChart1w() {
+        utils.click(chart1w);
+        return this;
     }
 
-    public void clickOnChart1m()
-    {
-        utils.clickOnElement(chart1m);
+    public Overview clickOnChart1m() {
+        utils.click(chart1m);
+        return this;
     }
 
-    public void clickOnChart3m()
-    {
-        utils.clickOnElement(chart3m);
+    public Overview clickOnChart3m() {
+        utils.click(chart3m);
+        return this;
     }
 
-    public void clickOnChart6m()
-    {
-        utils.clickOnElement(chart6m);
+    public Overview clickOnChart6m() {
+        utils.click(chart6m);
+        return this;
     }
 
-    public void clickOnChart1y()
-    {
-        utils.clickOnElement(chart1y);
+    public Overview clickOnChart1y() {
+        utils.click(chart1y);
+        return this;
     }
 
-    public void clickOnChartAll()
-    {
-        utils.clickOnElement(chartAll);
+    public Overview clickOnChartAll() {
+        utils.click(chartAll);
+        return this;
     }
 
-    public void clickOnChartUSD()
-    {
-        utils.clickOnElement(chartUSD);
+    public Overview clickOnChartUSD() {
+        utils.click(chartUSD);
+        return this;
     }
 
-    public Boolean chartUSDIsEnabled()
-    {
+    public Boolean chartUSDIsEnabled() {
         return utils.isEnabled(chartUSD);
     }
 
-    public Boolean chartUSDIsSelected()
-    {
+    public Boolean chartUSDIsSelected() {
         return utils.isSelected(chartUSD);
     }
 
-    public void clickOnChartBTC()
-    {
-        utils.clickOnElement(chartBTC);
+    public Overview clickOnChartBTC() {
+        utils.click(chartBTC);
+        return this;
     }
 
-    public Boolean chartBTCIsEnabled()
-    {
+    public Boolean chartBTCIsEnabled() {
         return utils.isEnabled(chartBTC);
     }
 
-    public Boolean chartBTCIsSelected()
-    {
+    public Boolean chartBTCIsSelected() {
         return utils.isSelected(chartBTC);
     }
 
-    public void clickOnChartETH()
-    {
-        utils.clickOnElement(chartETH);
+    public Overview clickOnChartETH() {
+        utils.click(chartETH);
+        return this;
     }
 
-    public Boolean chartETHIsEnabled()
-    {
+    public Boolean chartETHIsEnabled() {
         return utils.isEnabled(chartETH);
     }
 
-    public Boolean chartETHIsSelected()
-    {
+    public Boolean chartETHIsSelected() {
         return utils.isSelected(chartETH);
     }
 
 
     // Markets
 
-    public void clickOnMarketsShowMore()
-    {
-        utils.clickOnElement(marketsShowMore);
+    public Overview clickOnMarketsShowMore() {
+        utils.click(marketsShowMore);
+        return this;
     }
 
-    public void clickOnMarketsIndexRank()
-    {
-        utils.clickOnElement(marketsIndexRank);
+    public Overview clickOnMarketsIndexRank() {
+        utils.click(marketsIndexRank);
+        return this;
     }
 
-    public void clickOnMarketsNameRank()
-    {
-        utils.clickOnElement(marketsNameRank);
+    public Overview clickOnMarketsNameRank() {
+        utils.click(marketsNameRank);
+        return this;
     }
 
-    public void clickOnMarketsPairRank()
-    {
-        utils.clickOnElement(marketPairRank);
+    public Overview clickOnMarketsPairRank() {
+        utils.click(marketPairRank);
+        return this;
     }
 
-    public void clickOnMarketsVolume24hRank()
-    {
-        utils.clickOnElement(marketsVolume24hRank);
+    public Overview clickOnMarketsVolume24hRank() {
+        utils.click(marketsVolume24hRank);
+        return this;
     }
 
-    public void clickOnMarketsVolumePercentRank()
-    {
-        utils.clickOnElement(marketsVolumePercentRank);
+    public Overview clickOnMarketsVolumePercentRank() {
+        utils.click(marketsVolumePercentRank);
+        return this;
     }
 
-    public void clickOnMarketsPriceRank()
-    {
-        utils.clickOnElement(marketsPriceRank);
+    public Overview clickOnMarketsPriceRank() {
+        utils.click(marketsPriceRank);
+        return this;
     }
 
-    public void clickOnMarketsLastUpdatedRank()
-    {
-        utils.clickOnElement(marketsLastUpdatedRank);
+    public Overview clickOnMarketsLastUpdatedRank() {
+        utils.click(marketsLastUpdatedRank);
+        return this;
     }
 
 
     // Team Updates
 
-    public void clickOnTeamUpdatesShowMore()
-    {
-        utils.clickOnElement(teamUpdatesShowMore);
+    public Overview clickOnTeamUpdatesShowMore() {
+        utils.click(teamUpdatesShowMore);
+        return this;
     }
 
 }

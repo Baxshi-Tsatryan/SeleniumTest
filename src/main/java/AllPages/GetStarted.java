@@ -107,299 +107,279 @@ public class GetStarted {
     By createAccountForgotPasswordPage = By.cssSelector("a.table-row");
 
 
-
     // ----------------------------------------------------- Methods ------------------------------------------------------
 
-    public void clickOnGeneralLogin()
-    {
-        utils.clickOnElement(loginButton);
+    public GetStarted clickOnGeneralLogin() {
+        utils.click(loginButton);
+        return this;
     }
 
-    public Boolean generalLoginIsDisplayed()
-    {
+    public Boolean generalLoginIsDisplayed() {
         return utils.isDisplayed(loginButton);
     }
 
-    public void clickOnGetStarted()
-    {
-        utils.clickOnElement(getStartedButton);
+    public GetStarted clickOnGetStarted() {
+        utils.click(getStartedButton);
+        return this;
     }
 
-    public Boolean getStartedIsDisplayed()
-    {
+    public Boolean getStartedIsDisplayed() {
         return utils.isDisplayed(getStartedButton);
     }
 
 
     // Get Started page
 
-    public void clickOnLoginWithCoinbase()
-    {
-        utils.clickOnElement(loginWithCoinbase);
+    public GetStarted clickOnLoginWithCoinbase() {
+        utils.click(loginWithCoinbase);
+        return this;
     }
 
-    public void clickOnSignUpWithEmail()
-    {
-        utils.clickOnElement(signUpWithEmail);
+    public GetStarted clickOnSignUpWithEmail() {
+        utils.click(signUpWithEmail);
+        return this;
     }
 
-    public void clickOnTwitter()
-    {
-        utils.clickOnElement(twitter);
+    public GetStarted clickOnTwitter() {
+        utils.click(twitter);
+        return this;
     }
 
-    public void clickOnFacebook()
-    {
-        utils.clickOnElement(facebook);
+    public GetStarted clickOnFacebook() {
+        utils.click(facebook);
+        return this;
     }
 
-    public void clickOnGoogle()
-    {
-        utils.clickOnElement(google);
+    public GetStarted clickOnGoogle() {
+        utils.click(google);
+        return this;
     }
 
-    public void clickOnApple()
-    {
-        utils.clickOnElement(apple);
+    public GetStarted clickOnApple() {
+        utils.click(apple);
+        return this;
     }
 
-    public void clickOnLogin()
-    {
-        utils.clickOnElement(login);
+    public GetStarted clickOnLogin() {
+        utils.click(login);
+        return this;
     }
 
-    public void clickOnTermsOfUse()
-    {
-        utils.clickOnElement(termsOfUse);
+    public GetStarted clickOnTermsOfUse() {
+        utils.click(termsOfUse);
+        return this;
     }
 
-    public void clickOnPrivacyPolicy()
-    {
-        utils.clickOnElement(privacyPolicy);
+    public GetStarted clickOnPrivacyPolicy() {
+        utils.click(privacyPolicy);
+        return this;
     }
 
 
     // Sign Up with Email page
 
-    public void typeEmailSignUp(String email)
-    {
+    public GetStarted typeEmailSignUp(String email) {
         utils.sendKeysAction(emailSignUp, email);
+        return this;
     }
 
-    public void clearEmailSignUp()
-    {
+    public GetStarted clearEmailSignUp() {
         utils.clear(emailSignUp);
+        return this;
     }
 
-    public String getEmailSignUp()
-    {
+    public String getEmailSignUp() {
         return utils.getText(emailSignUp);
     }
 
-    public void typePasswordSignUp(String password)
-    {
+    public GetStarted typePasswordSignUp(String password) {
         utils.sendKeysAction(passwordSignUp, password);
+        return this;
     }
 
-    public void clearPasswordSignUp()
-    {
+    public GetStarted clearPasswordSignUp() {
         utils.clear(passwordSignUp);
+        return this;
     }
 
-    public String getPasswordSignUp()
-    {
+    public String getPasswordSignUp() {
         return utils.getText(passwordSignUp);
     }
 
-    public void clickOnPasswordEyeSignUp()
-    {
-        utils.clickOnElement(passwordEye);
+    public GetStarted clickOnPasswordEyeSignUp() {
+        utils.click(passwordEye);
+        return this;
     }
 
-    public Boolean errorMessageSignUpIsDisplayed()
-    {
+    public Boolean errorMessageSignUpIsDisplayed() {
         return utils.isDisplayed(errorMessageSignUp);
     }
 
-    public String getErrorMessageSignUp()
-    {
+    public String getErrorMessageSignUp() {
         return utils.getText(errorMessageSignUp);
     }
 
-    public String getFirstPasswordIndicatorColorSignUp()
-    {
+    public String getFirstPasswordIndicatorColorSignUp() {
         return utils.getCSSValue(firstPasswordIndicatorSignUp, "color");
     }
 
-    public String getSecondPasswordIndicatorColorSignUp()
-    {
+    public String getSecondPasswordIndicatorColorSignUp() {
         return utils.getCSSValue(secondPasswordIndicatorSignUp, "color");
     }
 
-    public String getThirdPasswordIndicatorColorSignUp()
-    {
+    public String getThirdPasswordIndicatorColorSignUp() {
         return utils.getCSSValue(thirdPasswordIndicatorSignUp, "color");
     }
 
-    public void clickOnEnableCaptcha()
-    {
-        utils.clickOnElement(enableCaptcha);
+    public GetStarted clickOnEnableCaptcha() {
+        utils.click(enableCaptcha);
+        return this;
     }
 
-    public void clickOnCreateAccountSignUp()
-    {
-        utils.clickOnElement(createAccountButton);
+    public GetStarted clickOnCreateAccountSignUp() {
+        utils.click(createAccountButton);
+        return this;
     }
 
-    public void clickOnLoginSignUp()
-    {
-        utils.clickOnElement(loginButtonSignUp);
+    public GetStarted clickOnLoginSignUp() {
+        utils.click(loginButtonSignUp);
+        return this;
     }
 
 
     // Login page
 
-    public void typeEmailLogin(String email)
-    {
+    public GetStarted typeEmailLogin(String email) {
         utils.sendKeysAction(emailLogin, email);
+        return this;
     }
 
-    public void clearEmailLogin()
-    {
+    public GetStarted clearEmailLogin() {
         utils.clear(emailLogin);
+        return this;
     }
 
-    public String getEmailLogin()
-    {
+    public String getEmailLogin() {
         return utils.getText(emailLogin);
     }
 
-    public Boolean errorMessageEmailLoginIsDisplayed()
-    {
+    public Boolean errorMessageEmailLoginIsDisplayed() {
         return utils.isDisplayed(emailErrorMessage);
     }
 
-    public String getErrorMessageEmailLogin()
-    {
+    public String getErrorMessageEmailLogin() {
         return utils.getText(emailErrorMessage);
     }
 
-    public void typePasswordLogin(String password)
-    {
+    public GetStarted typePasswordLogin(String password) {
         utils.sendKeysAction(passwordLogin, password);
+        return this;
     }
 
-    public void clearPasswordLogin()
-    {
+    public GetStarted clearPasswordLogin() {
         utils.clear(passwordLogin);
+        return this;
     }
 
-    public String getPasswordLogin()
-    {
+    public String getPasswordLogin() {
         return utils.getText(passwordLogin);
     }
 
-    public Boolean errorMessagePasswordLoginIsDisplayed()
-    {
+    public Boolean errorMessagePasswordLoginIsDisplayed() {
         return utils.isDisplayed(passwordErrorMessage);
     }
 
-    public String getErrorMessagePasswordLogin()
-    {
+    public String getErrorMessagePasswordLogin() {
         return utils.getText(passwordErrorMessage);
     }
 
-    public void clickOnEnableCaptchaLogin()
-    {
-        utils.clickOnElement(enableCaptchaLogin);
+    public GetStarted clickOnEnableCaptchaLogin() {
+        utils.click(enableCaptchaLogin);
+        return this;
     }
 
-    public void clickOnLoginButton()
-    {
-        utils.clickOnElement(loginButtonLoginPage);
+    public GetStarted clickOnLoginButton() {
+        utils.click(loginButtonLoginPage);
+        return this;
     }
 
-    public void clickOnForgotPassword()
-    {
-        utils.clickOnElement(forgotPassword);
+    public GetStarted clickOnForgotPassword() {
+        utils.click(forgotPassword);
+        return this;
     }
 
-    public void clickOnCoinbaseLogin()
-    {
-        utils.clickOnElement(coinbaseLogin);
+    public GetStarted clickOnCoinbaseLogin() {
+        utils.click(coinbaseLogin);
+        return this;
     }
 
-    public void clickOnTwitterLogin()
-    {
-        utils.clickOnElement(twitterLogin);
+    public GetStarted clickOnTwitterLogin() {
+        utils.click(twitterLogin);
+        return this;
     }
 
-    public void clickOnFacebookLogin()
-    {
-        utils.clickOnElement(facebookLogin);
+    public GetStarted clickOnFacebookLogin() {
+        utils.click(facebookLogin);
+        return this;
     }
 
-    public void clickOnGoogleLogin()
-    {
-        utils.clickOnElement(googleLogin);
+    public GetStarted clickOnGoogleLogin() {
+        utils.click(googleLogin);
+        return this;
     }
 
-    public void clickOnAppleLogin()
-    {
-        utils.clickOnElement(appleLogin);
+    public GetStarted clickOnAppleLogin() {
+        utils.click(appleLogin);
+        return this;
     }
 
-    public void clickOnCreateAccountLogin()
-    {
-        utils.clickOnElement(createAccountButtonLoginPage);
+    public GetStarted clickOnCreateAccountLogin() {
+        utils.click(createAccountButtonLoginPage);
+        return this;
     }
 
-    public String getGeneralErrorMessageLogin()
-    {
+    public String getGeneralErrorMessageLogin() {
         return utils.getText(generalErrorMessage);
     }
 
 
     // Forgot Password page
 
-    public void typeEmailForgotPassword(String email)
-    {
+    public GetStarted typeEmailForgotPassword(String email) {
         utils.sendKeysAction(emailForgotPassword, email);
+        return this;
     }
 
-    public void clearEmailForgotPassword()
-    {
+    public GetStarted clearEmailForgotPassword() {
         utils.clear(emailForgotPassword);
+        return this;
     }
 
-    public String getEmailForgotPassword()
-    {
+    public String getEmailForgotPassword() {
         return utils.getText(emailForgotPassword);
     }
 
-    public Boolean errorMessageForgotPasswordIsDisplayed()
-    {
+    public Boolean errorMessageForgotPasswordIsDisplayed() {
         return utils.isDisplayed(errorMessageForgotPassword);
     }
 
-    public String getErrorMessageForgotPassword()
-    {
+    public String getErrorMessageForgotPassword() {
         return utils.getText(errorMessageForgotPassword);
     }
 
-    public void clickOnEnableCaptchaForgotPassword()
-    {
-        utils.clickOnElement(enableCaptchaForgotPassword);
+    public GetStarted clickOnEnableCaptchaForgotPassword() {
+        utils.click(enableCaptchaForgotPassword);
+        return this;
     }
 
-    public void clickOnRecoverPassword()
-    {
-        utils.clickOnElement(recoverPasswordButton);
+    public GetStarted clickOnRecoverPassword() {
+        utils.click(recoverPasswordButton);
+        return this;
     }
 
-    public void clickOnCreateAccountForgotPasswordPage()
-    {
-        utils.clickOnElement(createAccountForgotPasswordPage);
+    public GetStarted clickOnCreateAccountForgotPasswordPage() {
+        utils.click(createAccountForgotPasswordPage);
+        return this;
     }
 
 }

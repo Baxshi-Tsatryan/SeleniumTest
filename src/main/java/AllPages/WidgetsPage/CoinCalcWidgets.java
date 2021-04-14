@@ -80,232 +80,213 @@ public class CoinCalcWidgets {
     By widgetBorderColor = By.cssSelector("tbody > tr:nth-of-type(2) > td:nth-of-type(2) .widget-color-rectangle");
 
 
-
     // ------------------------------------------------ Methods ---------------------------------------------------------
 
     // On Widget
 
-    public String getInvestInvested()
-    {
+    public String getInvestInvested() {
         return utils.getText(investInvestedButton);
     }
 
-    public void clickOnInvestInvested()
-    {
-        utils.clickOnElement(investInvestedButton);
+    public CoinCalcWidgets clickOnInvestInvested() {
+        utils.click(investInvestedButton);
+        return this;
     }
 
-    public String getFirstFieldPrice()
-    {
+    public String getFirstFieldPrice() {
         return utils.getText(firstField);
     }
 
-    public void clearFirstFieldPrice()
-    {
+    public CoinCalcWidgets clearFirstFieldPrice() {
         utils.clear(firstField);
+        return this;
     }
 
-    public void typeFirstFieldPrice(String firstPrice)
-    {
+    public CoinCalcWidgets typeFirstFieldPrice(String firstPrice) {
         utils.sendKeysAction(firstField, firstPrice);
+        return this;
     }
 
-    public void clickOnCoinName()
-    {
-        utils.clickOnElement(coinName);
+    public CoinCalcWidgets clickOnCoinName() {
+        utils.click(coinName);
+        return this;
     }
 
-    public String getCurrentCoinName()
-    {
+    public String getCurrentCoinName() {
         return utils.getText(coinName);
     }
 
-    public void typeCoinName(String coinName)
-    {
+    public CoinCalcWidgets typeCoinName(String coinName) {
         utils.sendKeysAction(searchCoinField, coinName);
+        return this;
     }
 
-    public void clearCoinName()
-    {
+    public CoinCalcWidgets clearCoinName() {
         utils.clear(searchCoinField);
+        return this;
     }
 
-    public String getInvestSecondFieldPrice()
-    {
+    public String getInvestSecondFieldPrice() {
         return utils.getText(investSecondField);
     }
 
-    public void clearInvestSecondFieldPrice()
-    {
+    public CoinCalcWidgets clearInvestSecondFieldPrice() {
         utils.clear(investSecondField);
+        return this;
     }
 
-    public void typeInvestSecondFieldPrice(String secondPrice)
-    {
+    public CoinCalcWidgets typeInvestSecondFieldPrice(String secondPrice) {
         utils.sendKeysAction(investSecondField, secondPrice);
+        return this;
     }
 
-    public String getResult()
-    {
+    public String getResult() {
         return utils.getText(result);
     }
 
-    public void clickOnInvestedDate()
-    {
-        utils.clickOnElement(investedDate);
+    public CoinCalcWidgets clickOnInvestedDate() {
+        utils.click(investedDate);
+        return this;
     }
 
 
     // Settings
 
-    public String getCurrentType()
-    {
+    public String getCurrentType() {
         return utils.getText(typeDropDown);
     }
 
-    public void clickOnTypeDropDown()
-    {
-        utils.clickOnElement(typeDropDown);
+    public CoinCalcWidgets clickOnTypeDropDown() {
+        utils.click(typeDropDown);
+        return this;
     }
 
-    public void clickOnInvestType()
-    {
-        utils.clickOnElement(investType);
+    public CoinCalcWidgets clickOnInvestType() {
+        utils.click(investType);
+        return this;
     }
 
-    public void clickOnInvestedType()
-    {
-        utils.clickOnElement(investedType);
+    public CoinCalcWidgets clickOnInvestedType() {
+        utils.click(investedType);
+        return this;
     }
 
-    public String getCurrentTheme()
-    {
+    public String getCurrentTheme() {
         return utils.getText(themeDropDown);
     }
 
-    public void clickOnThemeDropDown()
-    {
-        utils.clickOnElement(themeDropDown);
+    public CoinCalcWidgets clickOnThemeDropDown() {
+        utils.click(themeDropDown);
+        return this;
     }
 
-    public void clickOnLightMode()
-    {
-        utils.clickOnElement(lightMode);
+    public CoinCalcWidgets clickOnLightMode() {
+        utils.click(lightMode);
+        return this;
     }
 
-    public void clickOnDarkMode()
-    {
-        utils.clickOnElement(darkMode);
+    public CoinCalcWidgets clickOnDarkMode() {
+        utils.click(darkMode);
+        return this;
     }
 
-    public String getCurrentCurrency()
-    {
+    public String getCurrentCurrency() {
         return utils.getText(currenciesDropDown);
     }
 
-    public void clickOnCurrencyDropDown()
-    {
-        utils.clickOnElement(currenciesDropDown);
+    public CoinCalcWidgets clickOnCurrencyDropDown() {
+        utils.click(currenciesDropDown);
+        return this;
     }
 
-    public void clickOnIsEditable()
-    {
-        utils.clickOnElement(isEditable);
+    public CoinCalcWidgets clickOnIsEditable() {
+        utils.click(isEditable);
+        return this;
     }
 
-    public Boolean isEditableIsSelected()
-    {
+    public Boolean isEditableIsSelected() {
         return utils.isSelected(isEditable);
     }
 
-    public Boolean isEditableIsEnabled()
-    {
+    public Boolean isEditableIsEnabled() {
         return utils.isEnabled(isEditable);
     }
 
 
     // Colors Fields
 
-    public String getBackgroundColorText()
-    {
+    public String getBackgroundColorText() {
         return utils.getText(backgroundColorField);
     }
 
-    public void clearBackgroundColorText()
-    {
+    public CoinCalcWidgets clearBackgroundColorText() {
         utils.clear(backgroundColorField);
+        return this;
     }
 
-    public void typeBackgroundColorText(String colorText)
-    {
+    public CoinCalcWidgets typeBackgroundColorText(String colorText) {
         utils.sendKeysAction(backgroundColorField, "color");
+        return this;
     }
 
-    public String getTextColorText()
-    {
+    public String getTextColorText() {
         return utils.getText(textColorField);
     }
 
-    public void clearTextColorText()
-    {
+    public CoinCalcWidgets clearTextColorText() {
         utils.clear(textColorField);
+        return this;
     }
 
-    public void typeTextColorText(String colorText)
-    {
+    public CoinCalcWidgets typeTextColorText(String colorText) {
         utils.sendKeysAction(textColorField, "color");
+        return this;
     }
 
-    public String getSelectionColorText()
-    {
+    public String getSelectionColorText() {
         return utils.getText(selectionColorField);
     }
 
-    public void clearSelectionColorText()
-    {
+    public CoinCalcWidgets clearSelectionColorText() {
         utils.clear(selectionColorField);
+        return this;
     }
 
-    public void typeSelectionColorText(String colorText)
-    {
+    public CoinCalcWidgets typeSelectionColorText(String colorText) {
         utils.sendKeysAction(selectionColorField, "color");
+        return this;
     }
 
-    public String getWidgetBorderColorText()
-    {
+    public String getWidgetBorderColorText() {
         return utils.getText(widgetBorderColorField);
     }
 
-    public void clearWidgetBorderColorText()
-    {
+    public CoinCalcWidgets clearWidgetBorderColorText() {
         utils.clear(widgetBorderColorField);
+        return this;
     }
 
-    public void typeWidgetBorderColorText(String colorText)
-    {
+    public CoinCalcWidgets typeWidgetBorderColorText(String colorText) {
         utils.sendKeysAction(widgetBorderColorField, "color");
+        return this;
     }
 
 
     // Colors
 
-    public String getBackgroundColor()
-    {
+    public String getBackgroundColor() {
         return utils.getCSSValue(backgroundColor, "color");
     }
 
-    public String getTextColor()
-    {
+    public String getTextColor() {
         return utils.getCSSValue(textColor, "color");
     }
 
-    public String getSelectionColor()
-    {
+    public String getSelectionColor() {
         return utils.getCSSValue(selectionColor, "color");
     }
 
-    public String getWidgetBorderColor()
-    {
+    public String getWidgetBorderColor() {
         return utils.getCSSValue(widgetBorderColor, "color");
     }
 

@@ -51,92 +51,89 @@ public class MarketCap {
     By BTCDominanceAll = By.cssSelector("div.dominance-chart-wrapper div:nth-of-type(7) > .primary-nav");
 
 
-
     // -------------------------------------------- Methods ------------------------------------------------
 
     // Market Cap
 
-    public String getMarketCap()
-    {
+    public String getMarketCap() {
         return utils.getText(marketCap);
     }
 
-    public void clickOnMarketCap24h()
-    {
-        utils.clickOnElement(marketCap24h);
+    public MarketCap clickOnMarketCap24h() {
+        utils.click(marketCap24h);
+        return this;
     }
 
-    public void clickOnMarketCap1w()
-    {
-        utils.clickOnElement(marketCap1w);
+    public MarketCap clickOnMarketCap1w() {
+        utils.click(marketCap1w);
+        return this;
     }
 
-    public void clickOnMarketCap1m()
-    {
-        utils.clickOnElement(marketCap1m);
+    public MarketCap clickOnMarketCap1m() {
+        utils.click(marketCap1m);
+        return this;
     }
 
-    public void clickOnMarketCap3m()
-    {
-        utils.clickOnElement(marketCap3m);
+    public MarketCap clickOnMarketCap3m() {
+        utils.click(marketCap3m);
+        return this;
     }
 
-    public void clickOnMarketCap6m()
-    {
-        utils.clickOnElement(marketCap6m);
+    public MarketCap clickOnMarketCap6m() {
+        utils.click(marketCap6m);
+        return this;
     }
 
-    public void clickOnMarketCap1y()
-    {
-        utils.clickOnElement(marketCap1y);
+    public MarketCap clickOnMarketCap1y() {
+        utils.click(marketCap1y);
+        return this;
     }
 
-    public void clickOnMarketCapAll()
-    {
-        utils.clickOnElement(marketCapAll);
+    public MarketCap clickOnMarketCapAll() {
+        utils.click(marketCapAll);
+        return this;
     }
 
 
     // BTC Dominance
 
-    public String getBTCDominance()
-    {
+    public String getBTCDominance() {
         return utils.getText(BTCDominance);
     }
 
-    public void clickOnBTCDominance24h()
-    {
-        utils.clickOnElement(BTCDominance24h);
+    public MarketCap clickOnBTCDominance24h() {
+        utils.click(BTCDominance24h);
+        return this;
     }
 
-    public void clickOnBTCDominance1w()
-    {
-        utils.clickOnElement(BTCDominance1w);
+    public MarketCap clickOnBTCDominance1w() {
+        utils.click(BTCDominance1w);
+        return this;
     }
 
-    public void clickOnBTCDominance1m()
-    {
-        utils.clickOnElement(BTCDominance1m);
+    public MarketCap clickOnBTCDominance1m() {
+        utils.click(BTCDominance1m);
+        return this;
     }
 
-    public void clickOnBTCDominance3m()
-    {
-        utils.clickOnElement(BTCDominance3m);
+    public MarketCap clickOnBTCDominance3m() {
+        utils.click(BTCDominance3m);
+        return this;
     }
 
-    public void clickOnBTCDominance6m()
-    {
-        utils.clickOnElement(BTCDominance6m);
+    public MarketCap clickOnBTCDominance6m() {
+        utils.click(BTCDominance6m);
+        return this;
     }
 
-    public void clickOnBTCDominance1y()
-    {
-        utils.clickOnElement(BTCDominance1y);
+    public MarketCap clickOnBTCDominance1y() {
+        utils.click(BTCDominance1y);
+        return this;
     }
 
-    public void clickOnBTCDominanceAll()
-    {
-        utils.clickOnElement(BTCDominanceAll);
+    public MarketCap clickOnBTCDominanceAll() {
+        utils.click(BTCDominanceAll);
+        return this;
     }
 
 }

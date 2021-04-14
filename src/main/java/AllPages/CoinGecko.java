@@ -52,108 +52,90 @@ public class CoinGecko {
     By coinRank = By.cssSelector("table.b-b tr:nth-of-type(8) > td");
 
 
-
     By firstExchangeSearchResult = By.cssSelector("div.scroll-container > ul:nth-of-type(3) > li:nth-of-type(1) span:nth-of-type(2)");
 
     By exchangeAmount = By.cssSelector(".trade-vol-amount");
 
 
-
     // ------------------------------------------------ Methods ----------------------------------------------
 
-    public void typeSearchField(String coinOrExchangeName)
-    {
+    public CoinGecko typeSearchField(String coinOrExchangeName) {
         utils.sendKeys(searchField, coinOrExchangeName);
+        return this;
     }
 
-    public void clickOnFirstCoinResult()
-    {
-        utils.clickOnElement(firstCoinSearchResult);
+    public CoinGecko clickOnFirstCoinResult() {
+        utils.click(firstCoinSearchResult);
+        return this;
     }
 
-    public String getCoinName()
-    {
+    public String getCoinName() {
         return utils.getText(coinName);
     }
 
-    public String getCoinPrice()
-    {
+    public String getCoinPrice() {
         return utils.getText(coinPrice);
     }
 
-    public String getCoinPercent()
-    {
+    public String getCoinPercent() {
         return utils.getText(coinPercent);
     }
 
-    public String getCoinPriceBTC()
-    {
+    public String getCoinPriceBTC() {
         return utils.getText(coinPriceBTC);
     }
 
-    public String getCoinPercentBTC()
-    {
-        return  utils.getText(coinPercentBTC);
+    public String getCoinPercentBTC() {
+        return utils.getText(coinPercentBTC);
     }
 
-    public String getCoin24hTradingVol()
-    {
+    public String getCoin24hTradingVol() {
         return utils.getText(coin24hTradingVol);
     }
 
-    public String getCoin24hHigh()
-    {
+    public String getCoin24hHigh() {
         return utils.getText(coin24hHigh);
     }
 
-    public String getCoin24hLow()
-    {
+    public String getCoin24hLow() {
         return utils.getText(coin24hLow);
     }
 
-    public String getCoinTotalAndAvailableSupply()
-    {
+    public String getCoinTotalAndAvailableSupply() {
         return utils.getText(coinTotalAndAvailableSupply);
     }
 
-    public String getCoinFullyDilutedValuation()
-    {
+    public String getCoinFullyDilutedValuation() {
         return utils.getText(coinFullyDilutedValuation);
     }
 
-    public String getCoinTotalSupply()
-    {
+    public String getCoinTotalSupply() {
         return utils.getText(coinTotalSupply);
     }
 
-    public String getCoinMarketCapDominance()
-    {
+    public String getCoinMarketCapDominance() {
         return utils.getText(coinMarketCapDominance);
     }
 
-    public String getCoinTradingVolume()
-    {
+    public String getCoinTradingVolume() {
         return utils.getText(coinTradingVolume);
     }
 
-    public String getCoinRank()
-    {
+    public String getCoinRank() {
         return utils.getText(coinRank);
     }
 
 
-    public String getCoinMarketCap()
-    {
+    public String getCoinMarketCap() {
         return utils.getText(coinMarketCap);
     }
 
-    public void clickOnFirstExchangeResult()
-    {
-        utils.clickOnElement(firstExchangeSearchResult);
+    public CoinGecko clickOnFirstExchangeResult() {
+        utils.click(firstExchangeSearchResult);
+        return this;
     }
 
-    public String getExchangeAmount()
-    {
+    public String getExchangeAmount() {
         return utils.getText(exchangeAmount);
     }
 

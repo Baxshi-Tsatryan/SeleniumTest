@@ -4,7 +4,6 @@ import AllPages.PortfolioPage.AddPortfolio;
 import AllPages.PortfolioPage.LeftSideOfPagePortfolios;
 import MainPackage.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -44,6 +43,8 @@ public class AddAllExchangesNegative extends Driver {
 
             List<WebElement> list = driver.findElements(By.className("qa-exchanges"));
 
+            Thread.sleep(1000);
+
             String exchangeName = list.get(i).getText();
             list.get(i).click();
 
@@ -51,8 +52,9 @@ public class AddAllExchangesNegative extends Driver {
             String secondAPI = "secondAPI";
             String thirdAPI = "thirdAPI";
 
-            if (exchangeName.equals("Coinbase") || exchangeName.equals("Crypto.com app") || exchangeName.equals("Nexo (beta)") || exchangeName.equals("Gemini"))
+            if (exchangeName.equals("Coinbase") || exchangeName.equals("Crypto.com app") || exchangeName.equals("Nexo (beta)") || exchangeName.equals("Nexo") || exchangeName.equals("BlockFi (beta)") || exchangeName.equals("BlockFi"))
             {
+                Thread.sleep(3000);
                 addPortfolio.clickOnBack();
                 continue;
             }
@@ -64,9 +66,10 @@ public class AddAllExchangesNegative extends Driver {
                 addPortfolio.typeThirdAPI(thirdAPI);
             }
 
-            else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX"))
+            else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX") || exchangeName.equals("Bitrue"))
             {
                 addPortfolio.typeFirstAPI(firstAPI);
+                Thread.sleep(1000);
                 addPortfolio.typeSecondAPIByBit(secondAPI);
             }
 
@@ -78,14 +81,42 @@ public class AddAllExchangesNegative extends Driver {
 
             Thread.sleep(1000);
             addPortfolio.clickOnSubmit();
-            String errorMessage = addPortfolio.getErrorMessage();
-            System.out.println(exchangeName + " - " + "invalid format - " + errorMessage);
-            addPortfolio.clickOnBack();
+
+            if(addPortfolio.errorMessageIsDisplayed() == true)
+            {
+                String errorMessage = addPortfolio.getErrorMessage();
+                System.out.println(exchangeName + " negative case Passed");
+                System.out.print(exchangeName + " error message is - " + errorMessage);
+                addPortfolio.clickOnBack();
+            }
+
+            else if (addPortfolio.errorMessage2IsDisplayed() == true)
+            {
+                String errorMessage2 = addPortfolio.getErrorMessage2();
+                System.err.println(exchangeName + " negative case Passed");
+                System.out.print(exchangeName + " error message is - " + errorMessage2);
+                addPortfolio.clickOnBack();
+            }
+
+            else
+            {
+                System.err.println(exchangeName + " negative case Failed (portfolio added)");
+                utils.refreshPage();
+
+                Thread.sleep(4000);
+                addPortfolio.clickOnAddPortfolio();
+                addPortfolio.clickOnConnectExchange();
+
+                continue;
+            }
+
         }
 
         for (int i = 0; i < listTill.size(); i++) {
 
             List<WebElement> list = driver.findElements(By.className("qa-exchanges"));
+
+            Thread.sleep(1000);
 
             String exchangeName = list.get(i).getText();
             list.get(i).click();
@@ -94,8 +125,9 @@ public class AddAllExchangesNegative extends Driver {
             String secondAPI = "BcN94QMVwlRzEaTs3xuKnk9s73cdvlDL9lTrUV0GBbD6zsOzlt0Z79HOCXIxjZvl";
             String thirdAPI = "BcN94QMVwlRzEaTs3xuKnk9s73cdvlDL9lTrUV0GBbD6zsOzlt0Z79HOCXIxjZvl";
 
-            if (exchangeName.equals("Coinbase") || exchangeName.equals("Crypto.com app") || exchangeName.equals("Nexo (beta)") || exchangeName.equals("Gemini"))
+            if (exchangeName.equals("Coinbase") || exchangeName.equals("Crypto.com app") || exchangeName.equals("Nexo (beta)") || exchangeName.equals("Nexo") || exchangeName.equals("BlockFi (beta)") || exchangeName.equals("BlockFi"))
             {
+                Thread.sleep(3000);
                 addPortfolio.clickOnBack();
                 continue;
             }
@@ -107,9 +139,10 @@ public class AddAllExchangesNegative extends Driver {
                 addPortfolio.typeThirdAPI(thirdAPI);
             }
 
-            else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX"))
+            else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX") || exchangeName.equals("Bitrue"))
             {
                 addPortfolio.typeFirstAPI(firstAPI);
+                Thread.sleep(1000);
                 addPortfolio.typeSecondAPIByBit(secondAPI);
             }
 
@@ -121,9 +154,34 @@ public class AddAllExchangesNegative extends Driver {
 
             Thread.sleep(1000);
             addPortfolio.clickOnSubmit();
-            String errorMessage = addPortfolio.getErrorMessage();
-            System.out.println(exchangeName + " - " + "wrong API - " + errorMessage);
-            addPortfolio.clickOnBack();
+
+            if(addPortfolio.errorMessageIsDisplayed() == true)
+            {
+                String errorMessage = addPortfolio.getErrorMessage();
+                System.err.println(exchangeName + " negative case Passed");
+                System.out.print(exchangeName + " error message is - " + errorMessage);
+                addPortfolio.clickOnBack();
+            }
+
+            else if (addPortfolio.errorMessage2IsDisplayed() == true)
+            {
+                String errorMessage2 = addPortfolio.getErrorMessage2();
+                System.err.println(exchangeName + " negative case Passed");
+                System.out.print(exchangeName + " error message is - " + errorMessage2);
+                addPortfolio.clickOnBack();
+            }
+
+            else
+            {
+                System.err.println(exchangeName + " negative case Failed (portfolio added)");
+                utils.refreshPage();
+
+                Thread.sleep(4000);
+                addPortfolio.clickOnAddPortfolio();
+                addPortfolio.clickOnConnectExchange();
+
+                continue;
+            }
 
         }
     }

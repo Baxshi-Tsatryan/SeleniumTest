@@ -80,134 +80,131 @@ public class GeneralWidgets {
     By wordpressConfigCode = By.cssSelector(".widget-code-container");
 
 
-
     // ------------------------------------------------------ Methods -------------------------------------------------
 
     // Coin Price Widget
 
-    public void clickOnCoinPriceWidgetLarge()
-    {
-        utils.clickOnElement(coinPriceWidgetLarge);
+    public GeneralWidgets clickOnCoinPriceWidgetLarge() {
+        utils.click(coinPriceWidgetLarge);
+        return this;
     }
 
-    public void clickOnCoinPriceWidgetMedium()
-    {
-        utils.clickOnElement(coinPriceWidgetMedium);
+    public GeneralWidgets clickOnCoinPriceWidgetMedium() {
+        utils.click(coinPriceWidgetMedium);
+        return this;
     }
 
-    public void clickOnCoinPriceWidgetSmall()
-    {
-        utils.clickOnElement(coinPriceWidgetSmall);
+    public GeneralWidgets clickOnCoinPriceWidgetSmall() {
+        utils.click(coinPriceWidgetSmall);
+        return this;
     }
 
 
     // Coin List Widget
 
-    public void clickOnCoinListWidgetLarge()
-    {
-        utils.clickOnElement(coinListWidgetLarge);
+    public GeneralWidgets clickOnCoinListWidgetLarge() {
+        utils.click(coinListWidgetLarge);
+        return this;
     }
 
-    public void clickOnCoinListWidgetMedium()
-    {
-        utils.clickOnElement(coinListWidgetMedium);
+    public GeneralWidgets clickOnCoinListWidgetMedium() {
+        utils.click(coinListWidgetMedium);
+        return this;
     }
 
-    public void clickOnCoinListWidgetSmall()
-    {
-        utils.clickOnElement(coinListWidgetSmall);
+    public GeneralWidgets clickOnCoinListWidgetSmall() {
+        utils.click(coinListWidgetSmall);
+        return this;
     }
 
 
     // Coin Price Chart Widget
 
-    public void clickOnCoinPriceChartWidgetLarge()
-    {
-        utils.clickOnElement(coinPriceChartWidgetLarge);
+    public GeneralWidgets clickOnCoinPriceChartWidgetLarge() {
+        utils.click(coinPriceChartWidgetLarge);
+        return this;
     }
 
-    public void clickOnCoinPriceChartWidgetMedium()
-    {
-        utils.clickOnElement(coinPriceChartWidgetMedium);
+    public GeneralWidgets clickOnCoinPriceChartWidgetMedium() {
+        utils.click(coinPriceChartWidgetMedium);
+        return this;
     }
 
 
     // Insight Widget
 
-    public void clickOnFirstInsightWidget()
-    {
-        utils.clickOnElement(firstInsight);
+    public GeneralWidgets clickOnFirstInsightWidget() {
+        utils.click(firstInsight);
+        return this;
     }
 
-    public void clickOnSecondInsightWidget()
-    {
-        utils.clickOnElement(secondInsight);
+    public GeneralWidgets clickOnSecondInsightWidget() {
+        utils.click(secondInsight);
+        return this;
     }
 
-    public void clickOnThirdInsightWidget()
-    {
-        utils.clickOnElement(thirdInsight);
+    public GeneralWidgets clickOnThirdInsightWidget() {
+        utils.click(thirdInsight);
+        return this;
     }
 
-    public void clickOnForthInsightWidget()
-    {
-        utils.clickOnElement(forthInsight);
+    public GeneralWidgets clickOnForthInsightWidget() {
+        utils.click(forthInsight);
+        return this;
     }
 
 
     // Converter Widget
 
-    public void clickOnConverterWidgetLarge()
-    {
-        utils.clickOnElement(converterWidgetLarge);
+    public GeneralWidgets clickOnConverterWidgetLarge() {
+        utils.click(converterWidgetLarge);
+        return this;
     }
 
-    public void clickOnConverterWidgetMedium()
-    {
-        utils.clickOnElement(converterWidgetMedium);
+    public GeneralWidgets clickOnConverterWidgetMedium() {
+        utils.click(converterWidgetMedium);
+        return this;
     }
 
-    public void clickOnConverterWidgetSmall()
-    {
-        utils.clickOnElement(converterWidgetSmall);
+    public GeneralWidgets clickOnConverterWidgetSmall() {
+        utils.click(converterWidgetSmall);
+        return this;
     }
 
 
     // Coin Calc Widget
 
-    public void clickOnCoinCalcWidget()
-    {
-        utils.clickOnElement(coinCalcWidget);
+    public GeneralWidgets clickOnCoinCalcWidget() {
+        utils.click(coinCalcWidget);
+        return this;
     }
 
 
     // Coin Price Marquee Widget
 
-    public void clickOnCoinPriceMarqueeWidget()
-    {
-        utils.clickOnElement(coinPriceMarqueeWidget);
+    public GeneralWidgets clickOnCoinPriceMarqueeWidget() {
+        utils.click(coinPriceMarqueeWidget);
+        return this;
     }
 
 
     // All Widgets
 
-    public void clickOnScriptTab()
-    {
-        utils.clickOnElement(scriptTab);
+    public GeneralWidgets clickOnScriptTab() {
+        utils.click(scriptTab);
+        return this;
     }
 
-    public String getScriptCode()
-    {
+    public String getScriptCode() {
         return utils.getText(scriptCode);
     }
 
-    public void clickOnWordpressConfigTab()
-    {
-        utils.clickOnElement(wordpressConfigTab);
+    public GeneralWidgets clickOnWordpressConfigTab() {
+        utils.click(wordpressConfigTab);
+        return this;
     }
 
-    public String getWordpressConfigCode()
-    {
+    public String getWordpressConfigCode() {
         return utils.getText(wordpressConfigCode);
     }
 

@@ -146,6 +146,7 @@ public class AddAllWalletsPositive extends Driver {
                     continue;
                 }
             }
+            
             addPortfolio.typeWalletAddress(walletAddress);
             Thread.sleep(1000);
             addPortfolio.clickOnSubmit();

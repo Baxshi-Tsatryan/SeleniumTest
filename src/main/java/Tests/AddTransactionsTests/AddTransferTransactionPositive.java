@@ -53,11 +53,11 @@ public class AddTransferTransactionPositive extends Driver {
                 addTransactions.clickOnFirstCoinResult();
                 addTransactions.clickOnFromDropDown();
                 String currentFromType = utils.getText((By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index1 + ") .table-row")));
-                utils.clickOnElement(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index1 + ") .table-row"));
+                utils.click(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index1 + ") .table-row"));
 
                 addTransactions.clickOnToDropDown();
                 String currentToType = utils.getText((By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index2 + ") .table-row")));
-                utils.clickOnElement(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index2 + ") .table-row"));
+                utils.click(By.cssSelector("ul.jsx-1751315535 > li:nth-of-type(" + index2 + ") .table-row"));
 
                 addTransactions.typeAmount(coinAmount);
                 addTransactions.typeNote(note);

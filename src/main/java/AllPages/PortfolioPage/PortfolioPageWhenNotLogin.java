@@ -32,42 +32,42 @@ public class PortfolioPageWhenNotLogin {
 
     // Connect Exchange/Wallet
 
-    public void clickOnConnectExchange()
-    {
-        utils.clickOnElement(connectExchange);
+    public PortfolioPageWhenNotLogin clickOnConnectExchange() {
+        utils.click(connectExchange);
+        return this;
     }
 
-    public void clickOnConnectWallet()
-    {
-        utils.clickOnElement(connectWallet);
+    public PortfolioPageWhenNotLogin clickOnConnectWallet() {
+        utils.click(connectWallet);
+        return this;
     }
 
-    public void clickOnConnectToMetamask()
-    {
-        utils.clickOnElement(connectToMetamask);
+    public PortfolioPageWhenNotLogin clickOnConnectToMetamask() {
+        utils.click(connectToMetamask);
+        return this;
     }
 
-    public void clickOnConnectToLedger()
-    {
-        utils.clickOnElement(connectToLedger);
+    public PortfolioPageWhenNotLogin clickOnConnectToLedger() {
+        utils.click(connectToLedger);
+        return this;
     }
 
-    public void clickOnConnectToTrezor()
-    {
-        utils.clickOnElement(connectToTrezor);
+    public PortfolioPageWhenNotLogin clickOnConnectToTrezor() {
+        utils.click(connectToTrezor);
+        return this;
     }
 
 
     // Manual Transactions
 
-    public void clickOnAddManualTransaction()
-    {
-        utils.clickOnElement(addManualTransaction);
+    public PortfolioPageWhenNotLogin clickOnAddManualTransaction() {
+        utils.click(addManualTransaction);
+        return this;
     }
 
-    public void clickOnAddManualPortfolio()
-    {
-        utils.clickOnElement(addManualPortfolio);
+    public PortfolioPageWhenNotLogin clickOnAddManualPortfolio() {
+        utils.click(addManualPortfolio);
+        return this;
     }
 
 }
