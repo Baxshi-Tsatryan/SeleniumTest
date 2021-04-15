@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.asserts.Assertion;
 
 public class AddPortfolio {
 
@@ -15,7 +14,6 @@ public class AddPortfolio {
     public AddPortfolio(WebDriver driver) {
         this.driver = driver;
         utils = new SeleniumUtils(this.driver);
-
     }
 
     By addPortfolio = By.cssSelector(".primary");
@@ -26,6 +24,8 @@ public class AddPortfolio {
     By connectExchange = By.cssSelector("div.buttons-with-info > button:nth-of-type(1)");
 
     By searchExchanges = By.cssSelector(".search-wrapper.jsx-2489091780 [name]");
+
+    By exchangeName = By.cssSelector(".showing .filter-value");
 
     By exchangeNameField = By.xpath("//*[@id='__next']/main/div/div/div[1]/div[2]/div/div/div[1]/div[4]/div[3]/div/div[1]/div/div/input");
 

@@ -99,7 +99,7 @@ public class AddAllExchangesPositive2Name extends Driver {
                 }
 
                 case "Bybit": {
-                    firstAPI = exchangesWalletsAPIs.getByBitAPIPrivateKey();
+                    firstAPI = exchangesWalletsAPIs.getByBitPrivateAPIKey();
                     secondAPI = exchangesWalletsAPIs.getByBitPrivateKey();
                     loop = 8;
                     break;
@@ -136,14 +136,14 @@ public class AddAllExchangesPositive2Name extends Driver {
 
                 case "Huobi": {
                     firstAPI = exchangesWalletsAPIs.getHuobiAccessKey();
-                    secondAPI = exchangesWalletsAPIs.getHuobiAccessSecret();
+                    secondAPI = exchangesWalletsAPIs.getHuobiSecretKey();
                     loop = 2;
                     break;
                 }
 
                 case "IDEX": {
-                    firstAPI = exchangesWalletsAPIs.getIdexAPICode();
-                    secondAPI = exchangesWalletsAPIs.getIdexAPISecret();
+                    firstAPI = exchangesWalletsAPIs.getIDEXAPICode();
+                    secondAPI = exchangesWalletsAPIs.getIDEXAPISecret();
                     loop = 2;
                     break;
                 }
@@ -164,16 +164,16 @@ public class AddAllExchangesPositive2Name extends Driver {
                 }
 
                 case "Liquid": {
-                    firstAPI = exchangesWalletsAPIs.getLiquidID();
+                    firstAPI = exchangesWalletsAPIs.getLiquidTokenID();
                     secondAPI = exchangesWalletsAPIs.getLiquidTokenSecret();
                     loop = 2;
                     break;
                 }
 
                 case "OKEX": {
-                    firstAPI = exchangesWalletsAPIs.getOkexKey();
-                    secondAPI = exchangesWalletsAPIs.getOkexSecret();
-                    thirdAPI = exchangesWalletsAPIs.getOkexPassphrase();
+                    firstAPI = exchangesWalletsAPIs.getOKEXKey();
+                    secondAPI = exchangesWalletsAPIs.getOKEXSecret();
+                    thirdAPI = exchangesWalletsAPIs.getOKEXPassphrase();
                     loop = 3;
                     break;
                 }

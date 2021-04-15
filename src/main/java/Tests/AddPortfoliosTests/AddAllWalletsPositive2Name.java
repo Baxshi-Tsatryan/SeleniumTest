@@ -55,87 +55,87 @@ public class AddAllWalletsPositive2Name extends Driver {
 
             switch (walletName) {
                 case "Ethereum Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getEthereumWallet();
+                    walletAddress = exchangesWalletsAPIs.getEthereumAddress();
                     break;
                 }
 
                 case "Bitcoin Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getBitcoinWallet();
+                    walletAddress = exchangesWalletsAPIs.getBitcoinAddress();
                     break;
                 }
 
                 case "Algorand Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getAlgorandWallet();
+                    walletAddress = exchangesWalletsAPIs.getAlgorandAddress();
                     break;
                 }
 
                 case "Bitcoin Cash Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getBitcoinCashWallet();
+                    walletAddress = exchangesWalletsAPIs.getBitcoinCashAddress();
                     break;
                 }
 
                 case "Cardano Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getCardanoWallet();
+                    walletAddress = exchangesWalletsAPIs.getCardanoAddress();
                     break;
                 }
 
                 case "Cosmos Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getCosmosWallet();
+                    walletAddress = exchangesWalletsAPIs.getCosmosAddress();
                     break;
                 }
 
                 case "DASH Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getDashWallet();
+                    walletAddress = exchangesWalletsAPIs.getDashAddress();
                     break;
                 }
 
                 case "DigiByte Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getDigiByteWallet();
+                    walletAddress = exchangesWalletsAPIs.getDigiByteAddress();
                     break;
                 }
 
                 case "Ethereum Classic Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getEthereumClassicWallet();
+                    walletAddress = exchangesWalletsAPIs.getEthereumClassicAddress();
                     break;
                 }
 
                 case "Litecoin Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getLitecoinWallet();
+                    walletAddress = exchangesWalletsAPIs.getLitecoinAddress();
                     break;
                 }
 
                 case "NEO Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getNeoWallet();
+                    walletAddress = exchangesWalletsAPIs.getNEOAddress();
                     break;
                 }
 
                 case "Ontology Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getOntologyWallet();
+                    walletAddress = exchangesWalletsAPIs.getOntologyAddress();
                     break;
                 }
 
                 case "Stellar Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getStellarWallet();
+                    walletAddress = exchangesWalletsAPIs.getStellarAddress();
                     break;
                 }
 
                 case "Tron Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getTronWallet();
+                    walletAddress = exchangesWalletsAPIs.getTronAddress();
                     break;
                 }
 
                 case "Waves Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getWavesWallet();
+                    walletAddress = exchangesWalletsAPIs.getWavesAddress();
                     break;
                 }
 
                 case "ZClassic Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getZClassicWallet();
+                    walletAddress = exchangesWalletsAPIs.getZClassicAddress();
                     break;
                 }
 
                 case "Zilliqa Wallet": {
-                    walletAddress = exchangesWalletsAPIs.getZillqaWallet();
+                    walletAddress = exchangesWalletsAPIs.getZillqaAddress();
                     break;
                 }
 

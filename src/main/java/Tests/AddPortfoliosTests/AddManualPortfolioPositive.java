@@ -22,7 +22,7 @@ public class AddManualPortfolioPositive extends Driver {
         utils = new SeleniumUtils(driver);
         addPortfolio = new AddPortfolio(driver);
         leftSideOfPagePortfolios = new LeftSideOfPagePortfolios(driver);
-        deleteAllPortfolios = new DeleteAllPortfolios();
+        deleteAllPortfolios = new DeleteAllPortfolios(driver);
 
     }
 

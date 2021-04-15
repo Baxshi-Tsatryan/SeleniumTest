@@ -21,6 +21,7 @@ public class TestCSVPositive extends Driver {
     SeleniumUtils utils;
     Paths paths;
     PortfolioPageWhenNotLogin portfolioPageWhenNotLogin;
+    DeleteAllPortfolios deleteAllPortfolios;
 
     @BeforeClass
     public void beforeClass() {
@@ -30,15 +31,16 @@ public class TestCSVPositive extends Driver {
         leftSideOfPagePortfolios = new LeftSideOfPagePortfolios(driver);
         paths = new Paths(driver);
         portfolioPageWhenNotLogin = new PortfolioPageWhenNotLogin(driver);
+        deleteAllPortfolios = new DeleteAllPortfolios(driver);
     }
 
-    @Test (priority = 1)
-    public void addAllExchangesNegative() throws InterruptedException {
+    @Test
+    public void addAllExchangesPositive() throws InterruptedException {
 
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
-        deleteAllPortfolios();
+        deleteAllPortfolios.deleteAllPortfolios();
 
         addPortfolio
                 .clickOnAddPortfolio()
@@ -46,210 +48,138 @@ public class TestCSVPositive extends Driver {
 
         List<WebElement> listTill = driver.findElements(By.className("qa-exchanges"));
 
-        for (int i = 0; i < listTill.size(); i++)
-        {
+        for (int i = 28; i < listTill.size(); i++) {
 
             List<WebElement> list = driver.findElements(By.className("qa-exchanges"));
 
+            Thread.sleep(1000);
             String exchangeName = list.get(i).getText();
             list.get(i).click();
 
-            if (exchangeName.equals("Crypto.com app"))
-            {
-                for(int j = 0; j <= 3; j++)
-                {
+            if (exchangeName.equals("Crypto.com app")) {
+                for (int j = 0; j <= 3; j++) {
                     WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
                     importButton.sendKeys(paths.getAllCryptoComCSVs(j));
 
-                    if (addPortfolio.invalidCSVErrorMessageIsDisplayed() == true)
-                    {
-                        System.err.println(exchangeName + " " + j + "th  exchange CSV is Invalid");
+                    if (afterCSVUploading(exchangeName) == false) {
                         addPortfolio.clickOnBack();
+                        List<WebElement> listC = driver.findElements(By.className("qa-exchanges"));
+                        listC.get(i).click();
                         continue;
+                    } else {
+                        System.out.println(exchangeName + " " + j  + " th exchange CSV passed");
                     }
 
-                    if (afterCSVUploading(exchangeName) == false)
-                    {
-                        addPortfolio.clickOnBack();
-                        continue;
-                    }
+                    if (j == 3)
+                        break;
 
-                    else
-                    {
-                        System.out.println(exchangeName + j + " th exchange CSV passed");
-                    }
-
-                    list.get(i).click();
+                    List<WebElement> listC = driver.findElements(By.className("qa-exchanges"));
+                    listC.get(i).click();
                 }
-            }
-
-            else if (exchangeName.equals("Nexo (beta)") || exchangeName.equals("Nexo"))
-            {
-                for(int j = 0; j <= 6; j++)
-                {
+            } else if (exchangeName.equals("Nexo (beta)") || exchangeName.equals("Nexo")) {
+                for (int j = 0; j <= 6; j++) {
                     WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
-                    importButton.sendKeys(paths.getAllCryptoComCSVs(j));
+                    importButton.sendKeys(paths.getAllNexoCSVs(j));
 
-                    if (addPortfolio.invalidCSVErrorMessageIsDisplayed() == true)
-                    {
-                        System.err.println(exchangeName + " " + j + "th  exchange CSV is Invalid");
+                    if (afterCSVUploading(exchangeName) == false) {
                         addPortfolio.clickOnBack();
+                        List<WebElement> listN = driver.findElements(By.className("qa-exchanges"));
+                        listN.get(i).click();
                         continue;
+                    } else {
+                        System.out.println(exchangeName + " " +  j + " th exchange CSV passed");
                     }
 
-                    if (afterCSVUploading(exchangeName) == false)
-                    {
-                        addPortfolio.clickOnBack();
-                        continue;
-                    }
+                    if(j==6)
+                        break;
 
-                    else
-                    {
-                        System.out.println(exchangeName + j + " th exchange CSV passed");
-                    }
-
-                    list.get(i).click();
+                    List<WebElement> listN = driver.findElements(By.className("qa-exchanges"));
+                    listN.get(i).click();
 
                 }
-            }
-
-            else if (exchangeName.equals("BlockFi (beta)") || exchangeName.equals("BlockFi"))
-            {
-                for(int j = 0; j <= 1; j++)
-                {
+            } else if (exchangeName.equals("BlockFi (beta)") || exchangeName.equals("BlockFi")) {
+                for (int j = 0; j <= 1; j++) {
                     WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
-                    importButton.sendKeys(paths.getAllCryptoComCSVs(j));
+                    importButton.sendKeys(paths.getAllBlockFiCSVs(j));
 
-                    if (addPortfolio.invalidCSVErrorMessageIsDisplayed() == true)
-                    {
-                        System.err.println(exchangeName + " " + j + "th  exchange CSV is Invalid");
+                    if (afterCSVUploading(exchangeName) == false) {
                         addPortfolio.clickOnBack();
+                        List<WebElement> listB = driver.findElements(By.className("qa-exchanges"));
+                        listB.get(i).click();
                         continue;
+                    } else {
+                        System.out.println(exchangeName + " " + j + " th exchange CSV passed");
                     }
 
-                    if (afterCSVUploading(exchangeName) == false)
-                    {
-                        addPortfolio.clickOnBack();
-                        continue;
-                    }
+                    if(j==1)
+                        break;
 
-                    else
-                    {
-                        System.out.println(exchangeName + j + " th exchange CSV passed");
-                    }
-
-                    list.get(i).click();
+                    List<WebElement> listB = driver.findElements(By.className("qa-exchanges"));
+                    listB.get(i).click();
 
                 }
-            }
-
-            else if (exchangeName.equals("Bittrex"))
-            {
+            } else if (exchangeName.equals("Bittrex")) {
                 addPortfolio.clickOnCSVTab();
                 WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
                 importButton.sendKeys(paths.getBittrexCSV());
 
-                if (addPortfolio.invalidCSVErrorMessageIsDisplayed() == true)
-                {
-                    System.err.println(exchangeName + " exchange CSV is Invalid");
+                if (afterCSVUploading(exchangeName) == false) {
                     addPortfolio.clickOnBack();
+                    List<WebElement> listB = driver.findElements(By.className("qa-exchanges"));
+                    listB.get(i).click();
                     continue;
-                }
-
-                if (afterCSVUploading(exchangeName) == false)
-                {
-                    addPortfolio.clickOnBack();
-                    continue;
-                }
-
-                else
-                {
+                } else {
                     System.out.println(exchangeName + " exchange CSV passed");
                 }
-            }
-
-            else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX") || exchangeName.equals("Bitrue"))
-            {
+            } else if (exchangeName.equals("Bybit") || exchangeName.equals("Currency.com") || exchangeName.equals("FTX") || exchangeName.equals("Bitrue") || exchangeName.equals("Bitbuy") || exchangeName.equals("Bitpanda Pro")) {
                 addPortfolio.clickOnBack();
                 continue;
-            }
-
-            else
-            {
+            } else {
                 addPortfolio.clickOnCSVTab();
                 WebElement importButton = driver.findElement(By.cssSelector("input.jsx-2090407883"));
                 importButton.sendKeys(paths.getCoinStatsTemplateCSV());
 
-                if (addPortfolio.invalidCSVErrorMessageIsDisplayed() == true)
-                {
-                    System.err.println(exchangeName + " exchange CSV is Invalid");
+                if (afterCSVUploading(exchangeName) == false) {
                     addPortfolio.clickOnBack();
+                    List<WebElement> listA = driver.findElements(By.className("qa-exchanges"));
+                    listA.get(i).click();
                     continue;
-                }
-
-                if (afterCSVUploading(exchangeName) == false)
-                {
-                    addPortfolio.clickOnBack();
-                    continue;
-                }
-
-                else
-                {
+                } else {
                     System.out.println(exchangeName + " exchange CSV passed");
                 }
             }
         }
 
-        deleteAllPortfolios();
+        utils.refreshPage();
+        deleteAllPortfolios.deleteAllPortfolios();
     }
 
-    public Boolean afterCSVUploading(String exchangeName) throws InterruptedException {
+    public Boolean afterCSVUploading(String exchangeName) {
 
-        addPortfolio.clickOnSubmit();
-
-        if (addPortfolio.invalidCSVErrorMessageIsDisplayed() == true)
+        try {
+            addPortfolio.clickOnSubmit();
+        } catch (Exception e)
         {
-            System.err.println(exchangeName + " exchange CSV is Invalid");
             return false;
         }
 
-        if (addPortfolio.noShowMeSyncedIsDisplayed() == true)
-        {
+        if (addPortfolio.noShowMeSyncedIsDisplayed() == true) {
             addPortfolio.clickOnNoShowMeSynced();
+        } else {
+            System.err.println(exchangeName + " No Show Me Synced doesn't appear (CSV doesn't work correctly)");
+            return false;
         }
 
-        List<WebElement> list2 = driver.findElements(By.className("qa-portfolios"));
-        String addedExchangeName = list2.get(list2.size() - 1)
-                .getText().replace(" CSV", "");
+//        List<WebElement> list2 = driver.findElements(By.className("qa-portfolios"));
+//        int addedExchangeSize = list2.size() - 1;
 
-        if (!exchangeName.equals(addedExchangeName))
-        {
-            System.err.println(exchangeName + " exchange CSV (name is invalid) doesn't add");
-        }
+//        if (!exchangeName.equals(addedExchangeName)) {
+//            System.err.println(exchangeName + " exchange CSV (name is invalid) doesn't add");
+//        }
 
         addPortfolio.clickOnAddPortfolio();
         addPortfolio.clickOnConnectExchange();
 
         return true;
-    }
-
-    public void deleteAllPortfolios() throws InterruptedException {
-        List<WebElement> listTill = driver.findElements(By.className("qa-portfolios"));
-
-        if (listTill.size() < 2) {
-            System.out.println("There is only 1 portfolio");
-            return;
-        }
-
-        for (int i = 0; i < listTill.size() - 2; i++) {
-
-            List<WebElement> list = driver.findElements(By.className("qa-portfolios"));
-
-            leftSideOfPagePortfolios.moveToSecondPortfolioName();
-            Thread.sleep(1000);
-            leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
-            leftSideOfPagePortfolios.clickOnDeleteInDelete();
-            Thread.sleep(3000);
-        }
     }
 }
