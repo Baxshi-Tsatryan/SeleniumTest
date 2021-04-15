@@ -28,6 +28,9 @@ public class ExchangesWalletsAPIs {
     String bitfinexAPIKey = "BMUQ7lJPDSLm6y2kkfyGWf6IXn4j8CmL9zIeE4Nw7fA";
     String bitfinexAPISecret = "Pn40VNtUjjP9hNlFoqJTGkcnnngEb4fzsZTsh4kbRw9";
 
+    String bittrexAPIKey = "354b260b7353408b8697e0d3389d522e";
+    String bittrexAPISecret = "b5ee9f0671d14ab28437f14e6f95e11e";
+
     String bitmexID = "dYOcDY6USQ4h5Nfu-eZKEssc";
     String bitmexSecret = "C7qmXuvzcF1ocf5-asMUInQSb_i-R0HXYV2bMLMRiUo2yZdO";
 
@@ -104,6 +107,52 @@ public class ExchangesWalletsAPIs {
 
     // Multi-Coin Wallets
 
+    // Exodus
+
+    String exodusBitcoinAddress = "bc1qlddz8kgx2320wpvj9sj8y54hg6em3h0xkqvwa7";
+    String exodusEthereumAddress = "0x2Aa0D4cA03CAbbA7746a8c90085B2d8d2f2d2cA7";
+    String exodusXRPAddress = "rBHbiAVKmTBwnybB1VKvhVBV2wN8e3CWMt";
+    String exodusLitecoinAddress = "0x2Aa0D4cA03CAbbA7746a8c90085B2d8d2f2d2cA7";
+    String exodusNEOAddress = "AcuCi6tppw7eWdXovtiv6JSMT2bnmK1xwQ";
+    String exodusDashAddress = "XdQLw5FkpMaVVVFHncfQVswvwtv53YB97e";
+    String exodusCardanoAddress = "Ae2tdPwUPEZBmTGWUR7LNBxY8eJVAeSmovNL32HM5iqsCWv2TJJtobci3Rd";
+    String exodusEthereumClassicAddress = "0xDc5a875E8321D3d951bcEf91ca798c124c7bcE23";
+    String exodusVeChainAddress = "0x687912d858Fb7B44Ccec48ac0564F5aE77fDCE04";
+    String exodusTronAddress = "TW9FXZg8ATCfqiQvrvgR3UANBjLijrhz42";
+    String exodusTetherAddress = "0x2Aa0D4cA03CAbbA7746a8c90085B2d8d2f2d2cA7";
+    String exodusBinanceChainAddress = "bnb1zqd5l3hvtwkmd2l3aptvwwehzk825unvn4w9sc";
+
+    // Ledger
+
+    String ledgerEthereumAddress = "0xf56799d7C95C6DEb708A9f55b2e75A685A94F980";
+    String ledgerBitcoinAddress = "19VVSmRswV8sXYcQzueWvnxtUhwBrmbv9j";
+    String ledgerDigibyteAddress = "dgb1q592udvcp9q89h9dkxdn4d9l7vx6aaf0uvzqkkc";
+    String ledgerStellarAddress = "GCATFBPIBT4CKIJ4MAPOV6EPPBWXPOERAVETARIDCPX5TF2V32DRNAF2";
+    String ledgerTezosAddress = "tz1Z95nQsYkjs4ikbZfgR8YdPiMzB77tpRBW";
+    String ledgerTronAddress = "TAN9JfsGcBQigWh67nGMWf2daKqgrYn1C3";
+    String ledgerDashXPubAddress = "drkvjR5nbuDFX1HCNdyciUxPoiHxWATCYH9sTpVt6rXsJN7mesaATzAPE91xWchHCTaDyCj2CXZmeJjy8Uqntjiy2BXaSMupxCqeBHiqxRUsrFX";
+    String ledgerDashAddress = "XvtKi98HvznRbeA6xcyQNP5AyXbFDo2R9R";
+    String ledgerBitcoinCashXPubAddress = "xpub6CLv85AFtdfg7vBdErUzKSCzQSk1kNBRCo2r2qcfMi7SfBfoSnttcuSPVMG1ULqTWptdEoD1Tvp7W4dMW5GjRYB3BJKu2PWEtkeroXGp7Jb";
+    String ledgerBitcoinCashAddress = "qqkahm4jw48wh5aya6q8kpgmwpn5nyej75ewpxk26v";
+    String ledgerEthereumClassicAddress = "0x24875A39eB644802765443b5d247992ff47Bf3E3";
+    String ledgerLitecoinXPubAddress = "Ltub2ZZFR3YQX8586vk2WCuG1BCFLzUUsve3JvC7Sfjmu5L3B2mtubAwevnqmm7aEjEsdxbCAm87qyC7bXxKj6PCpZDUg2fgKbqKrW5auDhmT5d";
+    String ledgerLitecoinAddress = "ltc1qmvj9v6n2y0cvx4ea4dy58qn695l9al3haamnx9";
+    String ledgerEthereumAddress2 = "0xCcFADd350d2D5591a7cC63B54128aCf91613bA17";
+    String ledgerBitcoinXPubAddress = "xpub6DMTzP4RwrPYFQvKm9X66UtMbvAmJ5UNwhRPENVKSJu6x4sk8qGbE4r5N9AvqmLF4LsdFmuCJceN3bY3iMPPCX1T98xazd7MZEsboFm4Bfy";
+    String ledgerBitcoinAddress2 = "bc1q3a5pyavmwya54469w7eddnuyedszpmhe5cnczm";
+    String ledgerCosmosXPubAddress = "cosmospub1addwnpepqv0axftr45lx25v3y9ug4lt6dcgprt3yc8c3u2e33fyd7mlxkfvgxyaudwl";
+    String ledgerCosmosAddress = "cosmos1gahdwaf5hd7m6xukmshsgp284gf4c5lnjxx0qp";
+    String ledgerZCashXPubAddress = "xpub6DDGh8KybLsUz9jLck29U1RVbjchpvG9hNeRkXB9WSBNzzLXYDNaTcomxZoRSv4tkRHYzWWrQyqN2ciRsfWEnPdEcDAYeqZzCfLFiEN7tv7";
+    String ledgerZCashAddress = "t1NSZkzHiUqMZ9eF5Yrkwo58v1Cy6k6wA8j";
+    String ledgerDogeCoinXPubAddress = "dgub8snYNdwmQdzcJ4nxZbqVySy6AF87k4U8ezSVtRT8inN28wLQ45uzrSNSGMdJPqNyr827ZczWRDerL6rXTDTitMM2EbPScWKzB8k3q5uMhVQ";
+    String ledgerDogeCoinAddress = "D7ziCAZipCaDpLxfy4Fu4A2k4mB5NrScvT";
+
+    // Trezor
+
+    String trezorBitcoinXPubAddress = "dgub8s5XZpUn5RXyAZTWdh9wbM5DXctrfML4NYW3SgNHofvCQYJwLK8Qe3dU1NMgfw4qsnvfx8hF3FSnnZzNGHpFEQwkx85SoqRE1ZWLcDss7BH";
+    String trezorBitcoinAddress = "37PRXdNotxYepC52huwxZXD5Ywer2VmT49";
+    String trezorDashAddress = "XjshemZswzcjEMpjPP2qvuCPtAzBXuh4Zs";
+    String trezorLitecoinAddress = "M8fK7sxLCuukHeY8oN5A8gFnfQHHHQB2PH";
 
     // -------------------------------------------------------- Methods -------------------------------------------------------------
 
@@ -163,6 +212,14 @@ public class ExchangesWalletsAPIs {
         return bitfinexAPISecret;
     }
 
+
+    public String getBittrexAPIKey(){
+        return bittrexAPIKey;
+    }
+
+    public String getBittrexAPISecret(){
+        return bittrexAPISecret;
+    }
 
     public String getBitmexID()
     {
@@ -403,6 +460,171 @@ public class ExchangesWalletsAPIs {
     public String getOntologyAddress()
     {
         return ontologyAddress;
+    }
+
+
+    // Multi-Coins Wallets
+
+    // Exodus
+
+    public String getExodusBitcoinAddress(){
+        return exodusBitcoinAddress;
+    }
+
+    public String getExodusEthereumAddress(){
+        return exodusEthereumAddress;
+    }
+
+    public String getExodusXRPAddress(){
+        return exodusXRPAddress;
+    }
+
+    public String getExodusLitecoinAddress(){
+        return exodusLitecoinAddress;
+    }
+
+    public String getExodusNEOAddress(){
+        return exodusNEOAddress;
+    }
+
+    public String getExodusDashAddress(){
+        return exodusDashAddress;
+    }
+
+    public String getExodusCardanoAddress(){
+        return exodusCardanoAddress;
+    }
+
+    public String getExodusEthereumClassicAddress(){
+        return exodusEthereumClassicAddress;
+    }
+
+    public String getExodusVeChainAddress(){
+        return exodusVeChainAddress;
+    }
+
+    public String getExodusTronAddress(){
+        return exodusTronAddress;
+    }
+
+    public String getExodusTetherAddress(){
+        return exodusTetherAddress;
+    }
+
+    public String getExodusBinanceChainAddress(){
+        return exodusBinanceChainAddress;
+    }
+
+    // Ledger
+
+    public String getLedgerEthereumAddress()
+    {
+        return ledgerEthereumAddress;
+    }
+
+    public String getLedgerBitcoinAddress(){
+        return ledgerBitcoinAddress;
+    }
+
+    public String getLedgerDigibyteAddress(){
+        return ledgerDigibyteAddress;
+    }
+
+    public String getLedgerStellarAddress(){
+        return ledgerStellarAddress;
+    }
+
+    public String getLedgerTezosAddress(){
+        return ledgerTezosAddress;
+    }
+
+    public String getLedgerTronAddress(){
+        return ledgerTronAddress;
+    }
+
+    public String getLedgerDashXPubAddress(){
+        return ledgerDashXPubAddress;
+    }
+
+    public String getLedgerDashAddress(){
+        return ledgerDashAddress;
+    }
+
+    public String getLedgerBitcoinCashXPubAddress()
+    {
+        return ledgerBitcoinCashXPubAddress;
+    }
+
+    public String getLedgerBitcoinCashAddress(){
+        return ledgerBitcoinCashAddress;
+    }
+
+    public String getLedgerEthereumClassicAddress(){
+        return ledgerEthereumClassicAddress;
+    }
+
+    public String getLedgerLitecoinXPubAddress(){
+        return ledgerLitecoinXPubAddress;
+    }
+
+    public String getLedgerLitecoinAddress()
+    {
+        return ledgerLitecoinAddress;
+    }
+
+    public String getLedgerEthereumAddress2(){
+        return ledgerEthereumAddress2;
+    }
+
+    public String getLedgerBitcoinXPubAddress(){
+        return ledgerBitcoinXPubAddress;
+    }
+
+    public String getLedgerBitcoinAddress2(){
+        return ledgerBitcoinAddress2;
+    }
+
+    public String getLedgerCosmosXPubAddress(){
+        return ledgerCosmosXPubAddress;
+    }
+
+    public String getLedgerCosmosAddress(){
+        return ledgerCosmosAddress;
+    }
+
+    public String getLedgerZCashXPubAddress(){
+        return ledgerZCashXPubAddress;
+    }
+
+    public String getLedgerZCashAddress(){
+        return ledgerZCashAddress;
+    }
+
+    public String getLedgerDogeCoinXPubAddress()
+    {
+        return ledgerDogeCoinXPubAddress;
+    }
+
+    public String getLedgerDogeCoinAddress(){
+        return ledgerDogeCoinAddress;
+    }
+
+    // Trezor
+
+    public String getTrezorBitcoinXPubAddress(){
+        return trezorBitcoinXPubAddress;
+    }
+
+    public String getTrezorBitcoinAddress(){
+        return trezorBitcoinAddress;
+    }
+
+    public String getTrezorDashAddress(){
+        return trezorDashAddress;
+    }
+
+    public String getTrezorLitecoinAddress(){
+        return trezorLitecoinAddress;
     }
 
 }
