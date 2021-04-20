@@ -4,8 +4,6 @@ import AllPages.PortfolioPage.AddPortfolio;
 import AllPages.PortfolioPage.LeftSideOfPagePortfolios;
 import MainPackage.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,6 +17,7 @@ public class AddAllWalletsPositive extends Driver {
     SeleniumUtils utils;
     Paths paths;
     ExchangesWalletsAPIs exchangesWalletsAPIs;
+    DeleteAllPortfolios deleteAllPortfolios;
 
     @BeforeClass
     public void beforeClass() {
@@ -28,6 +27,7 @@ public class AddAllWalletsPositive extends Driver {
         leftSideOfPagePortfolios = new LeftSideOfPagePortfolios(driver);
         paths = new Paths(driver);
         exchangesWalletsAPIs = new ExchangesWalletsAPIs(driver);
+        deleteAllPortfolios = new DeleteAllPortfolios(driver);
     }
 
     @Test
@@ -35,13 +35,13 @@ public class AddAllWalletsPositive extends Driver {
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
-        deleteAllPortfolios();
+        deleteAllPortfolios.deleteAllPortfolios();
 
         String walletAddress = "";
 
-        Thread.sleep(4000);
-        addPortfolio.clickOnAddPortfolio();
-        addPortfolio.clickOnConnectWallet();
+        addPortfolio
+                .clickOnAddPortfolio()
+                .clickOnConnectWallet();
 
         List<WebElement> listTill = driver.findElements(By.className("qa-wallets"));
 
@@ -54,6 +54,7 @@ public class AddAllWalletsPositive extends Driver {
 
             int loop = 0;
 
+            Thread.sleep(1000);
             switch (walletName) {
                 case "Ethereum Wallet": {
                     walletAddress = exchangesWalletsAPIs.getEthereumAddress();
@@ -65,15 +66,27 @@ public class AddAllWalletsPositive extends Driver {
                     break;
                 }
 
+//                case "Celsius Network":{
+//                    break;
+//                }
+
                 case "Algorand Wallet": {
                     walletAddress = exchangesWalletsAPIs.getAlgorandAddress();
                     break;
                 }
 
+//                case "Binance Chain":{
+//                    break;
+//                }
+
                 case "Bitcoin Cash Wallet": {
                     walletAddress = exchangesWalletsAPIs.getBitcoinCashAddress();
                     break;
                 }
+
+//                case "Binance Smart Chain":{
+//                    break;
+//                }
 
                 case "Cardano Wallet": {
                     walletAddress = exchangesWalletsAPIs.getCardanoAddress();
@@ -84,6 +97,10 @@ public class AddAllWalletsPositive extends Driver {
                     walletAddress = exchangesWalletsAPIs.getCosmosAddress();
                     break;
                 }
+//
+//                case "XRP Wallet":{
+//                    break;
+//                }
 
                 case "DASH Wallet": {
                     walletAddress = exchangesWalletsAPIs.getDashAddress();
@@ -95,25 +112,45 @@ public class AddAllWalletsPositive extends Driver {
                     break;
                 }
 
+//                case "Doge Wallet":{
+//                    break;
+//                }
+
                 case "Ethereum Classic Wallet": {
                     walletAddress = exchangesWalletsAPIs.getEthereumClassicAddress();
                     break;
                 }
+
+//                case "EOS Wallet":{
+//                    break;
+//                }
 
                 case "Litecoin Wallet": {
                     walletAddress = exchangesWalletsAPIs.getLitecoinAddress();
                     break;
                 }
 
+//                case "Polkadot Wallet":{
+//                    break;
+//                }
+
                 case "NEO Wallet": {
                     walletAddress = exchangesWalletsAPIs.getNEOAddress();
                     break;
                 }
 
+//                case "Tezos Wallet":{
+//                    break;
+//                }
+
                 case "Ontology Wallet": {
                     walletAddress = exchangesWalletsAPIs.getOntologyAddress();
                     break;
                 }
+
+//                case "VeChain Wallet":{
+//                    break;
+//                }
 
                 case "Stellar Wallet": {
                     walletAddress = exchangesWalletsAPIs.getStellarAddress();
@@ -141,21 +178,24 @@ public class AddAllWalletsPositive extends Driver {
                 }
 
                 default: {
-                    Thread.sleep(1000);
                     addPortfolio.clickOnBack();
                     continue;
                 }
             }
             
             addPortfolio.typeWalletAddress(walletAddress);
-            Thread.sleep(1000);
             addPortfolio.clickOnSubmit();
             try {
                 addPortfolio.clickOnNoShowMeSynced();
-            } catch (NoSuchElementException e) {
-                System.err.println(walletName + " wallet address is Invalid or exception with Submit button");
+            } catch (Exception e) {
+                System.err.println(walletName + " wallet address is invalid");
+                String errorMessage = addPortfolio.getWalletError();
+                System.err.println(walletName + " error message is - " + errorMessage);
                 addPortfolio.clickOnBack();
+                continue;
             }
+
+            System.out.println(walletName + " wallet positive case passed");
 
             List<WebElement> list2 = driver.findElements(By.className("qa-portfolios"));
             String addedExchangeName = list2.get(list2.size() - 1).getText();
@@ -164,54 +204,11 @@ public class AddAllWalletsPositive extends Driver {
                 System.err.println(walletName + " wallet address is invalid");
             }
 
-            Thread.sleep(2000);
             addPortfolio.clickOnAddPortfolio();
             addPortfolio.clickOnConnectWallet();
         }
 
-        deleteAllPortfolios();
-
+        utils.refreshPage();
+        deleteAllPortfolios.deleteAllPortfolios();
     }
-
-
-  //      public void addManualPortfolioPositive() {
-
-  //             allURLs.navigateToPortfolioPage();
-
-  //             addPortfolio.clickOnAddPortfolio();
-  //             addPortfolio.clickOnAddManualPortfolio();
-  //             addPortfolio.clickOnSaveButtonInManualPortfolio();
-  //             utils.refreshPage();
-
-  //             addPortfolio.clickOnAddPortfolio();
-  //             addPortfolio.clickOnAddManualPortfolio();
-  //             addPortfolio.typeManualPortfolioName("Name");
-  //             addPortfolio.typeManualPortfolioTotalCost("100");
-  //             addPortfolio.clickOnSaveButtonInManualPortfolio();
-  //             utils.refreshPage();
-  // }
-
-        public void deleteAllPortfolios() throws InterruptedException {
-            allURLs.navigateToPortfolioPage();
-
-            while (true) {
-
-                try {
-                    leftSideOfPagePortfolios.moveToSecondPortfolioName();
-                    Thread.sleep(1000);
-                    try {
-                        leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
-                    } catch (Exception e) {
-                        JavascriptExecutor executor = (JavascriptExecutor) driver;
-                        executor.executeScript("arguments[0].click();", driver.findElement(By.cssSelector("ul#portfolio-list > li:nth-of-type(3) .icon-delete")));
-                    }
-                    leftSideOfPagePortfolios.clickOnDeleteInDelete();
-                    Thread.sleep(3000);
-                }
-                catch (NoSuchElementException e)
-                {
-                    break;
-                }
-            }
-        }
-    }
+}

@@ -2,7 +2,6 @@ package Tests.AddPortfoliosTests;
 
 import AllPages.PortfolioPage.LeftSideOfPagePortfolios;
 import MainPackage.AllURLs;
-import MainPackage.Driver;
 import MainPackage.SeleniumUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

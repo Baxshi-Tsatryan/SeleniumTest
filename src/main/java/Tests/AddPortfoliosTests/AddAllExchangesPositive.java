@@ -4,7 +4,6 @@ import AllPages.PortfolioPage.AddPortfolio;
 import AllPages.PortfolioPage.LeftSideOfPagePortfolios;
 import MainPackage.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -18,6 +17,7 @@ public class AddAllExchangesPositive extends Driver {
     SeleniumUtils utils;
     Paths paths;
     ExchangesWalletsAPIs exchangesWalletsAPIs;
+    DeleteAllPortfolios deleteAllPortfolios;
 
     @BeforeClass
     public void beforeClass() {
@@ -27,6 +27,7 @@ public class AddAllExchangesPositive extends Driver {
         leftSideOfPagePortfolios = new LeftSideOfPagePortfolios(driver);
         paths = new Paths(driver);
         exchangesWalletsAPIs = new ExchangesWalletsAPIs(driver);
+        deleteAllPortfolios = new DeleteAllPortfolios(driver);
     }
 
     @Test
@@ -34,13 +35,12 @@ public class AddAllExchangesPositive extends Driver {
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
-        deleteAllPortfolios();
+        deleteAllPortfolios.deleteAllPortfolios();
 
         String firstAPI = "";
         String secondAPI = "";
         String thirdAPI = "";
 
-        Thread.sleep(4000);
         addPortfolio.clickOnAddPortfolio();
         addPortfolio.clickOnConnectExchange();
 
@@ -55,18 +55,47 @@ public class AddAllExchangesPositive extends Driver {
 
             int loop = 0;
 
+            Thread.sleep(1000);
             switch (exchangeName) {
-                case "Binance": {
-                    firstAPI = exchangesWalletsAPIs.getBinanceAPIKey();
-                    secondAPI = exchangesWalletsAPIs.getBinanceAPISecret();
-                    loop = 1;
-                    break;
-                }
-
                 case "Binance US": {
                     firstAPI = exchangesWalletsAPIs.getBinanceUSAPIKey();
                     secondAPI = exchangesWalletsAPIs.getBinanceUSAPISecret();
                     loop = 2;
+                    break;
+                }
+
+                case "Coinbase Pro":{
+                    loop = 0;
+                    break;
+                }
+
+                case "Crypto.com exchange":{
+                    loop = 0;
+                    break;
+                }
+
+                case "Bitbuy":{
+                    loop = 0;
+                    break;
+                }
+
+                case "Bitpanda Pro":{
+                    loop = 0;
+                    break;
+                }
+
+                case "Bitrue":{
+                    loop = 0;
+                    break;
+                }
+
+                case "Bitstamp":{
+                    loop = 0;
+                    break;
+                }
+
+                case "Currency.com":{
+                    loop = 0;
                     break;
                 }
 
@@ -77,12 +106,19 @@ public class AddAllExchangesPositive extends Driver {
                     break;
                 }
 
-                //case "Bitmex": {
-                //    //firstAPI = exchangesWalletsAPIs.getBitmexID();
-                //    //secondAPI = exchangesWalletsAPIs.getBitmexAPISecret();
-                //    loop = 2;
-                //    break;
-                //}
+                case "Bittrex":{
+                    firstAPI = exchangesWalletsAPIs.getBittrexAPIKey();
+                    secondAPI = exchangesWalletsAPIs.getBittrexAPISecret();
+                    loop = 2;
+                    break;
+                }
+
+                case "Bitmex": {
+                    firstAPI = exchangesWalletsAPIs.getBitmexID();
+                    secondAPI = exchangesWalletsAPIs.getBitmexSecret();
+                    loop = 2;
+                    break;
+                }
 
                 case "Bitfinex": {
                     firstAPI = exchangesWalletsAPIs.getBitfinexAPIKey();
@@ -101,7 +137,7 @@ public class AddAllExchangesPositive extends Driver {
                 case "Bybit": {
                     firstAPI = exchangesWalletsAPIs.getByBitPrivateAPIKey();
                     secondAPI = exchangesWalletsAPIs.getByBitPrivateKey();
-                    loop = 8;
+                    loop = 1;
                     break;
                 }
 
@@ -123,7 +159,7 @@ public class AddAllExchangesPositive extends Driver {
                 case "FTX": {
                     firstAPI = exchangesWalletsAPIs.getFTXAPIKey();
                     secondAPI = exchangesWalletsAPIs.getFTXAPISecret();
-                    loop = 8;
+                    loop = 1;
                     break;
                 }
 
@@ -186,43 +222,18 @@ public class AddAllExchangesPositive extends Driver {
                 }
 
                 default: {
-                    Thread.sleep(1000);
                     addPortfolio.clickOnBack();
                     continue;
                 }
             }
 
-            if (loop == 1) {
+            if (loop == 2) {
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPI(secondAPI);
-                Thread.sleep(1000);
-                addPortfolio.clickOnSubmit();
-
-                if (addPortfolio.errorMessageIsDisplayed() == true) {
-                    String errorMessage = addPortfolio.getErrorMessage();
-                    System.out.println(exchangeName + " API is invalid");
-                    System.out.print(exchangeName + " error message is - " + errorMessage);
-                    addPortfolio.clickOnBack();
-                    continue;
-                }
-
-//                else if (addPortfolio.errorMessage2IsDisplayed() == true)
-//                {
-//                    String errorMessage2 = addPortfolio.getErrorMessage2();
-//                    System.err.println(exchangeName + " API is invalid");
-//                    System.out.print(exchangeName + " error message is - " + errorMessage2);
-//                    addPortfolio.clickOnBack();
-//                    continue;
-//                }
-
-                addPortfolio.clickOnBinanceAddAccounts();
-                addPortfolio.clickOnSuccessYes();
-                addPortfolio.clickOnConnectExchange();
+            } else if (loop == 0){
+                addPortfolio.clickOnBack();
                 continue;
-            } else if (loop == 2) {
-                addPortfolio.typeFirstAPI(firstAPI);
-                addPortfolio.typeSecondAPI(secondAPI);
-            } else if (loop == 8) {
+            } else if (loop == 1) {
                 addPortfolio.typeFirstAPI(firstAPI);
                 addPortfolio.typeSecondAPIByBit(secondAPI);
             } else if (loop == 3) {
@@ -231,28 +242,21 @@ public class AddAllExchangesPositive extends Driver {
                 addPortfolio.typeThirdAPI(thirdAPI);
             }
 
-            Thread.sleep(1000);
             addPortfolio.clickOnSubmit();
-
-            if (addPortfolio.errorMessageIsDisplayed() == true) {
-                String errorMessage = addPortfolio.getErrorMessage();
-                System.out.println(exchangeName + " API is invalid");
-                System.out.print(exchangeName + " error message is - " + errorMessage);
-                addPortfolio.clickOnBack();
-                continue;
-            } else if (addPortfolio.errorMessage2IsDisplayed() == true) {
-                String errorMessage2 = addPortfolio.getErrorMessage2();
-                System.err.println(exchangeName + " API is invalid");
-                System.out.print(exchangeName + " error message is - " + errorMessage2);
-                addPortfolio.clickOnBack();
-                continue;
-            }
 
             try {
                 addPortfolio.clickOnNoShowMeSynced();
-            } catch (NoSuchElementException e) {
-                System.err.println(exchangeName + " No, Show me Synced button is not appears");
+            } catch (Exception e) {
+                String errorMessage = addPortfolio.getErrorMessage();
+                String errorMessage2 = addPortfolio.getErrorMessage();
+                System.out.println(exchangeName + " API is invalid");
+                System.err.println(exchangeName + " error message is - " + errorMessage);
+                System.err.println(exchangeName + " error message is - " + errorMessage2);
+                addPortfolio.clickOnBack();
+                continue;
             }
+
+            System.out.println(exchangeName + " exchange connecting passed");
 
             List<WebElement> list2 = driver.findElements(By.className("qa-portfolios"));
             String addedExchangeName = list2.get(list2.size() - 1).getText();
@@ -261,33 +265,11 @@ public class AddAllExchangesPositive extends Driver {
                 System.err.println(exchangeName + " exchange name is invalid");
             }
 
-            Thread.sleep(2000);
             addPortfolio.clickOnAddPortfolio();
             addPortfolio.clickOnConnectExchange();
 
         }
 
-        deleteAllPortfolios();
-    }
-
-    public void deleteAllPortfolios() throws InterruptedException {
-
-        List<WebElement> listTill = driver.findElements(By.className("qa-portfolios"));
-
-        if (listTill.size() < 2) {
-            System.out.println("There is only 1 portfolio");
-            return;
-        }
-
-        for (int i = 0; i < listTill.size() - 2; i++) {
-
-            List<WebElement> list = driver.findElements(By.className("qa-portfolios"));
-
-            leftSideOfPagePortfolios.moveToSecondPortfolioName();
-            Thread.sleep(1000);
-            leftSideOfPagePortfolios.clickOnSecondPortfolioDelete();
-            leftSideOfPagePortfolios.clickOnDeleteInDelete();
-            Thread.sleep(3000);
-        }
+        deleteAllPortfolios.deleteAllPortfolios();
     }
 }

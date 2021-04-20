@@ -33,13 +33,12 @@ public class AddAllWalletsNegative extends Driver {
         allURLs.navigateToPortfolioPage();
         utils.enableCookie();
 
-        Thread.sleep(4000);
-        addPortfolio.clickOnAddPortfolio();
-        addPortfolio.clickOnConnectWallet();
+        addPortfolio
+                .clickOnAddPortfolio()
+                .clickOnConnectWallet();
 
         List<WebElement> listTill = driver.findElements(By.className("qa-wallets"));
 
-        // Invalid format
         for (int i = 0; i < listTill.size(); i++) {
 
             List<WebElement> list = driver.findElements(By.className("qa-wallets"));
@@ -49,7 +48,8 @@ public class AddAllWalletsNegative extends Driver {
 
             String walletAddress = "walletAddress";
 
-            if (walletName.equals("Metamask") || walletName.equals("Exodus") || walletName.equals("Tron Wallet"))
+            if (walletName.equals("Metamask") || walletName.equals("Exodus") || walletName.equals("Tron Wallet") || walletName.equals("Ledger") || walletName.equals("Trezor") || walletName
+            .equals("KeepKey") || walletName.equals("Blockchain.com"))
             {
                 addPortfolio.clickOnBack();
                 continue;
@@ -58,43 +58,23 @@ public class AddAllWalletsNegative extends Driver {
             else
             {
                 addPortfolio.typeWalletAddress(walletAddress);
-                Thread.sleep(1000);
                 addPortfolio.clickOnSubmit();
-                String walletError = addPortfolio.getWalletError();
-                System.out.println(walletName + " - invalid format - " + walletError);
+
+                if (addPortfolio.walletErrorIsDisplayed() == true) {
+                    String errorMessage = addPortfolio.getWalletError();
+                    System.out.println(walletName + " negative case Passed");
+                    System.out.print(walletName + " error message is - " + errorMessage);
+                    addPortfolio.clickOnBack();
+                }
+                else {
+                    System.err.println(walletName + " negative case filed");
+                    utils.refreshPage();
+                    addPortfolio
+                            .clickOnAddPortfolio()
+                            .clickOnConnectWallet();
+                    continue;
+                }
             }
-
-            addPortfolio.clickOnBack();
-            continue;
-        }
-
-        // Invalid address
-        for (int i = 0; i < listTill.size(); i++) {
-
-            List<WebElement> list = driver.findElements(By.className("qa-wallets"));
-
-            String walletName = list.get(i).getText();
-            list.get(i).click();
-
-            String walletAddress = "1xL22vTR5kCEfuRpaon38UsiT26KY8D";
-
-            if (walletName.equals("Metamask") || walletName.equals("Exodus") || walletName.equals("Tron Wallet"))
-            {
-                addPortfolio.clickOnBack();
-                continue;
-            }
-
-            else
-            {
-                addPortfolio.typeWalletAddress(walletAddress);
-                Thread.sleep(1000);
-                addPortfolio.clickOnSubmit();
-                String walletError = addPortfolio.getWalletError();
-                System.out.println(walletName + " - invalid adress - " + walletError);
-            }
-
-            addPortfolio.clickOnBack();
-            continue;
         }
     }
 }

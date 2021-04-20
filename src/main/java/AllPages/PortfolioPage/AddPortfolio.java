@@ -100,7 +100,7 @@ public class AddPortfolio {
 
     By walletPasteButton = By.cssSelector("div.circle-borders .jsx-1426819953");
 
-    By walletErrorMessage = By.cssSelector("div.error-text > span");
+    By walletErrorMessage = By.cssSelector(".error-text > span");
 
 
     // Multi-Coins Wallets
@@ -435,6 +435,10 @@ public class AddPortfolio {
 
     public String getWalletError() {
         return utils.getText(walletErrorMessage);
+    }
+
+    public Boolean walletErrorIsDisplayed(){
+        return utils.isDisplayed(walletErrorMessage);
     }
 
 
