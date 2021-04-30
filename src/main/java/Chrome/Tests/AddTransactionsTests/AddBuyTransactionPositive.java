@@ -3,7 +3,7 @@ package Chrome.Tests.AddTransactionsTests;
 import Chrome.AllPages.PortfolioPage.AddTransactions;
 import Chrome.AllPages.PortfolioPage.TradesTransactionsOpenOrders;
 import Chrome.MainPackage.AllURLs;
-import Chrome.MainPackage.ChromeDriver;
+import Chrome.MainPackage.Driver;
 import Chrome.MainPackage.Paths;
 import Chrome.MainPackage.SeleniumUtils;
 import org.openqa.selenium.By;
@@ -11,7 +11,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class AddBuyTransactionPositive extends ChromeDriver {
+public class AddBuyTransactionPositive extends Driver {
 
     AddTransactions addTransactions;
     TradesTransactionsOpenOrders tradesTransactionsOpenOrders;

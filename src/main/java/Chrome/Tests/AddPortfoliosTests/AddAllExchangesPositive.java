@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.util.List;
 
-public class AddAllExchangesPositive extends ChromeDriver {
+public class AddAllExchangesPositive extends Driver {
 
     AddPortfolio addPortfolio;
     LeftSideOfPagePortfolios leftSideOfPagePortfolios;

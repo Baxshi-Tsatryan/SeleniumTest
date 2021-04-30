@@ -2,13 +2,13 @@ package Chrome.Tests;
 
 import Chrome.AllPages.Alerts;
 import Chrome.MainPackage.AllURLs;
-import Chrome.MainPackage.ChromeDriver;
+import Chrome.MainPackage.Driver;
 import Chrome.MainPackage.SeleniumUtils;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class CheckCustomAlerts extends ChromeDriver {
+public class CheckCustomAlerts extends Driver {
 
     AllURLs allURLs;
     SeleniumUtils utils;

@@ -1,12 +1,12 @@
 package Chrome.AllPages.PortfolioPage;
 
-import Chrome.MainPackage.ChromeDriver;
+import Chrome.MainPackage.Driver;
 import Chrome.MainPackage.SeleniumUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
-public class Deposit extends ChromeDriver {
+public class Deposit extends Driver {
 
     WebDriver driver;
     SeleniumUtils utils;

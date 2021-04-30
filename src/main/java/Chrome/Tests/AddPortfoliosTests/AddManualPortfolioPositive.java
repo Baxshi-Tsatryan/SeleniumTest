@@ -4,13 +4,13 @@ import Chrome.AllPages.DevServer;
 import Chrome.AllPages.PortfolioPage.AddPortfolio;
 import Chrome.AllPages.PortfolioPage.LeftSideOfPagePortfolios;
 import Chrome.MainPackage.AllURLs;
-import Chrome.MainPackage.ChromeDriver;
+import Chrome.MainPackage.Driver;
 import Chrome.MainPackage.SeleniumUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class AddManualPortfolioPositive extends ChromeDriver {
+public class AddManualPortfolioPositive extends Driver {
     AddPortfolio addPortfolio;
     LeftSideOfPagePortfolios leftSideOfPagePortfolios;
     AllURLs allURLs;

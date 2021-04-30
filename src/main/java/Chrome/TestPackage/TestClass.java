@@ -1,17 +1,15 @@
 package Chrome.TestPackage;
 
-import Chrome.AllPages.MainPage.Header;
-import Chrome.AllPages.PortfolioPage.AddPortfolio;
+import Chrome.AllPages.CoinGecko;
 import Chrome.MainPackage.AllURLs;
-import Chrome.MainPackage.ChromeDriver;
+import Chrome.MainPackage.Driver;
 import Chrome.MainPackage.SeleniumUtils;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class TestClass extends ChromeDriver {
+public class TestClass extends Driver {
 
-    AddPortfolio addPortfolio;
-    Header header;
+    CoinGecko coinGecko;
     AllURLs allURLs;
     SeleniumUtils utils;
 
@@ -19,14 +17,13 @@ public class TestClass extends ChromeDriver {
     public void beforeClass() {
         allURLs = new AllURLs(driver);
         utils = new SeleniumUtils(driver);
-        addPortfolio = new AddPortfolio(driver);
-        header = new Header (driver);
+        coinGecko = new CoinGecko(driver);
+
     }
 
     @Test
-    public void testClass() throws InterruptedException {
-        allURLs.navigateToMainPage();
-        header.clickOnCurrenciesDropDown();
+    public void test(){
+        allURLs.navigateToCoinGecko();
+        coinGecko.searchAnyCoin("ethereum classic");
     }
-
 }

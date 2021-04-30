@@ -1,11 +1,11 @@
 package Chrome.AllPages;
 
-import Chrome.MainPackage.ChromeDriver;
+import Chrome.MainPackage.Driver;
 import Chrome.MainPackage.SeleniumUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Alerts extends ChromeDriver {
+public class Alerts extends Driver {
     WebDriver driver;
     SeleniumUtils utils;
 

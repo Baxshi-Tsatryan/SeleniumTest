@@ -5,7 +5,7 @@ import Chrome.AllPages.PortfolioPage.AddPortfolio;
 import Chrome.AllPages.PortfolioPage.LeftSideOfPagePortfolios;
 import Chrome.AllPages.PortfolioPage.PortfolioPageWhenNotLogin;
 import Chrome.MainPackage.AllURLs;
-import Chrome.MainPackage.ChromeDriver;
+import Chrome.MainPackage.Driver;
 import Chrome.MainPackage.Paths;
 import Chrome.MainPackage.SeleniumUtils;
 import org.openqa.selenium.*;
@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class AddAllExchangesCSVNegative extends ChromeDriver {
+public class AddAllExchangesCSVNegative extends Driver {
 
     AddPortfolio addPortfolio;
     LeftSideOfPagePortfolios leftSideOfPagePortfolios;

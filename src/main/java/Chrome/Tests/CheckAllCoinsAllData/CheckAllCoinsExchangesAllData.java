@@ -5,7 +5,7 @@ import Chrome.AllPages.ExchangesPage.GeneralExchangePage;
 import Chrome.AllPages.MainPage.CoinsFavoritesExchangesHeatmap;
 import Chrome.AllPages.MainPage.Header;
 import Chrome.MainPackage.AllURLs;
-import Chrome.MainPackage.ChromeDriver;
+import Chrome.MainPackage.Driver;
 import Chrome.MainPackage.SeleniumUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import java.util.List;
 
-public class CheckAllCoinsExchangesAllData extends ChromeDriver {
+public class CheckAllCoinsExchangesAllData extends Driver {
 
     AllURLs allURLs;
     SeleniumUtils utils;

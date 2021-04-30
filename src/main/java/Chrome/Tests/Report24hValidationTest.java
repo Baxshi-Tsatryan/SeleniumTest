@@ -3,13 +3,13 @@ package Chrome.Tests;
 import Chrome.AllPages.CoinGecko;
 import Chrome.AllPages.Report24h;
 import Chrome.MainPackage.AllURLs;
-import Chrome.MainPackage.ChromeDriver;
+import Chrome.MainPackage.Driver;
 import Chrome.MainPackage.Paths;
 import Chrome.MainPackage.SeleniumUtils;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Report24hValidationTest extends ChromeDriver {
+public class Report24hValidationTest extends Driver {
 
     CoinGecko coinGecko;
     Report24h report24h;

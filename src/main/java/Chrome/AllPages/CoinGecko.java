@@ -139,4 +139,30 @@ public class CoinGecko {
         return utils.getText(exchangeAmount);
     }
 
+
+    // --------------------------------------------- Scripts ---------------------------------------------------------
+
+    public CoinGecko searchAnyCoin(String coinName){
+
+        int i = 1;
+
+        String allCoinsNames = null;
+        typeSearchField(coinName);
+        do {
+            try {
+                allCoinsNames = driver.findElement(By.cssSelector(".scroll-container > ul:nth-of-type(2) > li:nth-of-type(" + i + ") span:nth-of-type(2)")).getText();
+            } catch (Exception e) {
+                System.err.println("Coin not found");
+                break;
+            }
+            if (allCoinsNames.equals(coinName)) {
+                driver.findElement(By.cssSelector(".scroll-container > ul:nth-of-type(2) > li:nth-of-type(" + i + ") span:nth-of-type(2)")).click();
+            } else {
+                i++;
+            }
+        } while (allCoinsNames == coinName);
+
+        return this;
+    }
+
 }
